@@ -1,0 +1,97 @@
+:root{
+    --bg-color: #D0CECE;
+    --bg-actions: #002B5B; 
+    --bg-header: #002044;
+    --orange: #E08F0C;
+}
+
+header{
+    background-color: var(--bg-header);
+    color: white;
+}
+
+header h1{
+    font-family: "Poppins";
+    font-size: 36px;
+    font-weight: bolder;
+   
+}
+
+header p{
+    font-family: "Montserrat";
+    font-size: 20px;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+#actions #find-auto{
+    height: 442px;
+    width: 427px;
+    margin-left: auto; 
+    margin-right: 10px;
+}
+
+#actions #sell-auto{
+    height: 442px;
+    width: 427px;
+    margin-left: 10px; 
+    margin-right: auto;
+}
+
+#actions figure{
+    height: 300px;
+    width: 400px;
+    margin-bottom: 0px;
+}
+
+#find-auto figure{
+    padding-top: 50px;
+}
+
+.auto{
+    width: 80%;
+    height: 100%;
+}
+
+.auto-key{
+    width: 100%;
+    height: 100%;
+}
+
+#actions div{
+    background-color: var(--bg-actions);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 12px black;
+}
+
+
+#actions button{
+    width: 362px;
+    height: 73px;
+    border-radius: 20px;
+    background-color: var(--orange);
+    font-size: 24px;
+    color: white;
+    font-weight: 900;
+    -webkit-text-stroke: 1px black;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0px 2px 5px black;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+
+@media (max-width: 1000px){
+    #actions #find-auto{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #actions #sell-auto{
+        margin-left: auto;
+        margin-left: auto;
+    }
+}

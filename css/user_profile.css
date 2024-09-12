@@ -1,0 +1,89 @@
+header, footer{
+    background-color: aqua;
+    height: 40px;
+}
+body{
+    background-color: #D0CECE;
+}
+
+/* izquierda */
+.barraLeft{
+    background-color: #5d6fa3;
+    text-align: center;
+    color: white;
+    padding: 0;
+}
+
+.barraLeft h2{
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+#close{
+    margin-top: 20px;
+    display: inline;
+}
+
+.opcionesPerfil{
+    margin-top: 70px;
+}
+
+/* centro */
+.cajaProfile{
+    text-align: center;
+    background-color: #002B5B;
+    border-radius: 20px;
+    padding: 20px 30px 20px 30px;
+    color: #ffffff;
+    font-family: 'Monserrat';
+    font-size: 20px;
+    margin: 40px;
+}
+.cajaProfile h1{
+    color: #FFCC00;
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: bold !important;
+    font-size: 28px;
+}
+
+.cajaProfile img{
+    margin-bottom: 40px;
+}
+
+.cajaProfileForm{
+    background-color: #51708a;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: black;
+    font-family: 'Monserrat';
+}
+
+input{
+    border-radius: 5px;
+    background: rgb(0, 32, 68);
+    border-color: #D0CECE;
+    border-width: 3px;
+    width: 60%;
+    height: 30px;
+    border-radius: 20px;
+}
+input, textarea{
+    color: white;
+}
+
+.itemForm{
+    padding: 10px;
+    text-align: right;
+}
+
+.itemForm label{
+    margin-right: 10px;
+}
+
+/* derecha */
+.cochesRight{
+    background-color: blue;
+
+}

@@ -1,0 +1,82 @@
+
+@font-face {
+    font-family: 'Tw-Cen-MT';
+    src: url(../fonts/Tw_Cen_MT_Condensed_Extra_Bold.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header{
+    height: 30px;               
+    background-color: pink;
+}
+
+/* MAIN */
+main{
+    background-color: #D0CECE;
+    
+}
+
+/* PARTE IZQUIERDA */
+.izquierda{
+    background-color: #E08F0C;
+}
+
+
+
+/* PARTE DERECHA */
+.cajaLogIn{
+    background-color: #002B5B;
+    border-radius: 20px;
+    padding: 20px 30px 20px 30px;
+    color: #ffffff;
+    font-family: 'Monserrat';
+    font-size: 20px;
+    margin: 30px 50px 30px 50px;
+}
+
+.cajaLogIn h1{
+    color: #FFCC00;
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: bold !important;
+    font-size: 28px;
+}
+
+.cajaLogIn img{
+    width: 10%;
+    margin-right: 10px;
+}
+#formularioLogIn{
+    text-align: right;
+}
+
+label{
+    text-align: left;
+}
+
+#btnLogIn{
+    justify-content: center;
+    color: #ffffff;
+    background-color: #E08F0C;
+    border-radius: 8px;
+    padding: 7px;
+    font-weight: bold;
+}
+input{
+    border-radius: 5px;
+    background: rgb(0, 32, 68);
+    border-color: #D0CECE;
+    border-width: 3px;
+    width: 85%;
+    height: 30px;
+    border-radius: 20px;
+}
+input, textarea{
+    color: white;
+}
+
+.itemForm{
+    padding: 10px;
+}
+

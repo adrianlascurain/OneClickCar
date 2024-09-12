@@ -1,8 +1,7 @@
 const nav_bar = document.getElementById("nav_bar");
 const footer_back = document.getElementById("footer_back");
 
-window.addEventListener("load", (event) => {
-  console.log("Página cargada");
+function createNavFoot () {
   let htmlContenidoNav = `<nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -82,4 +81,5 @@ window.addEventListener("load", (event) => {
             <a href="#" title="Info">No Vender Mi Información</a>
         </div>`
 footer_back.insertAdjacentHTML("beforeend", htmlContenidoFooter);
-});
+};
+createNavFoot();

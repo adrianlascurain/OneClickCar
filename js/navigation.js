@@ -13,13 +13,13 @@ function createNavFoot () {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto options">
-                        <a class="nav-link" aria-current="page" href="/OneClickCar/index.html">INICIO</a>
-                        <a class="nav-link" href="/OneClickCar/pages/contact.html">CONTACTO</a>
-                        <a class="nav-link" href="/OneClickCar/pages/about.html">NOSOTROS</a>
-                        <a class="nav-link" href="/OneClickCar/pages/log_in.html">INICIAR SESIÓN</a>
-                        <a class="nav-link" href="/OneClickCar/pages/sign_in.html">REGISTRARSE</a>
-                        <a class="nav-link" href="/OneClickCar/pages/user_profile.html">PERFIL</a>
-                        <a class="nav-link" href="/OneClickCar/pages/product_list.html">PRODUCTOS</a>
+                        <a class="nav-link" aria-current="page" href="https://adrianlascurain.github.io/OneClickCar/index.html">INICIO</a>
+                        <a class="nav-link" href="https://adrianlascurain.github.io/OneClickCar/pages/contact.html">CONTACTO</a>
+                        <a class="nav-link" href="https://adrianlascurain.github.io/OneClickCar/pages/about.html">NOSOTROS</a>
+                        <a class="nav-link" href="https://adrianlascurain.github.io/OneClickCar/pages/log_in.html">INICIAR SESIÓN</a>
+                        <a class="nav-link" href="https://adrianlascurain.github.io/OneClickCar/pages/sign_in.html">REGISTRARSE</a>
+                        <a class="nav-link" href="https://adrianlascurain.github.io/OneClickCar/pages/user_profile.html">PERFIL</a>
+                        <a class="nav-link" href="https://adrianlascurain.github.io/OneClickCar/pages/product_list.html">PRODUCTOS</a>
                     </div>
                 </div>
             </div>

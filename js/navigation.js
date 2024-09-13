@@ -2,6 +2,7 @@ const nav_bar = document.getElementById("nav_bar");
 const footer_back = document.getElementById("footer_back");
 
 function createNavFoot () {
+  let currentPath = location.href;
   let htmlContenidoNav = `<nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -14,12 +15,12 @@ function createNavFoot () {
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto options">
                         <a class="nav-link" aria-current="page" href="./index.html">INICIO</a>
-                        <a class="nav-link" href="../pages/contact.html">CONTACTO</a>
-                        <a class="nav-link" href="../pages/about.html">NOSOTROS</a>
-                        <a class="nav-link" href="../pages/log_in.html">INICIAR SESIÓN</a>
-                        <a class="nav-link" href="../pages/sign_in.html">REGISTRARSE</a>
-                        <a class="nav-link" href="../pages/user_profile.html">PERFIL</a>
-                        <a class="nav-link" href="../pages/product_list.html">PRODUCTOS</a>
+                        <a class="nav-link" href="./pages/contact.html">CONTACTO</a>
+                        <a class="nav-link" href="./pages/about.html">NOSOTROS</a>
+                        <a class="nav-link" href="./pages/log_in.html">INICIAR SESIÓN</a>
+                        <a class="nav-link" href="./pages/sign_in.html">REGISTRARSE</a>
+                        <a class="nav-link" href="./pages/user_profile.html">PERFIL</a>
+                        <a class="nav-link" href="./pages/product_list.html">PRODUCTOS</a>
                     </div>
                 </div>
             </div>

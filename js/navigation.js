@@ -13,13 +13,13 @@ function createNavFoot () {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto options">
-                        <a class="nav-link active" aria-current="page" href="./index.html">INICIO</a>
-                        <a class="nav-link" href="./contact.html">CONTACTO</a>
-                        <a class="nav-link" href="./about.html">NOSOTROS</a>
-                        <a class="nav-link" href="./log_in.html">INICIAR SESIÓN</a>
-                        <a class="nav-link" href="./sign_in.html">REGISTRARSE</a>
-                        <a class="nav-link" href="./user_profile.html">PERFIL</a>
-                        <a class="nav-link" href="./product_list.html">PRODUCTOS</a>
+                        <a class="nav-link" aria-current="page" href="/index.html">INICIO</a>
+                        <a class="nav-link" href="/pages/contact.html">CONTACTO</a>
+                        <a class="nav-link" href="/pages/about.html">NOSOTROS</a>
+                        <a class="nav-link" href="/pages/log_in.html">INICIAR SESIÓN</a>
+                        <a class="nav-link" href="/pages/sign_in.html">REGISTRARSE</a>
+                        <a class="nav-link" href="/pages/user_profile.html">PERFIL</a>
+                        <a class="nav-link" href="/pages/product_list.html">PRODUCTOS</a>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@ function createNavFoot () {
 
   let htmlContenidoFooter = `<h2 height="100vh">Copyright &copy OneClickCar</h2>
         <div class="footer-container">
-            <div class="contact-info">
+            <div class="contact-info mx-3">
                 <h3>Conócenos</h3>
                 <a href="https://www.instagram.com/OneClickCar/">
                     <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725421052/OneClickCar/n4vgpz2ykdqrejz53uxc.png" alt="Instagram">
@@ -47,7 +47,7 @@ function createNavFoot () {
                     https://www.tiktok.com/OneClickCar/
                 </a>
             </div>
-            <div class="company-info">
+            <div class="company-info mx-3">
                 <h3>Contáctanos</h3>
                 <p><img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725421052/OneClickCar/rnnaimpxwzllqjhs97zj.png" alt="ubicacion"><b>Dirección:</b> Av. de los Insurgentes Sur s/n, Benito Juárez, CDMX</p>
             
@@ -55,8 +55,8 @@ function createNavFoot () {
             
                 <p><img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725421051/OneClickCar/cw4nzzwjirjpf8imni4p.png" alt=""><b>Email:</b> contacto@oneclickcar.com</p>
             </div>
-            <div class="subscribe-section">
-                <h3 id="publicidad">Obtén publicidad de nuestros productos</h3>
+            <div class="subscribe-section mx-3 text-center">
+                <h3 class="text-center" id="publicidad">Obtén publicidad de nuestros productos</h3>
                 <form action="#">
                     <input type="email" placeholder="Tu correo electrónico">
                     <div class="checkbox-container">
@@ -82,4 +82,5 @@ function createNavFoot () {
         </div>`
 footer_back.insertAdjacentHTML("beforeend", htmlContenidoFooter);
 };
+
 createNavFoot();

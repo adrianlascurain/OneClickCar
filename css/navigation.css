@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Tw-Cen-MT';
-    src: url('/fonts/Tw_Cen_MT_Condensed_Extra_Bold.woff') format('woff');
+    src: url('../fonts/Tw_Cen_MT_Condensed_Extra_Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -46,64 +46,16 @@
     color: white;
 }
 
-.options a:visited{
-    color: white;
-}
+/* Pendiente
+/* .nav-link.active {
+    background-color: white;
+    color: #002b5b !important;
+} */
 
 .options a:hover{
     background-color: white;
     color: var(--navfoo-bg-color);
     border-radius: 20px;
-}
-
-.who-we-are h2{
-    margin-bottom: 40px;
-    color: var(--navfoo-bg-color);
-    font-weight: 500;
-}
-
-.who-we-are h2{
-    margin-bottom: 40px;
-}
-
-.car-image img{
-    opacity: 0.6;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
-
-.team{
-    margin: 20px 20px;
-}
-
-.team h2{
-    color: var(--navfoo-bg-color);
-    font-weight: 500;
-}
-
-main{
-    background-color: var(--bg-color);
-    padding: 40px 20px;
-}
-
-main .our-team{
-    text-align: left;
-}
-
-
-.card img{
-    border-radius: 50%;
-    height: 50vh;
-    width: 90%;
-    object-fit: cover;
-    margin: auto;
-}
-
-main p{
-    font-family: "Montserrat";
-    font-size: 18px;
-    color: black;
 }
 
 footer {
@@ -169,6 +121,10 @@ footer h3{
     border-radius: 20px;
 }
 
+.subscribe-section h3{
+    font-size: 23px;
+}
+
 .company-info input {
     padding: 10px;
     width: 80%;
@@ -203,20 +159,11 @@ footer button {
         margin: 0px 10px;
         padding-left: 10px !important;
     }
-
-    main .our-team{
-        text-align: left;
-    }
-
 }
 
 
 @media (max-width: 1500px) {
     .footer-container {
         flex-direction: column; /* Las columnas se apilarán verticalmente en pantallas pequeñas */
-    }
-
-    main .our-team{
-        text-align: center;
     }
 }

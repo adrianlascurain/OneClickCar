@@ -13,7 +13,7 @@ function createNavFoot () {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto options">
-                        <a class="nav-link" aria-current="page" href="../index.html">INICIO</a>
+                        <a class="nav-link" aria-current="page" href="./index.html">INICIO</a>
                         <a class="nav-link" href="../pages/contact.html">CONTACTO</a>
                         <a class="nav-link" href="../pages/about.html">NOSOTROS</a>
                         <a class="nav-link" href="../pages/log_in.html">INICIAR SESIÓN</a>

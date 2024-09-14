@@ -4,7 +4,7 @@ body{
 
 /* izquierda */
 .barraLeft{
-    background-color: #5d6fa3;
+    background-color: #1e3263a8;
     text-align: center;
     color: white;
     padding: 0;
@@ -13,6 +13,7 @@ body{
 .barraLeft h2{
     font-size: 16px;
     margin-right: 20px;
+    font-family: 'Montserrat';
 }
 
 #close{
@@ -21,7 +22,12 @@ body{
 }
 
 .opcionesPerfil{
-    margin-top: 70px;
+    margin-top: 190px;
+}
+
+.opcionesPerfil img{
+    width: 20px;
+    margin-bottom: 5px;
 }
 
 /* centro */
@@ -48,17 +54,24 @@ body{
 }
 
 .cajaProfileForm{
-    background-color: #51708a;
+    background-color: #627997;
     border-radius: 20px;
     padding: 20px;
     text-align: center;
     color: black;
-    font-family: 'Monserrat';
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.infoCenter img{
+    width: 250px;
+    margin-top: 20px;
 }
 
 input{
     flex-grow: 1; 
-    border-radius: 5px;
+    border-radius: 20px;
     background: rgb(0, 32, 68);
     border-style: solid;
     border-width: 3px;
@@ -79,6 +92,10 @@ input, textarea{
 
 /* derecha */
 .cochesRight{
-    background-color: blue;
+    background-image: url(https://img.freepik.com/foto-gratis/coches-modernos-estacionados-calle-ciudad_127089-6530.jpg?size=626&ext=jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 
 }

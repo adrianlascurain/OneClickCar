@@ -1,27 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de productos</title>
 
-    <link rel="stylesheet" href="../css/navigation.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/product_list.css" />
+  </head>
+  <body>
     <header id="nav_bar"></header>
 
-    <h1>Product list</h1>
+    <main>
+      <!-- Nav tipo de autos -->
+      <div class="container navBarCar text-center">
+        <div class="row align-items-center barCar">
+          <div class="col-6 col-md-2">
+            <a class="linkContainer" href="#titleSedan">Sedán</a>
+          </div>
+          <div class="col-6 col-md-2">
+            <a class="linkContainer" href="#titleCoupe">Coupé</a>
+          </div>
+          <div class="col-6 col-md-2">
+            <a class="linkContainer" href="#titleSuv">SUV</a>
+          </div>
+          <div class="col-6 col-md-2">
+            <a class="linkContainer" href="#titleHatchBack">HATCHBACK</a>
+          </div>
+          <div class="col-6 col-md-2">
+            <a class="linkContainer" href="#titlePickUp">PICK UP</a>
+          </div>
+          <div class="col-6 col-md-2">
+            <a class="linkContainer" href="#">VAN</a>
+          </div>
+        </div>
+      </div>
+      <!-- Nav para filtrado -->
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg" id="navBarOrder">
+          <div class="col-sm-4 col-lg-1" id="noFilterContainer">
+            <a class="nav-link" id="noFilter" href="#">Sin filtros</a>
+          </div>
+          <button
+            class="navbar-toggler bg-dark"
+            id="btnMobileNav"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
+          <div
+            class="collapse navbar-collapse col-sm-2 col-lg-8 justify-content-evenly"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav container p-0">
+              <li class="nav-item col-lg-3">
+                <a
+                  class="nav-link"
+                  id="filterPrice"
+                  aria-current="page"
+                  href="#"
+                  >Precio menor</a
+                >
+              </li>
+              <li class="nav-item col-lg-3">
+                <a class="nav-link" id="filterName" href="#">Nombre [A-Z]</a>
+              </li>
+              <li class="nav-item col-lg-3">
+                <a class="nav-link" id="filterYear" href="#">Año reciente</a>
+              </li>
+              <li class="nav-item col-lg-3">
+                <a class="nav-link" id="filterKilometer" href="#"
+                  >Kilometraje menor</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-lg-3" id="inputSearchContainer">
+            <input
+              class="form-control"
+              id="inputSearch"
+              type="search"
+              placeholder="Busca por marca, nombre o año"
+              aria-label="Search"
+            />
+          </div>
+        </nav>
+      </div>
+      <div
+        class="alert alert-danger fade show text-center"
+        style="display: none"
+        role="alert"
+        id="alertValidaciones"
+      >
+        <p id="alertValidacionesTexto"></p>
+      </div>
+      <!-- Carousel -->
+      <div class="container containerCarousel">
+        <h2 class="text-center carTitle" id="titleSedan">Sedán</h2>
+        <div id="carouselSedanDesktop" class="carousel slide"></div>
+        <div id="carouselSedanMobile" class="carousel slide"></div>
+      </div>
+      <!--Fin Carousel Sedan-->
+      <div class="container containerCarousel">
+        <h2 class="text-center carTitle" id="titleCoupe">Coupé</h2>
+        <div id="carouselCoupeDesktop" class="carousel slide"></div>
+        <div id="carouselCoupeMobile" class="carousel slide"></div>
+      </div>
+      <!--Fin Carousel Coupe-->
+      <div class="container containerCarousel">
+        <h2 class="text-center carTitle" id="titleSuv">SUV</h2>
+        <div id="carouselSuvDesktop" class="carousel slide"></div>
+        <div id="carouselSuvMobile" class="carousel slide"></div>
+      </div>
+      <!--Fin Carousel SUV-->
+      <div class="container containerCarousel">
+        <h2 class="text-center carTitle" id="titleHatchBack">HATCHBACK</h2>
+        <div id="carouselHatchBackDesktop" class="carousel slide"></div>
+        <div id="carouselHatchBackMobile" class="carousel slide"></div>
+      </div>
+      <!--Fin Carousel HatchBack-->
+      <div class="container containerCarousel">
+        <h2 class="text-center carTitle" id="titlePickUp">PICK UP</h2>
+        <div id="carouselPickUpDesktop" class="carousel slide"></div>
+        <div id="carouselPickUpMobile" class="carousel slide"></div>
+      </div>
+    </main>
     <footer id="footer_back"></footer>
 
-    <script src="../js/navigation.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
+    <script src="../js/navigation.js"></script>
+    <script defer src="../js/product_list.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

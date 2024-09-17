@@ -1,0 +1,251 @@
+:root {
+  --bg-color: #d0cece;
+  --navfoo-bg-color: #002b5b;
+  background-color: var(--bg-color);
+  opacity: 0.96;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Tw-Cen-MT";
+  src: url("/fonts/Tw_Cen_MT_Condensed_Extra_Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+main {
+  background-color: var(--bg-color);
+  font-family: "Montserrat";
+  font-size: 18px;
+  color: black;
+}
+
+.navBarCar {
+  background-color: rgba(224, 143, 12, 0.96);
+  max-width: 100%;
+}
+
+.barCar {
+  max-width: 1340px;
+  margin: 0 auto 0 auto;
+}
+
+.containerCarousel {
+  max-width: 1340px;
+  padding-left: auto;
+  padding-right: auto;
+  padding: 0px;
+  background-color: #002b5b;
+  border-radius: 20px;
+  margin-bottom: 31px;
+}
+
+.carousel-inner {
+  padding: 17px 0;
+}
+
+.linkContainer {
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#navBarOrder {
+  margin: 15px auto;
+  max-width: 1299px;
+  border-radius: 20px;
+  padding: 0;
+  font-size: 18px;
+  color: white;
+  font-family: "Poppins";
+  font-weight: bold;
+}
+#noFilterContainer {
+  background-color: #e08f0c;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 43px;
+}
+#noFilter {
+  padding: 8px;
+  color: black;
+}
+#inputSearchContainer {
+  padding-right: 8px;
+}
+#inputSearch {
+  border-radius: 20px;
+  height: 29px;
+}
+
+.link-cards {
+  text-decoration: none;
+}
+
+hr {
+  height: 0px;
+  border: none;
+  border-top: 1px solid #e08f0c;
+  opacity: 1;
+  margin: 0px;
+}
+
+.carTitle {
+  font-size: 28px;
+  color: #ffcc00;
+  font-family: "Poppins";
+  font-weight: bold;
+  margin: 0px;
+}
+
+.carousel.slide {
+  padding-left: 11px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+}
+
+.card {
+  max-width: 262px;
+  border: 0px;
+  border-radius: 20px;
+  background-color: #002b5b;
+}
+.card-body {
+  padding: 0px;
+}
+
+.btn.btn-primary {
+  background-color: #e08f0c;
+  border-radius: 20px;
+  border-color: #002b5b;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: bold;
+  margin: 10px;
+}
+.card-img-top {
+  width: 262px;
+  height: 167px;
+  border-radius: 20px;
+}
+
+.card-text {
+  font-family: "Montserrat";
+  font-weight: bold;
+  color: white;
+}
+.card-text-title {
+  font-size: 19px;
+}
+.card-text-kilometer {
+  font-size: 18px;
+}
+.card-text-price {
+  font-size: 22px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+/* Ajusta el diseño del carrusel en pantallas pequeñas */
+@media (width<= 428px) {
+  #navBarOrder {
+    width: 384px;
+  }
+  #inputSearchContainer {
+    padding-right: 0px;
+  }
+  #inputSearch {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    height: 43px;
+  }
+
+  #btnMobileNav {
+    height: 43px;
+  }
+  #carouselSedanDesktop,
+  #carouselCoupeDesktop,
+  #carouselSuvDesktop,
+  #carouselHatchBackDesktop,
+  #carouselPickUpDesktop {
+    display: none !important;
+  }
+  #carouselSedanMobile,
+  #carouselCoupeMobile,
+  #carouselSuvMobile,
+  #carouselHatchBackMobile,
+  #carouselPickUpMobile {
+    display: block !important;
+  }
+  .card {
+    max-width: 262px;
+    border: 0px;
+    margin-left: 57px;
+    margin-right: 57px;
+    border-radius: 20px;
+    background-color: #002b5b;
+  }
+
+  .card-img-top {
+    width: 262px;
+    height: 167px;
+    border-radius: 20px;
+  }
+
+  .containerCarousel {
+    max-width: 376px;
+    margin-left: 26px;
+    margin-right: 26px;
+    padding: 0px;
+    background-color: #002b5b;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (width> 428px) {
+  #carouselSedanMobile,
+  #carouselCoupeMobile,
+  #carouselSuvMobile,
+  #carouselHatchBackMobile,
+  #carouselPickUpMobile {
+    display: none !important;
+  }
+  #carouselSedanDesktop,
+  #carouselCoupeDesktop,
+  #carouselSuvDesktop,
+  #carouselHatchBackDesktop,
+  #carouselPickUpDesktop {
+    display: block !important;
+  }
+}

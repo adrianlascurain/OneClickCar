@@ -15,47 +15,6 @@
     font-style: normal;
 }
 
-.navbar{
-    background-color: var(--navfoo-bg-color);
-    font-family: "Tw-Cen-MT",sans-serif;
-    font-size: 20px;
-}
-
-.navbar-toggler-icon{
-    background-image: url("https://res.cloudinary.com/dz6zf3yio/image/upload/v1725433462/hamburger-menu-svgrepo-com_zby8hm.svg");
-}
-
-.logo{
-    height: 60px;
-}
-
-.navbar-toggler{
-    border-color: white;
-}
-
-.navbar-nav a{
-    color: white;
-    text-decoration: none;
-    margin-left: 50px;
-}
-
-.options a{
-    background-color: var(--navfoo-bg-color);
-    border-radius: 20px;
-    text-decoration: none;
-    color: white;
-}
-
-.options a:visited{
-    color: white;
-}
-
-.options a:hover{
-    background-color: white;
-    color: var(--navfoo-bg-color);
-    border-radius: 20px;
-}
-
 .who-we-are h2{
     margin-bottom: 40px;
     color: var(--navfoo-bg-color);
@@ -91,13 +50,16 @@ main .our-team{
     text-align: left;
 }
 
+.card .photo{
+    width: 100%;
+    height: 400px;
+}
 
 .card img{
-    border-radius: 50%;
-    height: 50vh;
-    width: 90%;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
     margin: auto;
+    object-fit: cover;
 }
 
 main p{
@@ -106,117 +68,37 @@ main p{
     color: black;
 }
 
-footer {
-    background-color: #002b5b;
-    color: white;
-    padding: 0px;
-    padding-bottom: 20px;
-    margin-top: 20px;
-    text-align: center;
-    width: 100%;
-    font-family: 'Poppins';
-    font-size: 12px;
+.social-media-team figure{
+    width: 70px;
+    height: 60px;
 }
 
-footer h2{
-    background-color: gray;
-    font-size: 35px;
-    position: relative;
-    bottom: 20px;
-    padding: 5px;
+.social-media-team img{
+    object-fit: contain;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
-}
-
-.contact-info,
-.company-info,
-.subscribe-section {
-
-    color: white;
-    text-align: left;
-}
-
-.contact-info a{
-    color: white;
-    text-decoration: none;
-}
-.subscribe-section form {
-    display: ruby;
-    align-items: flex-start;
-    justify-content: end;
-}
-
-footer h3{
-    text-align: center;
-    font-size: 25;
-}
-
-.contact-info img,
-.company-info img {
-    width: 50px;
-    margin-right: 10px;
-}
-
-.subscribe-section input {
-    padding: 10px;
-    width: 80%;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 20px;
-}
-
-.company-info input {
-    padding: 10px;
-    width: 80%;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 20px;
-}
-
-.checkbox-container {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.checkbox-container input {
-    margin-right: 10px;
-}
-
-footer button {
-    padding: 10px 20px;
-    background-color: #e08f0c;
-    border: none;
-    border-radius: 20px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+.contact-icons:hover{
+    scale: 1.2;
+    transition: 0.3s;
 }
 
 @media (min-width: 400px) {
-    .navbar-nav a{
-        color: white;
-        text-decoration: none;
-        margin: 0px 10px;
-        padding-left: 10px !important;
-    }
-
     main .our-team{
         text-align: left;
     }
 
 }
 
-
 @media (max-width: 1500px) {
-    .footer-container {
-        flex-direction: column; /* Las columnas se apilarán verticalmente en pantallas pequeñas */
-    }
 
     main .our-team{
         text-align: center;
+    }
+}
+
+@media (max-width: 1000px){
+    .card .photo{
+        width: 70%;
+        height: 400px;
     }
 }

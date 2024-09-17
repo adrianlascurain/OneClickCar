@@ -30,18 +30,22 @@
 
     <main>
         <div class="container-sm d-flex flex-wrap justify-content-center text-center" id="actions">
-            <div class="container-sm d-flex flex-wrap align-items-center justify-content-center" id="find-auto">
+            <div class="container-sm d-flex flex-wrap align-items-center justify-content-center action-div" id="find-auto">
                 <figure>
                     <img class="img-fluid object-fit-contain align-items-center auto" src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725920673/oneClickCar-Auto_jedd92.png" alt="Auto">
                 </figure>
-                <button>Encuentra tu auto ideal</button>
+                <div class="action-btn-buy mb-4">
+                    <button class="action-btn m-1 p-0">Encuentra tu auto ideal</button>
+                </div>
             </div>
 
-            <div class="container-sm d-flex flex-wrap align-items-center justify-content-center" id="sell-auto">
+            <div class="container-sm d-flex flex-wrap align-items-center justify-content-center action-div" id="sell-auto">
                 <figure>
                     <img class="img-fluid object-fit-contain auto-key" src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725920674/vende_tu_auto_yltaqs.png" alt="llave y contrato de venta">
                 </figure>
-                <button>Vende tu auto ahora</button>
+                <div class="action-btn-sell mb-4">
+                    <button class="action-btn m-1 p-0">Vende tu auto ahora</button>
+                </div>
             </div>
             
         </div>
@@ -49,17 +53,24 @@
         <div class="contianer-sm d-flex flex-wrap mx-5 justify-content-center" id="info">
             
             <div class="container-sm ms-0 me-2" id="how-to-buy">
-                <h3 class="text-center">¿Cómo adquiero un auto?</h3>
-                <ol>
-                    <li>Revisa nuestro catálogo</li>
-                    <li>Seleccionar el auto que más te gusto</li>
-                    <li>Consulta la información</li>
-                    <li>Contacta al vendedor</li>
-                    <li>!Adquiere tu auto de forma segura¡</li>
-                </ol>
-                <figure class="mw-100 d-flex align-self-end mb-0">
-                        <!-- <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726093355/un_cliente_satisfecho_que_acaba_de_comprar_un_coche_en_una_foto_realista_de_los_coches_actuales_uoy3tc.png" alt="Cliente" class="h-25 client"> -->
-                </figure>
+
+                <div class="how-to-buy-text mt-3">
+                    <h3 class="text-center mx-auto">¿Cómo adquiero un auto?</h3>
+                    <ol>
+                        <li>Revisa nuestro catálogo</li>
+                        <li>Seleccionar el auto que más te gusto</li>
+                        <li>Consulta la información</li>
+                        <li>Contacta al vendedor</li>
+                        <li>!Adquiere tu auto de forma segura¡</li>
+                    </ol>
+                </div>
+
+                <div class="container-fluid p-0 align-items-end">
+                    <figure class="client-frame m-0">
+                        <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726093355/un_cliente_satisfecho_que_acaba_de_comprar_un_coche_en_una_foto_realista_de_los_coches_actuales_uoy3tc.png" alt="Cliente feliz">
+                    </figure>
+                </div>
+
             </div>
 
             <div class="container-sm mx-2" id="how-to-sell">
@@ -77,12 +88,13 @@
             </div>
 
             <div class="container-sm ms-2 me-0" id="verify-car">
-                <div class="verified">
+                <div class="container-sm d-flex align-items-center justify-content-center mt-3 verified ">
+                    <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726544648/store-verified-shopping-svgrepo-com_ngtiqu.svg" alt="Verificado">
                     <h2>Verificado</h2>
                 </div>
 
-                <figure>
-                    <!-- <img src="" alt=""> -->
+                <figure class="verified-auto mt-4 mx-2 mb-0">
+                    <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725920673/coche_verificado_vnrirw.png" alt="auto verificado">
                 </figure>
                 <p class="text-center">Cada vehículo con la etiqueta 'Verificado' ha pasado por una exhaustiva inspección realizada por un equipo de expertos, garantizando que cumpla con los más altos estándares de calidad y seguridad para tu tranquilidad.</p>
             </div>

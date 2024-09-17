@@ -60,11 +60,12 @@ body{
     height: 100%;
 }
 
-#actions div{
+#actions .action-div{
     background-color: var(--bg-actions);
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 8px 12px black;
+    z-index: 2;
 }
 
 #actions button{
@@ -79,8 +80,47 @@ body{
     font-family: "Poppins", sans-serif;
     box-shadow: 0px 2px 5px black;
     margin-bottom: 25px;
-    margin-top: 0px;
+    margin-top: 0px;    
 }
+
+.action-btn-buy, .action-btn-sell{
+    position: relative;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.action-btn-buy:hover, .action-btn-sell:hover{
+    scale: 1.05;
+    transition: 0.5s;
+}
+
+.action-btn-buy:hover::after, .action-btn-sell:hover::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    background-image: conic-gradient(from var(--angle),transparent 10%  ,red,yellow);
+    border-radius: 20px;
+    animation: 1s spin linear infinite;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
 
 #info #how-to-buy,#how-to-sell{
     background-color: var(--bg-actions);
@@ -92,9 +132,19 @@ body{
     margin-bottom: 20px;
 }
 
-/* #how-to-buy figure{
-    
-} */
+.how-to-buy-text h3{
+    text-align: center;
+} 
+
+#how-to-buy figure{
+    width: 100%;
+    height: 100%;   
+}
+
+.client-frame img{
+    object-fit: contain;
+    height: 100px;
+}   
 
 #info #verify-car{
     background-color: var(--bg-actions);
@@ -110,6 +160,34 @@ body{
     height: 208px;
     width: 244px;
 } */
+
+.verified h2{
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 0;
+    -webkit-text-stroke: 1px black;
+}
+
+.verified img{
+    height: 70px;
+}
+
+#verify-car .verified-auto{
+    width: 100%;
+    height: 141px;
+}
+
+.verified-auto img{
+    width: 95%;
+}
+
+#verify-car p{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 35px;
+}
 
 
 @media (max-width: 1000px){

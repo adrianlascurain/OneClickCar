@@ -130,11 +130,34 @@ body{
     border-radius: 20px;
     box-shadow: 0px 8px 12px black;
     margin-bottom: 20px;
+    position: relative;
+}
+
+#how-to-sell h3, #how-to-buy h3{
+    color: var(--orange);
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Poppins';
+}
+
+#how-to-sell ol, #how-to-buy ol{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    margin-top: 20px;
 }
 
 .how-to-buy-text h3{
     text-align: center;
 } 
+
+.card-img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
 
 #how-to-buy figure{
     width: 100%;
@@ -143,8 +166,13 @@ body{
 
 .client-frame img{
     object-fit: contain;
-    height: 100px;
+    height: 244px;
 }   
+
+.sell-frame img{
+    object-fit: contain;
+    height: 189px;
+}
 
 #info #verify-car{
     background-color: var(--bg-actions);
@@ -189,6 +217,48 @@ body{
     margin-top: 35px;
 }
 
+.vision-container, .mission-container{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    flex: 1;
+    box-shadow: 0px 8px 12px black;
+}
+
+.vision-container h2, .mission-container h2{
+    color: var(--orange);
+    font-size: 32px;
+    font-family: 'Poppins';
+    font-weight: 900;
+    margin-top: 25px;
+}
+
+.vision-container p, .mission-container p{
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+
+}
+
+.mission-frame{
+    height: 152px;
+    width: auto;
+}
+
+.mission-frame img{
+    object-fit: contain;
+    height: 100%;
+}
+
+.vision-frame{
+    height: 184px;
+    width: auto;
+}
+
+.vision-frame img{
+    object-fit: contain;
+    height: 100%;
+}
 
 @media (max-width: 1000px){
     #actions #find-auto{

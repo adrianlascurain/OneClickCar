@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Validación nombre usuario
     if (txtNombre.value.length < 2) {
       txtNombre.style.border = "solid red medium";
-      alertValidacionesTexto.innerHTML =
+      alertValidacionesTexto.innerHTML +=
         "El <strong> NOMBRE </strong> no es correcto. <br>";
       alertValidaciones.style.display = "block";
       isValid = false;
-    } //cierre validación nombre usuario
+    } //if txtNombre
 
     // Validación número de teléfono --RegExp
     if (!telefonoRegex.test(txtNumber.value)) {
@@ -45,15 +45,25 @@ document.addEventListener("DOMContentLoaded", function () {
         "El <strong> TELÉFONO </strong> no es correcto <br>";
       alertValidaciones.style.display = "block";
       isValid = false;
-    }
+    } //if txtNumber
+
     // Validación correo --RegExp
     if (!emailRegex.test(txtEmail.value)) {
       txtEmail.style.border = "solid red medium";
       alertValidacionesTexto.innerHTML +=
-        "El <strong>CORREO</strong> no es correcto";
+        "El <strong>CORREO</strong> no es correcto <br>";
       alertValidaciones.style.display = "block";
       isValid = false;
-    }
+    } //if txtEmail
+
+    //Validación caja de comentario
+    if (txtMensaje.value !=null){
+      txtMensaje.style.border = "solid red medium";
+      alertValidacionesTexto.innerHTML +=
+        "El <strong> COMENTARIO </strong> no puede estar vacío.";
+      alertValidaciones.style.display = "block";
+      isValid = false;
+    } //if txtMensaje
 
     //todo correcto
     if (isValid) {
@@ -91,8 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
             text: "Ocurrió un problema, probar más tarde",
             icon: "error",
           }); // cierre msj error
-        }
-      );
+        }//cierre err
+      ); //then
     } //cierre IsValid
   }); //cierre btnSubmit
 }); //cierre total

@@ -1,0 +1,248 @@
+:root{
+    --bg-color: #D0CECE;
+    --navfoo-bg-color: #002B5B;
+    background-color: var(--bg-color);
+    opacity: 0.96;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Tw-Cen-MT';
+    src: url('/fonts/Tw_Cen_MT_Condensed_Extra_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Tw-Cen-MT', sans-serif;
+    background-color: #e1e1e1;
+    color: #333;
+}
+
+
+/* Sección del formulario */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-bottom: 150px;
+}
+
+.form-section {
+    background-color: #002B5B;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    color: white;
+}
+
+
+/* Estilos del formulario */
+form {
+    display: grid;
+    grid-template-columns: 1fr; 
+    padding: 20px;
+    background-color: #002B5B; 
+    border-radius: 10px;
+}
+.form-group {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    margin-bottom: 20px; 
+}
+.form-section {
+    background-color: #002B5B;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; 
+    max-width: 600px; 
+    color: white;
+    margin: auto; 
+}
+
+label {
+    flex: 1;
+    background-color: #F1D6EB;
+    padding:5px 15px;
+    border-radius:20px 0 0 20px;
+    color: #002B5B;
+    font-family: 'Tw-Cen-MT', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1.2;
+    margin: 0;
+}
+#image{
+    flex: 1;
+    background-color: #F1D6EB;
+    padding:5px 15px;
+    border-radius:20px 0 0 20px;
+    color: #002B5B;
+    font-family: 'Tw-Cen-MT', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1.2;
+    margin: 0;
+}
+input[type="text"],  input[type="number"],input[type="tel"],  textarea {
+    flex: 2;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-left: 8px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    opacity: 0; 
+    position: absolute;
+    z-index: -1;
+    flex: 2;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+/*Icono de Upload File*/
+.custom-file-upload {
+    flex: 2;
+    display: inline-block;
+    padding: 10px;
+    background-color:#002B5B;
+    color: white;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.upload-icon {
+    width: 45px; 
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.custom-file-upload:hover {
+    background-color: #002B5B;
+}
+
+/* Ocupa todo el ancho del grid para textarea */
+textarea {
+    width: 100%;
+}
+
+input[type="checkbox"] + label {
+    background-color: transparent; 
+    padding: 0;
+    border-radius: 0;
+    color: white; 
+}
+
+button {
+    background-color: #FFB82B; 
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Tw-Cen-MT', sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 20px;
+    width: 30%; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Sección de vista previa */
+.preview-section {
+    gap: 20px;
+    padding: 20px;
+    background-color:  #002B5B; 
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 40%;
+}
+
+.preview-section img {
+    max-width: 100%;
+}
+
+.preview-section ul {
+    list-style: none;
+    color: #ffffff;
+}
+
+.preview-section p {
+    color: #333;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form-section, .preview-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    label {
+        margin-bottom: 10px;
+        align-items: center; 
+    }
+
+    input[type="text"], input[type="number"], input[type="tel"], textarea {
+        margin-left: 0; 
+        width: 100%; 
+    }
+
+    .custom-file-upload {
+        width: 100%; 
+        text-align: center; 
+    }
+
+    button {
+        width: 100%; 
+    }
+}

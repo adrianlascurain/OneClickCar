@@ -439,6 +439,8 @@ let dataCars = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
   },
 ];
+//Array del registro de los clientes
+let vehiculos = obtenerVehiculos();
 // Array de objetos clients
 let dataClients = [
   {
@@ -494,6 +496,8 @@ let dataComments = [
     idSeller: 3,
   },
 ];
+
+
 
 // *************Métodos*************
 // Función para filtrar por tipo de carros

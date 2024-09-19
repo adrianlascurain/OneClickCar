@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     txtNombre.style.border = "";
     txtNumber.style.border = "";
     txtEmail.style.border = "";
+    txtMensaje.style.border="";
     alertValidaciones.style.display = "none";
     alertValidacionesTexto.innerHTML = "";
     isValid = true;
@@ -57,10 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
     } //if txtEmail
 
     //Validación caja de comentario
-    if (txtMensaje.value !=null){
+    if (txtMensaje.value.trim() === ""){
       txtMensaje.style.border = "solid red medium";
-      alertValidacionesTexto.innerHTML +=
-        "El <strong> COMENTARIO </strong> no puede estar vacío.";
+      alertValidacionesTexto.innerHTML += "El <strong> COMENTARIO </strong> no puede estar vacío.";
       alertValidaciones.style.display = "block";
       isValid = false;
     } //if txtMensaje

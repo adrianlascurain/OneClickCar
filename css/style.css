@@ -60,11 +60,12 @@ body{
     height: 100%;
 }
 
-#actions div{
+#actions .action-div{
     background-color: var(--bg-actions);
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 8px 12px black;
+    z-index: 2;
 }
 
 #actions button{
@@ -79,7 +80,49 @@ body{
     font-family: "Poppins", sans-serif;
     box-shadow: 0px 2px 5px black;
     margin-bottom: 25px;
-    margin-top: 0px;
+    margin-top: 0px;    
+}
+
+.action-btn-buy, .action-btn-sell{
+    position: relative;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.action-btn-buy:hover, .action-btn-sell:hover{
+    scale: 1.05;
+    transition: 0.5s;
+}
+
+.action-btn-buy:hover::after, .action-btn-sell:hover::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    background-image: conic-gradient(from var(--angle),transparent 10%  ,red,yellow);
+    border-radius: 20px;
+    animation: 1s spin linear infinite;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+#info{
+    column-gap: 10px;
 }
 
 #info #how-to-buy,#how-to-sell{
@@ -90,11 +133,64 @@ body{
     border-radius: 20px;
     box-shadow: 0px 8px 12px black;
     margin-bottom: 20px;
+    position: relative;
 }
 
-/* #how-to-buy figure{
-    
-} */
+#how-to-buy{
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+#how-to-sell{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#verify-car{
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+#how-to-sell h3, #how-to-buy h3{
+    color: var(--orange);
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Poppins';
+}
+
+#how-to-sell ol, #how-to-buy ol{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    margin-top: 20px;
+}
+
+.how-to-buy-text h3{
+    text-align: center;
+} 
+
+.card-img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+#how-to-buy figure{
+    width: 100%;
+    height: 100%;   
+}
+
+.client-frame img{
+    object-fit: contain;
+    height: 244px;
+}   
+
+.sell-frame img{
+    object-fit: contain;
+    height: 189px;
+}
 
 #info #verify-car{
     background-color: var(--bg-actions);
@@ -106,20 +202,177 @@ body{
     margin-bottom: 20px;
 }
 
-/* #how-to-buy figure{
-    height: 208px;
-    width: 244px;
-} */
+.verified h2{
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 0;
+    -webkit-text-stroke: 1px black;
+}
+
+.verified img{
+    height: 70px;
+}
+
+#verify-car .verified-auto{
+    width: 100%;
+    height: 141px;
+}
+
+.verified-auto img{
+    width: 95%;
+}
+
+#verify-car p{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 35px;
+}
 
 
-@media (max-width: 1000px){
+.vision-container, .mission-container{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 8px 12px black;
+    width: 640px;
+}
+
+
+.vision-container h2, .mission-container h2{
+    order: 1;
+    text-align: center;
+    width: 100%;
+    color: var(--orange);
+    font-size: 32px;
+    font-family: 'Poppins';
+    font-weight: 900;
+    margin-top: 25px;
+}
+
+.vision-container p, .mission-container p{
+    order: 2;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    flex:3;
+}
+
+.mission-frame{
+    flex:1;
+    order: 3;
+    height: 152px;
+    width: auto;
+    margin-left: 15px;
+}
+
+.mission-frame img{
+    object-fit: contain;
+    height: 100%;
+}
+
+.vision-frame{
+    flex: 1;
+    order: 3;
+    height: 184px;
+    width: auto;
+    margin-left: 10px;  
+}
+
+.vision-frame img{
+    object-fit: contain;
+    height: 100%;
+}
+
+@media (max-width: 1440px){
+
+    #info #how-to-buy,#how-to-sell{
+        min-width: 427px;
+        margin-bottom: 20px;
+    }
+
+    #how-to-buy{
+        margin-right: 5px;
+        margin-left: auto;
+    }
+    
+    #how-to-sell{
+        margin-left: 5px; 
+        margin-right: auto;
+    }
+
+    #verify-car{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+@media (max-width: 995px){
+    
     #actions #find-auto{
         margin-right: auto;
         margin-left: auto;
     }
 
     #actions #sell-auto{
+        margin-right: auto;
         margin-left: auto;
+    }
+
+    #how-to-buy{
+        margin-right: auto;
         margin-left: auto;
+    }
+    
+    #how-to-sell{
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    
+    #verify-car{
+        min-width: 427px;
+        max-width: 427px;
+    }
+
+    #verify-car p{
+        margin-top: 10px;
+    }
+}
+
+@media( max-width: 600px){
+
+    .vision-container, .mission-container{
+        width: 427px;
+    }
+    
+    .vision-container h2, .mission-container h2{
+        order: 2;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .vision-container p, .mission-container p{
+        order: 3;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .mission-frame{
+        margin-left: 0px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        order: 1;
+    }
+    
+    .vision-frame{
+        margin-left: 0px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        order: 1;
     }
 }

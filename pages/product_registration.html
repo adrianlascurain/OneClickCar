@@ -1,102 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro de Vehículo - OneClickCar</title>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="navigation.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="navigation.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/navigation.css">
-    <link rel="stylesheet" href="../css/registro.css">
-</head>
-<body>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/registro.css" />
+  </head>
+  <body>
     <header id="nav_bar"></header>
     <main>
-        <section class="form-section">
-            <form>
-                <div class="form-group">
-                    <label for="modelo">Modelo y año</label>
-                    <input type="text" id="modelo" name="modelo">
-                </div>
-        
-                <div class="form-group">
-                    <label for="transmision">Tipo de transmisión</label>
-                    <input type="text" id="transmision" name="transmision">
-                </div>
-        
-                <div class="form-group">
-                    <label for="propietario">Nombre del propietario</label>
-                    <input type="text" id="propietario" name="propietario">
-                </div>
-        
-                <div class="form-group">
-                    <label for="num_prop">Número total de propietarios</label>
-                    <input type="number" id="num_prop" name="num_prop">
-                </div>
-        
-                <div class="form-group">
-                    <label for="contacto">Número de contacto</label>
-                    <input type="tel" id="contacto" name="contacto">
-                </div>
-        
-                <div class="form-group">
-                    <label for="precio">Precio del vehículo</label>
-                    <input type="text" id="precio" name="precio">
-                </div>
-        
-                <div class="form-group">
-                    <label id="image" for="imagenes">Imágenes del vehículo</label>
-                    <input type="file" id="imagenes" name="imagenes" style="display:none;">
-                    <label for="imagenes" class="custom-file-upload">
-                        <img src="saveFile.PNG" alt="Icono de subida" class="upload-icon">
-                    </label>
-                </div>
-        
-                <div class="form-group">
-                    <label for="descripcion">Descripción del vehículo</label>
-                    <textarea id="descripcion" name="descripcion"></textarea>
-                </div>
-        
-                <div class="terms">
-                    <input type="checkbox" id="terms" name="terms">
-                    <label for="terms">Términos y condiciones</label>
-        
-                    <input type="checkbox" id="privacy" name="privacy">
-                    <label for="privacy">Política de privacidad</label>
-                </div>
-        
-                <button type="submit">Publicar</button>
-            </form>
-        </section>
-        
-        
+      <section class="form-section">
+                <form>
+        <div class="form-group">
+            <label for="tipo">Tipo</label>
+            <input type="text" id="tipo" name="tipo" />
+          </div>
+          
+        <form>
+        <div class="form-group">
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" name="marca" />
+          </div>
 
-        <section class="preview-section">
-            <img src="car_image.png" alt="Imagen representativa">
-            <h3>*Imagen representativa</h3>
-            <ul>
-                <li>DESCRIPCIÓN</li>
-                <li>AÑO</li>
-                <li>VENDEDOR</li>
-                <li>KILOMETRAJE</li>
-                <li>TRANSMISIÓN</li>
-                <li>DUEÑOS</li>
-                <li>PRECIO</li>
-            </ul>
-            <p>*Vista previa y estructura básica</p>
-        </section>
+        <form>
+          <div class="form-group">
+            <label for="modelo">Modelo</label>
+            <input type="text" id="modelo" name="modelo" />
+          </div>
+
+          <div class="form-group">
+            <label for="anio">Año</label>
+            <input type="text" id="anio" name="anio" />
+          </div>
+
+          <div class="form-group">
+            <label for="kilometraje">Kilometraje</label>
+            <input type="text" id="kilometraje" name="kilometraje" />
+          </div>
+          <div class="form-group">
+            <label for="transmision">Tipo de transmisión</label>
+            <input type="text" id="transmision" name="transmision" />
+          </div>
+
+          <div class="form-group">
+            <label for="propietario">Nombre del propietario</label>
+            <input type="text" id="propietario" name="propietario" />
+          </div>
+
+          <div class="form-group">
+            <label for="num_prop">Número total de propietarios</label>
+            <input type="number" id="num_prop" name="num_prop" />
+          </div>
+
+          <div class="form-group">
+            <label for="contacto">Número de contacto</label>
+            <input type="tel" id="contacto" name="contacto" />
+          </div>
+
+          <div class="form-group">
+            <label for="precio">Precio del vehículo</label>
+            <input type="text" id="precio" name="precio" />
+          </div>
+
+          <div class="form-group">
+            <label id="image" for="imagenes">Imágenes del vehículo</label>
+            <!-- <input
+              type="file"
+              id="imagenes"
+              name="imagenes"
+              style="display: none"
+            /> -->
+            <label for="imagenes" class="custom-file-upload">
+              <img
+                id="upload_widget"
+                src="saveFile.PNG"
+                alt="Icono de subida"
+                class="upload-icon"
+              />
+            </label>
+                <!-- placeholder for uploaded image -->
+    <!-- <img  
+      id="uploadedimage" 
+      src="">
+    </img>  -->
+          </div>
+
+          <div class="form-group">
+            <label for="descripcion">Descripción del vehículo</label>
+            <textarea id="descripcion" name="descripcion"></textarea>
+          </div>
+
+          <div class="terms">
+            <input type="checkbox" id="terms" name="terms" />
+            <label for="terms">Términos y condiciones</label>
+
+            <input type="checkbox" id="privacy" name="privacy" />
+            <label for="privacy">Política de privacidad</label>
+          </div>
+
+          <button type="submit">Publicar</button>
+        </form>
+      </section>
+
+      <section class="preview-section">
+        <img src="car_image.png" alt="Imagen representativa" />
+        <h3>*Imagen representativa</h3>
+        <ul>
+          <li>DESCRIPCIÓN</li>
+          <li>AÑO</li>
+          <li>VENDEDOR</li>
+          <li>KILOMETRAJE</li>
+          <li>TRANSMISIÓN</li>
+          <li>DUEÑOS</li>
+          <li>PRECIO</li>
+        </ul>
+        <p>*Vista previa y estructura básica</p>
+      </section>
     </main>
     <footer id="footer_back"></footer>
     <script src="../js/navigation.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script src="../js/registro.js"></script>
-</body>
+        <!-- cloudinary upload widget -->
+    <script 
+     src="https://widget.cloudinary.com/v2.0/global/all.js" 
+     type="text/javascript">
+    </script>
+
+    <!-- local upload instantiation -->
+    <script 
+     src="../js/upload_widget.js" 
+     type="text/javascript">
+    </script>
+  </body>
 </html>

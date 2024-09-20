@@ -1,70 +1,90 @@
-document.addEventListener("DOMContentLoaded", function() {
-    
-    let formRegistro = document.querySelector("form");
+let contadorId = 0;
 
-    if (formRegistro) {
-        formRegistro.addEventListener("submit", function(event) {
-            event.preventDefault();  
-            
-            // Datos del formulario
-            let name = document.getElementById("modelo").value;
-            let transmission = document.getElementById("transmision").value;
-            let seller = document.getElementById("propietario").value;
-            let owners = document.getElementById("num_prop").value;
-            let contact = document.getElementById("contacto").value;
-            let price = document.getElementById("precio").value;
-            let description = document.getElementById("descripcion").value;
-            let img = document.getElementById("imagenes");
-            
-            if (img.files.length > 0) {
-                let reader = new FileReader();
+document.addEventListener("DOMContentLoaded", function () {
+  let formRegistro = document.querySelector("form");
 
-                reader.onload = function(event) {
-                    // Convertir la imagen a base64
-                    let imgBase64 = event.target.result;
+  if (formRegistro) {
+    formRegistro.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-                    // Objeto con los datos del vehículo
-                    let vehiculo = {
-                        name: name,
-                        transmission: transmission,
-                        seller: seller,
-                        owners: owners,
-                        contact: contact,
-                        price: price,
-                        description: description,
-                        img: imgBase64 // Guardar la imagen en base64
-                    };
+      // Datos del formulario
+      let type = document.getElementById("tipo").value;
+      let brand = document.getElementById("marca").value;
+      let name = document.getElementById("modelo").value;
+      let year = document.getElementById("anio").value;
+      let kilometer = document.getElementById("kilometraje").value;
+      let transmission = document.getElementById("transmision").value;
+      let seller = document.getElementById("propietario").value;
+      let owners = document.getElementById("num_prop").value;
+      let contact = document.getElementById("contacto").value;
+      let price = document.getElementById("precio").value;
+      let description = document.getElementById("descripcion").value;
+      let img = document.getElementById("imagenes");
 
-                    // Obtención de los datos en el localStorage
-                    let dataCars = obtenerVehiculos();
+      // if (img.files.length > 0) {
+      // let reader = new FileReader();
 
-                    // Se agrega el nuevo vehículo al arreglo
-                    dataCars.push(vehiculo);
+      // reader.onload = function(event) {
+      // Convertir la imagen a base64
+      // let imgBase64 = event.target.result;
+      contadorId++;
+      console.log(contadorId);
+      localStorage.setItem("contadorId", JSON.stringify(contadorId));
+      // Objeto con los datos del vehículo
+      let vehiculo = {
+        id: contadorId,
+        type: type,
+        brand: brand,
+        name: name,
+        year: parseInt(year),
+        seller: seller,
+        kilometer: parseInt(kilometer),
+        transmission: transmission,
+        price: parseInt(price),
+        owners: parseInt(owners),
+        // contact: contact,
+        img: localStorage.getItem("image_url"), // Guardar la imagen en base64
+        description: description,
+      };
 
-                    // Almacenar en localStorage
-                    localStorage.setItem("dataCars", JSON.stringify(dataCars));
+      // Obtención de los datos en el localStorage
+      let dataCars = obtenerVehiculos();
 
-                    // Mensaje de éxito
-                    alert("El vehículo se ha registrado con éxito");
+      // Se agrega el nuevo vehículo al arreglo
+      dataCars.push(vehiculo);
 
-                    // Limpiar los campos del formulario
-                    formRegistro.reset();
-                };
+      // Almacenar en localStorage
+      localStorage.setItem("dataCars", JSON.stringify(dataCars));
 
-                // Leer la imagen como DataURL (base64)
-                reader.readAsDataURL(img.files[0]);
+      // Mensaje de éxito
+      alert("El vehículo se ha registrado con éxito");
 
-            } else {
-                alert("Por favor, selecciona una imagen.");
-            }
-        });
-    } else {
-        console.error("No se encontró el formulario en el DOM.");
-    }
+      // Limpiar los campos del formulario
+      formRegistro.reset();
+      // };
+
+      // Leer la imagen como DataURL (base64)
+      // reader.readAsDataURL(img.files[0]);
+      // } else {
+      //   alert("Por favor, selecciona una imagen.");
+      // }
+    });
+  } else {
+    console.error("No se encontró el formulario en el DOM.");
+  }
 });
 
-// Función para obtener los vehículos almacenados 
+// Función para obtener los vehículos almacenados
 function obtenerVehiculos() {
+  if (localStorage.getItem("dataCars") != null) {
     let dataCars = localStorage.getItem("dataCars");
     return dataCars ? JSON.parse(dataCars) : [];
+  }
+}
+
+if (localStorage.getItem("contadorId") == null) {
+  localStorage.setItem("contadorId", "30");
+}
+if (localStorage.getItem("contadorId") != null) {
+  contadorId = JSON.parse(localStorage.getItem("contadorId"));
 }

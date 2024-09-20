@@ -191,14 +191,16 @@ hr {
   #carouselCoupeDesktop,
   #carouselSuvDesktop,
   #carouselHatchBackDesktop,
-  #carouselPickUpDesktop {
+  #carouselPickUpDesktop,
+  #carouselVanDesktop {
     display: none !important;
   }
   #carouselSedanMobile,
   #carouselCoupeMobile,
   #carouselSuvMobile,
   #carouselHatchBackMobile,
-  #carouselPickUpMobile {
+  #carouselPickUpMobile,
+  #carouselVanMobile {
     display: block !important;
   }
   .card {
@@ -238,14 +240,16 @@ hr {
   #carouselCoupeMobile,
   #carouselSuvMobile,
   #carouselHatchBackMobile,
-  #carouselPickUpMobile {
+  #carouselPickUpMobile,
+  #carouselVanMobile {
     display: none !important;
   }
   #carouselSedanDesktop,
   #carouselCoupeDesktop,
   #carouselSuvDesktop,
   #carouselHatchBackDesktop,
-  #carouselPickUpDesktop {
+  #carouselPickUpDesktop,
+  #carouselVanDesktop {
     display: block !important;
   }
 }

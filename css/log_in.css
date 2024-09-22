@@ -66,7 +66,7 @@ main {
     margin-top: 40px;
 }
 
-input {
+.cajaLogIn input {
     flex-grow: 1;
     border-radius: 5px;
     background: rgb(0, 32, 68);
@@ -86,9 +86,12 @@ input {
     margin-right: 10px;
 }
 
-input,
+.cajaLogIn input,
 textarea {
     color: white;
+}
+.cajaLogIn input, placeholder{
+    font-size: 15px;
 }
 
 .itemForm {

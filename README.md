@@ -1,14 +1,15 @@
 
-<img align="right" width="150" height="150" src="https://res.cloudinary.com/duxbrimwv/image/upload/v1725420086/Logox_uoxcvr.png">
+<img align="right" width="150" src="https://res.cloudinary.com/duxbrimwv/image/upload/v1725420086/Logox_uoxcvr.png">
 
 
 <img align="right" width="150" height="150" src="https://media-exp1.licdn.com/dms/image/C4E0BAQF7BYCCZt5epw/company-logo_200_200/0?e=2159024400&v=beta&t=qUAFP9bUgBEEXGVQYpUXW1J_OiP8e0r4rFBpqp8OrxA">
 
 # OneClickCar
+<br><br><br><br>
 
 ## Descripción del Proyecto
 
-OneClickCar es una plataforma de E-commerce diseñada para facilitar la compra y venta de automóviles. Este proyecto fue desarrollado de forma colaborativa por un equipo de estudiantes del BootCamp Generation, siguiendo la metodología SCRUM para una gestión eficiente y continua de funcionalidades.
+**OneClickCar** es una plataforma de E-commerce diseñada para facilitar la compra y venta de automóviles. Este proyecto fue desarrollado de forma colaborativa por un equipo de estudiantes del BootCamp Generation, siguiendo la metodología SCRUM para una gestión eficiente y continua de funcionalidades.
 
 ## Control de Versiones
 
@@ -37,7 +38,7 @@ El proyecto incluye las siguientes páginas:
 Cada miembro del equipo desempeñó un papel crucial en el desarrollo del proyecto:
 
 ### Adrián Hernández
-- **Rol:** Creación de la página "Sobre nosotros" y implementación de la estructura básica para el proyecto Spring Boot API.
+- **Rol:** Creación de la página "Sobre nosotros" e implementación de la estructura básica para el proyecto Spring Boot API.
 - **GitHub:** [![GitHub](https://img.shields.io/badge/GitHub-adrianlascurain-black?style=flat&logo=github)](https://github.com/adrianlascurain)
 - **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/LinkedIn-Adri%C3%A1n%20Hern%C3%A1ndez-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/adri%C3%A1n-hern%C3%A1ndez-lascurain-3b9843309/)
 
@@ -51,17 +52,17 @@ Cada miembro del equipo desempeñó un papel crucial en el desarrollo del proyec
 - **GitHub:** [![GitHub](https://img.shields.io/badge/GitHub-sergio--rolon-black?style=flat&logo=github)](https://github.com/sergio-rolon)
 - **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/LinkedIn-Sergio%20Rolón-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/sergiorolon/)
 
-### Juan Antonio Santos
+### Juan Santos
 - **Rol:** Creación de un formulario de creación de producto y estructura de base de datos en MySQL.
 - **GitHub:** [![GitHub](https://img.shields.io/badge/GitHub-juansp12-black?style=flat&logo=github)](https://github.com/juansp12)
 - **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/LinkedIn-Juan%20Santos-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/juan-santos-99252722b)
 
 ### Luis José Melendez
-- **Rol:** Implementación de una estructura de navegación con una navbar.
+- **Rol:** Implementación de una estructura de navegación con una navbar en JavaScript.
 - **GitHub:** [![GitHub](https://img.shields.io/badge/GitHub-ljma12-black?style=flat&logo=github)](https://github.com/ljma12)
 - **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/LinkedIn-Luis%20José%20Melendez-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/luisjosemelendezarvizu)
 
-### Antonio Rosas
+### Luis Antonio Rosas
 - **Rol:** Creación de la página de registro de usuarios y conexión de base de datos MySQL con el proyecto Spring Boot.
 - **GitHub:** [![GitHub](https://img.shields.io/badge/GitHub-Arencito-black?style=flat&logo=github)](https://github.com/Arencito)
 - **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/LinkedIn-Luis%20Antonio%20Rosas-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/luis-antonio-rosas-sol%C3%ADs-407a37279/)

@@ -49,12 +49,15 @@ btnLogin.addEventListener("click", function (event) {
 
             //verificar contraseña
             if (usuarioObj.password === password) {
-                alert("Inicio de sesión exitoso"); ///////bootstrap
                 txtEmail.value = "";
                 txtPassword.value = "";
-                ////Redirección a perfil ? 
-
+                window.location.href = "https://adrianlascurain.github.io/OneClickCar/index.html";
             } else {
+                Swal.fire({
+                    title: "Contraseña incorrecta",
+                    text: "Por favor, ingrese una contraseña válida",
+                    icon: "error",
+                }); //cierre msj error
                 txtPassword.style.border = "solid red medium";
                 alertValidacionesTexto.innerHTML += "La <strong>CONTRASEÑA</strong> es incorrecta";
                 alertValidaciones.style.display = "block";
@@ -62,6 +65,11 @@ btnLogin.addEventListener("click", function (event) {
 
 
         } else {
+            Swal.fire({
+                title: "Correo no registrado",
+                text: "Por favor, ingrese un correo válido",
+                icon: "error",
+            }); //cierre msj error
             txtEmail.style.border = "solid red medium";
             alertValidacionesTexto.innerHTML += "<strong>CORREO</strong> no encontrado";
             alertValidaciones.style.display = "block";

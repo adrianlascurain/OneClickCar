@@ -1,0 +1,141 @@
+body{
+    background-color: whitesmoke !important;
+}
+
+.banner{
+    
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap:  100px;
+    
+    
+}
+
+.container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display:flex ;
+    justify-content: center;
+    height: auto;
+    width: 80%;
+    column-gap:  10px
+    
+}
+
+.formulary{
+    background-color:#08315F;
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    display: grid;
+    height: 700px !important;
+    width: 800px !important;
+    
+
+    
+}
+
+#name{
+    background-color:#042141;
+    color: white;
+    border-color: solid #8A8B7B;
+    margin-left:60px;
+    width: 500px;
+}
+
+#email{
+    background-color:#042141;
+    color: white;
+    border-color: solid #8A8B7B;
+    margin: 10px;
+    width: 500px;
+    margin-left:60px;
+}
+
+#phone{
+    background-color:#042141;
+    color: white;
+    border-color: solid #8A8B7B;
+    margin: 10px;
+    width: 500px;
+    margin-left:60px;
+}
+
+#exampleFormControlInput1{
+    background-color:#042141;
+    color: white;
+    border-color: solid #8A8B7B;
+    margin: 10px;
+    width: 500px;
+    margin-left:60px;
+}
+
+.form-label{
+    color: white;
+    font-size: medium;
+    justify-content: center;
+    width:auto;
+    gap: 10px;
+    margin-left:60px;
+}
+
+
+
+.title{
+    color: #FFCC00;
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    margin:10px;
+    width: 600px;
+}
+
+
+
+#inputPassword6{
+    background-color:#042141;
+    color: white;
+    border-color: solid #8A8B7B;
+    width: 500px;
+    margin-left:60px;
+}
+
+#inputPassword2{
+    background-color:#042141;
+    color: white;
+    border-color: solid #8A8B7B;
+    width: 500px;
+    margin-left:60px;
+    
+    
+}
+
+#submit{
+    color:white;
+    font-size: large;
+    font-style: italic;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+
+.button{
+    display: block;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+/* Media Queries para hacer el diseño responsivo */
+@media (max-width: 768px) {
+    /* Ocultar el banner en pantallas pequeñas */
+    .banner {
+        display: none;
+    }
+}
+
+

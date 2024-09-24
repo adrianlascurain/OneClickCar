@@ -35,7 +35,7 @@ body{
 
 #actions #sell-auto{
     height: 442px;
-    width: 427px;
+    width: 440px;
     margin-left: 10px; 
     margin-right: auto;
 }
@@ -125,11 +125,11 @@ body{
     column-gap: 10px;
 }
 
-#info #how-to-buy,#how-to-sell{
+#info #how-to-buy,#info #how-to-sell{
     background-color: var(--bg-actions);
     color: white;
     height: 465px;
-    width: 388px;
+    width: 400px;
     border-radius: 20px;
     box-shadow: 0px 8px 12px black;
     margin-bottom: 20px;

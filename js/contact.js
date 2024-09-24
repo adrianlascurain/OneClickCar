@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "alertValidacionesTexto"
   );
   // funciones RegExp
-  const telefonoRegex = /^\d{10}$/;
+  const telefonoRegex = /^(?!([0-9])\1{9})\d{10}$/;
   const emailRegex = /^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$/;
   // bandera
   let isValid = true;

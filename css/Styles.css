@@ -1,139 +1,89 @@
-body{
-    background-color: whitesmoke !important;
+/* PARTE IZQUIERDA */
+.columPic {
+    background-image: url("./carros 1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120vh;
 }
 
-.banner{
-    
-    border-radius: 10px;
+/* DERECHA */
+.columForm{
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap:  100px;
-    
-    
+    background-color: #D0CECE;
 }
 
-.container{
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    display:flex ;
-    justify-content: center;
-    height: auto;
-    width: 80%;
-    column-gap:  10px
-    
+.cajaForm {
+    background-color: #002B5B;
+    border-radius: 20px;       
+    color: #ffffff;            
+    font-family: 'Montserrat'; 
+    font-size: 20px;           
+    font-weight: 600;          
+    padding: 70px 30px 10px 30;
+    width: 90%;   
+    text-align: center; 
+    margin: 30px auto;            
 }
 
-.formulary{
-    background-color:#08315F;
-    color: white;
-    border-radius: 10px;
-    margin: 20px;
-    display: grid;
-    height: 700px !important;
-    width: 800px !important;
-    
-
-    
-}
-
-#name{
-    background-color:#042141;
-    color: white;
-    border-color: solid #8A8B7B;
-    margin-left:60px;
-    width: 500px;
-}
-
-#email{
-    background-color:#042141;
-    color: white;
-    border-color: solid #8A8B7B;
-    margin: 10px;
-    width: 500px;
-    margin-left:60px;
-}
-
-#phone{
-    background-color:#042141;
-    color: white;
-    border-color: solid #8A8B7B;
-    margin: 10px;
-    width: 500px;
-    margin-left:60px;
-}
-
-#exampleFormControlInput1{
-    background-color:#042141;
-    color: white;
-    border-color: solid #8A8B7B;
-    margin: 10px;
-    width: 500px;
-    margin-left:60px;
-}
-
-.form-label{
-    color: white;
-    font-size: medium;
-    justify-content: center;
-    width:auto;
-    gap: 10px;
-    margin-left:60px;
-}
-
-
-
-.title{
+.cajaForm h1{
     color: #FFCC00;
     text-align: center;
     font-weight: bolder;
     font-size: xx-large;
-    margin:10px;
-    width: 600px;
+    font-family: 'Poppins';
+    font-weight: bold !important; /**añadir font**/
+    margin-top:70px;
+    margin-bottom: 20px;
 }
 
 
-
-#inputPassword6{
-    background-color:#042141;
-    color: white;
-    border-color: solid #8A8B7B;
-    width: 500px;
-    margin-left:60px;
+.cajaForm input {
+    flex-grow: 1;
+    border-radius: 8px;
+    background: rgb(0, 32, 68);
+    border-style: solid;
+    border-width: 3px;
+    height: 50px;
+    width: 80%;
 }
 
-#inputPassword2{
-    background-color:#042141;
-    color: white;
-    border-color: solid #8A8B7B;
-    width: 500px;
-    margin-left:60px;
-    
-    
+.itemForm{
+    margin: 25px auto;
 }
+
+.itemForm label{
+    margin-left: 95px;
+}
+
 
 #submit{
-    color:white;
-    font-size: large;
+    justify-content: center;
+    color: #ffffff;
+    background-color: #E08F0C;
+    border-radius: 25px;
+    padding: 7px;
+    font-weight: bold;
+    padding: 10px 6px;
+    font-size: 25px;
     font-style: italic;
-    font-weight: bolder;
-    border-radius: 15px;
+    margin: 40px auto;
+}/* cambió del color del botón */
+
+
+.cajaForm input,textarea {
+    color: white;
+}
+.cajaForm input, placeholder{
+    font-size: 15px;
 }
 
-.button{
-    display: block;
-    justify-content: center;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    border-radius: 15px;
-}
 /* Media Queries para hacer el diseño responsivo */
 @media (max-width: 768px) {
     /* Ocultar el banner en pantallas pequeñas */
-    .banner {
+    .columPic {
         display: none;
     }
 }

@@ -1,3 +1,7 @@
+// nav bar active
+let navSignIn = document
+.getElementById("navSignIn")
+.classList.add("active");
 
 // Expresión regular para validar la contraseña
 const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;  // Al menos 8 caracteres, una letra y un número.

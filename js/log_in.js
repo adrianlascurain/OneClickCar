@@ -1,3 +1,8 @@
+// navbar active
+let navLogIn = document
+.getElementById("navLogIn")
+.classList.add("active");
+
 // elementos DOM
 const btnLogin = document.getElementById("btnLogIn");
 

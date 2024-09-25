@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/navigation.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OneClickCar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navigation.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
   </head>
   <body>
     <!-- Navbar and footer will be generated using JavaScript -->
@@ -33,101 +22,101 @@
 
     <header>
       <div class="container-fluid-sm text-center p-2 mb-4 mx-5">
-        <h1 class="pb-3 pt-4">
-          Encuentra el auto de tus sueños o vende el tuyo, rápido y seguro
-        </h1>
-        <p class="">
-          En OneClickCar compra y vende automóviles de manera segura y
-          transparente. Conecta con compradores y vendedores de confianza, y
-          accede a vehículos con o sin verificación a precios increíbles.
-        </p>
+        <h1 class="pb-3 pt-4">Encuentra el auto de tus sueños o vende el tuyo, rápido y seguro</h1>
+        <p>En OneClickCar compra y vende automóviles de manera segura y transparente. Conecta con compradores y vendedores de confianza, y accede a vehículos con o sin verificación a precios increíbles.</p>
       </div>
     </header>
 
     <main>
-      <div
-        class="container-sm d-flex flex-wrap justify-content-center text-center"
-        id="actions"
-      >
-        <div
-          class="container-sm d-flex flex-wrap align-items-center justify-content-center"
-          id="find-auto"
-        >
-          <figure>
-            <img
-              class="img-fluid object-fit-contain align-items-center auto"
-              src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725920673/oneClickCar-Auto_jedd92.png"
-              alt="Auto"
-            />
-          </figure>
-          <button>Encuentra tu auto ideal</button>
+        <div class="container-sm d-flex flex-wrap justify-content-center text-center p-0" id="actions">
+            <div class="container-sm d-flex flex-wrap align-items-center justify-content-center action-div" id="find-auto">
+                <figure>
+                    <img class="img-fluid object-fit-contain align-items-center auto" src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725920673/oneClickCar-Auto_jedd92.png" alt="Auto">
+                </figure>
+                <div class="action-btn-buy mb-4" id="buy-btn">
+                    <button class="action-btn m-1 p-0">Encuentra tu auto ideal</button>
+                </div>
+            </div>
+
+            <div class="container-sm d-flex flex-wrap align-items-center justify-content-center action-div" id="sell-auto">
+                <figure>
+                    <img class="img-fluid object-fit-contain auto-key" src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725920674/vende_tu_auto_yltaqs.png" alt="llave y contrato de venta">
+                </figure>
+                <div class="action-btn-sell mb-4" id="sell-btn">
+                    <button class="action-btn m-1 p-0">Vende tu auto ahora</button>
+                </div>
+            </div>
+            
         </div>
 
-        <div
-          class="container-sm d-flex flex-wrap align-items-center justify-content-center"
-          id="sell-auto"
-        >
-          <figure>
-            <img
-              class="img-fluid object-fit-contain auto-key"
-              src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725920674/vende_tu_auto_yltaqs.png"
-              alt="llave y contrato de venta"
-            />
-          </figure>
-          <a href="pages/product_registration.html" class="btn btn-primary">
-            <button type="button">Vende tu auto ahora</button>
-        </a>
-        </div>
-      </div>
+        <div class="contianer-sm d-flex flex-wrap justify-content-center p-0" id="info">
+            <div class="container-sm" id="how-to-buy">
+                    <h3 class="text-center mt-3">¿Cómo adquiero un auto?</h3>
+                    <ol>
+                        <li>Revisa nuestro catálogo.</li>
+                        <li>Seleccionar el auto que más te gustó.</li>
+                        <li>Consulta la información.</li>
+                        <li>Contacta al vendedor.</li>
+                        <li>¡Adquiere tu auto de forma segura!</li>
+                    </ol>
+                <div class="container-fluid p-0 align-items-end mx-auto card-img">
+                    <figure class="client-frame m-0">
+                        <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726093355/un_cliente_satisfecho_que_acaba_de_comprar_un_coche_en_una_foto_realista_de_los_coches_actuales_uoy3tc.png" alt="Cliente feliz">
+                    </figure>
+                </div>
 
-      <div
-        class="contianer-sm d-flex flex-wrap mx-5 justify-content-center"
-        id="info"
-      >
-        <div class="container-sm ms-0 me-2" id="how-to-buy">
-          <h3 class="text-center">¿Cómo adquiero un auto?</h3>
-          <ol>
-            <li>Revisa nuestro catálogo</li>
-            <li>Seleccionar el auto que más te gusto</li>
-            <li>Consulta la información</li>
-            <li>Contacta al vendedor</li>
-            <li>!Adquiere tu auto de forma segura¡</li>
-          </ol>
-          <figure class="mw-100 d-flex align-self-end mb-0">
-            <!-- <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726093355/un_cliente_satisfecho_que_acaba_de_comprar_un_coche_en_una_foto_realista_de_los_coches_actuales_uoy3tc.png" alt="Cliente" class="h-25 client"> -->
-          </figure>
-        </div>
+            </div>
 
-        <div class="container-sm mx-2" id="how-to-sell">
-          <h3 class="text-center">¿Cómo vendo mi auto?</h3>
-          <ol>
-            <li>Crea una cuenta</li>
-            <li>Llena el formulario de venta</li>
-            <li>Publica tu oferta</li>
-            <li>Comunícate con tus compradores</li>
-            <li>!Vende tu auto de forma segura¡</li>
-          </ol>
-          <figure class="mw-100 mh-auto d-flex align-self-end">
-            <!-- <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726093355/un_cliente_satisfecho_que_acaba_de_comprar_un_coche_en_una_foto_realista_de_los_coches_actuales_uoy3tc.png" alt="Cliente" class="object-fit-contain client"> -->
-          </figure>
-        </div>
+            <div class="container-sm" id="how-to-sell">
+                <h3 class="text-center mt-3">¿Cómo vendo mi auto?</h3>
+                <ol>
+                    <li>Crea una cuenta.</li>
+                    <li>Llena el formulario de venta.</li>
+                    <li>Publica tu oferta.</li>
+                    <li>Comunícate con tus compradores.</li>
+                    <li>¡Vende tu auto de forma segura!</li>
+                </ol>
+                <div class="container-fluid p-0 align-items-end mx-auto card-img">
+                    <figure class="sell-frame mb-4">
+                        <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725920673/oneClickCar_sell_v8nkm5.png" alt="Cliente" class="object-fit-contain client">
+                    </figure>
+                </div>
+            </div>
 
-        <div class="container-sm ms-2 me-0" id="verify-car">
-          <div class="verified">
-            <h2>Verificado</h2>
-          </div>
+            <div class="container-sm" id="verify-car">
+                <div class="container-sm d-flex align-items-center justify-content-center mt-3 verified ">
+                    <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726544648/store-verified-shopping-svgrepo-com_ngtiqu.svg" alt="Verificado">
+                    <h2>Verificado</h2>
+                </div>
 
-          <figure>
-            <!-- <img src="" alt=""> -->
-          </figure>
-          <p class="text-center">
-            Cada vehículo con la etiqueta 'Verificado' ha pasado por una
-            exhaustiva inspección realizada por un equipo de expertos,
-            garantizando que cumpla con los más altos estándares de calidad y
-            seguridad para tu tranquilidad.
-          </p>
+                <figure class="verified-auto mt-4 mx-2 mb-0">
+                    <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725920673/coche_verificado_vnrirw.png" alt="auto verificado">
+                </figure>
+                <p class="text-center">Cada vehículo con la etiqueta 'Verificado' ha pasado por una exhaustiva inspección realizada por un equipo de expertos, garantizando que cumpla con los más altos estándares de calidad y seguridad para tu tranquilidad.</p>
+            </div>
         </div>
-      </div>
+        <div class="container-sm d-flex justify-content-center p-0 d-flex flex-wrap" id="about-enterprise">
+            <div class="container-sm px-0 gap-4 d-flex flex-wrap mb-4 mission-vision">
+                <div class="container-sm mission-container">
+                    <div class="container-sm mission-description-container d-flex flex-wrap align-items-start">
+                        <h2>Misión</h2>
+                        <p>Conectar a personas interesadas en comprar y vender autos usados de manera segura y transparente, garantizando la satisfacción de ambas partes a través de un proceso confiable y eficiente.</p>
+                        <figure class="mission-frame">
+                            <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726544650/target-svgrepo-com_zhaqwv.svg" alt="Diana objetivo">
+                        </figure>
+                    </div>
+                </div>
+                <div class="container-sm vision-container">
+                    <div class="container-sm vision-description-container d-flex flex-wrap align-items-start">
+                        <h2 class="text-center">Visión</h2>
+                        <p>Ser el aliado de confianza número uno de nuestros clientes en la compra o venta de su auto, ofreciendo una amplia variedad de vehículos y servicios complementarios que se adapten a sus necesidades y presupuesto.</p>
+                        <figure class="vision-frame">
+                            <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726544649/paper-plane-svgrepo-com_3_g2wfiq.svg" alt="Avión de papel">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer id="footer_back"></footer>

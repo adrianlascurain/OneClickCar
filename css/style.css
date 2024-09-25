@@ -1,3 +1,4 @@
+/* Defining colors for index */
 :root{
     --bg-color: #D0CECE;
     --bg-actions: #002B5B; 
@@ -35,7 +36,7 @@ body{
 
 #actions #sell-auto{
     height: 442px;
-    width: 427px;
+    width: 440px;
     margin-left: 10px; 
     margin-right: auto;
 }
@@ -125,11 +126,11 @@ body{
     column-gap: 10px;
 }
 
-#info #how-to-buy,#how-to-sell{
+#info #how-to-buy,#info #how-to-sell{
     background-color: var(--bg-actions);
     color: white;
     height: 465px;
-    width: 388px;
+    width: 400px;
     border-radius: 20px;
     box-shadow: 0px 8px 12px black;
     margin-bottom: 20px;
@@ -287,8 +288,8 @@ body{
 
 @media (max-width: 1440px){
 
-    #info #how-to-buy,#how-to-sell{
-        min-width: 427px;
+    #info #how-to-buy, #info #how-to-sell{
+        width: 427px;
         margin-bottom: 20px;
     }
 
@@ -305,7 +306,7 @@ body{
     #verify-car{
         margin-left: auto;
         margin-right: auto;
-    }
+    } 
     
 }
 
@@ -333,7 +334,6 @@ body{
     
     #verify-car{
         min-width: 427px;
-        max-width: 427px;
     }
 
     #verify-car p{
@@ -341,10 +341,27 @@ body{
     }
 }
 
-@media( max-width: 600px){
+@media( max-width: 580px){
+
+    #actions #find-auto, #actions #sell-auto{
+        width: 85vw;
+        min-width: 370px;
+    }
+
+    #info #how-to-sell, #info #how-to-buy, #info #verify-car{
+        width: 85vw;
+        min-width: 370px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #verify-car p{
+        margin-top: 0px;
+    }
 
     .vision-container, .mission-container{
-        width: 427px;
+        width: 85vw;
+        min-width: 370px;
     }
     
     .vision-container h2, .mission-container h2{

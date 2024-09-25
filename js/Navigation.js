@@ -50,7 +50,7 @@ function createNavFoot() {
             </div>
             <div class="company-info mx-3">
                 <h3>Contáctanos</h3>
-                <p><img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725421052/OneClickCar/rnnaimpxwzllqjhs97zj.png" alt="ubicacion"><b>Dirección:</b> Manzanas 56, Tlacoquemecatl del Valle, Benito Juárez, 03100, Ciudad de México.</p>
+                <p><img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725421052/OneClickCar/rnnaimpxwzllqjhs97zj.png" alt="ubicacion"><b>Dirección:</b> Av. de los Insurgentes Sur s/n, Benito Juárez, CDMX</p>
             
                 <p> <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725421052/OneClickCar/x658h5jy83qf2bb1as8y.png" alt=""><b>Teléfono:</b> +52 555 555 55 55</p>
             

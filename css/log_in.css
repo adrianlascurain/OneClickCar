@@ -51,9 +51,11 @@ main {
 .cajaLogIn h1 {
     color: #FFCC00;
     text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    margin:10px;
     font-family: 'Poppins';
-    font-weight: bold !important;
-    font-size: 28px;
+    font-weight: bold !important; 
 }
 
 #btnLogIn {

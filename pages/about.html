@@ -16,13 +16,16 @@
 
 </head>
 <body>
-    <header id="nav_bar"></header>
+    <nav id="nav_bar"></nav>
     <main>
         <div class="container-sm bg-transparent pe-0 about">
         <div class="row">
                 <div class="col-md-5 who-we-are">
-                    <h2 class="text-center">¿Quienes somos?</h2>
+                    <h2 class="text-center">¿Quiénes somos?</h2>
                     <p>Trabajamos por tu seguridad. Somos una empresa creada con la finalidad de que tus transacciones sean 100% seguras para la adquisición o venta de un vehículo, por eso te contactamos con personas confiables.</p>
+                    <figure class="Carl-figure mx-auto mt-5">
+                        <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1727334525/Carl_dm7t2j.png" alt="">
+                    </figure>
                 </div>
                 <div class="col-md-7 car-image">
                     <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725398221/OneClickCar/awfkg1qg0bafpd5jrsts.jpg" alt="personas intercambiando llave de un auto" class="img-fluid">
@@ -97,11 +100,12 @@
                     <div class="col-lg-4">
                         <div class="card text-center bg-transparent border-0">
                             <figure class = "m-auto photo">
-                                <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725423454/OneClickCar/xc5gzawwj6xqasmj8x78.png" class="card-img-top rounded-circle" alt="Luis Antonio Rosas Solis">
+                                <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1727334818/Antonio_Rosas_xda3gn.png" class="card-img-top rounded-circle" alt="Luis Antonio Rosas Solis">
                             </figure>
                             <div class="card-body">
                               <h5 class="card-title">Luis Antonio Rosas Solis</h5>
-                              <p class="card-text"> Hola, soy Luis Antonio Rosas Solis, de la Ciudad de México. Mi pasión por el software comenzó al descubrir la versatilidad de los lenguajes de programación y la capacidad de crear lo que imaginara. Me dedico al desarrollo de software, donde he jugado un papel crucial en varios proyectos importantes. Disfruto colaborar con otros, compartir mi experiencia y buscar soluciones innovadoras. Mi enfoque siempre está en ofrecer calidad y eficiencia. Estoy entusiasmado por seguir explorando nuevas tecnologías y enfrentando nuevos desafíos en el mundo del software.</p>
+                              <p class="card-text"> Soy desarrollador Java Full Stack de la Ciudad de México. Me encanta crear soluciones innovadoras y colaborar en proyectos clave. En este proyecto, desarrollé la página de sign-in y los services & rest controllers. Siempre estoy buscando nuevas tecnologías y desafíos que me permitan seguir aprendiendo y mejorando.
+                            </p>
                             </div>
                             <div class="container social-media-team d-inline-flex justify-content-center">
                                 <figure class="contact-icons">
@@ -159,7 +163,12 @@
 
     <footer id="footer_back"></footer>
 
-    <script src="../js/navigation.js" defer></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../js/navigation.js"></script>
+    <script defer>
+      let navIndex = document
+        .getElementById("navAbout")
+        .classList.add("active");
+    </script>
 </body>
 </html>

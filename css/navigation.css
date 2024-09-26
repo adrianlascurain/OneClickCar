@@ -94,10 +94,12 @@ footer h2 {
   color: white;
   text-decoration: none;
   align-items: flex-start;
+  text-align: center;
 }
 .subscribe-section form {
   display: ruby;
   align-items: flex-start;
+  text-align: center;
   justify-content: end;
 }
 

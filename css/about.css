@@ -25,13 +25,22 @@
     margin-bottom: 40px;
 }
 
+
 .car-image img{
     opacity: 0.6;
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+    border-radius: 20px;
 }
 
+.Carl-figure{
+    width: 100%;
+}
+
+.Carl-figure img{
+    width: 100%;
+}
 .team{
     margin: 20px 20px;
 }

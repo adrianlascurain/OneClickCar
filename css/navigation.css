@@ -87,12 +87,13 @@ footer h2 {
 .company-info,
 .subscribe-section {
   color: white;
-  text-align: left;
+  align-items: flex-start;
 }
 
 .contact-info a {
   color: white;
   text-decoration: none;
+  align-items: flex-start;
 }
 .subscribe-section form {
   display: ruby;
@@ -109,6 +110,9 @@ footer h3 {
 .company-info img {
   width: 50px;
   margin-right: 10px;
+  align-items: flex-start;
+  text-align: center;
+  position: relative;
 }
 
 .subscribe-section input {
@@ -155,10 +159,8 @@ footer button {
     color: white;
     text-decoration: none;
     margin: 0px 10px;
-    padding-left: 10px !important;
   }
 }
-
 @media (max-width: 1500px) {
   .footer-container {
     flex-direction: column; /* Las columnas se apilarán verticalmente en pantallas pequeñas */

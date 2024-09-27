@@ -34,47 +34,94 @@ body {
 /* Sección del formulario */
 main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
+    align-items: flex-start;
     padding: 20px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
+    gap: 20px;
 }
 
 .form-section {
-    background-color: #002B5B;
+    /* background-color: #002B5B;
     padding: 20px;
     border-radius: 10px;
     width: 50%;
-    color: white;
+    color: white; */
+    background-color: #002B5B; 
+    padding: 40px 60px;
+    border-radius: 20px; 
+    width: 50%;
+    color: #FFC300; 
+    text-align: center; 
+    font-family: 'Arial', sans-serif;
+
 }
 
 
 /* Estilos del formulario */
+#alertaVehiculos{
+    font-size: small;
+}
+
 form {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr; 
     padding: 20px;
     background-color: #002B5B; 
+    border-radius: 10px; */
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px; 
+    padding: 10px;
+    background-color: #002B5B; 
     border-radius: 10px;
+    text-align: center;
+    margin-right: auto;
+    max-width: 700px; 
+    margin: 0 auto; 
+    
 }
+
+select {
+    align-items: end;
+    width: 50%; 
+    font-size: 0.7em; 
+    margin-bottom: 1em; 
+    padding: 0.5em; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    margin-bottom: 1em;
+    float: left;
+}
+
 .form-group {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    margin-bottom: 20px; 
+    margin-right: 0;  
+    margin-left: 0;
+    width: 80%;
 }
 .form-section {
-    background-color: #002B5B;
+    /* background-color: #002B5B;
     padding: 20px;
     border-radius: 10px;
     width: 100%; 
     max-width: 600px; 
     color: white;
-    margin: auto; 
+    margin: auto;  */
+    background-color: #002B5B;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    margin-right: 60px;
+    width: 100%;
+    margin-bottom: 30px;
+    font-family: 'Poppins';
+    font-size: 28px;
 }
 
 label {
-    flex: 1;
-    background-color: #F1D6EB;
+    /* flex: 1;
+     background-color: #F1D6EB; 
     padding:5px 15px;
     border-radius:20px 0 0 20px;
     color: #002B5B;
@@ -84,35 +131,30 @@ label {
     display: inline-block;
     white-space: nowrap;
     line-height: 1.2;
-    margin: 0;
+    margin: 0; */
+    color: #FFFFFF; 
+    font-size: 17px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
 }
 #image{
-    flex: 1;
-    background-color: #F1D6EB;
-    padding:5px 15px;
-    border-radius:20px 0 0 20px;
-    color: #002B5B;
-    font-family: 'Tw-Cen-MT', sans-serif;
+    color: #FFFFFF; 
     font-size: 14px;
-    text-align: center;
-    display: inline-block;
-    white-space: nowrap;
-    line-height: 1.2;
-    margin: 0;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
 }
 input[type="text"],  input[type="number"],input[type="tel"],  textarea {
-    flex: 2;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: medium;
+    background: rgb(0, 32, 68);
+    border-style: solid;
+    border-width: 3px;
     width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    margin-left: 8px;
-    margin-bottom: 10px;
-    border-radius: 25px;
-    background-color: #ffffff;
-    border: none;
-    font-size: 14px;
-    outline: none;
-    box-sizing: border-box;
+    height: 30px;
+    margin: 0 auto;
 }
 
 input[type="file"] {
@@ -159,12 +201,23 @@ textarea {
     width: 100%;
 }
 
-input[type="checkbox"] + label {
-    background-color: transparent; 
-    padding: 0;
-    border-radius: 0;
-    color: white; 
-}
+.terms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+    flex-direction: row;
+  }
+  
+  .terms input[type="checkbox"] {
+    margin-right: 0px;
+  }
+  
+  .terms label {
+    margin-left: 0px;
+    
+  }
 
 button {
     background-color: #FFB82B; 
@@ -193,7 +246,7 @@ button {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    width: 40%;
+    width: 80%;
 }
 
 .preview-section img {

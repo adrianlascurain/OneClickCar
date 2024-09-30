@@ -20,7 +20,36 @@ document.addEventListener("DOMContentLoaded", function () {
       let price = document.getElementById("precio").value;
       let description = document.getElementById("descripcion").value;
       let img = document.getElementById("imagenes");
+      let termsCheckbox = document.getElementById("terms");
+      let privacyCheckbox = document.getElementById("privacy");
 
+
+        // Array para almacenar los campos vacíos
+      let camposFaltantes = [];
+
+      // Validar que cada campo esté lleno, si no, agregarlo a la lista
+      if (type === "") camposFaltantes.push("Tipo de vehículo");
+      if (brand === "") camposFaltantes.push("Marca");
+      if (name === "") camposFaltantes.push("Modelo");
+      if (year === "") camposFaltantes.push("Año");
+      if (kilometer === "") camposFaltantes.push("Kilometraje");
+      if (transmission === "") camposFaltantes.push("Transmisión");
+      if (seller === "") camposFaltantes.push("Propietario");
+      if (owners === "") camposFaltantes.push("Número de propietarios");
+      if (contact === "") camposFaltantes.push("Contacto");
+      if (price === "") camposFaltantes.push("Precio");
+      if (description === "") camposFaltantes.push("Descripción");
+      if (!termsCheckbox.checked) camposFaltantes.push("Términos y condiciones");
+      if (!privacyCheckbox.checked) camposFaltantes.push("Política de privacidad");
+
+        // Si hay campos faltantes, mostrar alerta en formato de lista y detener el envío
+        if (camposFaltantes.length > 0) {
+          let mensajeError = "Faltan los siguientes campos por llenar:";
+          mensajeError += `<ul>${camposFaltantes.map(campo => `<li><strong>${campo}</strong></li>`).join('')}</ul>`;
+          mostrarAlerta(mensajeError);
+        
+        return; 
+      } 
       // if (img.files.length > 0) {
       // let reader = new FileReader();
 
@@ -80,6 +109,23 @@ function obtenerVehiculos() {
     let dataCars = localStorage.getItem("dataCars");
     return dataCars ? JSON.parse(dataCars) : [];
   }
+}
+
+// Función para mostrar la alerta en caso de error
+function mostrarAlerta(mensaje) {
+  let alertDiv = document.getElementById("alertaVehiculos");
+  alertDiv.innerHTML = `<div class="alert alert-danger" role="alert">
+    ${mensaje}
+  </div>`;
+}
+
+function printTotal(div) {
+  div.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="alert alert-primary" role="alert">
+        Vehículos en total registrados: <strong>${contadorId}</strong>
+        </div>`
+  );
 }
 
 if (localStorage.getItem("contadorId") == null) {

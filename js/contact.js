@@ -1,3 +1,7 @@
+let navContact = document
+  .getElementById("navContact")
+  .classList.add("active");
+  
 // Implementa una función de JavaScript que valide los tipos de entrada y la corrección cuando se presiona el botón Enviar
 document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("9XWPUGj3d1O00oX7k");
@@ -18,9 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // bandera
   let isValid = true;
 
-  let navContact = document
-    .getElementById("navContact")
-    .classList.add("active");
 
   btnSubmit.addEventListener("click", function (event) {
     event.preventDefault();

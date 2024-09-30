@@ -1,11 +1,13 @@
 
-<img align="right" width="150" src="https://res.cloudinary.com/duxbrimwv/image/upload/v1725420086/Logox_uoxcvr.png">
+<img align="right" width="150" style="margin-left: 35px;" alt= "OneClickCarLogo" src="https://res.cloudinary.com/duxbrimwv/image/upload/v1725420086/Logox_uoxcvr.png">
 
 
-<img align="right" width="150" height="150" src="https://media-exp1.licdn.com/dms/image/C4E0BAQF7BYCCZt5epw/company-logo_200_200/0?e=2159024400&v=beta&t=qUAFP9bUgBEEXGVQYpUXW1J_OiP8e0r4rFBpqp8OrxA">
+<img align="right" alt="GenerationLogo" width="150"  src="https://www.generation.org/wp-content/uploads/2023/03/Generation_logo_blue.svg">
+
+
+<br>
 
 # OneClickCar
-<br><br><br><br>
 
 ## Descripción del Proyecto
 
@@ -30,8 +32,6 @@ El proyecto incluye las siguientes páginas:
 - **Lista de productos**
 - **Descripción de cada producto**
 - **Formulario de registro de producto**
-
-*(Poner capturas de pantalla de cada página!!)*
 
 ## Equipo 
 
@@ -70,10 +70,10 @@ Cada miembro del equipo desempeñó un papel crucial en el desarrollo del proyec
 
 ## Proceso de Desarrollo
 
-**1.** Establecimiento de normas y acuerdos de equipo.
-**2.** Creación de un documento guía con la definición de la plataforma.
-**3.** Elaboración de una lista de objetivos.
-**4.** Creación de un tablero de flujo de trabajo en Trello.
-**5.** Creación de un repositorio en GitHub.
-**6.** Diseño de Wireframes del sitio web con la app Figma.
-**7.** Desarrollo de las páginas y funcionalidades específicas asignadas a cada miembro.
+- **1.** Establecimiento de normas y acuerdos de equipo.
+- **2.** Creación de un documento guía con la definición de la plataforma.
+- **3.** Elaboración de una lista de objetivos.
+- **4.** Creación de un tablero de flujo de trabajo en Trello.
+- **5.** Creación de un repositorio en GitHub.
+- **6.** Diseño de Wireframes del sitio web con la app Figma.
+- **7.** Desarrollo de las páginas y funcionalidades específicas asignadas a cada miembro.

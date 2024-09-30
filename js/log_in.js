@@ -1,3 +1,7 @@
+// navbar active
+let navLogIn = document
+.getElementById("navLogIn")
+.classList.add("active");
 
 // elementos DOM
 const btnLogin = document.getElementById("btnLogIn");
@@ -10,10 +14,6 @@ const alertValidacionesTexto = document.getElementById("alertValidacionesTexto")
 //bandera
 let isValid = true;
 
-// navbar active
-let navLogIn = document
-.getElementById("navLogIn")
-.classList.add("active");
 
 //Validaciones al dar click en botón "Iniciar sesión"
 btnLogin.addEventListener("click", function (event) {

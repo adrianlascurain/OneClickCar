@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "alertValidacionesTexto"
   );
   // funciones RegExp
-  const telefonoRegex = /^(?!([0-9])\1{9})\d{10}$/;
+  const nameRegex = /^[A-Za-z\s]{2,}$/; //(solo letras, con un mínimo de 2 caracteres)
+  const telefonoRegex = /^(?!([0-9])\1{5,9})(?!.*000{4,})([2-9]\d{1}\d{8})$/;
   const emailRegex = /^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$/;
   // bandera
   let isValid = true;
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     alertValidacionesTexto.innerHTML = "";
     isValid = true;
     // Validación nombre usuario
-    if (txtNombre.value.length < 2) {
+    if (!nameRegex.test(txtNombre.value)) {
       txtNombre.style.border = "solid red medium";
       alertValidacionesTexto.innerHTML +=
         "El <strong> NOMBRE </strong> no es correcto. <br>";

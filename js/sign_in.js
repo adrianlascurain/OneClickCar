@@ -3,21 +3,21 @@ let navSignIn = document
 .getElementById("navSignIn")
 .classList.add("active");
 
-// Expresión regular para validar la contraseña
-const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;  // Al menos 8 caracteres, una letra y un número.
-// Expresión regular para validar el teléfono (formato sencillo: solo dígitos, entre 7 y 15 caracteres)
-const phoneRegex = /^\d{7,15}$/;
+// Expresión regular para validar la contraseña 
+const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;  
+// Expresión regular para validar el teléfono 
+const phoneRegex = /^(?!([0-9])\1{5,9})(?!.*000{4,})([2-9]\d{1}\d{8})$/;
 // Expresión regular para validar el nombre (solo letras, con un mínimo de 2 caracteres)
-const nameRegex = /^[A-Za-z\s]{2,}$/;
+const nameRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,}$/;
 // Expresión regular para validar el correo electrónico
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emailRegex = /^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$/;
 
-document.getElementById('submit').addEventListener('click', function (e) {
+document.getElementById('btnSignIn').addEventListener('click', function (e) {
     e.preventDefault();  // Evita que el formulario se envíe automáticamente
 
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
+    const email = document.getElementById('email').value.toLowerCase();
     const password = document.getElementById('inputPassword2').value;
     const confirmPassword = document.getElementById('inputPassword6').value;
 
@@ -36,7 +36,7 @@ document.getElementById('submit').addEventListener('click', function (e) {
         Swal.fire({
             icon: 'error',
             title: 'Teléfono inválido',
-            text: 'El teléfono debe contener solo dígitos y tener entre 7 y 15 caracteres.',
+            text: 'El teléfono debe contener solo dígitos y tener 10 caracteres.',
         });
         return;
     }
@@ -66,16 +66,21 @@ document.getElementById('submit').addEventListener('click', function (e) {
         Swal.fire({
             icon: 'error',
             title: 'Contraseña inválida',
-            text: 'La contraseña debe tener al menos 8 caracteres, incluir letras y al menos un número.',
+            text: 'La contraseña debe tener al menos 8 caracteres, incluir letras, número y un caracter especial.',
         });
         return;
     }
 
-    // Guardar los datos en local storage
-    localStorage.setItem('name', name);
-    localStorage.setItem('phone', phone);
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', password);  
+    // Crear objetoJSON
+    const usuarioObj = {
+        name: name, 
+        phone: phone, 
+        email: email, 
+        birthdate: birthdate, 
+        password: password
+    };//usuarioObj
+    //guardar en LocalStorage
+    localStorage.setItem(email, JSON.stringify(usuarioObj));  //usando  email com 'clave'
 
     // Mostrar mensaje de éxito
     Swal.fire({

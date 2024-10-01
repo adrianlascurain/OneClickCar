@@ -1,10 +1,9 @@
 /* PARTE IZQUIERDA */
 .columPic {
-    background-image: url("./carros 1.jpg");
+    background-image: url("https://res.cloudinary.com/duxbrimwv/image/upload/v1727818419/coches_signIn_jxhc5d.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 120vh;
 }
 
 /* DERECHA */
@@ -22,21 +21,20 @@
     font-family: 'Montserrat'; 
     font-size: 20px;           
     font-weight: 600;          
-    padding: 70px 30px 10px 30;
     width: 90%;   
-    text-align: center; 
-    margin: 30px auto;            
+    margin: 30px auto;    
+    max-width: 100%;        
+    padding: 70px 90px 20px 90px;
 }
 
 .cajaForm h1{
     color: #FFCC00;
+    text-align: center; 
     text-align: center;
     font-weight: bolder;
     font-size: xx-large;
     font-family: 'Poppins';
-    font-weight: bold !important; /**añadir font**/
-    margin-top:70px;
-    margin-bottom: 20px;
+    font-weight: bold !important;
 }
 
 
@@ -47,19 +45,15 @@
     border-style: solid;
     border-width: 3px;
     height: 50px;
-    width: 80%;
+    width: 100%;
 }
 
 .itemForm{
-    margin: 25px auto;
-}
-
-.itemForm label{
-    margin-left: 95px;
+    margin: 20px;
 }
 
 
-#submit{
+#btnSignIn{
     justify-content: center;
     color: #ffffff;
     background-color: #E08F0C;
@@ -69,23 +63,29 @@
     padding: 10px 6px;
     font-size: 25px;
     font-style: italic;
-    margin: 40px auto;
-}/* cambió del color del botón */
+    margin-top: 30px;
+}
 
 
 .cajaForm input,textarea {
     color: white;
+    font-family: 'Montserrat';
 }
 .cajaForm input, placeholder{
     font-size: 15px;
 }
 
 /* Media Queries para hacer el diseño responsivo */
-@media (max-width: 768px) {
-    /* Ocultar el banner en pantallas pequeñas */
+@media (max-width: 500px) {
     .columPic {
         display: none;
     }
-}
+    .cajaForm{
+        margin: 150px 0px 150px 0px;
+        width: 100%;
+        padding: 70px 30px 20px 30px;
 
+    }
+    
+}
 

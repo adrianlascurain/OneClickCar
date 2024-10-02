@@ -66,7 +66,7 @@ function createNavFoot() {
                 <br>
                 <div class="img-link-container d-flex justify-content-start align-items-center">
                     <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725421051/OneClickCar/cw4nzzwjirjpf8imni4p.png" alt="">
-                    <p class="my-0"><b>Email:</b> contacto@oneclickcar.com</p>
+                    <p class="my-0"><b>Email:</b> oneclickcarcontacto@gmail.com</p>
                 </div>
             </div>
             <div class="subscribe-section mx-3 text-center">

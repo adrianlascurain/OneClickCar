@@ -49,6 +49,7 @@ main p{
     width: 600px;
     height: 450px;
     border: 0;
+    border-radius: 20px;
 }
 
 #ubicacionIcon, #telefonoIcon, #emailIcon{
@@ -73,6 +74,7 @@ main p{
     margin-right: 60px;
     width: 100%;
     margin-bottom: 30px;
+    box-shadow: 0px 8px 12px black;
     
 }
 
@@ -112,6 +114,17 @@ main p{
     border-radius: 8px;
     padding: 7px;
     font-weight: bold;
+}
+
+.maps iframe {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    box-shadow: 0px 8px 12px black;
+    
+}
+
+.maps iframe.loaded {
+    opacity: 1; 
 }
 
 

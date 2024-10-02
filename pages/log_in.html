@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="../css/navigation.css" />
     <link rel="stylesheet" href="../css/log_in.css">
 
+    <!-- prueba animación -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 
 <body>
@@ -32,7 +35,8 @@
                 <div class="col-sm-5 izquierda"></div>
                 <!-- lado derecho / log_in -->
                 <div class="col-sm-7 derecha">
-                    <div class="cajaLogIn">
+                    <!-- <div class="cajaLogIn animate__animated animate__zoomIn"> -->
+                    <div class="cajaLogIn animate__animated animate__bounceInLeft">
                         <div class="contenidoLogIn">
                             <h1> Ingresa tu e-mail de OneClickCar</h1>
                             <div class="alert alert-danger fade show" style="display:none;" role="alert"
@@ -48,7 +52,7 @@
                                     <div class="inputGroup">
                                         <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725421051/OneClickCar/cw4nzzwjirjpf8imni4p.png"
                                             alt="correoLogo">
-                                        <input type="email" id="correo-ipt" placeholder="Ejemplo: oneclickcar@gmail.com"><br>
+                                        <input type="email" id="correo-ipt" placeholder="Ejemplo: oneclickcar@gmail.com" autocomplete="email"><br>
                                     </div>
                                 </div>
                                 <div class="itemForm">
@@ -59,7 +63,7 @@
                                         <img src="https://res.cloudinary.com/duxbrimwv/image/upload/v1726193785/keyIcon_eqbgjg.svg"
                                             alt="keyLogo">
                                         <input type="password" id="password-ipt"
-                                            placeholder="********"><br>
+                                            placeholder="********" autocomplete="current-password"><br>
                                     </div>
                                 </div>
                                 <div class="itemForm text-center">

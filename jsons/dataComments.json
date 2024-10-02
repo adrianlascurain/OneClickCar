@@ -1,0 +1,29 @@
+[
+  {
+    "id_comment": 1,
+    "content": "Compré un Nissan Versa 2018 con SergioR y fue una excelente adquisición a pesar de tener más de 200,000 kms, estéticamente y mecánicamente se encontraba en perfectas condiciones, llevó más de 1 año y sin necesidad de mantenimientos correctivos.",
+    "rating": 5,
+    "comment_date": "08 / 31 / 2024",
+    "id_buyer": 1,
+    "id_seller": 1,
+    "approved": true
+  },
+  {
+    "id_comment": 2,
+    "content": "Adquirí una Hilux 2015 con SergioR y fue una buena compra, se respetó el precio y las condiciones en las que se me comentó que se encontraba la camioneta, tanto el vendedor como OneClickCar se aseguraron de brindar confiabilidad al proceso.",
+    "rating": 4,
+    "comment_date": "08 / 15 / 2024",
+    "id_buyer": 1,
+    "id_seller": 2,
+    "approved": true
+  },
+  {
+    "id_comment": 3,
+    "content": "Le compré un Toyoya Yaris a SergioR, al inicio todo iba bien pero unos meses posteriores la bomba de gasolina falló, aunque me comentaron que era un tema de desgaste por uso y antigüedad, reconozco que todo el proceso con el vendedor y la platafora fue transparente.",
+    "rating": 3,
+    "comment_date": "08 / 14 / 2024",
+    "id_buyer": 1,
+    "id_seller": 3,
+    "approved": true
+  }
+]

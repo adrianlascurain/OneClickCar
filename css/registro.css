@@ -224,6 +224,12 @@ input[type="file"] {
     margin: 0 auto;
     width: 80%; 
   }
+#imageContainer{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%; 
+}
   
 /*Icono de Upload File*/
 .custom-file-upload {

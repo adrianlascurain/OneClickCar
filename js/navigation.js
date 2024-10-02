@@ -31,24 +31,24 @@ function createNavFoot() {
         <div class="footer-container d-flex flex-wrap">
             <div class="contact-info mx-3">
                 <h3>Conócenos</h3>
-                <a href="https://www.instagram.com/OneClickCar/">
+                <a href="https://www.instagram.com/oneclickcarmx" target="_blank">
                     <div class="img-link-container d-flex justify-content-center align-items-center">
                         <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725421052/OneClickCar/n4vgpz2ykdqrejz53uxc.png" alt="Instagram">
-                        <p class="my-0">https://www.instagram.com/OneClickCar/</p>
+                        <p class="my-0">https://www.instagram.com/oneclickcarmx/</p>
                     </div>
                 </a>
                 <br>
-                <a href="https://www.facebook.com/OneClickCar/">
+                <a href="https://www.facebook.com/OneClickCarMx" target="_blank">
                 <div class="img-link-container d-flex justify-content-start align-items-center">
                     <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725421052/OneClickCar/olqffplsdykzjv3iiavd.png" alt="Facebook">
-                    <p class="my-0">https://www.facebook.com/OneClickCar/</p>
+                    <p class="my-0">https://www.facebook.com/OneClickCarMx</p>
                 </div>
                 </a>
                 <br>
-                <a href="https://www.tiktok.com/OneClickCar/">
+                <a href="https://www.tiktok.com/@oneclickcarmx" target="_blank">
                     <div class="img-link-container d-flex justify-content-start align-items-center">
                         <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725421052/OneClickCar/ncrvqyml2zngmeeuyfl7.png" alt="TikTok">
-                        <p class="my-0">https://www.tiktok.com/OneClickCar/</p>
+                        <p class="my-0">https://www.tiktok.com/@oneclickcarmx</p>
                     </div>
                 </a>
             </div>
@@ -71,6 +71,7 @@ function createNavFoot() {
             </div>
             <div class="subscribe-section mx-3 text-center">
                 <h3 class="text-center" id="publicidad">Obtén publicidad de nuestros productos</h3>
+                <p class="text-warning mb-1" id="email-error">Ingresa un correo electrónico válido</p>
                 <form action="#">
                     <input type="email" placeholder="Tu correo electrónico" id="ipt-email">
                     <div class="checkbox-container d-flex align-items-center justify-content-center w-100">

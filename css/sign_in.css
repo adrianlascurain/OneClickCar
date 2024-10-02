@@ -74,6 +74,9 @@
 .cajaForm input, placeholder{
     font-size: 15px;
 }
+#birthdate{
+    color: #888383b9;
+}
 
 /* Media Queries para hacer el diseño responsivo */
 @media (max-width: 500px) {

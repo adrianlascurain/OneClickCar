@@ -20,6 +20,7 @@ document.getElementById('btnSignIn').addEventListener('click', function (e) {
     const email = document.getElementById('email').value.toLowerCase();
     const password = document.getElementById('inputPassword2').value;
     const confirmPassword = document.getElementById('inputPassword6').value;
+    const userType = "client"
 
     // Validar nombre
     if (!nameRegex.test(name)) {
@@ -77,7 +78,8 @@ document.getElementById('btnSignIn').addEventListener('click', function (e) {
         phone: phone, 
         email: email, 
         birthdate: birthdate, 
-        password: password
+        password: password,
+        userType: userType 
     };//usuarioObj
     //guardar en LocalStorage
     localStorage.setItem(email, JSON.stringify(usuarioObj));  //usando  email com 'clave'

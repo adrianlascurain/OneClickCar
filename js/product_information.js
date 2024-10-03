@@ -222,7 +222,7 @@ function sendOpinion(listCars, dataClients) {
   htmlContent += `
     <img class="img_profile" src="https://res.cloudinary.com/duqki6x6t/image/upload/v1727588002/h5zdh5wsuos6fp8mhtls.png" alt="Imagen perfil">
       <span class="actual_user">${dataClients[3].name} - ${currentDate}</span></br>
-      <form id="formOpinion">
+      <form id="formOpinion" action="#opinion_title1">
       <label for="ratingInput">Califica tu compra del 1 al 5:</label></br>
       <div class="divForSelect">
       <select id="ratingInput">
@@ -244,14 +244,24 @@ function sendOpinion(listCars, dataClients) {
 
   let formOpinion = document.getElementById("formOpinion");
   formOpinion.addEventListener("submit", (event) => {
-    event.preventDefault();
-
     let rating = document.getElementById("ratingInput").value;
     let content = document
       .getElementById("commentInput")
       .value.replace(/\s+/g, " ")
       .split(" ")
       .filter((e) => e.length > 0);
+
+    // Show success message
+    Swal.fire({
+      title: "Opinión completada",
+      text: "Tu opinión será validada conforme a las políticas de OneClickCar",
+      imageUrl:
+        "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+      imageWidth: 350,
+      imageHeight: 200,
+      imageAlt: "Custom image",
+      icon: "success",
+    });
 
     let comment = {
       id_comment: 4,

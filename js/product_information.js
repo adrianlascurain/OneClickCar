@@ -224,6 +224,7 @@ function sendOpinion(listCars, dataClients) {
       <span class="actual_user">${dataClients[3].name} - ${currentDate}</span></br>
       <form id="formOpinion">
       <label for="ratingInput">Califica tu compra del 1 al 5:</label></br>
+      <div class="divForSelect">
       <select id="ratingInput">
         <option value="" disabled selected></option>
         <option value="1">1</option>
@@ -231,7 +232,9 @@ function sendOpinion(listCars, dataClients) {
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
-      </select></br>
+      </select>
+      </div>
+      </br>
       <label for="commentInput">Déjanos tu comentario:</label></br>
 <textarea id="commentInput" class="text-area form-control"></textarea>
       <div class="text-center div_button_details"><button class="btn btn-primary btn-interest" id="btnSendOpinion" type="submit">Enviar para validación</button></div></form>

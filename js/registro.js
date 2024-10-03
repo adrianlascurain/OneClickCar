@@ -23,8 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let termsCheckbox = document.getElementById("terms");
       let privacyCheckbox = document.getElementById("privacy");
 
-
-        // Array para almacenar los campos vacíos
+      // Array para almacenar los campos vacíos
       let camposFaltantes = [];
 
       // Validar que cada campo esté lleno, si no, agregarlo a la lista
@@ -39,17 +38,21 @@ document.addEventListener("DOMContentLoaded", function () {
       if (contact === "") camposFaltantes.push("Contacto");
       if (price === "") camposFaltantes.push("Precio");
       if (description === "") camposFaltantes.push("Descripción");
-      if (!termsCheckbox.checked) camposFaltantes.push("Términos y condiciones");
-      if (!privacyCheckbox.checked) camposFaltantes.push("Política de privacidad");
+      if (!termsCheckbox.checked)
+        camposFaltantes.push("Términos y condiciones");
+      if (!privacyCheckbox.checked)
+        camposFaltantes.push("Política de privacidad");
 
-        // Si hay campos faltantes, mostrar alerta en formato de lista y detener el envío
-        if (camposFaltantes.length > 0) {
-          let mensajeError = "Faltan los siguientes campos por llenar:";
-          mensajeError += `<ul>${camposFaltantes.map(campo => `<li><strong>${campo}</strong></li>`).join('')}</ul>`;
-          mostrarAlerta(mensajeError);
-        
-        return; 
-      } 
+      // Si hay campos faltantes, mostrar alerta en formato de lista y detener el envío
+      if (camposFaltantes.length > 0) {
+        let mensajeError = "Faltan los siguientes campos por llenar:";
+        mensajeError += `<ul>${camposFaltantes
+          .map((campo) => `<li><strong>${campo}</strong></li>`)
+          .join("")}</ul>`;
+        mostrarAlerta(mensajeError);
+
+        return;
+      }
       // if (img.files.length > 0) {
       // let reader = new FileReader();
 
@@ -61,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("contadorId", JSON.stringify(contadorId));
       // Objeto con los datos del vehículo
       let vehiculo = {
-        id: contadorId,
+        id_cars: contadorId,
         type: type,
         brand: brand,
         name: name,
@@ -74,6 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // contact: contact,
         img: localStorage.getItem("image_url"), // Guardar la imagen en base64
         description: description,
+        verified: false,
+        sold: false,
       };
 
       // Obtención de los datos en el localStorage
@@ -101,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("No se encontró el formulario en el DOM.");
   }
-
 });
 
 // Función para obtener los vehículos almacenados
@@ -135,4 +139,3 @@ if (localStorage.getItem("contadorId") == null) {
 if (localStorage.getItem("contadorId") != null) {
   contadorId = JSON.parse(localStorage.getItem("contadorId"));
 }
-

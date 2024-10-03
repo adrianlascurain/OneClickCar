@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("No se encontró el formulario en el DOM.");
   }
+
 });
 
 // Función para obtener los vehículos almacenados
@@ -134,3 +135,4 @@ if (localStorage.getItem("contadorId") == null) {
 if (localStorage.getItem("contadorId") != null) {
   contadorId = JSON.parse(localStorage.getItem("contadorId"));
 }
+

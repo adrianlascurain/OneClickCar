@@ -87,15 +87,14 @@ footer h2 {
 .company-info,
 .subscribe-section {
   color: white;
-  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
 .contact-info a {
   color: white;
   text-decoration: none;
-  align-items: flex-start;
-  text-align: center;
 }
+
 .subscribe-section form {
   display: ruby;
   align-items: flex-start;
@@ -111,13 +110,19 @@ footer h3 {
 .contact-info img,
 .company-info img {
   width: 50px;
+  height: 50px;
   margin-right: 10px;
   align-items: flex-start;
   text-align: center;
   position: relative;
+  object-fit: contain;
 }
 
-.subscribe-section input {
+.contact-info a{
+  margin-left: 0px;
+}
+
+.subscribe-section #ipt-email {
   padding: 10px;
   width: 80%;
   margin-bottom: 10px;
@@ -125,6 +130,10 @@ footer h3 {
   border-radius: 20px;
 }
 
+#ipt-consent-checkbox{
+  width: 25px;
+  height: 25px;
+}
 .subscribe-section h3 {
   font-size: 23px;
 }
@@ -146,25 +155,52 @@ footer h3 {
   margin-right: 10px;
 }
 
+.checkbox-container label {
+  font-size: 12px;
+}
+
+#subscribeBtn:disabled{
+  cursor: auto;
+}
+
 footer button {
-  padding: 10px 20px;
+  padding: 5px 10px;
   background-color: #e08f0c;
   border: none;
   border-radius: 20px;
   color: white;
   font-weight: bold;
+  font-size: 15px;
   cursor: pointer;
+  width: 30%;
+}
+
+.terms-conditions{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.terms-conditions a{
+  color: #e08f0c;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.terms-conditions a:hover{
+  scale: 1.05;
+  color: #d0cece;
+  transition: 0.2s;
 }
 
 @media (min-width: 400px) {
-  .navbar-nav a {
+  .navbar-nav .nav-link {
     color: white;
     text-decoration: none;
     margin: 0px 10px;
   }
 }
 @media (max-width: 1500px) {
-  .footer-container {
-    flex-direction: column; /* Las columnas se apilarán verticalmente en pantallas pequeñas */
-  }
+  /* .footer-container {
+    flex-direction: column;
+  } */
 }

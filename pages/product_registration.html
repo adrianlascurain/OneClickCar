@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <link rel="icon" href="../fonts/logoOneClickCar.ico">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro de Vehículo - OneClickCar</title>
@@ -38,15 +39,26 @@
     />
     <link rel="stylesheet" href="../css/navigation.css" />
     <link rel="stylesheet" href="../css/registro.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="../assets/sweetAlert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../assets/emailJS/dist/email.min.js"></script>
   </head>
   <body>
     <header id="nav_bar"></header>
     <main>
+      
       <section class="form-section">
                 <form>
-                  <div id="alertaVehiculos"></div>
+                  
+                  <div class="pares">
         <div class="form-group">
-            <label for="tipo">Tipo</label>
+          <div class="labelContainer">
+            <img src="https://cdn-icons-png.flaticon.com/512/2555/2555021.png" alt="tipoLogo" class="icon">
+           <label for="tipo">Tipo</label>
+          </div>
             <select id="tipo" name="tipo" style="margin-bottom: 1em;">
               <option value="Sedán">Sedán</option>
               <option value="Coupé">Coupé</option>
@@ -54,55 +66,86 @@
               <option value="HATCHBACK">HATCHBACK</option>
               <option value="PICK UP">PICK UP</option>
               <option value="VAN">VAN</option>
-            <input type="text" id="tipo" name="tipo" />
+           </select>
           </div>
           
-        <form>
+        
         <div class="form-group">
+          <div class="labelContainer">
+            <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" alt="marcaLogo" class="icon">
             <label for="marca">Marca</label>
-            <input type="text" id="marca" name="marca" />
+          </div>
+              <input type="text" id="marca" name="marca" />
           </div>
 
-        <form>
+        
           <div class="form-group">
-            <label for="modelo">Modelo</label>
+            <div class="labelContainer">
+              <img src="https://cdn-icons-png.flaticon.com/512/2514/2514088.png" alt="modeloLogo" class="icon">
+               <label for="modelo">Modelo</label>
+            </div>
             <input type="text" id="modelo" name="modelo" />
           </div>
 
           <div class="form-group">
-            <label for="anio">Año</label>
+            <div class="labelContainer">
+              <img src="https://cdn-icons-png.flaticon.com/512/10755/10755666.png" alt="anoIcon" class="icon">
+              <label for="ano">Año</label>
+            </div>
             <input type="text" id="anio" name="anio" />
           </div>
 
           <div class="form-group">
-            <label for="kilometraje">Kilometraje</label>
+            <div class="labelContainer">
+              <img src="https://cdn-icons-png.flaticon.com/512/4539/4539773.png" alt="kmLogo" class="icon">
+              <label for="kilometraje">Kilometraje</label>
+            </div>
             <input type="text" id="kilometraje" name="kilometraje" />
           </div>
           <div class="form-group">
-            <label for="transmision">Tipo de transmisión</label>
+            <div class="labelContainer">
+              <img src="https://cdn-icons-png.flaticon.com/512/3410/3410249.png" alt="tipoLogo" class="icon">
+              <label for="transmision">Tipo de Transmision</label>
+            </div>
             <input type="text" id="transmision" name="transmision" />
           </div>
 
           <div class="form-group">
-            <label for="propietario">Nombre del propietario</label>
+            <div class="labelContainer">
+              <img src="https://cdn-icons-png.flaticon.com/512/5091/5091731.png" alt="propietarioLogo" class="icon">
+              <label for="propietario">Nombre de Propietario</label>
+            </div>
             <input type="text" id="propietario" name="propietario" />
           </div>
 
           <div class="form-group">
-            <label for="num_prop">Número total de propietarios</label>
-            <input type="number" id="num_prop" name="num_prop" />
+            <div class="labelContainer">
+              <img src="https://cdn-icons-png.flaticon.com/512/2621/2621783.png" alt="nPropLogo" class="icon">
+              <label for="propietario">Número total de Propietarios</label>
+            </div>
+            <input type="number" id="num_prop" name="num_prop" min="1"/>
           </div>
 
           <div class="form-group">
-            <label for="contacto">Número de contacto</label>
+            <div class="labelContainer">
+              <img src="https://cdn-icons-png.flaticon.com/512/3014/3014736.png" alt="contactoLogo" class="icon">
+              <label for="telefono">Número de Contacto</label>
+            </div>
             <input type="tel" id="contacto" name="contacto" />
           </div>
 
           <div class="form-group">
-            <label for="precio">Precio del vehículo</label>
+            <div class="labelContainer">
+              <img src="https://cdn-icons-png.flaticon.com/512/1787/1787203.png" alt="precioLogo" class="icon">
+              <label for="precio">Precio del Vehiculo</label>
+            </div>
             <input type="text" id="precio" name="precio" />
           </div>
-
+         </div>
+          <div class="drescripcion">
+            <label for="descripcion">Descripción del vehículo</label>
+            <textarea id="descripcion" name="descripcion"></textarea>
+          </div> 
           <div class="form-group">
             <label id="image" for="imagenes">Imágenes del vehículo</label>
             <!-- <input
@@ -125,24 +168,50 @@
       src="" class="d-none">
     </img>  
           </div>
-
-          <div class="form-group">
-            <label for="descripcion">Descripción del vehículo</label>
-            <textarea id="descripcion" name="descripcion"></textarea>
+          <div id="carouselContainer" style="display: none;">
+            <div id="imageContainer"></div>
           </div>
+          <!-- <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> -->
 
-          <div class="terms">
-            <input type="checkbox" id="terms" name="terms" />
-            <label for="terms">Términos y condiciones</label>
-
-            <input type="checkbox" id="privacy" name="privacy" />
-            <label for="privacy">Política de privacidad</label>
-          </div>
-
-          <button type="submit">Publicar</button>
+          <div class="terms-container">
+            <div class="terms"> 
+                <input type="checkbox" id="terms" name="terms" />
+                <label for="terms">
+                 <a href="Terminos.html"> Términos y condiciones</a>
+                </label>
+    
+                <input type="checkbox" id="privacy" name="privacy" />
+                <label for="privacy">
+                  <a href="Terminos.html">Política de privacidad</a>
+                </label>
+            </div>
+            <div id="alertaVehiculos"></div>
+            <button type="submit">Publicar</button>
+        </div>
+    </section>
         </form>
       </section>
-
+     
       <section class="preview-section">
         <img src="car_image.png" alt="Imagen representativa" />
         <h3>*Imagen representativa</h3>
@@ -178,5 +247,6 @@
      src="../js/upload_widget.js" 
      type="text/javascript">
     </script>
+  <script src="../js/subscribe.js"></script>
   </body>
 </html>

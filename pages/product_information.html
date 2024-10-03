@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de productos</title>
+
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="./assets/sweetAlert2/dist/sweetalert2.all.min.js"></script>
+    <script src="./assets/emailJS/dist/email.min.js"></script>
+    <link rel="stylesheet" href="../css/product_information.css" />
+  </head>
+  <body>
+    <header id="nav_bar"></header>
+
+    <main>
+      <h1 class="text-center" id="product_title"></h1>
+
+      <div class="row contact_car">
+        <div class="col-sm-12 col-lg-8" id="card_car"></div>
+        <div
+          class="col-sm-12 col-lg-4 text-center align-self-center"
+          id="contact_car"
+        >
+          <p class="p_announcement">¡Contacta al vendedor!</p>
+          <span class="p_price" id="price_car">
+            <img
+              src="https://res.cloudinary.com/duqki6x6t/image/upload/v1727584886/dmtko5g06d0mycu1zcpz.png"
+              alt="money_bag"
+            />
+          </span>
+
+          <div class="div_button_details">
+            <a href="" class="btn btn-primary btn-whats" id="btnWhatsApp"
+              ><img
+                src="https://res.cloudinary.com/duqki6x6t/image/upload/v1727587966/ffd8z6iyd9wdnj4fm76t.png"
+                alt="WhatsApp"
+              />WhatsApp</a
+            >
+          </div>
+          <p id="verified_car">
+            <img
+              src="https://res.cloudinary.com/duqki6x6t/image/upload/v1727587966/av1pdcwyvhhmv1nenug4.png"
+              alt="Logo"
+            />
+          </p>
+        </div>
+      </div>
+
+      <div class="container opinion_car">
+        <h3 class="text-center" id="opinion_title1">
+          Opiniones sobre el vendedor
+        </h3>
+        <div id="opinions"></div>
+        <h3 class="text-center" id="opinion_title2">
+          Cuéntanos tu opinión si compraste con este vendedor
+        </h3>
+        <div id="insert_opinions">
+          <span id="actual_user"> </span>
+        </div>
+      </div>
+
+      <div class="text-center div_button_details">
+        <a
+          href="https://adrianlascurain.github.io/OneClickCar/pages/product_list.html"
+          class="btn btn-primary btn-interest"
+          id="btnGoBack"
+          >Volver para ver más modelos</a
+        >
+      </div>
+    </main>
+    <footer id="footer_back"></footer>
+
+    <script src="../js/navigation.js"></script>
+    <script defer src="../js/product_information.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/subscribe.js"></script>
+  </body>
+</html>

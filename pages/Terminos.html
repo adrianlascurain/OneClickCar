@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="../css/navigation.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Términos y condiciones</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script src="../assets/sweetAlert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../assets/emailJS/dist/email.min.js"></script>
 </head>
 <body>
   <nav id="nav_bar"></nav>
@@ -20,13 +36,13 @@
 
     <div class="container-fluid-sm">
     <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
+        <div class="accordion-item" id="Terminos">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTerminos" aria-expanded="false" aria-controls="collapseTerminos">
              Términos del sitio web OneClickCar
             </button>
           </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div id="collapseTerminos" class="accordion-collapse collapse" aria-labelledby="headingTerminos" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">El presente documento, contiene los términos y condiciones generales aplicables al acceso y/o uso de los Servicios que ofrece <b>OneClickCar</b> a sus Clientes, a través del del sitio web <a href="https://adrianlascurain.github.io/OneClickCar/">https://adrianlascurain.github.io/OneClickCar/</a> (el “<b> Sitio Web</b>”); y/o en las aplicaciones para dispositivos móviles propiedad de OneClickCar (la “<b>Aplicación Móvil</b>” o las “<b>Aplicaciones Móviles</b>”); y/o de cualquier otra parte y/o extensión de la Plataforma; y/o de forma personal y presencial en alguno de sus Centros Autorizados y/o Centros de Exhibición o Showrooms. <br> <br>
 
               Cualquier persona que desee acceder o que acceda, a través de cualquier medio autorizado por OneClickCar, a los servicios en general que ofrece OneClickCar, descritos en estos Términos y Condiciones (los “<b>Servicios</b>”), o que desee acceder y/o hacer uso del Sitio Web; y/o acceder y/o utilizar las Aplicaciones Móviles; y/o acceder y/o utilizar cualquier otro medio que para tales efectos autorice OneClickCar (denominados en conjunto, a efectos de estos Términos y Condiciones como la “<b>Plataforma OneClickCar</b>” o la “<b>Plataforma</b>”), quedará sujeto a los Términos y Condiciones 
@@ -40,13 +56,13 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item" id="Politica">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
               Política de Privacidad de OneClickCar
             </button>
           </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div id="collapsePolitica" class="accordion-collapse collapse" aria-labelledby="headingPolitica" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               En <b>OneClickCar</b>, valoramos la privacidad y seguridad de nuestros usuarios. Esta Política de Privacidad describe cómo recopilamos, utilizamos, divulgamos y protegemos su información cuando accede a nuestro sitio web y utiliza nuestros servicios para la compra y venta de vehículos usados. Al utilizar OneClickCar, usted acepta las prácticas descritas en esta política. <br><br>
             <ol>
@@ -105,7 +121,7 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item" id="Declaracion">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
               Declaración de Accesibilidad de OneClickCar
@@ -135,7 +151,7 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item" id="Codigo">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
               Código de Conducta para Proveedores de OneClickCar
@@ -217,7 +233,7 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item" id="Noventa">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
               Términos de No Venta de Información - OneClickCar
@@ -264,5 +280,21 @@
       <footer id="footer_back"></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <script src="../js/navigation.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const hash = window.location.hash;
+    
+          if (hash) {
+            const target = document.querySelector(hash + ' .accordion-collapse');
+            if (target) {
+              const accordionButton = document.querySelector(hash + ' .accordion-button');
+              // Forzamos el botón a abrir la sección
+              accordionButton.classList.remove('collapsed');
+              target.classList.add('show');
+            }
+          }
+        });
+      </script>
+      <script defer src="../js/subscribe.js"></script>
   </body>
 </html>

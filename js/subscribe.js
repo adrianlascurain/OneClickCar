@@ -6,7 +6,7 @@ const iptEmail = document.getElementById("ipt-email");
 const emailError = document.getElementById("email-error")
 
 // Email validation
-const emailRegex = /^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$/;
+const emailRegexSubscribe = /^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$/;
 
 // Disable styles and states are applied
 emailError.style.display = "none"
@@ -33,7 +33,7 @@ subscribeBtn.onclick = function(event){
     iptEmail.style.border = 'none'
     event.preventDefault();
     let email = iptEmail.value;
-    let validEmail = emailRegex.test(email);
+    let validEmail = emailRegexSubscribe.test(email);
     if(validEmail){
         // Code for subscribe user 
         emailjs.send("OneClickCar_contacto","template_ilf8f1t",{

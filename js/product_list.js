@@ -1132,7 +1132,7 @@ function productInformation(index) {
     index--;
     localStorage.setItem("indexShowCar", index);
     window.location.href =
-      "https://adrianlascurain.github.io/OneClickCar/product_information.html";
+      "https://adrianlascurain.github.io/OneClickCar/pages/product_information.html";
     // window.location.href = "../pages/product_information.html";
   } else {
     window.location.href =

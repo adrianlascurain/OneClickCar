@@ -99,28 +99,552 @@ let dataSellers = [
   },
 ];
 
+let dataCars = [
+  {
+    id_cars: 1,
+    type: "Sedán",
+    brand: "Chevrolet",
+    name: "Cavalier",
+    year: 2021,
+    seller: "Adrían Hernández Lascurain",
+    kilometer: 51000,
+    transmission: "Manual",
+    price: 320000,
+    owners: 2,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SEDAN/jzmc4om5b6305qnkarzp.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 2,
+    type: "Sedán",
+    brand: "KIA",
+    name: "Forte",
+    year: 2019,
+    seller: "Luis José Meléndez",
+    kilometer: 97000,
+    transmission: "Manual",
+    price: 217000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SEDAN/xrw9p0u81kudod72eo9z.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 3,
+    type: "Sedán",
+    brand: "KIA",
+    name: "Forte",
+    year: 2022,
+    seller: "Juan Antonio Santos",
+    kilometer: 38000,
+    transmission: "Manual",
+    price: 280000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SEDAN/pfmdsxdozg4muh8rsm7i.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 4,
+    type: "Sedán",
+    brand: "Toyota",
+    name: "Corolla",
+    year: 2020,
+    seller: "Libertad Rivas",
+    kilometer: 76000,
+    transmission: "Automático",
+    price: 250000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SEDAN/jzcifbic9pvzj0ntw8ek.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 5,
+    type: "Sedán",
+    brand: "Dodge",
+    name: "Attitude",
+    year: 2021,
+    seller: "Antonio Rosas",
+    kilometer: 66000,
+    transmission: "Automático",
+    price: 190000,
+    owners: 3,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SEDAN/r7yx7ajnarxwyrjskiob.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 6,
+    type: "Coupé",
+    brand: "Ford",
+    name: "Mustang",
+    year: 2014,
+    seller: "Adrían Hernández Lascurain",
+    kilometer: 164000,
+    transmission: "Manual",
+    price: 170000,
+    owners: 2,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889395/CARROS%20ACTUALIZACION/COUPE/m2scaucxbiugsglz9pyv.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 7,
+    type: "Coupé",
+    brand: "Ford",
+    name: "Mustang",
+    year: 2023,
+    seller: "Luis José Meléndez",
+    kilometer: 2100,
+    transmission: "Manual",
+    price: 445000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/COUPE/bs7ya0ncrne3rhw3wcxn.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 8,
+    type: "Coupé",
+    brand: "Chevrolet",
+    name: "Camaro",
+    year: 2017,
+    seller: "Juan Antonio Santos",
+    kilometer: 92000,
+    transmission: "Manual",
+    price: 315000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889395/CARROS%20ACTUALIZACION/COUPE/vdrke72dax4bguhazerg.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 9,
+    type: "Coupé",
+    brand: "Audi",
+    name: "A5",
+    year: 2021,
+    seller: "Libertad Rivas",
+    kilometer: 43000,
+    transmission: "Automático",
+    price: 387000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727892329/CARROS%20ACTUALIZACION/COUPE/gxutrhmdgnz3bzvgvhkr.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 10,
+    type: "Coupé",
+    brand: "BMW",
+    name: "Serie 4",
+    year: 2012,
+    seller: "Antonio Rosas",
+    kilometer: 149000,
+    transmission: "Automático",
+    price: 187000,
+    owners: 3,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889395/CARROS%20ACTUALIZACION/COUPE/dcouwfbl2ke6bcvaydho.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 11,
+    type: "SUV",
+    brand: "Nissan",
+    name: "X-trail",
+    year: 2014,
+    seller: "Adrían Hernández Lascurain",
+    kilometer: 133000,
+    transmission: "Manual",
+    price: 183000,
+    owners: 2,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889398/CARROS%20ACTUALIZACION/SUV/gvdimlttgnvwyc2tihfy.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 12,
+    type: "SUV",
+    brand: "Toyota",
+    name: "RAV-4",
+    year: 2018,
+    seller: "Luis José Meléndez",
+    kilometer: 117000,
+    transmission: "Manual",
+    price: 264000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727897951/CARROS%20ACTUALIZACION/SUV/gquq5ocroeosm3bab8ht.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 13,
+    type: "SUV",
+    brand: "Honda",
+    name: "CRV",
+    year: 2011,
+    seller: "Juan Antonio Santos",
+    kilometer: 204000,
+    transmission: "Manual",
+    price: 132000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SUV/b4at9o8h4vmpszdbpwcq.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 14,
+    type: "SUV",
+    brand: "Volkswagen",
+    name: "Tiguan",
+    year: 2024,
+    seller: "Libertad Rivas",
+    kilometer: 9000,
+    transmission: "Automático",
+    price: 567000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889398/CARROS%20ACTUALIZACION/SUV/chl5pccvbihfxvvok1b6.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 15,
+    type: "SUV",
+    brand: "Mazda",
+    name: "CX-5",
+    year: 2019,
+    seller: "Antonio Rosas",
+    kilometer: 149000,
+    transmission: "Automático",
+    price: 187000,
+    owners: 3,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SUV/idvczoi3mmsjpramflwj.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 16,
+    type: "Hatchback",
+    brand: "Mazda",
+    name: "3",
+    year: 2016,
+    seller: "Adrían Hernández Lascurain",
+    kilometer: 141000,
+    transmission: "Manual",
+    price: 160000,
+    owners: 2,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727896775/CARROS%20ACTUALIZACION/HATCHBACK/shyx5azgolm4rtaycwyo.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 17,
+    type: "Hatchback",
+    brand: "Volkswagen",
+    name: "Polo",
+    year: 2017,
+    seller: "Luis José Meléndez",
+    kilometer: 63000,
+    transmission: "Manual",
+    price: 189000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/HATCHBACK/cg5xuvfhmnodgrlwdgcb.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 18,
+    type: "Hatchback",
+    brand: "KIA",
+    name: "Rio",
+    year: 2023,
+    seller: "Juan Antonio Santos",
+    kilometer: 27000,
+    transmission: "Manual",
+    price: 287000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/HATCHBACK/tuzm5cvgolblv42girrv.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 19,
+    type: "Hatchback",
+    brand: "Ford",
+    name: "Fiesta",
+    year: 2008,
+    seller: "Libertad Rivas",
+    kilometer: 214000,
+    transmission: "Automático",
+    price: 83000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/HATCHBACK/wv7qch7reot3295h7qab.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 20,
+    type: "Hatchback",
+    brand: "Chevrolet",
+    name: "Aveo",
+    year: 2024,
+    seller: "Antonio Rosas",
+    kilometer: 14000,
+    transmission: "Automático",
+    price: 290000,
+    owners: 3,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889395/CARROS%20ACTUALIZACION/HATCHBACK/mqgonenyxaxpd9atu8as.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 21,
+    type: "Pick Up",
+    brand: "Nissan",
+    name: "Frontier",
+    year: 2010,
+    seller: "Adrían Hernández Lascurain",
+    kilometer: 188000,
+    transmission: "Manual",
+    price: 197000,
+    owners: 2,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/PICK%20UP/iikuqbp7nxlsgpz93qh9.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 22,
+    type: "Pick Up",
+    brand: "Dodge",
+    name: "Ram 1500 TRX",
+    year: 2021,
+    seller: "Luis José Meléndez",
+    kilometer: 57000,
+    transmission: "Manual",
+    price: 580000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/PICK%20UP/yf137l97v50bv7dayqy3.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 23,
+    type: "Pick Up",
+    brand: "Ford",
+    name: "Ranger",
+    year: 2023,
+    seller: "Juan Antonio Santos",
+    kilometer: 124000,
+    transmission: "Manual",
+    price: 254000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/PICK%20UP/romyos7pv8vhha3tqffo.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 24,
+    type: "Pick Up",
+    brand: "Chevrolet",
+    name: "Cheyenne",
+    year: 2015,
+    seller: "Libertad Rivas",
+    kilometer: 120000,
+    transmission: "Automático",
+    price: 350000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/PICK%20UP/yhr9xizivzm5wvfnjzft.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 25,
+    type: "Pick Up",
+    brand: "Toyota",
+    name: "Hilux",
+    year: 2016,
+    seller: "Antonio Rosas",
+    kilometer: 55000,
+    transmission: "Automático",
+    price: 270000,
+    owners: 3,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/PICK%20UP/uysztqhhyomm9yl3a3pp.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 26,
+    type: "VAN",
+    brand: "Nissan",
+    name: "Urvan",
+    year: 2017,
+    seller: "Adrían Hernández Lascurain",
+    kilometer: 244000,
+    transmission: "Manual",
+    price: 167000,
+    owners: 2,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889399/CARROS%20ACTUALIZACION/VAN/bqkedgz11mkxojw57oiz.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 27,
+    type: "VAN",
+    brand: "Toyota",
+    name: "Hiace",
+    year: 2019,
+    seller: "Luis José Meléndez",
+    kilometer: 157000,
+    transmission: "Manual",
+    price: 230000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889399/CARROS%20ACTUALIZACION/VAN/tizxegacbbkfwlc88hzo.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 28,
+    type: "VAN",
+    brand: "Ford",
+    name: "Transit",
+    year: 2020,
+    seller: "Juan Antonio Santos",
+    kilometer: 174000,
+    transmission: "Manual",
+    price: 285000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889398/CARROS%20ACTUALIZACION/VAN/ctmgfch57gxydh7r0bwg.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 29,
+    type: "VAN",
+    brand: "Volkswagen",
+    name: "Transporter",
+    year: 2012,
+    seller: "Libertad Rivas",
+    kilometer: 280000,
+    transmission: "Automático",
+    price: 145000,
+    owners: 1,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889399/CARROS%20ACTUALIZACION/VAN/tizxegacbbkfwlc88hzo.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
+    verified: "true",
+    sold: "false",
+  },
+  {
+    id_cars: 30,
+    type: "VAN",
+    brand: "Mercedes",
+    name: "Sprinter",
+    year: 2021,
+    seller: "Antonio Rosas",
+    kilometer: 180000,
+    transmission: "Automático",
+    price: 300000,
+    owners: 3,
+    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727898730/CARROS%20ACTUALIZACION/VAN/dsebewpjrkkut6qpk1bs.jpg",
+    description:
+      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión",
+    verified: "true",
+    sold: "false",
+  },
+];
+
+// Function fetch dataCars
+// function getDataCars() {
+//   const promesa = fetch("../jsons/dataCars.JSON", {
+//     method: "GET",
+//   });
+//   promesa
+//     .then((response) => {
+//       response
+//         .json()
+//         .then((dataCarsFetch) => {
+//           if (localStorage.getItem("dataCars") != null) {
+//             filterDataCars(JSON.parse(localStorage.getItem("dataCars")));
+//             createGroupCarousels();
+//           } else {
+//             localStorage.setItem("dataCars", JSON.stringify(dataCarsFetch));
+//             filterDataCars(JSON.parse(localStorage.getItem("dataCars")));
+//             createGroupCarousels();
+//           }
+//         })
+//         .catch((error) => console.log("Problema con el json", error));
+//     })
+//     .catch((err) => console.log("Existió un problema con la solicitud", err));
+// } //getDataCars()
 // Function fetch dataCars
 function getDataCars() {
-  const promesa = fetch("../jsons/dataCars.JSON", {
-    method: "GET",
-  });
-  promesa
-    .then((response) => {
-      response
-        .json()
-        .then((dataCarsFetch) => {
-          if (localStorage.getItem("dataCars") != null) {
-            filterDataCars(JSON.parse(localStorage.getItem("dataCars")));
-            createGroupCarousels();
-          } else {
-            localStorage.setItem("dataCars", JSON.stringify(dataCarsFetch));
-            filterDataCars(JSON.parse(localStorage.getItem("dataCars")));
-            createGroupCarousels();
-          }
-        })
-        .catch((error) => console.log("Problema con el json", error));
-    })
-    .catch((err) => console.log("Existió un problema con la solicitud", err));
+  if (localStorage.getItem("dataCars") != null) {
+    filterDataCars(JSON.parse(localStorage.getItem("dataCars")));
+    createGroupCarousels();
+  } else {
+    localStorage.setItem("dataCars", JSON.stringify(dataCars));
+    filterDataCars(JSON.parse(localStorage.getItem("dataCars")));
+    createGroupCarousels();
+  }
 } //getDataCars()
 
 // *************Métodos*************
@@ -609,6 +1133,7 @@ function productInformation(index) {
     localStorage.setItem("indexShowCar", index);
     window.location.href =
       "https://adrianlascurain.github.io/OneClickCar/product_information.html";
+    // window.location.href = "../pages/product_information.html";
   } else {
     window.location.href =
       "https://adrianlascurain.github.io/OneClickCar/pages/sign_in.html";

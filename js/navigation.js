@@ -85,15 +85,15 @@ function createNavFoot() {
         <img id="OneClickCar" src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725394895/OneClickCar/logoOneClickCar.png" alt="OneClickCar" width="300px">
         <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
         <div class="social-media terms-conditions">
-            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html" title="Terminos">Términos del Sitio Web</a>
+            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html#Terminos" title="Terminos">Términos del Sitio Web</a>
             <a>|</a>
-            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html" title="Politica">Politica de Privacidad</a>
+            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html#Politica" title="Politica">Politica de Privacidad</a>
             <a>|</a>
-            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html" title="Declaración">Declaración de accesibilidad</a>
+            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html#Declaracion" title="Declaración">Declaración de accesibilidad</a>
             <a>|</a>
-            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html" title="Conducta">Codigo de Conducta para Proveedores</a>
+            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html#Codigo" title="Conducta">Codigo de Conducta para Proveedores</a>
             <a>|</a>
-            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html" title="Info">No Vender Mi Información</a>
+            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html#Noventa" title="Info">No Vender Mi Información</a>
         </div>`;
   footer_back.insertAdjacentHTML("beforeend", htmlContenidoFooter);
 }

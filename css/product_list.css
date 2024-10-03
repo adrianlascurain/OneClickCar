@@ -130,6 +130,7 @@ hr {
   font-family: "Montserrat";
   font-weight: bold;
   margin: 10px;
+  word-break: break-all;
 }
 .card-img-top {
   width: 262px;
@@ -150,6 +151,10 @@ hr {
 }
 .card-text-price {
   font-size: 22px;
+}
+
+.span_user {
+  word-break: break-all;
 }
 
 .carousel-control-prev,
@@ -202,6 +207,9 @@ hr {
   #carouselPickUpMobile,
   #carouselVanMobile {
     display: block !important;
+  }
+  #containerVan {
+    margin-bottom: 32px;
   }
   .card {
     max-width: 262px;

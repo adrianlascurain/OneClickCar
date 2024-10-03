@@ -224,6 +224,12 @@ input[type="file"] {
     margin: 0 auto;
     width: 80%; 
   }
+#imageContainer{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%; 
+}
   
 /*Icono de Upload File*/
 .custom-file-upload {
@@ -339,10 +345,13 @@ button {
     color: #ffffff;
     padding: 0;
 }
-
+.preview-section h3 {
+    color: #FFB82B;
+   
+}
 .preview-section p {
-    color: #333;
-    font-size: 12px;
+    color: #FFB82B;
+    font-size: 14px;
 }
 
 @media (max-width: 768px) {

@@ -345,10 +345,13 @@ button {
     color: #ffffff;
     padding: 0;
 }
-
+.preview-section h3 {
+    color: #FFB82B;
+   
+}
 .preview-section p {
-    color: #333;
-    font-size: 12px;
+    color: #FFB82B;
+    font-size: 14px;
 }
 
 @media (max-width: 768px) {

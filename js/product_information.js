@@ -1,3 +1,5 @@
+let contadorComment = 0;
+
 let navProductList = document
   .getElementById("navProductList")
   .classList.add("active");
@@ -35,6 +37,14 @@ let dataClients = [
   {
     idClient: 4,
     name: "LuisM",
+  },
+  {
+    idClient: 5,
+    name: "AntonioR",
+  },
+  {
+    idClient: 6,
+    name: "SergioR",
   },
 ];
 
@@ -251,32 +261,57 @@ function sendOpinion(listCars, dataClients) {
       .split(" ")
       .filter((e) => e.length > 0);
 
-    // Show success message
-    Swal.fire({
-      title: "Opinión completada",
-      text: "Tu opinión será validada conforme a las políticas de OneClickCar",
-      imageUrl:
-        "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
-      imageWidth: 350,
-      imageHeight: 200,
-      imageAlt: "Custom image",
-      icon: "success",
-    });
+    if (rating != 0) {
+      if (content.toString().length != 0) {
+        contadorComment++;
+        localStorage.setItem(
+          "contadorComment",
+          JSON.stringify(contadorComment)
+        );
 
-    let comment = {
-      id_comment: 4,
-      content: content.toString,
-      rating: parseInt(rating),
-      comment_date: currentDate,
-      id_buyer: dataClients[3].idClient,
-      id_seller: listCars[localStorage.getItem("indexShowCar")].seller,
-      approved: false,
-    };
+        let comment = {
+          id_comment: contadorComment,
+          content: content.toString(),
+          rating: parseInt(rating),
+          comment_date: currentDate,
+          id_buyer: dataClients[3].idClient,
+          id_seller: listCars[localStorage.getItem("indexShowCar")].seller,
+          approved: false,
+        };
+        document.getElementById("ratingInput").value = "";
+        document.getElementById("commentInput").value = "";
+        event.preventDefault();
+        // Show success message
+        Swal.fire({
+          title: "Opinión completada",
+          text: "Tu opinión será validada conforme a las políticas de OneClickCar",
+          imageUrl:
+            "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+          imageWidth: 350,
+          imageHeight: 200,
+          imageAlt: "Custom image",
+          icon: "success",
+        });
 
-    // console.log(comment);
-    // let dataComments = JSON.parse(localStorage.getItem("dataComments"));
-    // dataComments.push(comment);
-    // localStorage.setItem("dataComments", JSON.stringify(dataComments));
+        let dataComments = JSON.parse(localStorage.getItem("dataComments"));
+        dataComments.push(comment);
+        localStorage.setItem("dataComments", JSON.stringify(dataComments));
+      } else {
+        event.preventDefault();
+        Swal.fire({
+          title: "Opinión incompleta",
+          text: "Debes escribir una opinión",
+          icon: "error",
+        });
+      }
+    } else {
+      event.preventDefault();
+      Swal.fire({
+        title: "Opinión incompleta",
+        text: "Debes seleccionar una puntuación",
+        icon: "error",
+      });
+    }
   });
 } //sendOpinion()
 
@@ -293,4 +328,11 @@ if (
 } else {
   window.location.href =
     "https://adrianlascurain.github.io/OneClickCar/pages/sign_in.html";
+}
+
+if (localStorage.getItem("contadorComment") == null) {
+  localStorage.setItem("contadorComment", "3");
+}
+if (localStorage.getItem("contadorComment") != null) {
+  contadorComment = JSON.parse(localStorage.getItem("contadorComment"));
 }

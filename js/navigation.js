@@ -1,14 +1,27 @@
 const nav_bar = document.getElementById("nav_bar");
 const footer_back = document.getElementById("footer_back");
 
+// Get curren page
 let path = window.location.pathname;
 let page= path.split("/").pop();
 let relativePathOrigin = "";
-if(page == "index.html"){
-    relativePathOrigin = ".";
-}else{
-    relativePathOrigin = "..";
+
+// Create a regex to validate ip's
+const ipRegEx = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+
+// 
+let localDeployed = ipRegEx.test(location.hostname);
+
+if(localDeployed){
+    if(page == "index.html"){
+        relativePathOrigin = ".";
+    }else{
+        relativePathOrigin = "..";
+    }  
+}else{ // This case is used to deploy at GitHub Pages and must be reviewed if another hosting service will be used
+    relativePathOrigin = location.host + "/OneClickCar"
 }
+
 
 function createNavFoot(relativePathOrigin) {
   let currentPath = location.href;

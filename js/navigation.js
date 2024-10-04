@@ -11,6 +11,8 @@ const ipRegEx = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[
 
 // 
 let localDeployed = ipRegEx.test(location.hostname);
+console.log(localDeployed);
+
 
 if(localDeployed){
     if(page == "index.html"){
@@ -19,7 +21,7 @@ if(localDeployed){
         relativePathOrigin = "..";
     }  
 }else{ // This case is used to deploy at GitHub Pages and must be reviewed if another hosting service will be used
-    relativePathOrigin = location.host + "/OneClickCar"
+    relativePathOrigin =  "/OneClickCar"
 }
 
 

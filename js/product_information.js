@@ -255,11 +255,7 @@ function sendOpinion(listCars, dataClients) {
   let formOpinion = document.getElementById("formOpinion");
   formOpinion.addEventListener("submit", (event) => {
     let rating = document.getElementById("ratingInput").value;
-    let content = document
-      .getElementById("commentInput")
-      .value.replace(/\s+/g, " ")
-      .split(" ")
-      .filter((e) => e.length > 0);
+    let content = document.getElementById("commentInput").value;
 
     if (rating != 0) {
       if (content.toString().length != 0) {

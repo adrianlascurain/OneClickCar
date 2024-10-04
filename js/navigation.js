@@ -9,10 +9,8 @@ let relativePathOrigin = "";
 // Create a regex to validate ip's
 const ipRegEx = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 
-// 
+// Check if local host its an ip direction
 let localDeployed = ipRegEx.test(location.hostname);
-console.log(localDeployed);
-
 
 if(localDeployed){
     if(page == "index.html"){
@@ -26,7 +24,6 @@ if(localDeployed){
 
 
 function createNavFoot(relativePathOrigin) {
-  let currentPath = location.href;
   let htmlContenidoNav = `<nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">

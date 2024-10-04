@@ -1,7 +1,16 @@
 const nav_bar = document.getElementById("nav_bar");
 const footer_back = document.getElementById("footer_back");
 
-function createNavFoot() {
+let path = window.location.pathname;
+let page= path.split("/").pop();
+let relativePathOrigin = "";
+if(page == "index.html"){
+    relativePathOrigin = ".";
+}else{
+    relativePathOrigin = "..";
+}
+
+function createNavFoot(relativePathOrigin) {
   let currentPath = location.href;
   let htmlContenidoNav = `<nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
@@ -14,13 +23,13 @@ function createNavFoot() {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto options">
-                        <a class="nav-link" id="navIndex" aria-current="page" href="https://adrianlascurain.github.io/OneClickCar/index.html">INICIO</a>
-                        <a class="nav-link" id="navContact" href="https://adrianlascurain.github.io/OneClickCar/pages/contact.html">CONTACTO</a>
-                        <a class="nav-link" id="navAbout" href="https://adrianlascurain.github.io/OneClickCar/pages/about.html">NOSOTROS</a>
-                        <a class="nav-link" id="navLogIn" href="https://adrianlascurain.github.io/OneClickCar/pages/log_in.html">INICIAR SESIÓN</a>
-                        <a class="nav-link" id="navSignIn" href="https://adrianlascurain.github.io/OneClickCar/pages/sign_in.html">REGISTRARSE</a>
-                        <a class="nav-link" id="navUserProfile" href="https://adrianlascurain.github.io/OneClickCar/pages/user_profile.html">PERFIL</a>
-                        <a class="nav-link" id="navProductList" href="https://adrianlascurain.github.io/OneClickCar/pages/product_list.html">PRODUCTOS</a>
+                        <a class="nav-link" id="navIndex" aria-current="page" href="${relativePathOrigin}/index.html">INICIO</a>
+                        <a class="nav-link" id="navContact" href="${relativePathOrigin}/pages/contact.html">CONTACTO</a>
+                        <a class="nav-link" id="navAbout" href="${relativePathOrigin}/pages/about.html">NOSOTROS</a>
+                        <a class="nav-link" id="navLogIn" href="${relativePathOrigin}/pages/log_in.html">INICIAR SESIÓN</a>
+                        <a class="nav-link" id="navSignIn" href="${relativePathOrigin}/pages/sign_in.html">REGISTRARSE</a>
+                        <a class="nav-link" id="navUserProfile" href="${relativePathOrigin}/pages/user_profile.html">PERFIL</a>
+                        <a class="nav-link" id="navProductList" href="${relativePathOrigin}/pages/product_list.html">PRODUCTOS</a>
                     </div>
                 </div>
             </div>
@@ -85,17 +94,17 @@ function createNavFoot() {
         <img id="OneClickCar" src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725394895/OneClickCar/logoOneClickCar.png" alt="OneClickCar" width="300px">
         <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
         <div class="social-media terms-conditions">
-            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html#Terminos" title="Terminos">Términos del Sitio Web</a>
+            <a href="${relativePathOrigin}/pages/Terminos.html#Terminos" title="Terminos">Términos del Sitio Web</a>
             <a>|</a>
-            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html#Politica" title="Politica">Politica de Privacidad</a>
+            <a href="${relativePathOrigin}/pages/Terminos.html#Politica" title="Politica">Politica de Privacidad</a>
             <a>|</a>
-            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html#Declaracion" title="Declaración">Declaración de accesibilidad</a>
+            <a href="${relativePathOrigin}/pages/Terminos.html#Declaracion" title="Declaración">Declaración de accesibilidad</a>
             <a>|</a>
-            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html#Codigo" title="Conducta">Codigo de Conducta para Proveedores</a>
+            <a href="${relativePathOrigin}/pages/Terminos.html#Codigo" title="Conducta">Codigo de Conducta para Proveedores</a>
             <a>|</a>
-            <a href="https://adrianlascurain.github.io/OneClickCar/pages/Terminos.html#Noventa" title="Info">No Vender Mi Información</a>
+            <a href="${relativePathOrigin}/pages/Terminos.html#Noventa" title="Info">No Vender Mi Información</a>
         </div>`;
   footer_back.insertAdjacentHTML("beforeend", htmlContenidoFooter);
 }
 
-createNavFoot();
+createNavFoot(relativePathOrigin);

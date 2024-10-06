@@ -12,12 +12,13 @@ h1 {
 }
 h2 {
   font-family: "Poppins";
+
   font-weight: bold;
   margin-bottom: 10px;
   color: white;
   font-size: 28px;
 }
-h3 {
+h4 {
   font-family: "Poppins";
   font-weight: bold;
   font-size: 28px;
@@ -116,11 +117,13 @@ p {
   padding: 11px 10px;
 }
 .btn-interest:hover,
-.btn-interest:visited {
+.btn-interest:visited,
+.btn-interest:active {
   background-color: #e08f0ccd;
 }
 .btn-whats:hover,
-.btn-whats:visited {
+.btn-whats:visited,
+.btn-whats:active {
   background-color: #30a03c;
 }
 
@@ -224,7 +227,7 @@ select {
     padding: 18px 0px 19px;
     margin: 0px;
   }
-  h3 {
+  h4 {
     margin-bottom: 0px;
     padding: 30px 36px 0px 36px;
   }

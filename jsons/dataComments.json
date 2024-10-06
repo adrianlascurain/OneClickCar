@@ -1,29 +1,47 @@
 [
   {
     "id_comment": 1,
-    "content": "Compré un Nissan Versa 2018 con SergioR y fue una excelente adquisición a pesar de tener más de 200,000 kms, estéticamente y mecánicamente se encontraba en perfectas condiciones, llevó más de 1 año y sin necesidad de mantenimientos correctivos.",
+    "content": "Compré un Nissan Urvan 2018 y fue una excelente adquisición a pesar de tener más de 120,000 kms, estéticamente y mecánicamente se encontraba en perfectas condiciones, llevó más de 1 año y sin necesidad de mantenimientos correctivos.",
     "rating": 5,
-    "comment_date": "08 / 31 / 2024",
-    "id_buyer": 1,
-    "id_seller": 1,
-    "approved": true
+    "comment_date": "2024-01-01",
+    "approved": 1,
+    "Buyer_id_user": 2,
+    "Seller_id_user": 3
   },
   {
     "id_comment": 2,
-    "content": "Adquirí una Hilux 2015 con SergioR y fue una buena compra, se respetó el precio y las condiciones en las que se me comentó que se encontraba la camioneta, tanto el vendedor como OneClickCar se aseguraron de brindar confiabilidad al proceso.",
+    "content": "Adquirí una Toyota Hiace 2018 y fue una buena compra, se respetó el precio y las condiciones en las que se me comentó que se encontraba la camioneta, tanto el vendedor como OneClickCar se aseguraron de brindar confiabilidad al proceso.",
     "rating": 4,
-    "comment_date": "08 / 15 / 2024",
-    "id_buyer": 1,
-    "id_seller": 2,
-    "approved": true
+    "comment_date": "2024-01-02",
+    "approved": 1,
+    "Buyer_id_user": 3,
+    "Seller_id_user": 4
   },
   {
     "id_comment": 3,
-    "content": "Le compré un Toyoya Yaris a SergioR, al inicio todo iba bien pero unos meses posteriores la bomba de gasolina falló, aunque me comentaron que era un tema de desgaste por uso y antigüedad, reconozco que todo el proceso con el vendedor y la platafora fue transparente.",
-    "rating": 3,
-    "comment_date": "08 / 14 / 2024",
-    "id_buyer": 1,
-    "id_seller": 3,
-    "approved": true
+    "content": "Le compré un Ford Transit 2021, al inicio todo iba bien pero unos meses posteriores la bomba de gasolina falló, aunque me comentaron que era un tema de desgaste por uso y antigüedad, reconozco que todo el proceso con el vendedor y la platafora fue transparente.",
+    "rating": 5,
+    "comment_date": "2024-01-03",
+    "approved": 1,
+    "Buyer_id_user": 4,
+    "Seller_id_user": 5
+  },
+  {
+    "id_comment": 4,
+    "content": "Me encanto el vehículo, recomiendo 100% al vendedor",
+    "rating": 5,
+    "comment_date": "2024-01-04",
+    "approved": 1,
+    "Buyer_id_user": 5,
+    "Seller_id_user": 6
+  },
+  {
+    "id_comment": 5,
+    "content": "Pude encontrar mi coche ideal a un excelente precio.",
+    "rating": 5,
+    "comment_date": "2024-01-05",
+    "approved": 1,
+    "Buyer_id_user": 6,
+    "Seller_id_user": 2
   }
 ]

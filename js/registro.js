@@ -1,4 +1,4 @@
-let contadorId = 0;
+let contadorIdCar = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
   let formRegistro = document.querySelector("form");
@@ -59,26 +59,25 @@ document.addEventListener("DOMContentLoaded", function () {
       // reader.onload = function(event) {
       // Convertir la imagen a base64
       // let imgBase64 = event.target.result;
-      contadorId++;
-      console.log(contadorId);
-      localStorage.setItem("contadorId", JSON.stringify(contadorId));
+      contadorIdCar++;
+      console.log(contadorIdCar);
+      localStorage.setItem("contadorIdCar", JSON.stringify(contadorIdCar));
       // Objeto con los datos del vehículo
       let vehiculo = {
-        id_cars: contadorId,
+        id_car: contadorIdCar,
         type: type,
         brand: brand,
         name: name,
         year: parseInt(year),
-        seller: seller,
         kilometer: parseInt(kilometer),
         transmission: transmission,
         price: parseInt(price),
-        owners: parseInt(owners),
-        // contact: contact,
         img: localStorage.getItem("image_url"), // Guardar la imagen en base64
+        owners: parseInt(owners),
         description: description,
-        verified: false,
-        sold: false,
+        verified: 0,
+        sold: 0,
+        Seller_id_user: sessionStorage.getItem("id_user_logged"),
       };
 
       // Obtención de los datos en el localStorage
@@ -88,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       dataCars.push(vehiculo);
 
       // Almacenar en localStorage
-      localStorage.setItem("dataCars", JSON.stringify(dataCars));
+      localStorage.setItem("dataCarsOnSale", JSON.stringify(dataCars));
 
       // Mensaje de éxito
       alert("El vehículo se ha registrado con éxito");
@@ -110,8 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Función para obtener los vehículos almacenados
 function obtenerVehiculos() {
-  if (localStorage.getItem("dataCars") != null) {
-    let dataCars = localStorage.getItem("dataCars");
+  if (localStorage.getItem("dataCarsOnSale") != null) {
+    let dataCars = localStorage.getItem("dataCarsOnSale");
     return dataCars ? JSON.parse(dataCars) : [];
   }
 }
@@ -128,14 +127,14 @@ function printTotal(div) {
   div.insertAdjacentHTML(
     "afterbegin",
     `<div class="alert alert-primary" role="alert">
-        Vehículos en total registrados: <strong>${contadorId}</strong>
+        Vehículos en total registrados: <strong>${contadorIdCar}</strong>
         </div>`
   );
 }
 
-if (localStorage.getItem("contadorId") == null) {
-  localStorage.setItem("contadorId", "30");
+if (localStorage.getItem("contadorIdCar") == null) {
+  localStorage.setItem("contadorIdCar", "30");
 }
-if (localStorage.getItem("contadorId") != null) {
-  contadorId = JSON.parse(localStorage.getItem("contadorId"));
+if (localStorage.getItem("contadorIdCar") != null) {
+  contadorIdCar = JSON.parse(localStorage.getItem("contadorIdCar"));
 }

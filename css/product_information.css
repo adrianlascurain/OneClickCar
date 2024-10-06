@@ -115,12 +115,15 @@ p {
   word-break: break-all;
   padding: 11px 10px;
 }
-.btn-interest:hover {
+.btn-interest:hover,
+.btn-interest:visited {
   background-color: #e08f0ccd;
 }
-.btn-whats:hover {
+.btn-whats:hover,
+.btn-whats:visited {
   background-color: #30a03c;
 }
+
 .btn-whats {
   background-color: #52cb5f;
   border: none;
@@ -202,7 +205,6 @@ select {
   }
   .card {
     border: 0px;
-
     background-color: #002b5b;
   }
   .row.contact_car {

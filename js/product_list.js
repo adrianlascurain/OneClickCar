@@ -1131,12 +1131,23 @@ function productInformation(index) {
   if (sessionStorage.getItem("usuario_logeado") != null) {
     index--;
     localStorage.setItem("indexShowCar", index);
-    window.location.href =
-      "https://adrianlascurain.github.io/OneClickCar/pages/product_information.html";
-    // window.location.href = "../pages/product_information.html";
+    if ((window.location.pathname = "/pages/product_list.html")) {
+      // local
+      window.location.href = "../pages/product_information.html";
+    } else {
+      // github
+      window.location.href =
+        "https://adrianlascurain.github.io/OneClickCar/pages/product_information.html";
+    }
   } else {
-    window.location.href =
-      "https://adrianlascurain.github.io/OneClickCar/pages/sign_in.html";
+    if ((window.location.pathname = "/pages/product_list.html")) {
+      // local
+      window.location.href = "../pages/sign_in.html";
+    } else {
+      // github
+      window.location.href =
+        "https://adrianlascurain.github.io/OneClickCar/pages/sign_in.html";
+    }
   }
 } // productInformation()
 

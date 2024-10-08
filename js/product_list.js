@@ -90,7 +90,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 2,
@@ -107,7 +107,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 3,
@@ -124,7 +124,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 4,
@@ -141,7 +141,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 5,
@@ -158,7 +158,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 6,
@@ -175,7 +175,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 7,
@@ -192,7 +192,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 8,
@@ -209,7 +209,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 9,
@@ -226,7 +226,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 10,
@@ -243,7 +243,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 11,
@@ -260,7 +260,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 12,
@@ -277,7 +277,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 13,
@@ -294,7 +294,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 14,
@@ -311,7 +311,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 15,
@@ -328,7 +328,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 16,
@@ -345,7 +345,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 17,
@@ -362,7 +362,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 18,
@@ -379,7 +379,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 19,
@@ -396,7 +396,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 20,
@@ -413,7 +413,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 21,
@@ -430,7 +430,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 22,
@@ -447,7 +447,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 23,
@@ -464,7 +464,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 24,
@@ -481,7 +481,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 25,
@@ -498,7 +498,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 26,
@@ -515,7 +515,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 27,
@@ -532,7 +532,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 28,
@@ -549,7 +549,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 29,
@@ -566,7 +566,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 30,
@@ -583,7 +583,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión",
     verified: 1,
     sold: 1,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 31,
@@ -600,7 +600,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 1,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 32,
@@ -617,7 +617,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 1,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 33,
@@ -634,7 +634,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 1,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 34,
@@ -651,7 +651,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 1,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 35,
@@ -668,7 +668,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión",
     verified: 1,
     sold: 1,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
 ];
 let dataUsers = [
@@ -743,7 +743,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 2,
@@ -760,7 +760,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 3,
@@ -777,7 +777,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 4,
@@ -794,7 +794,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 5,
@@ -811,7 +811,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 6,
@@ -828,7 +828,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 7,
@@ -845,7 +845,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 8,
@@ -862,7 +862,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 9,
@@ -879,7 +879,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 10,
@@ -896,7 +896,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 11,
@@ -913,7 +913,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 12,
@@ -930,7 +930,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 13,
@@ -947,7 +947,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 14,
@@ -964,7 +964,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 15,
@@ -981,7 +981,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 16,
@@ -998,7 +998,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 17,
@@ -1015,7 +1015,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 18,
@@ -1032,7 +1032,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 19,
@@ -1049,7 +1049,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 20,
@@ -1066,7 +1066,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 21,
@@ -1083,7 +1083,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 22,
@@ -1100,7 +1100,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 23,
@@ -1117,7 +1117,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 24,
@@ -1134,7 +1134,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 25,
@@ -1151,7 +1151,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 26,
@@ -1168,7 +1168,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 27,
@@ -1185,7 +1185,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 28,
@@ -1202,7 +1202,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 29,
@@ -1219,7 +1219,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 30,
@@ -1236,7 +1236,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión",
     verified: 1,
     sold: 1,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
 ];
 let dataComments = [
@@ -1248,7 +1248,7 @@ let dataComments = [
     comment_date: "2024-01-01",
     approved: 1,
     Buyer_id_user: 2,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_comment: 2,
@@ -1258,7 +1258,7 @@ let dataComments = [
     comment_date: "2024-01-02",
     approved: 1,
     Buyer_id_user: 3,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_comment: 3,
@@ -1268,7 +1268,7 @@ let dataComments = [
     comment_date: "2024-01-03",
     approved: 1,
     Buyer_id_user: 4,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_comment: 4,
@@ -1277,7 +1277,7 @@ let dataComments = [
     comment_date: "2024-01-04",
     approved: 1,
     Buyer_id_user: 5,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_comment: 5,
@@ -1286,7 +1286,7 @@ let dataComments = [
     comment_date: "2024-01-05",
     approved: 1,
     Buyer_id_user: 6,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
 ];
 let dataPaymentMethod = [
@@ -1341,35 +1341,35 @@ let dataDepositMethod = [
     id_account: 1,
     name_account: "Luis Meléndez",
     type_card: "BBVA",
-    account_bank: "1234567890",
+    name_bank: "1234567890",
     Users_id_user: 2,
   },
   {
     id_account: 2,
     name_account: "Libertad Rivas",
     type_card: "Banamex",
-    account_bank: "0987654321",
+    name_bank: "0987654321",
     Users_id_user: 3,
   },
   {
     id_account: 3,
     name_account: "Antonio Rosas",
     type_card: "Banorte",
-    account_bank: "2345678901",
+    name_bank: "2345678901",
     Users_id_user: 4,
   },
   {
     id_account: 4,
     name_account: "Sergio Rolón",
     type_card: "Santander",
-    account_bank: "3456789012",
+    name_bank: "3456789012",
     Users_id_user: 5,
   },
   {
     id_account: 5,
     name_account: "Adrián Hernández",
     type_card: "HSBC",
-    account_bank: "4567890123",
+    name_bank: "4567890123",
     Users_id_user: 6,
   },
 ];
@@ -1378,7 +1378,7 @@ let dataTransactions = [
     id_transaction: 1,
     date_transaction: "2024-10-01",
     Buyer_id_user: 2,
-    Seller_id_user: 3,
+    seller_id_user: 3,
     Cars_id_car: 31,
     Payment_method_id_card: 1,
     Deposit_method_id_account: 2,
@@ -1387,7 +1387,7 @@ let dataTransactions = [
     id_transaction: 2,
     date_transaction: "2024-10-02",
     Buyer_id_user: 3,
-    Seller_id_user: 4,
+    seller_id_user: 4,
     Cars_id_car: 32,
     Payment_method_id_card: 2,
     Deposit_method_id_account: 3,
@@ -1396,7 +1396,7 @@ let dataTransactions = [
     id_transaction: 3,
     date_transaction: "2024-10-03",
     Buyer_id_user: 4,
-    Seller_id_user: 5,
+    seller_id_user: 5,
     Cars_id_car: 33,
     Payment_method_id_card: 3,
     Deposit_method_id_account: 4,
@@ -1405,7 +1405,7 @@ let dataTransactions = [
     id_transaction: 4,
     date_transaction: "2024-10-04",
     Buyer_id_user: 5,
-    Seller_id_user: 6,
+    seller_id_user: 6,
     Cars_id_car: 34,
     Payment_method_id_card: 4,
     Deposit_method_id_account: 5,
@@ -1414,556 +1414,16 @@ let dataTransactions = [
     id_transaction: 5,
     date_transaction: "2024-10-05",
     Buyer_id_user: 6,
-    Seller_id_user: 2,
+    seller_id_user: 2,
     Cars_id_car: 35,
     Payment_method_id_card: 5,
     Deposit_method_id_account: 1,
   },
 ];
-// ANTERIORES DB
-let dataClients = [
-  {
-    idClient: 1,
-    name: "AdrianH",
-  },
-  {
-    idClient: 2,
-    name: "LibertadR",
-  },
-  {
-    idClient: 3,
-    name: "LeslieE",
-  },
-  {
-    idClient: 4,
-    name: "LuisM",
-  },
-];
 
-// Array de objetos sellers
-let dataSellers = [
-  {
-    idSeller: 1,
-    name: "SergioR",
-  },
-];
-
-let dataCars = [
-  {
-    id_car: 1,
-    type: "Sedán",
-    brand: "Chevrolet",
-    name: "Cavalier",
-    year: 2021,
-    seller: "Adrían Hernández Lascurain",
-    kilometer: 51000,
-    transmission: "Manual",
-    price: 320000,
-    owners: 2,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SEDAN/jzmc4om5b6305qnkarzp.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 2,
-    type: "Sedán",
-    brand: "KIA",
-    name: "Forte",
-    year: 2019,
-    seller: "Luis José Meléndez",
-    kilometer: 97000,
-    transmission: "Manual",
-    price: 217000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SEDAN/xrw9p0u81kudod72eo9z.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 3,
-    type: "Sedán",
-    brand: "KIA",
-    name: "Forte",
-    year: 2022,
-    seller: "Juan Antonio Santos",
-    kilometer: 38000,
-    transmission: "Manual",
-    price: 280000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SEDAN/pfmdsxdozg4muh8rsm7i.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 4,
-    type: "Sedán",
-    brand: "Toyota",
-    name: "Corolla",
-    year: 2020,
-    seller: "Libertad Rivas",
-    kilometer: 76000,
-    transmission: "Automático",
-    price: 250000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SEDAN/jzcifbic9pvzj0ntw8ek.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 5,
-    type: "Sedán",
-    brand: "Dodge",
-    name: "Attitude",
-    year: 2021,
-    seller: "Antonio Rosas",
-    kilometer: 66000,
-    transmission: "Automático",
-    price: 190000,
-    owners: 3,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SEDAN/r7yx7ajnarxwyrjskiob.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 6,
-    type: "Coupé",
-    brand: "Ford",
-    name: "Mustang",
-    year: 2014,
-    seller: "Adrían Hernández Lascurain",
-    kilometer: 164000,
-    transmission: "Manual",
-    price: 170000,
-    owners: 2,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889395/CARROS%20ACTUALIZACION/COUPE/m2scaucxbiugsglz9pyv.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 7,
-    type: "Coupé",
-    brand: "Ford",
-    name: "Mustang",
-    year: 2023,
-    seller: "Luis José Meléndez",
-    kilometer: 2100,
-    transmission: "Manual",
-    price: 445000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/COUPE/bs7ya0ncrne3rhw3wcxn.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 8,
-    type: "Coupé",
-    brand: "Chevrolet",
-    name: "Camaro",
-    year: 2017,
-    seller: "Juan Antonio Santos",
-    kilometer: 92000,
-    transmission: "Manual",
-    price: 315000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889395/CARROS%20ACTUALIZACION/COUPE/vdrke72dax4bguhazerg.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 9,
-    type: "Coupé",
-    brand: "Audi",
-    name: "A5",
-    year: 2021,
-    seller: "Libertad Rivas",
-    kilometer: 43000,
-    transmission: "Automático",
-    price: 387000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727892329/CARROS%20ACTUALIZACION/COUPE/gxutrhmdgnz3bzvgvhkr.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 10,
-    type: "Coupé",
-    brand: "BMW",
-    name: "Serie 4",
-    year: 2012,
-    seller: "Antonio Rosas",
-    kilometer: 149000,
-    transmission: "Automático",
-    price: 187000,
-    owners: 3,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889395/CARROS%20ACTUALIZACION/COUPE/dcouwfbl2ke6bcvaydho.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 11,
-    type: "SUV",
-    brand: "Nissan",
-    name: "X-trail",
-    year: 2014,
-    seller: "Adrían Hernández Lascurain",
-    kilometer: 133000,
-    transmission: "Manual",
-    price: 183000,
-    owners: 2,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889398/CARROS%20ACTUALIZACION/SUV/gvdimlttgnvwyc2tihfy.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 12,
-    type: "SUV",
-    brand: "Toyota",
-    name: "RAV-4",
-    year: 2018,
-    seller: "Luis José Meléndez",
-    kilometer: 117000,
-    transmission: "Manual",
-    price: 264000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727897951/CARROS%20ACTUALIZACION/SUV/gquq5ocroeosm3bab8ht.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 13,
-    type: "SUV",
-    brand: "Honda",
-    name: "CRV",
-    year: 2011,
-    seller: "Juan Antonio Santos",
-    kilometer: 204000,
-    transmission: "Manual",
-    price: 132000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SUV/b4at9o8h4vmpszdbpwcq.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 14,
-    type: "SUV",
-    brand: "Volkswagen",
-    name: "Tiguan",
-    year: 2024,
-    seller: "Libertad Rivas",
-    kilometer: 9000,
-    transmission: "Automático",
-    price: 567000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889398/CARROS%20ACTUALIZACION/SUV/chl5pccvbihfxvvok1b6.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 15,
-    type: "SUV",
-    brand: "Mazda",
-    name: "CX-5",
-    year: 2019,
-    seller: "Antonio Rosas",
-    kilometer: 149000,
-    transmission: "Automático",
-    price: 187000,
-    owners: 3,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/SUV/idvczoi3mmsjpramflwj.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 16,
-    type: "Hatchback",
-    brand: "Mazda",
-    name: "3",
-    year: 2016,
-    seller: "Adrían Hernández Lascurain",
-    kilometer: 141000,
-    transmission: "Manual",
-    price: 160000,
-    owners: 2,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727896775/CARROS%20ACTUALIZACION/HATCHBACK/shyx5azgolm4rtaycwyo.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 17,
-    type: "Hatchback",
-    brand: "Volkswagen",
-    name: "Polo",
-    year: 2017,
-    seller: "Luis José Meléndez",
-    kilometer: 63000,
-    transmission: "Manual",
-    price: 189000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/HATCHBACK/cg5xuvfhmnodgrlwdgcb.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 18,
-    type: "Hatchback",
-    brand: "KIA",
-    name: "Rio",
-    year: 2023,
-    seller: "Juan Antonio Santos",
-    kilometer: 27000,
-    transmission: "Manual",
-    price: 287000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/HATCHBACK/tuzm5cvgolblv42girrv.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 19,
-    type: "Hatchback",
-    brand: "Ford",
-    name: "Fiesta",
-    year: 2008,
-    seller: "Libertad Rivas",
-    kilometer: 214000,
-    transmission: "Automático",
-    price: 83000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/HATCHBACK/wv7qch7reot3295h7qab.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 20,
-    type: "Hatchback",
-    brand: "Chevrolet",
-    name: "Aveo",
-    year: 2024,
-    seller: "Antonio Rosas",
-    kilometer: 14000,
-    transmission: "Automático",
-    price: 290000,
-    owners: 3,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889395/CARROS%20ACTUALIZACION/HATCHBACK/mqgonenyxaxpd9atu8as.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 21,
-    type: "Pick Up",
-    brand: "Nissan",
-    name: "Frontier",
-    year: 2010,
-    seller: "Adrían Hernández Lascurain",
-    kilometer: 188000,
-    transmission: "Manual",
-    price: 197000,
-    owners: 2,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/PICK%20UP/iikuqbp7nxlsgpz93qh9.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 22,
-    type: "Pick Up",
-    brand: "Dodge",
-    name: "Ram 1500 TRX",
-    year: 2021,
-    seller: "Luis José Meléndez",
-    kilometer: 57000,
-    transmission: "Manual",
-    price: 580000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/PICK%20UP/yf137l97v50bv7dayqy3.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 23,
-    type: "Pick Up",
-    brand: "Ford",
-    name: "Ranger",
-    year: 2023,
-    seller: "Juan Antonio Santos",
-    kilometer: 124000,
-    transmission: "Manual",
-    price: 254000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/PICK%20UP/romyos7pv8vhha3tqffo.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 24,
-    type: "Pick Up",
-    brand: "Chevrolet",
-    name: "Cheyenne",
-    year: 2015,
-    seller: "Libertad Rivas",
-    kilometer: 120000,
-    transmission: "Automático",
-    price: 350000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889396/CARROS%20ACTUALIZACION/PICK%20UP/yhr9xizivzm5wvfnjzft.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 25,
-    type: "Pick Up",
-    brand: "Toyota",
-    name: "Hilux",
-    year: 2016,
-    seller: "Antonio Rosas",
-    kilometer: 55000,
-    transmission: "Automático",
-    price: 270000,
-    owners: 3,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889397/CARROS%20ACTUALIZACION/PICK%20UP/uysztqhhyomm9yl3a3pp.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 26,
-    type: "VAN",
-    brand: "Nissan",
-    name: "Urvan",
-    year: 2017,
-    seller: "Adrían Hernández Lascurain",
-    kilometer: 244000,
-    transmission: "Manual",
-    price: 167000,
-    owners: 2,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889399/CARROS%20ACTUALIZACION/VAN/bqkedgz11mkxojw57oiz.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 27,
-    type: "VAN",
-    brand: "Toyota",
-    name: "Hiace",
-    year: 2019,
-    seller: "Luis José Meléndez",
-    kilometer: 157000,
-    transmission: "Manual",
-    price: 230000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889399/CARROS%20ACTUALIZACION/VAN/tizxegacbbkfwlc88hzo.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 28,
-    type: "VAN",
-    brand: "Ford",
-    name: "Transit",
-    year: 2020,
-    seller: "Juan Antonio Santos",
-    kilometer: 174000,
-    transmission: "Manual",
-    price: 285000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889398/CARROS%20ACTUALIZACION/VAN/ctmgfch57gxydh7r0bwg.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 29,
-    type: "VAN",
-    brand: "Volkswagen",
-    name: "Transporter",
-    year: 2012,
-    seller: "Libertad Rivas",
-    kilometer: 280000,
-    transmission: "Automático",
-    price: 145000,
-    owners: 1,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727889399/CARROS%20ACTUALIZACION/VAN/tizxegacbbkfwlc88hzo.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
-    verified: "true",
-    sold: "false",
-  },
-  {
-    id_car: 30,
-    type: "VAN",
-    brand: "Mercedes",
-    name: "Sprinter",
-    year: 2021,
-    seller: "Antonio Rosas",
-    kilometer: 180000,
-    transmission: "Automático",
-    price: 300000,
-    owners: 3,
-    img: "https://res.cloudinary.com/duqki6x6t/image/upload/v1727898730/CARROS%20ACTUALIZACION/VAN/dsebewpjrkkut6qpk1bs.jpg",
-    description:
-      "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión",
-    verified: "true",
-    sold: "false",
-  },
-];
-
-// Function fetch dataCars
+// Function fetch dataCars - funcional -- cambiar URL
 // function getDataCars() {
-//   const promesa = fetch("../jsons/dataCars.JSON", {
+//   const promesa = fetch("http://localhost:8080/api/productos/", {
 //     method: "GET",
 //   });
 //   promesa
@@ -1975,7 +1435,11 @@ let dataCars = [
 //             filterDataCars(JSON.parse(localStorage.getItem("dataCarsOnSale")));
 //             createGroupCarousels();
 //           } else {
-//             localStorage.setItem("dataCarsOnSale", JSON.stringify(dataCarsFetch));
+//             console.log(dataCarsFetch);
+//             localStorage.setItem(
+//               "dataCarsOnSale",
+//               JSON.stringify(dataCarsFetch)
+//             );
 //             filterDataCars(JSON.parse(localStorage.getItem("dataCarsOnSale")));
 //             createGroupCarousels();
 //           }
@@ -1984,7 +1448,8 @@ let dataCars = [
 //     })
 //     .catch((err) => console.log("Existió un problema con la solicitud", err));
 // } //getDataCars()
-// Function fetch dataCars
+
+//Function fetch dataCars
 function getDataCars() {
   if (localStorage.getItem("dataCarsOnSale") != null) {
     filterDataCars(JSON.parse(localStorage.getItem("dataCarsOnSale")));
@@ -2071,9 +1536,9 @@ function createCarouselDesktop(listCars, carouselTipoDesktop, tipoCarro) {
                     <a id="btnInfo${
                       listCars[j].id_car
                     }"  onclick="productInformation(${listCars[j].id_car},${
-        listCars[j].Seller_id_user
+        listCars[j].seller_id_user
       })" oncontextmenu="productInformation(${listCars[j].id_car},${
-        listCars[j].Seller_id_user
+        listCars[j].seller_id_user
       })" class="btn btn-primary btn-informacion" ">Más información</a></div><!-- fin div boton-->
                   </div><!-- ****************************FIN Card body -->
                 </div><!-- ****************************FIN Card -->
@@ -2147,9 +1612,9 @@ function createCarouselMobile(listCars, carouselTipoMobile, tipoCarro) {
                     <div class="text-center"><a id="btnInfoMob${
                       listCars[i].id_car
                     }"  onclick="productInformation(${listCars[i].id_car},${
-      listCars[i].Seller_id_user
+      listCars[i].seller_id_user
     })" oncontextmenu="productInformation(${listCars[i].id_car},${
-      listCars[i].Seller_id_user
+      listCars[i].seller_id_user
     })" class="btn btn-primary btn-informacion" ">Más información</a></div><!-- fin div boton-->
                   </div><!-- ****************************FIN Card body -->
                 </div><!-- ****************************FIN Card -->
@@ -2476,12 +1941,12 @@ inputSearch.addEventListener("keypress", function (event) {
 }); //inputSearch.addEventListener()
 
 // Función para generar índice y presentar información en página product_information
-function productInformation(id_car, Seller_id_user) {
+function productInformation(id_car, seller_id_user) {
   if (sessionStorage.getItem("id_user_logged") != null) {
     id_car;
-    Seller_id_user;
+    seller_id_user;
     localStorage.setItem("id_car", id_car);
-    localStorage.setItem("Seller_id_user", Seller_id_user);
+    localStorage.setItem("seller_id_user", seller_id_user);
     localStorage.setItem("dataUsers", JSON.stringify(dataUsers));
     if ((window.location.pathname = "/pages/product_list.html")) {
       // local

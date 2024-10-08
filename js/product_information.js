@@ -39,7 +39,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 2,
@@ -56,7 +56,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 3,
@@ -73,7 +73,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 4,
@@ -90,7 +90,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 5,
@@ -107,7 +107,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 6,
@@ -124,7 +124,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 7,
@@ -141,7 +141,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 8,
@@ -158,7 +158,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 9,
@@ -175,7 +175,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 10,
@@ -192,7 +192,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 11,
@@ -209,7 +209,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 12,
@@ -226,7 +226,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 13,
@@ -243,7 +243,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 14,
@@ -260,7 +260,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 15,
@@ -277,7 +277,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 16,
@@ -294,7 +294,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 17,
@@ -311,7 +311,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 18,
@@ -328,7 +328,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 19,
@@ -345,7 +345,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 20,
@@ -362,7 +362,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 21,
@@ -379,7 +379,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 22,
@@ -396,7 +396,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 23,
@@ -413,7 +413,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 24,
@@ -430,7 +430,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 25,
@@ -447,7 +447,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 26,
@@ -464,7 +464,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 27,
@@ -481,7 +481,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 28,
@@ -498,7 +498,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 29,
@@ -515,7 +515,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 30,
@@ -532,7 +532,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión",
     verified: 1,
     sold: 1,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 31,
@@ -549,7 +549,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 1,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 32,
@@ -566,7 +566,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 1,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 33,
@@ -583,7 +583,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 1,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 34,
@@ -600,7 +600,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 1,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 35,
@@ -617,7 +617,7 @@ let dataCarsGeneral = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión",
     verified: 1,
     sold: 1,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
 ];
 let dataUsers = [
@@ -692,7 +692,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 2,
@@ -709,7 +709,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 3,
@@ -726,7 +726,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 4,
@@ -743,7 +743,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 5,
@@ -760,7 +760,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 6,
@@ -777,7 +777,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 7,
@@ -794,7 +794,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 8,
@@ -811,7 +811,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 9,
@@ -828,7 +828,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 10,
@@ -845,7 +845,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 11,
@@ -862,7 +862,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 12,
@@ -879,7 +879,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 13,
@@ -896,7 +896,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 14,
@@ -913,7 +913,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 15,
@@ -930,7 +930,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 16,
@@ -947,7 +947,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 17,
@@ -964,7 +964,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 18,
@@ -981,7 +981,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 19,
@@ -998,7 +998,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 20,
@@ -1015,7 +1015,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 21,
@@ -1032,7 +1032,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 22,
@@ -1049,7 +1049,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 23,
@@ -1066,7 +1066,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 24,
@@ -1083,7 +1083,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 25,
@@ -1100,7 +1100,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_car: 26,
@@ -1117,7 +1117,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
   {
     id_car: 27,
@@ -1134,7 +1134,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_car: 28,
@@ -1151,7 +1151,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_car: 29,
@@ -1168,7 +1168,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión o compra.",
     verified: 1,
     sold: 0,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_car: 30,
@@ -1185,7 +1185,7 @@ let dataCarsOnSale = [
       "Llevate este excelente vehículo en óptimas condiciones. Ha pasado todas las revisiones (mécanica y legal), así que contacta al vendedor para más información, cita para revisión",
     verified: 1,
     sold: 1,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
 ];
 let dataComments = [
@@ -1197,7 +1197,7 @@ let dataComments = [
     comment_date: "2024-01-01",
     approved: 1,
     Buyer_id_user: 2,
-    Seller_id_user: 3,
+    seller_id_user: 3,
   },
   {
     id_comment: 2,
@@ -1207,7 +1207,7 @@ let dataComments = [
     comment_date: "2024-01-02",
     approved: 1,
     Buyer_id_user: 3,
-    Seller_id_user: 4,
+    seller_id_user: 4,
   },
   {
     id_comment: 3,
@@ -1217,7 +1217,7 @@ let dataComments = [
     comment_date: "2024-01-03",
     approved: 1,
     Buyer_id_user: 4,
-    Seller_id_user: 5,
+    seller_id_user: 5,
   },
   {
     id_comment: 4,
@@ -1226,7 +1226,7 @@ let dataComments = [
     comment_date: "2024-01-04",
     approved: 1,
     Buyer_id_user: 5,
-    Seller_id_user: 6,
+    seller_id_user: 6,
   },
   {
     id_comment: 5,
@@ -1235,7 +1235,7 @@ let dataComments = [
     comment_date: "2024-01-05",
     approved: 1,
     Buyer_id_user: 6,
-    Seller_id_user: 2,
+    seller_id_user: 2,
   },
 ];
 let dataPaymentMethod = [
@@ -1290,35 +1290,35 @@ let dataDepositMethod = [
     id_account: 1,
     name_account: "Luis Meléndez",
     type_card: "BBVA",
-    account_bank: "1234567890",
+    name_bank: "1234567890",
     Users_id_user: 2,
   },
   {
     id_account: 2,
     name_account: "Libertad Rivas",
     type_card: "Banamex",
-    account_bank: "0987654321",
+    name_bank: "0987654321",
     Users_id_user: 3,
   },
   {
     id_account: 3,
     name_account: "Antonio Rosas",
     type_card: "Banorte",
-    account_bank: "2345678901",
+    name_bank: "2345678901",
     Users_id_user: 4,
   },
   {
     id_account: 4,
     name_account: "Sergio Rolón",
     type_card: "Santander",
-    account_bank: "3456789012",
+    name_bank: "3456789012",
     Users_id_user: 5,
   },
   {
     id_account: 5,
     name_account: "Adrián Hernández",
     type_card: "HSBC",
-    account_bank: "4567890123",
+    name_bank: "4567890123",
     Users_id_user: 6,
   },
 ];
@@ -1327,7 +1327,7 @@ let dataTransactions = [
     id_transaction: 1,
     date_transaction: "2024-10-01",
     Buyer_id_user: 2,
-    Seller_id_user: 3,
+    seller_id_user: 3,
     Cars_id_car: 31,
     Payment_method_id_card: 1,
     Deposit_method_id_account: 2,
@@ -1336,7 +1336,7 @@ let dataTransactions = [
     id_transaction: 2,
     date_transaction: "2024-10-02",
     Buyer_id_user: 3,
-    Seller_id_user: 4,
+    seller_id_user: 4,
     Cars_id_car: 32,
     Payment_method_id_card: 2,
     Deposit_method_id_account: 3,
@@ -1345,7 +1345,7 @@ let dataTransactions = [
     id_transaction: 3,
     date_transaction: "2024-10-03",
     Buyer_id_user: 4,
-    Seller_id_user: 5,
+    seller_id_user: 5,
     Cars_id_car: 33,
     Payment_method_id_card: 3,
     Deposit_method_id_account: 4,
@@ -1354,7 +1354,7 @@ let dataTransactions = [
     id_transaction: 4,
     date_transaction: "2024-10-04",
     Buyer_id_user: 5,
-    Seller_id_user: 6,
+    seller_id_user: 6,
     Cars_id_car: 34,
     Payment_method_id_card: 4,
     Deposit_method_id_account: 5,
@@ -1363,7 +1363,7 @@ let dataTransactions = [
     id_transaction: 5,
     date_transaction: "2024-10-05",
     Buyer_id_user: 6,
-    Seller_id_user: 2,
+    seller_id_user: 2,
     Cars_id_car: 35,
     Payment_method_id_card: 5,
     Deposit_method_id_account: 1,
@@ -1430,7 +1430,7 @@ let dataCommentsOld = [
   },
 ];
 
-function createCard(listCars, id_car, dataUsers, Seller_id_user) {
+function createCard(listCars, id_car, dataUsers, seller_id_user) {
   product_title.insertAdjacentHTML(
     "beforeend",
     `${listCars[id_car].brand} ${listCars[id_car].name}`
@@ -1460,7 +1460,7 @@ function createCard(listCars, id_car, dataUsers, Seller_id_user) {
                     </div>
                     <div class="row justify-content-center" id="row_description2">
                       <div class="div_details col-sm-12 col-lg-4">Vendedor: ${
-                        dataUsers[Seller_id_user].full_name
+                        dataUsers[seller_id_user].full_name
                       }</div>
                       <div class="div_details col-sm-12 col-lg-4">Transmisión: ${
                         listCars[id_car].transmission
@@ -1545,22 +1545,22 @@ function getDataComments() {
     createOpinios(
       JSON.parse(localStorage.getItem("dataComments")),
       JSON.parse(localStorage.getItem("dataUsers")),
-      JSON.parse(localStorage.getItem("Seller_id_user") - 1)
+      JSON.parse(localStorage.getItem("seller_id_user") - 1)
     );
   } else {
     localStorage.setItem("dataComments", JSON.stringify(dataComments));
     createOpinios(
       JSON.parse(localStorage.getItem("dataComments")),
       JSON.parse(localStorage.getItem("dataUsers")),
-      JSON.parse(localStorage.getItem("Seller_id_user") - 1)
+      JSON.parse(localStorage.getItem("seller_id_user") - 1)
     );
   }
 } //getDataComments()
 
-function createOpinios(dataComments, dataUsers, Seller_id_user) {
+function createOpinios(dataComments, dataUsers, seller_id_user) {
   let htmlContent = "";
   for (i = 0; i < dataComments.length; i++) {
-    if (dataComments[i].Seller_id_user == Seller_id_user + 1) {
+    if (dataComments[i].seller_id_user == seller_id_user + 1) {
       htmlContent = `
     <div id="div_span_user">
     <img class="img_profile" src="https://res.cloudinary.com/duqki6x6t/image/upload/v1727588002/h5zdh5wsuos6fp8mhtls.png" alt="Imagen perfil">
@@ -1583,7 +1583,7 @@ function createOpinios(dataComments, dataUsers, Seller_id_user) {
 } //createOpinios()
 
 // Function fetch sendOpinion
-function sendOpinion(dataUsers, id_user_logged, Seller_id_user) {
+function sendOpinion(dataUsers, id_user_logged, seller_id_user) {
   let htmlContent = "";
   htmlContent += `
     <img class="img_profile" src="https://res.cloudinary.com/duqki6x6t/image/upload/v1727588002/h5zdh5wsuos6fp8mhtls.png" alt="Imagen perfil">
@@ -1630,7 +1630,7 @@ function sendOpinion(dataUsers, id_user_logged, Seller_id_user) {
           comment_date: currentDate,
           approved: 0,
           Buyer_id_user: id_user_logged,
-          Seller_id_user: Seller_id_user,
+          seller_id_user: seller_id_user,
         };
         document.getElementById("ratingInput").value = "";
         document.getElementById("commentInput").value = "";
@@ -1673,20 +1673,20 @@ function sendOpinion(dataUsers, id_user_logged, Seller_id_user) {
 if (
   localStorage.getItem("dataCarsOnSale") != null &&
   localStorage.getItem("id_car") != null &&
-  localStorage.getItem("Seller_id_user") != null &&
+  localStorage.getItem("seller_id_user") != null &&
   localStorage.getItem("dataUsers") != null
 ) {
   createCard(
     JSON.parse(localStorage.getItem("dataCarsOnSale")),
     JSON.parse(localStorage.getItem("id_car") - 1),
     JSON.parse(localStorage.getItem("dataUsers")),
-    JSON.parse(localStorage.getItem("Seller_id_user") - 1)
+    JSON.parse(localStorage.getItem("seller_id_user") - 1)
   );
   getDataComments();
   sendOpinion(
     JSON.parse(localStorage.getItem("dataUsers")),
     JSON.parse(sessionStorage.getItem("id_user_logged")),
-    JSON.parse(localStorage.getItem("Seller_id_user"))
+    JSON.parse(localStorage.getItem("seller_id_user"))
   );
 } else {
   if ((window.location.pathname = "/pages/product_list.html")) {

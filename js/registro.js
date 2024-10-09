@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
       let year = document.getElementById("anio").value;
       let kilometer = document.getElementById("kilometraje").value;
       let transmission = document.getElementById("transmision").value;
-      let seller = document.getElementById("propietario").value;
+      // let seller = document.getElementById("propietario").value;
       let owners = document.getElementById("num_prop").value;
-      let contact = document.getElementById("contacto").value;
+      // let contact = document.getElementById("contacto").value;
       let price = document.getElementById("precio").value;
       let description = document.getElementById("descripcion").value;
       let img = document.getElementById("imagenes");
@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (year === "") camposFaltantes.push("Año");
       if (kilometer === "") camposFaltantes.push("Kilometraje");
       if (transmission === "") camposFaltantes.push("Transmisión");
-      if (seller === "") camposFaltantes.push("Propietario");
+      // if (seller === "") camposFaltantes.push("Propietario");
       if (owners === "") camposFaltantes.push("Número de propietarios");
-      if (contact === "") camposFaltantes.push("Contacto");
+      // if (contact === "") camposFaltantes.push("Contacto");
       if (price === "") camposFaltantes.push("Precio");
       if (description === "") camposFaltantes.push("Descripción");
       if (!termsCheckbox.checked) camposFaltantes.push("Términos y condiciones");
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         brand: brand,
         name: name,
         year: parseInt(year),
-        seller: seller,
+        // seller: seller,
         kilometer: parseInt(kilometer),
         transmission: transmission,
         price: parseInt(price),

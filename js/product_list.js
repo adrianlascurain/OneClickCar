@@ -1338,35 +1338,35 @@ let dataDepositMethod = [
     id_account: 1,
     name_account: "Luis Meléndez",
     type_card: "BBVA",
-    name_bank: "1234567890",
+    name_bank: "1234567890123456",
     users_id_user: 2,
   },
   {
     id_account: 2,
     name_account: "Libertad Rivas",
     type_card: "Banamex",
-    name_bank: "0987654321",
+    name_bank: "0987654321123456",
     users_id_user: 3,
   },
   {
     id_account: 3,
     name_account: "Antonio Rosas",
     type_card: "Banorte",
-    name_bank: "2345678901",
+    name_bank: "2345678901123456",
     users_id_user: 4,
   },
   {
     id_account: 4,
     name_account: "Sergio Rolón",
     type_card: "Santander",
-    name_bank: "3456789012",
+    name_bank: "3456789012123456",
     users_id_user: 5,
   },
   {
     id_account: 5,
     name_account: "Adrián Hernández",
     type_card: "HSBC",
-    name_bank: "4567890123",
+    name_bank: "4567890123123456",
     users_id_user: 6,
   },
 ];
@@ -1983,7 +1983,7 @@ if (localStorage.getItem("contadorCarsGeneral") == null) {
   localStorage.setItem("contadorCarsGeneral", "35");
 } else { let contadorCarsGeneral = JSON.parse(localStorage.getItem("contadorCarsGeneral")); }
 // Identificador usuario loggeado-actual
-sessionStorage.setItem("id_user_logged", "0");
+// sessionStorage.setItem("id_user_logged", "0");
 
 // Contador método de depósito
 if (localStorage.getItem("contadorDeposit") == null) {

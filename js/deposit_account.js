@@ -1,6 +1,3 @@
-// Identificador usuario loggeado-actual
-sessionStorage.setItem("id_user_logged", "0");
-
 let navUserProfile = document.getElementById("navUserProfile").classList.add("active");
 let infoCliente = document.getElementById("infoCliente");
 let infoClienteRow = document.getElementById("infoClienteRow");

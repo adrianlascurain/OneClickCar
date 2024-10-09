@@ -410,6 +410,9 @@ width: 67px ;
         width: 100%; 
         text-align: center;
     }
+    #image{
+        padding-left: 0px;
+    }
 
     input[type="text"], input[type="number"], input[type="tel"], textarea {
         margin-bottom: 10px;

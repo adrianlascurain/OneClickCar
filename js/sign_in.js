@@ -1,5 +1,4 @@
-// Identificador usuario loggeado-actual
-sessionStorage.setItem("id_user_logged", "2");
+
 // nav bar active
 let navSignIn = document
 .getElementById("navSignIn")
@@ -22,7 +21,8 @@ document.getElementById('btnSignIn').addEventListener('click', function (e) {
     const email = document.getElementById('email').value.toLowerCase();
     const password = document.getElementById('inputPassword2').value;
     const confirmPassword = document.getElementById('inputPassword6').value;
-    const userType = "client"
+  const userType = "cliente";
+  const birthdate = document.getElementById('birthdate');
 
     // Validar nombre
     if (!nameRegex.test(name)) {
@@ -84,7 +84,7 @@ document.getElementById('btnSignIn').addEventListener('click', function (e) {
         userType: userType 
     };//usuarioObj
     //guardar en LocalStorage
-    localStorage.setItem(email, JSON.stringify(usuarioObj));  //usando  email com 'clave'
+    localStorage.setItem(email, JSON.stringify(usuarioObj));  //usando  email como 'clave'
 
     // Mostrar mensaje de éxito
     Swal.fire({

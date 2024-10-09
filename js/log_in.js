@@ -1,3 +1,6 @@
+// Identificador usuario loggeado-actual
+sessionStorage.setItem("id_user_logged", "2");
+
 // navbar active
 let navLogIn = document
 .getElementById("navLogIn")

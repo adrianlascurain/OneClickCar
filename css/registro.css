@@ -152,7 +152,7 @@ select {
     margin-bottom: 5px;  */
     margin: 20px 0;
     display: block;
-    padding-left: 100px;
+    padding-left: 200px;
     text-align: center;
     width: 100%;
 } 
@@ -220,7 +220,7 @@ input[type="file"] {
 .upload-icon {
     width: 200px; 
     height: 80px; 
-    margin-right: 8px; 
+    margin-right: 80px; 
     padding-left: 100px;
 }
 

@@ -61,6 +61,7 @@ main {
     grid-template-columns: 1fr; /* Cambia a una columna para diseño compacto */
     gap: 15px;
     align-items: center;
+    overflow: hidden;
 
 }
 
@@ -144,16 +145,17 @@ label {
     margin-right: 8px; 
   }
 
-#image{
+ #image{
     color: #FFFFFF; 
     font-size: 17px;
-    margin-right: 100px;
-    margin-bottom: 5px;
+     /* margin-right: 100px;
+    margin-bottom: 5px;  */
+    margin: 20px 0;
     display: block;
-    align-items: center;
+    padding-left: 100px;
     text-align: center;
     width: 100%;
-}
+} 
 input[type="text"],  input[type="number"],input[type="tel"],textarea {
     border-radius: 5px;
     color: #FFFFFF;
@@ -197,25 +199,29 @@ input[type="file"] {
     justify-content: center;
     margin: 0 auto;
     width: 80%; 
+    
 }
 
 .custom-file-upload {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    padding: 15px;
+     padding: 20px; 
     background-color: #002B5B; 
     color: white; 
     border-radius: 25px; 
     cursor: pointer; 
     width: 300px; 
     max-width: 300px;
+    
+    margin-left: 100px;
 }
 
 .upload-icon {
     width: 200px; 
     height: 80px; 
     margin-right: 8px; 
+    padding-left: 100px;
 }
 
 #carouselExample {
@@ -356,40 +362,92 @@ button {
 .swal2-styled{
 width: 67px ;
 
-}
-@media (max-width: 768px) {
+@media (max-width: 1070px) {
     main {
         flex-direction: column;
         padding: 10px;
+        align-items: center; /*cambio*/
+        justify-content: center;/*cambio*/
     }
 
-    .form-section, .preview-section {
+    .form-section{
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
+        max-width: 500px; /* Establece un ancho máximo para centrar */
+        margin: 0 auto; /* Centra el contenedor del formulario horizontalmente */
+        align-items: center;/*cambio*/
     }
 
+ .preview-section {
+        width: 100%;
+        max-width: 500px; /* Establece un ancho máximo para centrar */
+        margin: 0 auto;/*cambio*/
+        margin-bottom: 20px;
+        align-items: center;/*cambio*/
+    }
+    .pares{
+        align-items: center;
+        margin: 20px 0;
+        width: 100%;
+        display: block;
+    }
     .form-group {
         display:flex;
         flex-direction: column;
-        align-items: center;
+        /* justify-content: flex-start; */
+         width: 100%; 
+        align-items: center; 
+        margin-bottom: 20px;
     }
 
     label {
         margin-bottom: 10px;
-        align-items: center; 
+        /* align-items: center; 
+        padding: 10px 0;*/
+        width: 100%; 
+        text-align: center;
     }
 
     input[type="text"], input[type="number"], input[type="tel"], textarea {
-        margin-left: 0; 
+        margin-bottom: 10px;
         width: 100%; 
+        padding: 10px;
+        
     }
 
     .custom-file-upload {
         width: 100%; 
         text-align: center; 
+        margin-bottom: 20px;
     }
 
     button {
         width: 100%; 
+    }
+
+    .icon {
+        width: auto; 
+        margin-right: 10px; 
+    }
+
+    .preview-section {
+        order: 2; /* Mueve la vista previa abajo en pantallas pequeñas */
+        width: 100%;
+    }
+
+    /* Asegúrate de que el contenido de la vista previa también sea flexible */
+    .preview-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Evitar desbordamientos */
+    .form-container, .preview-container {
+        width: 100%;
+        padding: 0;
+        overflow: hidden; /* Evita que el contenido se salga */
     }
 }

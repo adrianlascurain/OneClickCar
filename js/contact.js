@@ -1,7 +1,7 @@
-let navContact = document
-  .getElementById("navContact")
-  .classList.add("active");
-  
+let navContact = document.getElementById("navContact").classList.add("active");
+
+let navSide = document.getElementById("navContact").classList.add("active");
+
 // Implementa una función de JavaScript que valide los tipos de entrada y la corrección cuando se presiona el botón Enviar
 document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("9XWPUGj3d1O00oX7k");
@@ -22,13 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // bandera
   let isValid = true;
 
-
   btnSubmit.addEventListener("click", function (event) {
     event.preventDefault();
     txtNombre.style.border = "";
     txtNumber.style.border = "";
     txtEmail.style.border = "";
-    txtMensaje.style.border="";
+    txtMensaje.style.border = "";
     alertValidaciones.style.display = "none";
     alertValidacionesTexto.innerHTML = "";
     isValid = true;
@@ -60,9 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } //if txtEmail
 
     //Validación caja de comentario
-    if (txtMensaje.value.trim() === ""){
+    if (txtMensaje.value.trim() === "") {
       txtMensaje.style.border = "solid red medium";
-      alertValidacionesTexto.innerHTML += "El <strong> COMENTARIO </strong> no puede estar vacío.";
+      alertValidacionesTexto.innerHTML +=
+        "El <strong> COMENTARIO </strong> no puede estar vacío.";
       alertValidaciones.style.display = "block";
       isValid = false;
     } //if txtMensaje
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
             text: "Ocurrió un problema, probar más tarde",
             icon: "error",
           }); // cierre msj error
-        }//cierre err
+        } //cierre err
       ); //then
     } //cierre IsValid
   }); //cierre btnSubmit

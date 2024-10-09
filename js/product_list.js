@@ -1,6 +1,3 @@
-//borrar
-sessionStorage.setItem("id_user_logged", "5");
-
 // *************Declaración/Inicialización variables*************
 // Sedan
 let carouselSedanDesktop = document.getElementById("carouselSedanDesktop");
@@ -1247,7 +1244,7 @@ let dataComments = [
     rating: 5,
     comment_date: "2024-01-01",
     approved: 1,
-    Buyer_id_user: 2,
+    buyer_id_user: 2,
     seller_id_user: 3,
   },
   {
@@ -1257,7 +1254,7 @@ let dataComments = [
     rating: 4,
     comment_date: "2024-01-02",
     approved: 1,
-    Buyer_id_user: 3,
+    buyer_id_user: 3,
     seller_id_user: 4,
   },
   {
@@ -1267,7 +1264,7 @@ let dataComments = [
     rating: 5,
     comment_date: "2024-01-03",
     approved: 1,
-    Buyer_id_user: 4,
+    buyer_id_user: 4,
     seller_id_user: 5,
   },
   {
@@ -1276,7 +1273,7 @@ let dataComments = [
     rating: 5,
     comment_date: "2024-01-04",
     approved: 1,
-    Buyer_id_user: 5,
+    buyer_id_user: 5,
     seller_id_user: 6,
   },
   {
@@ -1285,7 +1282,7 @@ let dataComments = [
     rating: 5,
     comment_date: "2024-01-05",
     approved: 1,
-    Buyer_id_user: 6,
+    buyer_id_user: 6,
     seller_id_user: 2,
   },
 ];
@@ -1297,7 +1294,7 @@ let dataPaymentMethod = [
     number_card: "4154187326118117",
     date_card: "2025-10-01",
     cvv_card: "123",
-    Users_id_user: 2,
+    users_id_user: 2,
   },
   {
     id_card: 2,
@@ -1306,7 +1303,7 @@ let dataPaymentMethod = [
     number_card: "317349875390931",
     date_card: "2024-09-01",
     cvv_card: "456",
-    Users_id_user: 3,
+    users_id_user: 3,
   },
   {
     id_card: 3,
@@ -1315,7 +1312,7 @@ let dataPaymentMethod = [
     number_card: "371449635398431",
     date_card: "2023-08-01",
     cvv_card: "789",
-    Users_id_user: 4,
+    users_id_user: 4,
   },
   {
     id_card: 4,
@@ -1324,7 +1321,7 @@ let dataPaymentMethod = [
     number_card: "6011000990139424",
     date_card: "2026-07-01",
     cvv_card: "012",
-    Users_id_user: 5,
+    users_id_user: 5,
   },
   {
     id_card: 5,
@@ -1333,7 +1330,7 @@ let dataPaymentMethod = [
     number_card: "5231789940139574",
     date_card: "2025-06-01",
     cvv_card: "345",
-    Users_id_user: 6,
+    users_id_user: 6,
   },
 ];
 let dataDepositMethod = [
@@ -1342,42 +1339,42 @@ let dataDepositMethod = [
     name_account: "Luis Meléndez",
     type_card: "BBVA",
     name_bank: "1234567890",
-    Users_id_user: 2,
+    users_id_user: 2,
   },
   {
     id_account: 2,
     name_account: "Libertad Rivas",
     type_card: "Banamex",
     name_bank: "0987654321",
-    Users_id_user: 3,
+    users_id_user: 3,
   },
   {
     id_account: 3,
     name_account: "Antonio Rosas",
     type_card: "Banorte",
     name_bank: "2345678901",
-    Users_id_user: 4,
+    users_id_user: 4,
   },
   {
     id_account: 4,
     name_account: "Sergio Rolón",
     type_card: "Santander",
     name_bank: "3456789012",
-    Users_id_user: 5,
+    users_id_user: 5,
   },
   {
     id_account: 5,
     name_account: "Adrián Hernández",
     type_card: "HSBC",
     name_bank: "4567890123",
-    Users_id_user: 6,
+    users_id_user: 6,
   },
 ];
 let dataTransactions = [
   {
     id_transaction: 1,
     date_transaction: "2024-10-01",
-    Buyer_id_user: 2,
+    buyer_id_user: 2,
     seller_id_user: 3,
     Cars_id_car: 31,
     Payment_method_id_card: 1,
@@ -1386,7 +1383,7 @@ let dataTransactions = [
   {
     id_transaction: 2,
     date_transaction: "2024-10-02",
-    Buyer_id_user: 3,
+    buyer_id_user: 3,
     seller_id_user: 4,
     Cars_id_car: 32,
     Payment_method_id_card: 2,
@@ -1395,7 +1392,7 @@ let dataTransactions = [
   {
     id_transaction: 3,
     date_transaction: "2024-10-03",
-    Buyer_id_user: 4,
+    buyer_id_user: 4,
     seller_id_user: 5,
     Cars_id_car: 33,
     Payment_method_id_card: 3,
@@ -1404,7 +1401,7 @@ let dataTransactions = [
   {
     id_transaction: 4,
     date_transaction: "2024-10-04",
-    Buyer_id_user: 5,
+    buyer_id_user: 5,
     seller_id_user: 6,
     Cars_id_car: 34,
     Payment_method_id_card: 4,
@@ -1413,7 +1410,7 @@ let dataTransactions = [
   {
     id_transaction: 5,
     date_transaction: "2024-10-05",
-    Buyer_id_user: 6,
+    buyer_id_user: 6,
     seller_id_user: 2,
     Cars_id_car: 35,
     Payment_method_id_card: 5,
@@ -1449,7 +1446,7 @@ let dataTransactions = [
 //     .catch((err) => console.log("Existió un problema con la solicitud", err));
 // } //getDataCars()
 
-//Function fetch dataCars
+//Function fetch dataCars local
 function getDataCars() {
   if (localStorage.getItem("dataCarsOnSale") != null) {
     filterDataCars(JSON.parse(localStorage.getItem("dataCarsOnSale")));
@@ -1943,11 +1940,8 @@ inputSearch.addEventListener("keypress", function (event) {
 // Función para generar índice y presentar información en página product_information
 function productInformation(id_car, seller_id_user) {
   if (sessionStorage.getItem("id_user_logged") != null) {
-    id_car;
-    seller_id_user;
     localStorage.setItem("id_car", id_car);
     localStorage.setItem("seller_id_user", seller_id_user);
-    localStorage.setItem("dataUsers", JSON.stringify(dataUsers));
     if ((window.location.pathname = "/pages/product_list.html")) {
       // local
       window.location.href = "../pages/product_information.html";
@@ -1970,3 +1964,62 @@ function productInformation(id_car, seller_id_user) {
 
 // *************Ejecución*************
 getDataCars();
+
+// Establecer contadores
+// Contador comentarios
+if (localStorage.getItem("contadorComment") == null) {
+  localStorage.setItem("contadorComment", "5");
+}else{let contadorComment = JSON.parse(localStorage.getItem("contadorComment"));}
+// Contador usuarios
+if (localStorage.getItem("contadorUser") == null) {
+  localStorage.setItem("contadorUser", "6");
+} else { let contadorUser = JSON.parse(localStorage.getItem("contadorUser")); }
+// Contador carros
+if (localStorage.getItem("contadorCarsOnSale") == null) {
+  localStorage.setItem("contadorCarsOnSale", "30");
+} else { let contadorCarsOnSale = JSON.parse(localStorage.getItem("contadorCarsOnSaleCar")); }
+// Contador carros en general
+if (localStorage.getItem("contadorCarsGeneral") == null) {
+  localStorage.setItem("contadorCarsGeneral", "35");
+} else { let contadorCarsGeneral = JSON.parse(localStorage.getItem("contadorCarsGeneral")); }
+// Identificador usuario loggeado-actual
+sessionStorage.setItem("id_user_logged", "0");
+
+// Contador método de depósito
+if (localStorage.getItem("contadorDeposit") == null) {
+  localStorage.setItem("contadorDeposit", "5");
+} else { let contadorDeposit = JSON.parse(localStorage.getItem("contadorDeposit")); }
+// Contador método de pago
+if (localStorage.getItem("contadorPayment") == null) {
+  localStorage.setItem("contadorPayment", "5");
+} else { let contadorPayment = JSON.parse(localStorage.getItem("contadorPayment")); }
+// Contador transacciones
+if (localStorage.getItem("contadorTransactions") == null) {
+  localStorage.setItem("contadorTransactions", "5");
+} else { let contadorTransactions = JSON.parse(localStorage.getItem("contadorTransactions")); }
+ 
+// Establecer datos 
+//Métodos de depósito
+if (localStorage.getItem("dataDepositMethod") == null) {
+  localStorage.setItem("dataDepositMethod",JSON.stringify(dataDepositMethod));
+} else { let dataDepositMethod = localStorage.getItem("dataDepositMethod"); }
+// Comentarios
+if (localStorage.getItem("dataComments") == null) {
+  localStorage.setItem("dataComments", JSON.stringify(dataComments));
+} else {let dataComments = JSON.parse(localStorage.getItem("dataComments")); }
+// Usuarios
+if (localStorage.getItem("dataUsers") == null) {
+  localStorage.setItem("dataUsers", JSON.stringify(dataUsers));
+} else {let dataUsers = JSON.parse(localStorage.getItem("dataUsers")); }
+// Carros general
+if (localStorage.getItem("dataCarsGeneral") == null) {
+  localStorage.setItem("dataCarsGeneral", JSON.stringify(dataCarsGeneral));
+} else {let dataCarsGeneral = JSON.parse(localStorage.getItem("dataCarsGeneral")); }
+//Métodos de pago
+if (localStorage.getItem("dataPaymentMethod") == null) {
+  localStorage.setItem("dataPaymentMethod",JSON.stringify(dataPaymentMethod));
+} else {let  dataPaymentMethod = localStorage.getItem("dataPaymentMethod"); }
+//Transacciones
+if (localStorage.getItem("dataTransactions") == null) {
+  localStorage.setItem("dataTransactions",JSON.stringify(dataTransactions));
+} else {let  dataTransactions = localStorage.getItem("dataTransactions"); }

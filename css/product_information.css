@@ -240,6 +240,7 @@ select {
   }
   .p_comment_content {
     margin-bottom: 0px;
+    padding-top: 10px;
   }
   .div_details {
     padding: 0px;
@@ -285,5 +286,8 @@ select {
     word-break: break-all;
     border: 2px solid black;
     resize: none;
+  }
+  #opinion_title2 {
+    margin-top: 30px;
   }
 }

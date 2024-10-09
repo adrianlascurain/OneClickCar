@@ -1,5 +1,3 @@
-let contadorIdCar = 0;
-
 document.addEventListener("DOMContentLoaded", function () {
   let formRegistro = document.querySelector("form");
 
@@ -59,12 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
       // reader.onload = function(event) {
       // Convertir la imagen a base64
       // let imgBase64 = event.target.result;
-      contadorIdCar++;
-      console.log(contadorIdCar);
-      localStorage.setItem("contadorIdCar", JSON.stringify(contadorIdCar));
+      
+      let contadorCarsOnSale=parseInt(localStorage.getItem("contadorCarsOnSale"))+1;
+      localStorage.setItem("contadorCarsOnSale", JSON.stringify(contadorCarsOnSale));
       // Objeto con los datos del vehículo
       let vehiculo = {
-        id_car: contadorIdCar,
+        id_car: contadorCarsOnSale,
         type: type,
         brand: brand,
         name: name,
@@ -72,25 +70,71 @@ document.addEventListener("DOMContentLoaded", function () {
         kilometer: parseInt(kilometer),
         transmission: transmission,
         price: parseInt(price),
-        img: localStorage.getItem("image_url"), // Guardar la imagen en base64
+        img: localStorage.getItem("image_url"), 
         owners: parseInt(owners),
         description: description,
         verified: 0,
         sold: 0,
-        Seller_id_user: sessionStorage.getItem("id_user_logged"),
+        seller_id_user: parseInt(sessionStorage.getItem("id_user_logged")),
       };
+      console.log(parseInt(sessionStorage.getItem("id_user_logged")))
+      // // fetch pendiente modificar
+      // const promesa = fetch("http://localhost:8080/api/productos/addProduct", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(vehiculo),
+      // });
+      // promesa
+      //   .then((response) => {
+      //     response
+      //       .json()
+      //       .then((dataCarsFetch) => {
+      //         if (localStorage.getItem("dataCarsOnSale") != null) {
+      //           filterDataCars(
+      //             JSON.parse(localStorage.getItem("dataCarsOnSale"))
+      //           );
+      //           createGroupCarousels();
+      //         } else {
+      //           console.log(dataCarsFetch);
+      //           localStorage.setItem(
+      //             "dataCarsOnSale",
+      //             JSON.stringify(dataCarsFetch)
+      //           );
+      //           filterDataCars(
+      //             JSON.parse(localStorage.getItem("dataCarsOnSale"))
+      //           );
+      //           createGroupCarousels();
+      //         }
+      //       })
+      //       .catch((error) => console.log("Problema con el json", error));
+      //   })
+      //   .catch((err) =>
+      //     console.log("Existió un problema con la solicitud", err)
+      //   );
+      // //modificar pendiente
 
       // Obtención de los datos en el localStorage
-      let dataCars = obtenerVehiculos();
+      let dataCarsOnSale = obtenerVehiculos();
 
       // Se agrega el nuevo vehículo al arreglo
-      dataCars.push(vehiculo);
+      dataCarsOnSale.push(vehiculo);
 
       // Almacenar en localStorage
-      localStorage.setItem("dataCarsOnSale", JSON.stringify(dataCars));
+      localStorage.setItem("dataCarsOnSale", JSON.stringify(dataCarsOnSale));
 
       // Mensaje de éxito
-      alert("El vehículo se ha registrado con éxito");
+             Swal.fire({
+          title: "Vehículo registrado con éxito.",
+          text: "Se iniciará con el proceso de verificación conforme a las políticas de OneClickCar, pronto te contactaremos para más indicaciones.",
+          imageUrl:
+            "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+          imageWidth: 350,
+          imageHeight: 200,
+          imageAlt: "Custom image",
+          icon: "success",
+        });
 
       // Limpiar los campos del formulario
       formRegistro.reset();
@@ -127,14 +171,9 @@ function printTotal(div) {
   div.insertAdjacentHTML(
     "afterbegin",
     `<div class="alert alert-primary" role="alert">
-        Vehículos en total registrados: <strong>${contadorIdCar}</strong>
+        Vehículos en total registrados: <strong>${contadorCarsOnSaleCar}</strong>
         </div>`
   );
 }
 
-if (localStorage.getItem("contadorIdCar") == null) {
-  localStorage.setItem("contadorIdCar", "30");
-}
-if (localStorage.getItem("contadorIdCar") != null) {
-  contadorIdCar = JSON.parse(localStorage.getItem("contadorIdCar"));
-}
+

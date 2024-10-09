@@ -176,7 +176,7 @@ hr {
 /* Ajusta el diseño del carrusel en pantallas pequeñas */
 @media (width<= 428px) {
   #navBarOrder {
-    width: 384px;
+    max-width: 386px;
   }
   #inputSearchContainer {
     padding-right: 0px;

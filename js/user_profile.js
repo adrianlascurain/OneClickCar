@@ -1,3 +1,3 @@
 let navUserProfile = document
-.getElementById("navUserProfile")
-.classList.add("active");
+  .getElementById("navUserProfile")
+  .classList.add("active");

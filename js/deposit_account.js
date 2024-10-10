@@ -1,18 +1,26 @@
 let navUserProfile = document.getElementById("navUserProfile").classList.add("active");
 let infoCliente = document.getElementById("infoCliente");
-let infoClienteRow = document.getElementById("infoClienteRow");
 let infoAdmin = document.getElementById("infoAdmin");
+let nameTextNew = document.getElementById("name-ipt-new");
+let bankTextNew = document.getElementById("bank-ipt-new");
+let accountTextNew = document.getElementById("account-ipt-new");
 
-if (sessionStorage.getItem("id_user_logged") == 0) {
-  infoClienteRow.classList.add("d-none");
-  infoCliente.innerHTML = "";
-  
-  let dataDepositMethod = JSON.parse(localStorage.getItem("dataDepositMethod"));
+let nameTextAdd= document.getElementById("name-ipt-add");
+let bankTextAdd = document.getElementById("bank-ipt-add");
+let accountTextAdd = document.getElementById("account-ipt-add");
+let idUserTextAdd = document.getElementById("iduser-ipt-add");
+
+let btnModificarAdm = document.getElementById("btn-modificar-adm");
+let btnAgregarAdm = document.getElementById("btn-agregar-adm");
+
+// Crear tabla para dar dinamismo a los datos mostrados
+function createTableAdm(dataDepositMethod) {
+  infoAdmin.innerHTML = "";
   let htmlContent = "";
   htmlContent += ` 
   <h1 class=text-center>Reporte de métodos de depósito</h1><br>
   <div class="text-left">
-  <a class="btn btn-primary btn-informacion" ">Agregar</a></div>
+  <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAgregar">Agregar</a></div>
   <table class="table"> </tbody>
       <thead>
         <tr>
@@ -35,20 +43,169 @@ if (sessionStorage.getItem("id_user_logged") == 0) {
       <td>${dataDepositMethod[i].name_bank}</td>
       <td>${dataDepositMethod[i].account_bank}</td>
       <td>${dataDepositMethod[i].users_id_user}</td>
-      <td><button type="button" class="btn btn-primary  btn-information" id="btnModificarAdm" onclick="modificarInfo(${dataDepositMethod[i].id_account})">Modificar</button></td>
-      <td><button type="button" class="btn btn-primary  btn-information" id="btnEliminarAdm" onclick="eliminarInfo(${dataDepositMethod[i].id_account})">Eliminar</button></td>
+      <td><button type="button" class="btn btn-primary" onclick="modificarInfo(${dataDepositMethod[i].id_account})" data-bs-toggle="modal" data-bs-target="#modalModificar">Modificar</button></td>
+      <td><button type="button" class="btn btn-primary" id="btn-modificar-adm" onclick="eliminarInfo(${dataDepositMethod[i].id_account})">Eliminar</button></td>
     </tr>
     `;
   }
   htmlContent += `</table>`;
   infoAdmin.insertAdjacentHTML("beforeend", htmlContent);
+}
 
-  // Métodos
+
+if (sessionStorage.getItem("id_user_logged") == 0) {
+  infoCliente.classList.add("d-none");
+  infoCliente.innerHTML = "";
+  
+  let dataDepositMethod = JSON.parse(localStorage.getItem("dataDepositMethod"));
+
+  createTableAdm(dataDepositMethod);
+
+  btnAgregarAdm.addEventListener("click", (event) => {
+    event.preventDefault();
+      // Validamos que no haya campos vacíos, si no lanzamos sweet alert
+      if (nameTextAdd.value != "" && bankTextAdd.value != "" && accountTextAdd.value != "" && idUserTextAdd.value != "") {
+        // Simulamos el autoincrement de id_account
+        let contadorDeposit = parseInt(localStorage.getItem("contadorDeposit")) + 1;
+        localStorage.setItem("contadorDeposit", JSON.stringify(contadorDeposit));
+        // Reasignamos valores al objeto
+        let datumDepositMethod = {
+          id_account: contadorDeposit,
+          name_account: nameTextAdd.value,
+          name_bank: bankTextAdd.value,
+          account_bank: accountTextAdd.value,
+          users_id_user: idUserTextAdd.value,
+        };
+        // Agregamos a todos los registros y de manera local (actualizamos)
+        dataDepositMethod.push(datumDepositMethod);
+        localStorage.setItem("dataDepositMethod",JSON.stringify(dataDepositMethod));
+        createTableAdm(dataDepositMethod);
+        // Mostramos mensaje de éxito
+        Swal.fire({
+          title: "Registro exitoso",
+          text: "La cuenta de depósito fue agregada",
+          imageUrl:
+            "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+          imageWidth: 350,
+          imageHeight: 200,
+          imageAlt: "Custom image",
+          icon: "success",
+        });// Sweet alert
+
+      } else {
+        Swal.fire({
+          title: "Registro fallido",
+          text: "Ningún campo puede estar vacío",
+          icon: "error",
+        });// Sweet alert
+      }//else
+  });//btnAgregar.addEventListener()
+
   function modificarInfo(id_account) {
-    console.log(id_account);
+
+  // Creamos una variable para el objeto método de depósito del usuario actual
+  let datumDepositMethod = null;
+
+  // Recuperamos ese objeto en caso que exista, caso contrario se queda null
+    for (i = 0; i < dataDepositMethod.length; i++) {
+    if (dataDepositMethod[i].id_account == id_account) {
+      datumDepositMethod = dataDepositMethod[i];
+      break;
+    } 
   }
-    function eliminarInfo(id_account) {
-    console.log(id_account);
+
+  nameTextNew.value = datumDepositMethod.name_account;
+  bankTextNew.value = datumDepositMethod.name_bank;
+  accountTextNew.value = datumDepositMethod.account_bank;
+
+
+    
+    
+  // Evento modificar, se valida si existe ya un registro, siendo así sí se puede
+  // editar o eliminar, pero no agregar
+  btnModificarAdm.addEventListener("click", (event) => {
+    event.preventDefault();
+    // Variable temporal/nuevo para los nuevos datos
+    let datumDepositMethodNew = null;
+    //Validación de campos vacíos
+      if (nameTextNew.value != "" && bankTextNew.value != "" && accountTextNew.value != "") {
+        // Reasignamos valores al objeto temporal
+        datumDepositMethodNew = {
+          id_account: datumDepositMethod.id_account,//este no cambia
+          name_account: nameTextNew.value,
+          name_bank: bankTextNew.value,
+          account_bank: accountTextNew.value,
+          users_id_user: datumDepositMethod.users_id_user,//este no cambia
+        };
+        // Buscamos el índice del objeto y ahí guardamos la información actualizada
+        for (i = 0; i < dataDepositMethod.length; i++) {
+            if (dataDepositMethod[i] == datumDepositMethod) {
+              dataDepositMethod[i] = datumDepositMethodNew;
+              break;
+            } 
+        }
+
+        // Actualizamos las referencias
+        datumDepositMethod = datumDepositMethodNew;
+        localStorage.setItem("dataDepositMethod",JSON.stringify(dataDepositMethod));
+        createTableAdm(dataDepositMethod);
+        // Show success message
+        Swal.fire({
+          title: "Modificación exitosa",
+          text: "La cuenta de depósito fue modificada",
+          imageUrl:
+            "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+          imageWidth: 350,
+          imageHeight: 200,
+          imageAlt: "Custom image",
+          icon: "success",
+        });
+        flag = false;
+      } else {
+        //falla event.preventDefault();
+        Swal.fire({
+          title: "Modificación fallida",
+          text: "Ningún campo puede estar vacío.",
+          icon: "error",
+        });
+      }
+  });//btnModificarAdm.addEventListener
+  }
+
+  function eliminarInfo(id_account) {
+  
+  //Buscamos el objeto dentro de todos los registros y con el índice y splice lo eliminamos
+        for (i = 0; i < dataDepositMethod.length; i++) {
+            if (dataDepositMethod[i].id_account == id_account) {
+              dataDepositMethod.splice(i,1);
+              break;
+            } 
+        }
+        // Actualizamos referencias
+  localStorage.setItem("dataDepositMethod", JSON.stringify(dataDepositMethod));
+  createTableAdm(dataDepositMethod);
+        //Devolvemos en blanco los inputs y ponemos null el objeto recuperado al no existir más
+        //Y el contador tiene que actualizarse también para liberar ese espacio de un registro más
+        let contadorDeposit = parseInt(localStorage.getItem("contadorDeposit")) - 1;
+        localStorage.setItem("contadorDeposit", JSON.stringify(contadorDeposit));
+        // Show success message
+        Swal.fire({
+          title: "Eliminación exitosa",
+          text: "La cuenta de depósito fue eliminada",
+          imageUrl:
+            "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+          imageWidth: 350,
+          imageHeight: 200,
+          imageAlt: "Custom image",
+          icon: "success",
+        });
+        
+      
+    
+  
+
+
+
   }
 } else if (sessionStorage.getItem("id_user_logged") == null) {
   infoCliente.classList.add("d-none");

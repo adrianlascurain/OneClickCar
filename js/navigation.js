@@ -33,18 +33,24 @@ if(sessionStorage.length != 0){
         // Get JavaScript Object
         let userCredentials = localStorage.getItem("userCredentials");
         if(userCredentials != null){
-            let userInfo = JSON.parse(userCredentials);
-            // Obtain user full name and bring only name
-            userName = userInfo.name;
-            userName = userName.split(" ");
-            userName = userName[0];
-    
-            // User logged anchors display 
-            displayAnchors = ["d-flex","d-block","d-block","d-block","d-none","d-none","d-block","d-block","d-block","d-block"];
-        }
+            // Try to read user credentials
+            try{
+                let userInfo = JSON.parse(userCredentials);
+                // Obtain user full name and bring only name
+                userName = userInfo.name;
+                userName = userName.split(" ");
+                userName = userName[0];
         
-    }
-}
+                // User logged anchors display 
+                displayAnchors = ["d-flex","d-block","d-block","d-block","d-none","d-none","d-block","d-block","d-block","d-block"];
+            }catch(error){
+                console.error("No fue posible leer las credenciales del usuario" + error)
+            }// catch
+            
+        }// if
+        
+    }// if
+}// if
 
 function createNavFoot(relativePathOrigin,displayAnchors,userName) {
   let htmlContenidoNav = `<nav class="navbar navbar-expand-lg ">
@@ -150,7 +156,7 @@ function createNavFoot(relativePathOrigin,displayAnchors,userName) {
             <a href="${relativePathOrigin}/pages/Terminos.html#Noventa" title="Info">No Vender Mi Información</a>
         </div>`;
   footer_back.insertAdjacentHTML("beforeend", htmlContenidoFooter);
-}
+}//createNavFoot
 
 createNavFoot(relativePathOrigin,displayAnchors,userName);
 
@@ -161,4 +167,4 @@ logOutBtn.addEventListener("click",(event) =>{
     event.preventDefault();
     sessionStorage.clear();
     window.location.href = relativePathOrigin + "/pages/log_in.html"
-})
+})//logOutBtn click

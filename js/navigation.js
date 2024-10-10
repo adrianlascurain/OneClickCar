@@ -29,7 +29,7 @@ let userName = "";
 
 if(sessionStorage.length != 0){
     let idUser = sessionStorage.getItem("id_user_logged");
-    if(idUser > 0){
+    if(idUser >= 0){
         // Get JavaScript Object
         let userCredentials = localStorage.getItem("userCredentials");
         let userInfo = JSON.parse(userCredentials);
@@ -57,7 +57,7 @@ function createNavFoot(relativePathOrigin,displayAnchors,userName) {
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="${displayAnchors[0]}">
                         <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1728545465/user-person-profile-check-svgrepo-com_jhfdfe.svg" alt="logged" id="user-logged">
-                        <p class="my-auto" id="welcome-message">Bienvenido ${userName}</p>
+                        <p class="my-auto" id="welcome-message">Hola ${userName}</p>
                     </div>
                     <div class="navbar-nav ms-auto options">
                         <a class="nav-link ${displayAnchors[1]}" id="navIndex" aria-current="page" href="${relativePathOrigin}/index.html">INICIO</a>

@@ -60,7 +60,7 @@ btnLogin.addEventListener("click", function (event) {
             if (usuarioObj.password === password) {
                 txtEmail.value = "";
                 txtPassword.value = "";
-                window.location.href = "https://adrianlascurain.github.io/OneClickCar/index.html";
+                window.location.href = "../index.html";
             } else {
                 Swal.fire({
                     title: "Contraseña incorrecta",

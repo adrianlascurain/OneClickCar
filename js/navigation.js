@@ -32,15 +32,17 @@ if(sessionStorage.length != 0){
     if(idUser > 0){
         // Get JavaScript Object
         let userCredentials = localStorage.getItem("userCredentials");
-        let userInfo = JSON.parse(userCredentials);
-
-        // Obtain user full name and bring only name
-        userName = userInfo.name;
-        userName = userName.split(" ");
-        userName = userName[0];
-
-        // User logged anchors display 
-        displayAnchors = ["d-flex","d-block","d-block","d-block","d-none","d-none","d-block","d-block","d-block","d-block"];
+        if(userCredentials != null){
+            let userInfo = JSON.parse(userCredentials);
+            // Obtain user full name and bring only name
+            userName = userInfo.name;
+            userName = userName.split(" ");
+            userName = userName[0];
+    
+            // User logged anchors display 
+            displayAnchors = ["d-flex","d-block","d-block","d-block","d-none","d-none","d-block","d-block","d-block","d-block"];
+        }
+        
     }
 }
 

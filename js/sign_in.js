@@ -5,7 +5,7 @@ let navSignIn = document
 .classList.add("active");
 
 // Expresión regular para validar la contraseña 
-const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;  
+const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%_#*?&])[A-Za-z\d@$!%_#*?&]{8,}$/;  
 // Expresión regular para validar el teléfono 
 const phoneRegex = /^(?!([0-9])\1{5,9})(?!.*000{4,})([2-9]\d{1}\d{8})$/;
 // Expresión regular para validar el nombre (solo letras, con un mínimo de 2 caracteres)

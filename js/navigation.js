@@ -22,8 +22,29 @@ if(localDeployed){
     relativePathOrigin =  "/OneClickCar"
 }
 
+// Check if session storage is empty to change navbar options
+// User not logged anchors display 
+let displayAnchors = ["d-none","d-block","d-block","d-block","d-block","d-block","d-none","d-block","d-none","d-none"];
+let userName = "";
 
-function createNavFoot(relativePathOrigin) {
+if(sessionStorage.length != 0){
+    let idUser = sessionStorage.getItem("id_user_logged");
+    if(idUser > 0){
+        // Get JavaScript Object
+        let userCredentials = localStorage.getItem("userCredentials");
+        let userInfo = JSON.parse(userCredentials);
+
+        // Obtain user full name and bring only name
+        userName = userInfo.name;
+        userName = userName.split(" ");
+        userName = userName[0];
+
+        // User logged anchors display 
+        displayAnchors = ["d-flex","d-block","d-block","d-block","d-none","d-none","d-block","d-block","d-block","d-block"];
+    }
+}
+
+function createNavFoot(relativePathOrigin,displayAnchors,userName) {
   let htmlContenidoNav = `<nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -34,14 +55,24 @@ function createNavFoot(relativePathOrigin) {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="${displayAnchors[0]}">
+                        <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1728545465/user-person-profile-check-svgrepo-com_jhfdfe.svg" alt="logged" id="user-logged">
+                        <p class="my-auto" id="welcome-message">Bienvenido ${userName}</p>
+                    </div>
                     <div class="navbar-nav ms-auto options">
-                        <a class="nav-link" id="navIndex" aria-current="page" href="${relativePathOrigin}/index.html">INICIO</a>
-                        <a class="nav-link" id="navContact" href="${relativePathOrigin}/pages/contact.html">CONTACTO</a>
-                        <a class="nav-link" id="navAbout" href="${relativePathOrigin}/pages/about.html">NOSOTROS</a>
-                        <a class="nav-link" id="navLogIn" href="${relativePathOrigin}/pages/log_in.html">INICIAR SESIÓN</a>
-                        <a class="nav-link" id="navSignIn" href="${relativePathOrigin}/pages/sign_in.html">REGISTRARSE</a>
-                        <a class="nav-link" id="navUserProfile" href="${relativePathOrigin}/pages/user_profile.html">PERFIL</a>
-                        <a class="nav-link" id="navProductList" href="${relativePathOrigin}/pages/product_list.html">PRODUCTOS</a>
+                        <a class="nav-link ${displayAnchors[1]}" id="navIndex" aria-current="page" href="${relativePathOrigin}/index.html">INICIO</a>
+                        <a class="nav-link ${displayAnchors[2]}" id="navContact" href="${relativePathOrigin}/pages/contact.html">CONTACTO</a>
+                        <a class="nav-link ${displayAnchors[3]}" id="navAbout" href="${relativePathOrigin}/pages/about.html">NOSOTROS</a>
+                        <a class="nav-link ${displayAnchors[4]}" id="navLogIn" href="${relativePathOrigin}/pages/log_in.html">INICIAR SESIÓN</a>
+                        <a class="nav-link ${displayAnchors[5]}" id="navSignIn" href="${relativePathOrigin}/pages/sign_in.html">REGISTRARSE</a>
+                        <a class="nav-link ${displayAnchors[6]}" id="navUserProfile" href="${relativePathOrigin}/pages/user_profile.html">PERFIL</a>
+                        <a class="nav-link ${displayAnchors[7]}" id="navProductList" href="${relativePathOrigin}/pages/product_list.html">PRODUCTOS</a>
+                        <a class="nav-link ${displayAnchors[8]}" id="navProductList" href="${relativePathOrigin}/pages/product_registration.html">VENDER</a>
+                    </div>
+                    <div class="${displayAnchors[9]}">
+                        <button class="ms-3" title="Cerrar sesión" id="log-out-btn">
+                            <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1728548961/logout-svgrepo-com_2_xrxkpq.svg" alt="logout" id="user-logout">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -119,4 +150,13 @@ function createNavFoot(relativePathOrigin) {
   footer_back.insertAdjacentHTML("beforeend", htmlContenidoFooter);
 }
 
-createNavFoot(relativePathOrigin);
+createNavFoot(relativePathOrigin,displayAnchors,userName);
+
+const logOutBtn = document.getElementById("log-out-btn");
+
+// Clean session storage and go to login page
+logOutBtn.addEventListener("click",(event) =>{
+    event.preventDefault();
+    sessionStorage.clear();
+    window.location.href = relativePathOrigin + "/pages/log_in.html"
+})

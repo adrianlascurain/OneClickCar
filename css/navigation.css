@@ -33,6 +33,28 @@
   border-color: white;
 }
 
+#welcome-message{
+  color: white;
+  font-size: 25px;
+  font-family: "Tw-Cen-MT", sans-serif;
+}
+
+#user-logged {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+#user-logout{
+  width: 40px;
+  height: 40px;
+}
+
+#log-out-btn{
+  background-color: transparent;
+  border: none;
+}
+
 .navbar-nav a {
   color: white;
   text-decoration: none;

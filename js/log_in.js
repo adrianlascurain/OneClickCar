@@ -1,5 +1,4 @@
-// Identificador usuario loggeado-actual
-sessionStorage.setItem("id_user_logged", "2");
+
 
 // navbar active
 let navLogIn = document
@@ -50,7 +49,7 @@ btnLogin.addEventListener("click", function (event) {
         const password = txtPassword.value.trim();
 
         //Validación de usuario en localStorage
-        const usuario = localStorage.getItem(email);
+        const usuario = localStorage.getItem("userCredentials");
 
         if (usuario) {
             //pasar a objeto
@@ -60,27 +59,33 @@ btnLogin.addEventListener("click", function (event) {
             if (usuarioObj.password === password) {
                 txtEmail.value = "";
                 txtPassword.value = "";
+                // Identificador usuario loggeado-actual
+                sessionStorage.setItem("id_user_logged", "2");
                 window.location.href = "../index.html";
             } else {
                 Swal.fire({
-                    title: "Contraseña incorrecta",
-                    text: "Por favor, ingrese una contraseña válida",
+                    title: "Credenciales inválidas",
+                    text: "Por favor, ingrese un correo y contraseña válidos",
                     icon: "error",
                 }); //cierre msj error
+                
+                txtEmail.style.border = "solid red medium";
                 txtPassword.style.border = "solid red medium";
-                alertValidacionesTexto.innerHTML += "La <strong>CONTRASEÑA</strong> es incorrecta";
+                alertValidacionesTexto.innerHTML += "Las <strong>CREDENCIALES</strong> son incorrectas";
                 alertValidaciones.style.display = "block";
             }//else password !===
 
 
         } else {
             Swal.fire({
-                title: "Correo no registrado",
-                text: "Por favor, ingrese un correo válido",
+                title: "Credenciales inválidas",
+                text: "Por favor, ingrese un correo y contraseña válidos",
                 icon: "error",
             }); //cierre msj error
+
             txtEmail.style.border = "solid red medium";
-            alertValidacionesTexto.innerHTML += "<strong>CORREO</strong> no encontrado";
+            txtPassword.style.border = "solid red medium";
+            alertValidacionesTexto.innerHTML += "Las <strong>CREDENCIALES</strong> son incorrectas";
             alertValidaciones.style.display = "block";
         }//else usuario existente
 

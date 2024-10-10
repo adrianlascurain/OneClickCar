@@ -84,7 +84,7 @@ document.getElementById('btnSignIn').addEventListener('click', function (e) {
         userType: userType 
     };//usuarioObj
     //guardar en LocalStorage
-    localStorage.setItem(email, JSON.stringify(usuarioObj));  //usando  email como 'clave'
+    localStorage.setItem("userCredentials", JSON.stringify(usuarioObj));  //usando  email como 'clave'
 
     // Mostrar mensaje de éxito
     Swal.fire({

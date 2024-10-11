@@ -42,7 +42,7 @@ if(sessionStorage.length != 0){
                 userName = userName[0];
         
                 // User logged anchors display 
-                displayAnchors = ["d-flex","d-block","d-block","d-block","d-none","d-none","d-block","d-block","d-block","d-block"];
+                displayAnchors = ["d-flex justify-content-center align-items-center","d-block","d-block","d-block","d-none","d-none","d-block","d-block","d-block","d-block"];
             }catch(error){
                 console.error("No fue posible leer las credenciales del usuario" + error)
             }// catch
@@ -53,7 +53,7 @@ if(sessionStorage.length != 0){
 }// if
 
 function createNavFoot(relativePathOrigin,displayAnchors,userName) {
-  let htmlContenidoNav = `<nav class="navbar navbar-expand-lg ">
+  let htmlContenidoNav = `<nav class="navbar navbar-expand-xl">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img class="logo" src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725394895/OneClickCar/logoOneClickCar.png" alt="logo" id="logoOneClickCar">
@@ -63,9 +63,9 @@ function createNavFoot(relativePathOrigin,displayAnchors,userName) {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="${displayAnchors[0]}">
+                    <div class="${displayAnchors[0]}" id="welcome-container">
                         <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1728545465/user-person-profile-check-svgrepo-com_jhfdfe.svg" alt="logged" id="user-logged">
-                        <p class="my-auto" id="welcome-message">Bienvenido ${userName}</p>
+                        <p class="my-auto" id="welcome-message">Hola ${userName}</p>
                     </div>
                     <div class="navbar-nav ms-auto options">
                         <a class="nav-link ${displayAnchors[1]}" id="navIndex" aria-current="page" href="${relativePathOrigin}/index.html">INICIO</a>
@@ -77,7 +77,7 @@ function createNavFoot(relativePathOrigin,displayAnchors,userName) {
                         <a class="nav-link ${displayAnchors[7]}" id="navProductList" href="${relativePathOrigin}/pages/product_registration.html">VENDER</a>
                         <a class="nav-link ${displayAnchors[8]}" id="navProductList" href="${relativePathOrigin}/pages/product_list.html">PRODUCTOS</a>
                     </div>
-                    <div class="${displayAnchors[9]}">
+                    <div class="${displayAnchors[9]} text-center">
                         <button class="ms-3" title="Cerrar sesión" id="log-out-btn">
                             <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1728548961/logout-svgrepo-com_2_xrxkpq.svg" alt="logout" id="user-logout">
                         </button>

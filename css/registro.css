@@ -27,19 +27,18 @@
 body {
     font-family: 'Tw-Cen-MT', sans-serif;
     background-color:#D0CECE;
-    color: #333;
+    /* color: #333; */
 }
 
 
 /* Sección del formulario */
 main {
     display: flex;
-    justify-content: space-between;  
+    justify-content: center;  
     align-items: flex-start; 
     padding: 20px;
-    gap: 20px;
+    gap: 40px;
 }
-
 
 .form-section {
 /*   
@@ -84,11 +83,11 @@ select {
     align-items: end;
     width: 100%; 
     font-size: 0.7em; 
-    margin-bottom: 1em; 
+    margin-bottom: 10px; 
     padding: 0.5em; 
     border: 1px solid #ccc;
     border-radius: 4px; 
-    margin-bottom: 1em;
+    margin-bottom: 10px;
     float: left;
 }
 .pares{
@@ -107,9 +106,9 @@ select {
     flex-direction: column;
     width: 100%; 
     box-sizing: border-box;
-  margin-bottom: 20px;
-  text-align: left;
-  margin-right: 100px;
+    margin-bottom: 20px;
+    text-align: left;
+    margin: auto;
 }
 
 
@@ -128,9 +127,7 @@ select {
     margin: 0; */
     color: #FFFFFF; 
     font-size: 17px;
-    margin-bottom: 5px;
     display: block;
-    text-align: left;
 }
 
 .labelContainer {
@@ -148,11 +145,9 @@ select {
  #image{
     color: #FFFFFF; 
     font-size: 17px;
-     /* margin-right: 100px;
-    margin-bottom: 5px;  */
     margin: 20px 0;
+    padding: 0px;
     display: block;
-    padding-left: 200px;
     text-align: center;
     width: 100%;
 } 
@@ -170,6 +165,21 @@ input[type="text"],  input[type="number"],input[type="tel"],textarea {
     padding: 10px;
     text-align: left;
 }
+
+#tipo{
+    height: 48.8px;
+    color: white;
+    background: rgb(0, 32, 68);
+}
+
+/* #prop-label{
+    text-wrap: nowrap;
+} */
+
+#upload-widget{
+    width: 100%;
+}
+
 .drescripcion {
     display: flex; 
     flex-direction: column; 
@@ -206,22 +216,21 @@ input[type="file"] {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-     padding: 20px; 
     background-color: #002B5B; 
     color: white; 
     border-radius: 25px; 
     cursor: pointer; 
-    width: 300px; 
-    max-width: 300px;
-    
-    margin-left: 100px;
+    width: 100%; 
 }
 
-.upload-icon {
-    width: 200px; 
-    height: 80px; 
-    margin-right: 80px; 
-    padding-left: 100px;
+.custom-file-upload img{
+    padding: 0;
+    margin: auto;
+}
+
+#image{
+    text-align: center;
+    margin: auto;
 }
 
 #carouselExample {
@@ -255,9 +264,7 @@ input[type="file"] {
 
 .upload-icon {
     width: 100%; 
-    height: 40px;
-   max-height: 50px;
-   object-fit: contain;
+    object-fit: contain;
 }
 
 .custom-file-upload:hover {
@@ -331,13 +338,14 @@ textarea {
 
 /* Sección de vista previa */
 .preview-section {
+    width: 40%;
     gap: 20px;
     padding: 20px;
     background-color:  #002B5B; 
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    width: 40%;
+    height: max-content; 
     color:#ffffff;
     align-self: flex-start;
 }
@@ -363,11 +371,12 @@ textarea {
 width: 67px ;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1310px) {
     main {
-        flex-direction: column;
-        padding: 10px;
-        align-items: center; /*cambio*/
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        /* padding: 10px; */
+        align-items: start; /*cambio*/
         justify-content: center;/*cambio*/
     }
 
@@ -378,13 +387,15 @@ width: 67px ;
         /* margin-bottom: 20px; */
         max-width: 500px; 
         margin: 0 auto; 
+        margin-right: 0px;
         align-items: center;/*cambio*/
     }
 
- .preview-section {
-        width: 100%;
+    .preview-section {
+        width: 40%;
         max-width: 500px; 
         margin: 0 auto;/*cambio*/
+        margin-left: 0px;
         margin-bottom: 20px;
         align-items: center;/*cambio*/
     }
@@ -453,5 +464,17 @@ width: 67px ;
         width: 100%;
         padding: 0;
         overflow: hidden; /* Evita que el contenido se salga */
+    }
+}
+
+@media(max-width:1100px){
+    .form-section{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .preview-section {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

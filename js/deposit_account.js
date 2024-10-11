@@ -199,10 +199,6 @@ if (sessionStorage.getItem("id_user_logged") == 0) {
         // Actualizamos referencias
   localStorage.setItem("dataDepositMethod", JSON.stringify(dataDepositMethod));
   createTableAdm(dataDepositMethod);
-        //Devolvemos en blanco los inputs y ponemos null el objeto recuperado al no existir más
-        //Y el contador tiene que actualizarse también para liberar ese espacio de un registro más
-        let contadorDeposit = parseInt(localStorage.getItem("contadorDeposit")) - 1;
-        localStorage.setItem("contadorDeposit", JSON.stringify(contadorDeposit));
         // Show success message
         Swal.fire({
           title: "Eliminación exitosa",

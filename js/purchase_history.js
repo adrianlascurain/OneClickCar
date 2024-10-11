@@ -1,3 +1,18 @@
+// noSerieTextAdd.value
+// tipoTextAdd.value
+// marcaTextAdd.value
+// nombreTextAdd.value
+// anioTextAdd.value
+// kilTextAdd.value
+// transTextAdd.value
+// precioTextAdd.value
+// imgTextAdd.value
+// duenosTextAdd.value
+// descripTextAdd.value
+// verifTextAdd.value
+// vendTextAdd.value
+// idVendedorTextAdd.value
+
 let navUserProfile = document.getElementById("navUserProfile").classList.add("active");
 let infoCliente = document.getElementById("infoCliente");
 let infoAdmin = document.getElementById("infoAdmin");
@@ -5,10 +20,35 @@ let nameTextNew = document.getElementById("name-ipt-new");
 let bankTextNew = document.getElementById("bank-ipt-new");
 let accountTextNew = document.getElementById("account-ipt-new");
 
-let nameTextAdd= document.getElementById("name-ipt-add");
-let bankTextAdd = document.getElementById("bank-ipt-add");
-let accountTextAdd = document.getElementById("account-ipt-add");
-let idUserTextAdd = document.getElementById("iduser-ipt-add");
+let noSerieTextAdd= document.getElementById("noSerie-ipt-add");
+let tipoTextAdd = document.getElementById("tipo-ipt-add");
+let marcaTextAdd = document.getElementById("marca-ipt-add");
+let nombreTextAdd = document.getElementById("nombre-ipt-add");
+let anioTextAdd= document.getElementById("anio-ipt-add");
+let kilTextAdd = document.getElementById("kil-ipt-add");
+let transTextAdd = document.getElementById("trans-ipt-add");
+let precioTextAdd = document.getElementById("precio-ipt-add");
+let imgTextAdd= document.getElementById("img-ipt-add");
+let duenosTextAdd = document.getElementById("duenos-ipt-add");
+let descripTextAdd = document.getElementById("descrip-ipt-add");
+let verifTextAdd = document.getElementById("verif-ipt-add");
+let vendTextAdd= document.getElementById("vend-ipt-add");
+let idVendedorTextAdd = document.getElementById("idVendedor-ipt-add");
+
+
+let noSerieTextNew= document.getElementById("noSerie-ipt-new");
+let tipoTextNew = document.getElementById("tipo-ipt-new");
+let marcaTextNew = document.getElementById("marca-ipt-new");
+let nombreTextNew = document.getElementById("nombre-ipt-new");
+let anioTextNew= document.getElementById("anio-ipt-new");
+let kilTextNew = document.getElementById("kil-ipt-new");
+let transTextNew = document.getElementById("trans-ipt-new");
+let precioTextNew = document.getElementById("precio-ipt-new");
+let imgTextNew= document.getElementById("img-ipt-new");
+let duenosTextNew = document.getElementById("duenos-ipt-new");
+let descripTextNew = document.getElementById("descrip-ipt-new");
+let verifTextNew = document.getElementById("verif-ipt-new");
+let vendTextNew= document.getElementById("vend-ipt-new");
 
 let btnModificarAdm = document.getElementById("btn-modificar-adm");
 let btnAgregarAdm = document.getElementById("btn-agregar-adm");
@@ -89,7 +129,8 @@ function createTableAdm(dataCarsGeneral) {
   <h1 class=text-center>Reporte de historial de vehículos</h1><br>
   <div class="text-left">
   <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAgregar">Agregar</a></div>
-  <table class="table"> </tbody>
+  <div class="table-responsive">
+  <table class="table table-bordered  border-secondary align-middle"> 
       <thead>
         <tr>
       <th scope="col">Id vehículo</th>
@@ -109,7 +150,7 @@ function createTableAdm(dataCarsGeneral) {
       <th scope="col">Id vendedor</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="table-group-divider">
 `;
   for (i = 0; i < dataCarsGeneral.length; i++) {
     htmlContent += `
@@ -129,49 +170,70 @@ function createTableAdm(dataCarsGeneral) {
       <td>${dataCarsGeneral[i].verified}</td>
       <td>${dataCarsGeneral[i].sold}</td>
       <td>${dataCarsGeneral[i].seller_id_user}</td>
-      <td>${dataCarsGeneral[i].verified}</td> 
-
-      <td><button type="button" class="btn btn-primary" onclick="modificarInfo(${dataCarsGeneral[i].id_account})" data-bs-toggle="modal" data-bs-target="#modalModificar">Modificar</button></td>
-      <td><button type="button" class="btn btn-primary" id="btn-modificar-adm" onclick="eliminarInfo(${dataCarsGeneral[i].id_account})">Eliminar</button></td>
+      <td><button type="button" class="btn btn-primary" onclick="modificarInfo(${dataCarsGeneral[i].id_car})" data-bs-toggle="modal" data-bs-target="#modalModificar">Modificar</button></td>
+      <td><button type="button" class="btn btn-primary" id="btn-modificar-adm" onclick="eliminarInfo(${dataCarsGeneral[i].id_car})">Eliminar</button></td>
     </tr>
     `;
   }
-  htmlContent += `</table>`;
+  htmlContent += `</tbody></table></div>`;
   infoAdmin.insertAdjacentHTML("beforeend", htmlContent);
 }
 
-
-if (sessionStorage.getItem("id_user_logged") == 0) {
+//sessionStorage.getItem("id_user_logged") == 0
+if (true) {
   infoCliente.classList.add("d-none");
   infoCliente.innerHTML = "";
   
-  let dataDepositMethod = JSON.parse(localStorage.getItem("dataDepositMethod"));
+  let dataCarsGeneral = JSON.parse(localStorage.getItem("dataCarsGeneral"));
 
-  createTableAdm(dataDepositMethod);
+  createTableAdm(dataCarsGeneral);
 
   btnAgregarAdm.addEventListener("click", (event) => {
     event.preventDefault();
       // Validamos que no haya campos vacíos, si no lanzamos sweet alert
-      if (nameTextAdd.value != "" && bankTextAdd.value != "" && accountTextAdd.value != "" && idUserTextAdd.value != "") {
+      if (noSerieTextAdd.value != "" &&
+          tipoTextAdd.value != "" &&
+          marcaTextAdd.value != "" &&
+          nombreTextAdd.value != "" &&
+          anioTextAdd.value != "" &&
+          kilTextAdd.value != "" &&
+          transTextAdd.value != "" &&
+          precioTextAdd.value != "" &&
+          imgTextAdd.value != "" &&
+          duenosTextAdd.value != "" &&
+          descripTextAdd.value != "" &&
+          verifTextAdd.value != "" &&
+          vendTextAdd.value != "" &&
+          idVendedorTextAdd.value != "") {
         // Simulamos el autoincrement de id_account
-        let contadorDeposit = parseInt(localStorage.getItem("contadorDeposit")) + 1;
-        localStorage.setItem("contadorDeposit", JSON.stringify(contadorDeposit));
+        let contadorCarsGeneral = parseInt(localStorage.getItem("contadorCarsGeneral")) + 1;
+        localStorage.setItem("contadorCarsGeneral", JSON.stringify(contadorCarsGeneral));
         // Reasignamos valores al objeto
-        let datumDepositMethod = {
-          id_account: contadorDeposit,
-          name_account: nameTextAdd.value,
-          name_bank: bankTextAdd.value,
-          account_bank: accountTextAdd.value,
-          users_id_user: idUserTextAdd.value,
+        let datumCarsGeneral = {
+          // noSerie: noSerieTextAdd.value,
+          id_car: contadorCarsGeneral,
+          type: tipoTextAdd.value,
+          brand: marcaTextAdd.value,
+          name: nombreTextAdd.value,
+          year: anioTextAdd.value,
+          kilometer: kilTextAdd.value,
+          transmission: transTextAdd.value,
+          price: precioTextAdd.value,
+          img: imgTextAdd.value,
+          owners: duenosTextAdd.value,
+          description: descripTextAdd.value,
+          verified: verifTextAdd.value,
+          sold: vendTextAdd.value,
+          seller_id_user: idVendedorTextAdd.value
         };
         // Agregamos a todos los registros y de manera local (actualizamos)
-        dataDepositMethod.push(datumDepositMethod);
-        localStorage.setItem("dataDepositMethod",JSON.stringify(dataDepositMethod));
-        createTableAdm(dataDepositMethod);
+        dataCarsGeneral.push(datumCarsGeneral);
+        localStorage.setItem("dataCarsGeneral",JSON.stringify(dataCarsGeneral));
+        createTableAdm(dataCarsGeneral);
         // Mostramos mensaje de éxito
         Swal.fire({
           title: "Registro exitoso",
-          text: "La cuenta de depósito fue agregada",
+          text: "El carro fue agregado",
           imageUrl:
             "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
           imageWidth: 350,
@@ -189,54 +251,88 @@ if (sessionStorage.getItem("id_user_logged") == 0) {
       }//else
   });//btnAgregar.addEventListener()
 
-  function modificarInfo(id_account) {
+
+
+
+  function modificarInfo(id_car) {
 
   // Creamos una variable para el objeto método de depósito del usuario actual
-  let datumDepositMethod = null;
+  let datumCarsGeneral = null;
 
   // Recuperamos ese objeto en caso que exista, caso contrario se queda null
-    for (i = 0; i < dataDepositMethod.length; i++) {
-    if (dataDepositMethod[i].id_account == id_account) {
-      datumDepositMethod = dataDepositMethod[i];
+    for (i = 0; i < dataCarsGeneral.length; i++) {
+    if (dataCarsGeneral[i].id_car == id_car) {
+      datumCarsGeneral = dataCarsGeneral[i];
       break;
     } 
   }
 
-  nameTextNew.value = datumDepositMethod.name_account;
-  bankTextNew.value = datumDepositMethod.name_bank;
-  accountTextNew.value = datumDepositMethod.account_bank;
-
-
     
+    
+    // noSerieTextNew.value = datumCarsGeneral.noSerie;
+    tipoTextNew.value = datumCarsGeneral.type;
+    marcaTextNew.value = datumCarsGeneral.brand;
+    nombreTextNew.value = datumCarsGeneral.name;
+    anioTextNew.value = datumCarsGeneral.year;
+    kilTextNew.value = datumCarsGeneral.kilometer;
+    transTextNew.value = datumCarsGeneral.transmission;
+    precioTextNew.value = datumCarsGeneral.price;
+    imgTextNew.value = datumCarsGeneral.img;
+    duenosTextNew.value = datumCarsGeneral.owners;
+    descripTextNew.value = datumCarsGeneral.description;
+    verifTextNew.value = datumCarsGeneral.verified;
+    vendTextNew.value = datumCarsGeneral.sold;
+
     
   // Evento modificar, se valida si existe ya un registro, siendo así sí se puede
   // editar o eliminar, pero no agregar
   btnModificarAdm.addEventListener("click", (event) => {
     event.preventDefault();
     // Variable temporal/nuevo para los nuevos datos
-    let datumDepositMethodNew = null;
-    //Validación de campos vacíos
-      if (nameTextNew.value != "" && bankTextNew.value != "" && accountTextNew.value != "") {
+    let datumCarsGeneralNew = null;
+      // Validamos que no haya campos vacíos, si no lanzamos sweet alert
+      if (noSerieTextNew.value != "" &&
+          tipoTextNew.value != "" &&
+          marcaTextNew.value != "" &&
+          nombreTextNew.value != "" &&
+          anioTextNew.value != "" &&
+          kilTextNew.value != "" &&
+          transTextNew.value != "" &&
+          precioTextNew.value != "" &&
+          imgTextNew.value != "" &&
+          duenosTextNew.value != "" &&
+          descripTextNew.value != "" &&
+          verifTextNew.value != "" &&
+          vendTextNew.value != "") {
         // Reasignamos valores al objeto temporal
-        datumDepositMethodNew = {
-          id_account: datumDepositMethod.id_account,//este no cambia
-          name_account: nameTextNew.value,
-          name_bank: bankTextNew.value,
-          account_bank: accountTextNew.value,
-          users_id_user: datumDepositMethod.users_id_user,//este no cambia
+        datumCarsGeneralNew = {
+          id_car: datumCarsGeneral.id_car,//este no cambia
+          type: tipoTextNew.value,
+          brand: marcaTextNew.value,
+          name: nombreTextNew.value,
+          year: anioTextNew.value,
+          kilometer: kilTextNew.value,
+          transmission: transTextNew.value,
+          price: precioTextNew.value,
+          img: imgTextNew.value,
+          owners: duenosTextNew.value,
+          description: descripTextNew.value,
+          verified: verifTextNew.value,
+          sold: vendTextNew.value,
+          seller_id_user: datumCarsGeneral.seller_id_user,//este no cambia
         };
         // Buscamos el índice del objeto y ahí guardamos la información actualizada
-        for (i = 0; i < dataDepositMethod.length; i++) {
-            if (dataDepositMethod[i] == datumDepositMethod) {
-              dataDepositMethod[i] = datumDepositMethodNew;
+        for (i = 0; i < dataCarsGeneral.length; i++) {
+            if (dataCarsGeneral[i] == datumCarsGeneral) {
+              dataCarsGeneral[i] = datumCarsGeneralNew;
               break;
             } 
         }
 
         // Actualizamos las referencias
-        datumDepositMethod = datumDepositMethodNew;
-        localStorage.setItem("dataDepositMethod",JSON.stringify(dataDepositMethod));
-        createTableAdm(dataDepositMethod);
+        datumCarsGeneral = datumCarsGeneralNew;
+        localStorage.setItem("dataCarsGeneral",JSON.stringify(dataCarsGeneral));
+        createTableAdm(dataCarsGeneral);
         // Show success message
         Swal.fire({
           title: "Modificación exitosa",
@@ -260,26 +356,22 @@ if (sessionStorage.getItem("id_user_logged") == 0) {
   });//btnModificarAdm.addEventListener
   }
 
-  function eliminarInfo(id_account) {
+  function eliminarInfo(id_car) {
   
   //Buscamos el objeto dentro de todos los registros y con el índice y splice lo eliminamos
-        for (i = 0; i < dataDepositMethod.length; i++) {
-            if (dataDepositMethod[i].id_account == id_account) {
-              dataDepositMethod.splice(i,1);
+        for (i = 0; i < dataCarsGeneral.length; i++) {
+            if (dataCarsGeneral[i].id_car == id_car) {
+              dataCarsGeneral.splice(i,1);
               break;
             } 
         }
         // Actualizamos referencias
-  localStorage.setItem("dataDepositMethod", JSON.stringify(dataDepositMethod));
-  createTableAdm(dataDepositMethod);
-        //Devolvemos en blanco los inputs y ponemos null el objeto recuperado al no existir más
-        //Y el contador tiene que actualizarse también para liberar ese espacio de un registro más
-        let contadorDeposit = parseInt(localStorage.getItem("contadorDeposit")) - 1;
-        localStorage.setItem("contadorDeposit", JSON.stringify(contadorDeposit));
+  localStorage.setItem("dataCarsGeneral", JSON.stringify(dataCarsGeneral));
+  createTableAdm(dataCarsGeneral);
         // Show success message
         Swal.fire({
           title: "Eliminación exitosa",
-          text: "La cuenta de depósito fue eliminada",
+          text: "El vehículo fue eliminado",
           imageUrl:
             "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
           imageWidth: 350,
@@ -287,13 +379,6 @@ if (sessionStorage.getItem("id_user_logged") == 0) {
           imageAlt: "Custom image",
           icon: "success",
         });
-        
-      
-    
-  
-
-
-
   }
 } else if (sessionStorage.getItem("id_user_logged") == null) {
   infoCliente.classList.add("d-none");

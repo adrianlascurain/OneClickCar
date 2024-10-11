@@ -1,33 +1,40 @@
 body{
     background-color: #D0CECE;
 }
+.nav-link.active {
+  background-color: white;
+  color: #002b5b !important;
+  border-radius: 20px;
+  padding: 4px 16px
+}
 
 /* izquierda */
-.barraLeft{
-    background-color: #1e3263a8;
-    text-align: center;
-    color: white;
-    padding: 0;
+.barraLeft {
+  background-color: #1e3263a8;
+  text-align: center;
+  color: white;
+  
 }
 
-.barraLeft h2{
-    font-size: 16px;
-    margin-right: 20px;
-    font-family: 'Montserrat';
+.barraLeft h2 {
+  font-size: 16px;
+  margin: 0px auto;
+  font-family: "Montserrat";
+  cursor: pointer;
 }
 
-#close{
-    margin-top: 20px;
-    display: inline;
+#close {
+  margin-top: 20px;
+  display: inline;
 }
 
-.opcionesPerfil{
-    margin-top: 190px;
+.opcionesPerfil {
+  margin: auto 0px;
 }
 
-.opcionesPerfil img{
-    width: 20px;
-    margin-bottom: 5px;
+.opcionesPerfil img {
+  width: 20px;
+  margin-bottom: 5px;
 }
 
 /* centro */
@@ -99,3 +106,8 @@ body{
     height: 100vh;
 
 }
+
+@media (width<= 575px) {
+  .opcionesPerfil {
+    margin: 20px;
+  }}

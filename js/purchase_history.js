@@ -82,37 +82,57 @@ linkLogOut.addEventListener("click",(event) =>{
 })//logOutBtn click
 
 // Crear tabla para dar dinamismo a los datos mostrados
-function createTableAdm(dataDepositMethod) {
+function createTableAdm(dataCarsGeneral) {
   infoAdmin.innerHTML = "";
   let htmlContent = "";
   htmlContent += ` 
-  <h1 class=text-center>Reporte de métodos de depósito</h1><br>
+  <h1 class=text-center>Reporte de historial de vehículos</h1><br>
   <div class="text-left">
   <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAgregar">Agregar</a></div>
-  <table class="table"> <tbody>
+  <table class="table"> </tbody>
       <thead>
         <tr>
-      <th scope="col">Id cuenta</th>
-      <th scope="col">Nombre completo</th>
-      <th scope="col">Banco</th>
-      <th scope="col">Cuenta de banco</th>
-      <th scope="col">Id usuario</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
+      <th scope="col">Id vehículo</th>
+      <th scope="col">Número de serie</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Año</th>
+      <th scope="col">Kilometraje</th>
+      <th scope="col">Transmisión</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Enlace imagen</th>
+      <th scope="col">Dueños anteriores</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Verificado</th>
+      <th scope="col">Vendido</th>
+      <th scope="col">Id vendedor</th>
     </tr>
   </thead>
   <tbody>
 `;
-  for (i = 0; i < dataDepositMethod.length; i++) {
+  for (i = 0; i < dataCarsGeneral.length; i++) {
     htmlContent += `
       <tr>
-      <th scope="row">${dataDepositMethod[i].id_account}</th>
-      <td>${dataDepositMethod[i].name_account}</td>
-      <td>${dataDepositMethod[i].name_bank}</td>
-      <td>${dataDepositMethod[i].account_bank}</td>
-      <td>${dataDepositMethod[i].users_id_user}</td>
-      <td><button type="button" class="btn btn-primary" onclick="modificarInfo(${dataDepositMethod[i].id_account})" data-bs-toggle="modal" data-bs-target="#modalModificar">Modificar</button></td>
-      <td><button type="button" class="btn btn-primary" id="btn-modificar-adm" onclick="eliminarInfo(${dataDepositMethod[i].id_account})">Eliminar</button></td>
+      <th scope="row">${dataCarsGeneral[i].id_car}</th>
+      <td>####pendiente###</td> 
+      <td>${dataCarsGeneral[i].type}</td>
+      <td>${dataCarsGeneral[i].brand}</td>
+      <td>${dataCarsGeneral[i].name}</td>
+      <td>${dataCarsGeneral[i].year}</td>
+      <td>${dataCarsGeneral[i].kilometer}</td>
+      <td>${dataCarsGeneral[i].transmission}</td>
+      <td>${dataCarsGeneral[i].price}</td>
+      <td>${dataCarsGeneral[i].img}</td>
+      <td>${dataCarsGeneral[i].owners}</td>
+      <td>${dataCarsGeneral[i].description}</td>
+      <td>${dataCarsGeneral[i].verified}</td>
+      <td>${dataCarsGeneral[i].sold}</td>
+      <td>${dataCarsGeneral[i].seller_id_user}</td>
+      <td>${dataCarsGeneral[i].verified}</td> 
+
+      <td><button type="button" class="btn btn-primary" onclick="modificarInfo(${dataCarsGeneral[i].id_account})" data-bs-toggle="modal" data-bs-target="#modalModificar">Modificar</button></td>
+      <td><button type="button" class="btn btn-primary" id="btn-modificar-adm" onclick="eliminarInfo(${dataCarsGeneral[i].id_account})">Eliminar</button></td>
     </tr>
     `;
   }
@@ -487,5 +507,3 @@ if (sessionStorage.getItem("id_user_logged") == 0) {
     }
   });//btnEliminar.addEventListener
 }
-
-

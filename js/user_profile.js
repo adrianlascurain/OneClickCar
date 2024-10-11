@@ -1,6 +1,6 @@
 let navUserProfile = document.getElementById("navUserProfile").classList.add("active");
 
-  let linkProfile = document.getElementById("linkProfile");
+let linkProfile = document.getElementById("linkProfile");
 let linkPayment = document.getElementById("linkPayment");
 let linkPurchase = document.getElementById("linkPurchase");
 let linkLogOut = document.getElementById("linkLogOut");

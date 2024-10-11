@@ -1,14 +1,6 @@
 let navUserProfile = document.getElementById("navUserProfile").classList.add("active");
 let infoCliente = document.getElementById("infoCliente");
 let infoAdmin = document.getElementById("infoAdmin");
-
-let linkProfile = document.getElementById("linkProfile");
-let linkPayment = document.getElementById("linkPayment");
-let linkPurchase = document.getElementById("linkPurchase");
-let linkLogOut = document.getElementById("linkLogOut");
-let linkDeposit = document.getElementById("linkDeposit");
-
-
 let nameTextNew = document.getElementById("name-ipt-new");
 let bankTextNew = document.getElementById("bank-ipt-new");
 let accountTextNew = document.getElementById("account-ipt-new");
@@ -21,36 +13,100 @@ let idUserTextAdd = document.getElementById("iduser-ipt-add");
 let btnModificarAdm = document.getElementById("btn-modificar-adm");
 let btnAgregarAdm = document.getElementById("btn-agregar-adm");
 
+let linkProfile = document.getElementById("linkProfile");
+let linkPayment = document.getElementById("linkPayment");
+let linkPurchase = document.getElementById("linkPurchase");
+let linkLogOut = document.getElementById("linkLogOut");
+let linkDeposit = document.getElementById("linkDeposit");
 
+  linkProfile.addEventListener("click", (event) => {
+    event.preventDefault();
+    if ((window.location.pathname = "/pages/user_profile.html")) {
+    // local
+    window.location.href = "../pages/user_profile.html";
+  } else {
+    // github
+    window.location.href =
+      "https://adrianlascurain.github.io/OneClickCar/pages/user_profile.html";
+  }
+});
 
+linkPurchase.addEventListener("click", (event) => {
+    event.preventDefault();
+    if ((window.location.pathname = "/pages/purchase_history.html")) {
+    // local
+    window.location.href = "../pages/purchase_history.html";
+  } else {
+    // github
+    window.location.href =
+      "https://adrianlascurain.github.io/OneClickCar/pages/purchase_history.html";
+  }
+});
+
+linkPayment.addEventListener("click", (event) => {
+    event.preventDefault();
+    if ((window.location.pathname = "/pages/payment_account.html")) {
+    // local
+    window.location.href = "../pages/payment_account.html";
+  } else {
+    // github
+    window.location.href =
+      "https://adrianlascurain.github.io/OneClickCar/pages/payment_method.html";
+  }
+});
+
+linkDeposit.addEventListener("click", (event) => {
+    event.preventDefault();
+    if ((window.location.pathname = "/pages/deposit_account.html")) {
+    // local
+    window.location.href = "../pages/deposit_account.html";
+  } else {
+    // github
+    window.location.href =
+      "https://adrianlascurain.github.io/OneClickCar/pages/deposit_method.html";
+  }
+});
+
+// Clean session storage and go to login page
+linkLogOut.addEventListener("click",(event) =>{
+    event.preventDefault();
+    sessionStorage.clear();
+      if ((window.location.pathname = "/pages/user_profile.html")) {
+    // local
+    window.location.href = "../pages/log_in.html";
+  } else {
+    // github
+    window.location.href =
+      "https://adrianlascurain.github.io/OneClickCar/pages/log_in.html";
+  }
+})//logOutBtn click
 
 // Crear tabla para dar dinamismo a los datos mostrados
 function createTableAdm(dataDepositMethod) {
   infoAdmin.innerHTML = "";
   let htmlContent = "";
   htmlContent += ` 
-  <h1 id="titleReport">Reporte de métodos de depósito</h1><br>
+  <h1 class=text-center>Reporte de métodos de depósito</h1><br>
   <div class="text-left">
   <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAgregar">Agregar</a></div>
-  <div class="table-responsive">
-  <table class="table table-bordered  border-secondary align-middle"> 
+  <table class="table"> </tbody>
       <thead>
         <tr>
-      <th scope="col ">Id cuenta</th>
-      <th scope="col ">Nombre completo</th>
-      <th scope="col ">Banco</th>
-      <th scope="col ">Cuenta de banco</th>
-      <th scope="col ">Id usuario</th>
-      <th scope="col "></th>
-      <th scope="col "></th>
+      <th scope="col">Id cuenta</th>
+      <th scope="col">Nombre completo</th>
+      <th scope="col">Banco</th>
+      <th scope="col">Cuenta de banco</th>
+      <th scope="col">Id usuario</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
-  <tbody class="table-group-divider">
+  <tbody>
 `;
   for (i = 0; i < dataDepositMethod.length; i++) {
     htmlContent += `
       <tr>
-      <th scope="row ">${dataDepositMethod[i].id_account}</th>
+      <th scope="row">${dataDepositMethod[i].id_account}</th>
       <td>${dataDepositMethod[i].name_account}</td>
       <td>${dataDepositMethod[i].name_bank}</td>
       <td>${dataDepositMethod[i].account_bank}</td>
@@ -60,7 +116,7 @@ function createTableAdm(dataDepositMethod) {
     </tr>
     `;
   }
-  htmlContent += `</tbody></table></div>`;
+  htmlContent += `</table>`;
   infoAdmin.insertAdjacentHTML("beforeend", htmlContent);
 }
 
@@ -92,11 +148,6 @@ if (sessionStorage.getItem("id_user_logged") == 0) {
         dataDepositMethod.push(datumDepositMethod);
         localStorage.setItem("dataDepositMethod",JSON.stringify(dataDepositMethod));
         createTableAdm(dataDepositMethod);
-        
-        nameTextAdd.value="",
-        bankTextAdd.value="",
-        accountTextAdd.value="",
-        idUserTextAdd.value="",
         // Mostramos mensaje de éxito
         Swal.fire({
           title: "Registro exitoso",
@@ -437,83 +488,4 @@ if (sessionStorage.getItem("id_user_logged") == 0) {
   });//btnEliminar.addEventListener
 }
 
-linkProfile.addEventListener("click", (event) => {
-    event.preventDefault();
-    if ((window.location.pathname = "/pages/user_profile.html")) {
-    // local
-    window.location.href = "../pages/user_profile.html";
-  } else {
-    // github
-    window.location.href =
-      "https://adrianlascurain.github.io/OneClickCar/pages/user_profile.html";
-  }
-});
 
-linkPurchase.addEventListener("click", (event) => {
-    event.preventDefault();
-    if ((window.location.pathname = "/pages/purchase_history.html")) {
-    // local
-    window.location.href = "../pages/purchase_history.html";
-  } else {
-    // github
-    window.location.href =
-      "https://adrianlascurain.github.io/OneClickCar/pages/purchase_history.html";
-  }
-});
-
-linkPayment.addEventListener("click", (event) => {
-    event.preventDefault();
-    if ((window.location.pathname = "/pages/payment_account.html")) {
-    // local
-    window.location.href = "../pages/payment_account.html";
-  } else {
-    // github
-    window.location.href =
-      "https://adrianlascurain.github.io/OneClickCar/pages/payment_method.html";
-  }
-});
-
-linkDeposit.addEventListener("click", (event) => {
-    event.preventDefault();
-    if ((window.location.pathname = "/pages/deposit_account.html")) {
-    // local
-    window.location.href = "../pages/deposit_account.html";
-  } else {
-    // github
-    window.location.href =
-      "https://adrianlascurain.github.io/OneClickCar/pages/deposit_method.html";
-  }
-});
-
-// Clean session storage and go to login page
-linkLogOut.addEventListener("click",(event) =>{
-    event.preventDefault();
-    sessionStorage.clear();
-      if ((window.location.pathname = "/pages/user_profile.html")) {
-    // local
-    window.location.href = "../pages/log_in.html";
-  } else {
-    // github
-    window.location.href =
-      "https://adrianlascurain.github.io/OneClickCar/pages/log_in.html";
-  }
-})//logOutBtn click
-
-
-//sendOpinion()
-
-// exampleModal.addEventListener("show.bs.modal", function (event) {
-//   // Button that triggered the modal
-//   var button = event.relatedTarget;
-//   // Extract info from data-bs-* attributes
-//   var recipient = button.getAttribute("data-bs-whatever");
-//   // If necessary, you could initiate an AJAX request here
-//   // and then do the updating in a callback.
-//   //
-//   // Update the modal's content.
-//   var modalTitle = exampleModal.querySelector(".modal-title");
-//   var modalBodyInput = exampleModal.querySelector(".modal-body input");
-
-//   modalTitle.textContent = "New message to " + recipient;
-//   modalBodyInput.value = recipient;
-// });

@@ -92,13 +92,11 @@ function createTableAdm(dataDepositMethod) {
   <table class="table"> <tbody>
       <thead>
         <tr>
-      <th scope="col">Id cuenta</th>
-      <th scope="col">Nombre completo</th>
-      <th scope="col">Banco</th>
-      <th scope="col">Cuenta de banco</th>
-      <th scope="col">Id usuario</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
+      <th scope="col ">Id cuenta</th>
+      <th scope="col ">Nombre completo</th>
+      <th scope="col ">Banco</th>
+      <th scope="col ">Cuenta de banco</th>
+      <th scope="col ">Id usuario</th>
     </tr>
   </thead>
   <tbody>

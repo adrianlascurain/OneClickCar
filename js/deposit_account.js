@@ -41,8 +41,6 @@ function createTableAdm(dataDepositMethod) {
       <th scope="col ">Banco</th>
       <th scope="col ">Cuenta de banco</th>
       <th scope="col ">Id usuario</th>
-      <th scope="col "></th>
-      <th scope="col "></th>
     </tr>
   </thead>
   <tbody class="table-group-divider">

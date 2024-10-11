@@ -24,7 +24,7 @@ if(localDeployed){
 
 // Check if session storage is empty to change navbar options
 // User not logged anchors display 
-let displayAnchors = ["d-none","d-block","d-block","d-block","d-block","d-block","d-none","d-block","d-none","d-none"];
+let displayAnchors = ["d-none","d-block","d-block","d-block","d-block","d-block","d-none","d-none","d-block","d-none"];
 let userName = "";
 
 if(sessionStorage.length != 0){
@@ -69,13 +69,13 @@ function createNavFoot(relativePathOrigin,displayAnchors,userName) {
                     </div>
                     <div class="navbar-nav ms-auto options">
                         <a class="nav-link ${displayAnchors[1]}" id="navIndex" aria-current="page" href="${relativePathOrigin}/index.html">INICIO</a>
-                        <a class="nav-link ${displayAnchors[2]}" id="navContact" href="${relativePathOrigin}/pages/contact.html">CONTACTO</a>
-                        <a class="nav-link ${displayAnchors[3]}" id="navAbout" href="${relativePathOrigin}/pages/about.html">NOSOTROS</a>
-                        <a class="nav-link ${displayAnchors[4]}" id="navLogIn" href="${relativePathOrigin}/pages/log_in.html">INICIAR SESIÓN</a>
-                        <a class="nav-link ${displayAnchors[5]}" id="navSignIn" href="${relativePathOrigin}/pages/sign_in.html">REGISTRARSE</a>
+                        <a class="nav-link ${displayAnchors[2]}" id="navAbout" href="${relativePathOrigin}/pages/about.html">NOSOTROS</a>
+                        <a class="nav-link ${displayAnchors[3]}" id="navContact" href="${relativePathOrigin}/pages/contact.html">CONTACTO</a>
+                        <a class="nav-link ${displayAnchors[4]}" id="navSignIn" href="${relativePathOrigin}/pages/sign_in.html">REGISTRARSE</a>
+                        <a class="nav-link ${displayAnchors[5]}" id="navLogIn" href="${relativePathOrigin}/pages/log_in.html">INICIAR SESIÓN</a>
                         <a class="nav-link ${displayAnchors[6]}" id="navUserProfile" href="${relativePathOrigin}/pages/user_profile.html">PERFIL</a>
-                        <a class="nav-link ${displayAnchors[7]}" id="navProductList" href="${relativePathOrigin}/pages/product_list.html">PRODUCTOS</a>
-                        <a class="nav-link ${displayAnchors[8]}" id="navProductList" href="${relativePathOrigin}/pages/product_registration.html">VENDER</a>
+                        <a class="nav-link ${displayAnchors[7]}" id="navProductList" href="${relativePathOrigin}/pages/product_registration.html">VENDER</a>
+                        <a class="nav-link ${displayAnchors[8]}" id="navProductList" href="${relativePathOrigin}/pages/product_list.html">PRODUCTOS</a>
                     </div>
                     <div class="${displayAnchors[9]}">
                         <button class="ms-3" title="Cerrar sesión" id="log-out-btn">

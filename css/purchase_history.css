@@ -95,6 +95,12 @@ textarea {
   text-align: center;
 }
 
+td{
+  word-break: break-all;
+}
+button{
+  word-break:normal;
+}
 /* derecha */
 
 .btn.btn-primary {

@@ -56,15 +56,15 @@
     <main>
       
       <section class="form-section">
-                <form id="formulario">
+      <form id="formulario">
                   
-                  <div class="pares">
+      <div class="pares">
         <div class="form-group">
           <div class="labelContainer">
             <img src="https://cdn-icons-png.flaticon.com/512/2555/2555021.png" alt="tipoLogo" class="icon">
            <label for="tipo">Tipo</label>
           </div>
-            <select id="tipo" name="tipo" style="margin-bottom: 1em;">
+            <select id="tipo" name="tipo">
               <option value="Sedán">Sedán</option>
               <option value="Coupé">Coupé</option>
               <option value="SUV">SUV</option>
@@ -126,7 +126,7 @@
           <div class="form-group">
             <div class="labelContainer">
               <img src="https://cdn-icons-png.flaticon.com/512/2621/2621783.png" alt="nPropLogo" class="icon">
-              <label for="propietario">Número total de Propietarios</label>
+              <label for="num_prop" id="prop-label">Número total de Propietarios</label>
             </div>
             <input type="number" id="num_prop" name="num_prop" min="1"/>
           </div>
@@ -147,6 +147,18 @@
             <input type="text" id="precio" name="precio" />
           </div>
          </div>
+
+         <div class="form-group mt-3">
+          <div class="labelContainer mx-auto align-items-center">
+            <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1728875875/barcode-svgrepo-com_sqk9xr.svg" alt="precioLogo" class="icon">
+            <label for="serial">Número de serie</label>
+          </div>
+          <input type="text" id="serial" name="serial" />
+        </div>
+
+        
+       
+
           <div class="drescripcion">
             <label for="descripcion">Descripción del vehículo</label>
             <textarea id="descripcion" name="descripcion"></textarea>
@@ -159,19 +171,22 @@
               name="imagenes"
               style="display: none"
             /> -->
-            <label for="imagenes" class="custom-file-upload">
+            <div for="imagenes" class="custom-file-upload p-0" id="upload-container-cd">
               <img
-                id="upload_widget"
+                id="upload-widget"
                 src="https://res.cloudinary.com/duqki6x6t/image/upload/v1728448319/fg7pko4clm8u05waeznc.png"
                 alt="Icono de subida"
                 class="upload-icon"
               />
-            </label>
+            </div>
                 <!-- placeholder for uploaded image -->
-     <img  
-      id="uploadedimage" 
-      src="" class="d-none">
-    </img>  
+            <figure class="mx-auto" id="img-placeholder">
+              <img  
+                id="uploadedimage" 
+                src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726810826/occ-mascota_fddolf.png">
+              </img>  
+            </figure>
+             
           </div>
           <div id="carouselContainer" style="display: none;">
             <div id="imageContainer"></div>
@@ -199,23 +214,34 @@
           </div> -->
 
           <div class="terms-container">
-            <div class="terms"> 
-                <input type="checkbox" id="terms" name="terms" />
-                <label for="terms">
-                 <a href="Terminos.html"> Términos y condiciones</a>
-                </label>
-    
-                <input type="checkbox" id="privacy" name="privacy" />
-                <label for="privacy">
-                  <a href="Terminos.html">Política de privacidad</a>
-                </label>
+            <div class="terms d-flex flex-wrap mt-3 gap-2"> 
+
+              <ul>
+                <li>
+                  <div class="term-condi-cb d-flex">
+                    <input type="checkbox" id="terms" name="terms" />
+                    <label for="terms" id="terms-label">
+                     <a href="Terminos.html" target="_blank">Acepto los <span class="text-warning">Términos y Condiciones</span></a>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="term-condi-cb d-flex justify-content-start">
+                    <input type="checkbox" id="privacy" name="privacy" />
+                    <label for="privacy" id="privacy-label">
+                      <a href="Terminos.html" target="_blank"> Acepto la <span class="text-warning">Política de Privacidad</span></a>
+                    </label>
+                </div>
+                </li>
+              </ul>
+                
             </div>
             <div id="alertaVehiculos"></div>
             <button id="public" type="submit">Publicar</button>
         </div>
+      </form>
     </section>
-        </form>
-      </section>
+ 
      
       <section class="preview-section">
         <img src="https://res.cloudinary.com/duqki6x6t/image/upload/v1728448318/tmvctcqqiy878gn5itx0.png" alt="Imagen representativa" />
@@ -242,9 +268,11 @@
     ></script>
     <script src="../js/registro.js"></script>
         <!-- cloudinary upload widget -->
-    <script 
+    <!-- <script 
      src="https://widget.cloudinary.com/v2.0/global/all.js" 
      type="text/javascript">
+    </script> -->
+    <script src="https://upload-widget.cloudinary.com/latest/global/all.js" type="text/javascript">
     </script>
 
     <!-- local upload instantiation -->

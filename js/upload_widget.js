@@ -1,5 +1,6 @@
 const cloudName = "duqki6x6t"; // replace with your own cloud name
 const uploadPreset = "OneClickCarPrueba"; // replace with your own upload preset
+const uploadWidget = document.getElementById("upload-widget")
 
 const myWidget = cloudinary.createUploadWidget(
   {
@@ -16,7 +17,7 @@ const myWidget = cloudinary.createUploadWidget(
   }
 );
 
-document.getElementById("upload_widget").addEventListener(
+document.getElementById("upload-widget").addEventListener(
   "click",
   function () {
     myWidget.open();

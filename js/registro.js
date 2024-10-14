@@ -1,3 +1,58 @@
+// Disable button to publish
+const publishBtn = document.getElementById("public");
+const termsCheckboxBtn = document.getElementById("terms");
+const privacyCheckboxBtn = document.getElementById("privacy");
+
+const disableBtn = (btn) => {
+  btn.disabled = true;
+  btn.style.opacity = "50%";
+}// disableBtn
+
+const enableBtn = (btn) => {
+  btn.disabled = false;
+  btn.style.opacity = "100%";
+}// enableBtn
+
+termsCheckboxBtn.onclick = function () {
+  if(termsCheckboxBtn.checked && privacyCheckboxBtn.checked){
+    enableBtn(publishBtn)
+    animeteElement("#public","tada")
+  }else{
+    disableBtn(publishBtn)
+  }
+}
+
+privacyCheckboxBtn.onclick = function(){
+  if(termsCheckboxBtn.checked && privacyCheckboxBtn.checked){
+    enableBtn(publishBtn)
+    animeteElement("#public","tada")
+  }else{
+    disableBtn(publishBtn)
+  }
+}
+
+// maintain button disabled until terms and privacy are not accepted
+disableBtn(publishBtn)
+
+function animeteElement(selector,animation){
+        
+  new Promise((resolve,reject)=> {
+      const prefix = "animate__";
+  
+      const animationName = `${prefix}${animation}`;
+      const element = document.querySelector(selector);
+      element.classList.add(`${prefix}animated`, animationName);
+
+      function handleAnimationEnd(event){
+          event.stopPropagation();
+          element.classList.remove(`${prefix}animated`, animationName);
+          resolve("animation ended")
+      }
+
+      element.addEventListener("animationend",handleAnimationEnd,{once : true})
+  })
+} // animeteElement
+
 document.addEventListener("DOMContentLoaded", function () {
   let formRegistro = document.querySelector("form");
 
@@ -16,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let owners = document.getElementById("num_prop").value;
       // let contact = document.getElementById("contacto").value;
       let price = document.getElementById("precio").value;
+      let serialNumber = document.getElementById("serial").value
       let description = document.getElementById("descripcion").value;
       let img = document.getElementById("imagenes");
       let termsCheckbox = document.getElementById("terms");
@@ -35,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (owners === "") camposFaltantes.push("Número de propietarios");
       // if (contact === "") camposFaltantes.push("Contacto");
       if (price === "") camposFaltantes.push("Precio");
+      if (serialNumber === "") camposFaltantes.push("Número de serie");
       if (description === "") camposFaltantes.push("Descripción");
       if (!termsCheckbox.checked)
         camposFaltantes.push("Términos y condiciones");
@@ -166,6 +223,7 @@ function mostrarAlerta(mensaje) {
   alertDiv.innerHTML = `<div class="alert alert-danger" role="alert">
     ${mensaje}
   </div>`;
+  animeteElement("#alertaVehiculos","shakeX")
 }
 
 function printTotal(div) {

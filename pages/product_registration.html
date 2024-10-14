@@ -171,7 +171,7 @@
               name="imagenes"
               style="display: none"
             /> -->
-            <div for="imagenes" class="custom-file-upload p-0">
+            <div for="imagenes" class="custom-file-upload p-0" id="upload-container-cd">
               <img
                 id="upload-widget"
                 src="https://res.cloudinary.com/duqki6x6t/image/upload/v1728448319/fg7pko4clm8u05waeznc.png"
@@ -180,10 +180,13 @@
               />
             </div>
                 <!-- placeholder for uploaded image -->
+            <figure class="mx-auto" id="img-placeholder">
               <img  
                 id="uploadedimage" 
-                src="" class="d-none">
+                src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726810826/occ-mascota_fddolf.png">
               </img>  
+            </figure>
+             
           </div>
           <div id="carouselContainer" style="display: none;">
             <div id="imageContainer"></div>
@@ -211,21 +214,26 @@
           </div> -->
 
           <div class="terms-container">
-            <div class="terms d-flex flex-wrap justify-content-center mt-3 gap-2"> 
+            <div class="terms d-flex flex-wrap mt-3 gap-2"> 
 
-              <div class="term-condi-cb d-flex align-items-center">
-                <input type="checkbox" id="terms" name="terms" />
-                <label for="terms" id="terms-label">
-                 <a href="Terminos.html">Acepto los <span class="text-warning">Términos y Condiciones</span></a>
-                </label>
-              </div>
-
-              <div class="term-condi-cb d-flex align-items-center">
-                  <input type="checkbox" id="privacy" name="privacy" />
-                  <label for="privacy" id="privacy-label">
-                    <a href="Terminos.html"> Acepto la <span class="text-warning">Política de Privacidad</span></a>
-                  </label>
+              <ul>
+                <li>
+                  <div class="term-condi-cb d-flex">
+                    <input type="checkbox" id="terms" name="terms" />
+                    <label for="terms" id="terms-label">
+                     <a href="Terminos.html" target="_blank">Acepto los <span class="text-warning">Términos y Condiciones</span></a>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="term-condi-cb d-flex justify-content-start">
+                    <input type="checkbox" id="privacy" name="privacy" />
+                    <label for="privacy" id="privacy-label">
+                      <a href="Terminos.html" target="_blank"> Acepto la <span class="text-warning">Política de Privacidad</span></a>
+                    </label>
                 </div>
+                </li>
+              </ul>
                 
             </div>
             <div id="alertaVehiculos"></div>

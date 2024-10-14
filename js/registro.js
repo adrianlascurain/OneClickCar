@@ -3,6 +3,9 @@ const publishBtn = document.getElementById("public");
 const termsCheckboxBtn = document.getElementById("terms");
 const privacyCheckboxBtn = document.getElementById("privacy");
 
+// Regex for vehicle identification number (serial number)
+const VINRegex = /^(?=.*[0-9])(?=.*[A-z])[0-9A-z-]{17}$/
+
 const disableBtn = (btn) => {
   btn.disabled = true;
   btn.style.opacity = "50%";
@@ -91,7 +94,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (owners === "") camposFaltantes.push("Número de propietarios");
       // if (contact === "") camposFaltantes.push("Contacto");
       if (price === "") camposFaltantes.push("Precio");
-      if (serialNumber === "") camposFaltantes.push("Número de serie");
+      if (serialNumber === ""){ 
+        camposFaltantes.push("Número de serie");
+      }else if(!VINRegex.test(serialNumber)){
+        camposFaltantes.push("Número de serie inválido");
+      }
       if (description === "") camposFaltantes.push("Descripción");
       if (!termsCheckbox.checked)
         camposFaltantes.push("Términos y condiciones");
@@ -130,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
         price: parseInt(price),
         img: localStorage.getItem("image_url"), 
         owners: parseInt(owners),
+        serialNumber: serialNumber,
         description: description,
         verified: 0,
         sold: 0,
@@ -196,6 +204,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Limpiar los campos del formulario
       formRegistro.reset();
+      document
+        .getElementById("uploadedimage")
+        .setAttribute("src", "https://res.cloudinary.com/dz6zf3yio/image/upload/v1726810826/occ-mascota_fddolf.png");
       // };
 
       // Leer la imagen como DataURL (base64)

@@ -235,15 +235,17 @@ input[type="file"] {
 #img-placeholder{
     max-width: 400px;
     max-height: 400px;
-    border: 3px solid white;
-    border-radius: 20px;
     margin-top: 10px;
+    
 }
 
 #uploadedimage{
     width: 100%;
     object-fit: contain;
+    border-radius: 20px;
+    border: 3px solid white;
 }
+
 #image{
     text-align: center;
     margin: auto;

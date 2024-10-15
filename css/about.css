@@ -41,6 +41,7 @@
 .Carl-figure img{
     width: 100%;
 }
+
 .team{
     margin: 20px 20px;
 }
@@ -69,6 +70,21 @@ main .our-team{
     height: 100%;
     margin: auto;
     object-fit: cover;
+}
+
+.favorite-car{
+    bottom: 5px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    display: none;
+    pointer-events: none;
+}
+
+.favorite-car p{
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: "Montserrat";
 }
 
 main p{
@@ -108,6 +124,13 @@ main p{
 @media (max-width: 1000px){
     .card .photo{
         width: 70%;
+        height: 400px;
+    }
+}
+
+@media (max-width: 700px){
+    .card .photo{
+        width: 80%;
         height: 400px;
     }
 }

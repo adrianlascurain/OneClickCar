@@ -4,7 +4,6 @@ const termsCheckboxBtn = document.getElementById("terms");
 const privacyCheckboxBtn = document.getElementById("privacy");
 
 // Regex for vehicle identification number (serial number)
-const VINRegex = /^(?=.*[0-9])(?=.*[A-z])[0-9A-z-]{17}$/
 
 const disableBtn = (btn) => {
   btn.disabled = true;
@@ -15,6 +14,10 @@ const enableBtn = (btn) => {
   btn.disabled = false;
   btn.style.opacity = "100%";
 }// enableBtn
+
+
+// maintain button disabled until terms and privacy are not accepted
+disableBtn(publishBtn)
 
 termsCheckboxBtn.onclick = function () {
   if(termsCheckboxBtn.checked && privacyCheckboxBtn.checked){
@@ -34,8 +37,6 @@ privacyCheckboxBtn.onclick = function(){
   }
 }
 
-// maintain button disabled until terms and privacy are not accepted
-disableBtn(publishBtn)
 
 function animeteElement(selector,animation){
         
@@ -55,6 +56,27 @@ function animeteElement(selector,animation){
       element.addEventListener("animationend",handleAnimationEnd,{once : true})
   })
 } // animeteElement
+
+// Regex set
+const brandRegEx = /a/;
+const modelRegEx = /a/;
+const VINRegex = /^(?=.*[0-9])(?=.*[A-z])[0-9A-z-]{17}$/
+
+
+// Validation set
+const validateBrand = (brand) => brand.length >= 2 && brandRegEx.test(brand);
+const validateModel = (model) => model.length >= 2 && modelRegEx.test(model);
+
+const validateYear = (year) => {
+  const thisYear = new Date().getFullYear();
+  return year >= 1886 && year <= thisYear;
+};
+
+const validateKm = (km) => km >= 0;
+const validateProp = (numProp) => numProp >= 1;
+const validatePrice = (price) => price > 0;
+const validateSerialNumber = (number) => VINRegex.test(number);
+const validateDescription = (description) => description.length >= 50;
 
 document.addEventListener("DOMContentLoaded", function () {
   let formRegistro = document.querySelector("form");

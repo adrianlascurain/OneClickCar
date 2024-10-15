@@ -14,19 +14,27 @@ let fcAntonio = document.getElementById("favorite-car-antonio");
 let fcLuis = document.getElementById("favorite-car-luis");
 let fcLibertad = document.getElementById("favorite-car-libertad");
 
-fcLibertad.style.opacity = "0%"
+fcSergio.style.opacity = "0%";
+fcJuan.style.opacity = "0%";
+fcAdrian.style.opacity = "0%";
+fcAntonio.style.opacity = "0%";
+fcLuis.style.opacity = "0%";
+fcLibertad.style.opacity = "0%";
+
+
 
 function fadeOutImg(memberImg,url,fc){
     memberImg.style.transition = "opacity 0.3s linear";
     memberImg.style.opacity = "0%";
     fc.style.transition = "opacity 0.3s linear";
+    fc.style.opacity = "0%"
     setTimeout(()=> {
         memberImg.src = url;
         memberImg.style.transition = "opacity 0.3s linear";
         memberImg.style.opacity = "100%";
         fc.style.opacity = "100%";
         fc.style.display = "block";
-        fc.style.zIndex = 0;
+        
     }, 1 * 300)
 }
 
@@ -34,13 +42,14 @@ function fadeInImg(memberImg,url,fc){
     memberImg.style.transition = "opacity 0.3s linear";
     memberImg.style.opacity = "0%";
     fc.style.transition = "opacity 0.3s linear";
+    fc.style.opacity = "100%"
     setTimeout(()=> {
         memberImg.src = url;
         memberImg.style.transition = "opacity 0.3s linear";
         memberImg.style.opacity = "100%";
         fc.style.opacity = "0%";
         fc.style.display = "none";
-        fc.style.zIndex = 0;
+        
     }, 1 * 300)
 }
 

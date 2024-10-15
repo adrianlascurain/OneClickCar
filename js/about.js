@@ -34,7 +34,6 @@ function fadeOutImg(memberImg,url,fc){
         memberImg.style.opacity = "100%";
         fc.style.opacity = "100%";
         fc.style.display = "block";
-        
     }, 1 * 300)
 }
 
@@ -49,7 +48,6 @@ function fadeInImg(memberImg,url,fc){
         memberImg.style.opacity = "100%";
         fc.style.opacity = "0%";
         fc.style.display = "none";
-        
     }, 1 * 300)
 }
 

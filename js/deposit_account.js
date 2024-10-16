@@ -121,6 +121,7 @@ function createTableAdm(dataDepositMethod) {
 }
 
 
+//inicia
 if (sessionStorage.getItem("id_user_logged") == 0) {
   infoCliente.classList.add("d-none");
   infoCliente.innerHTML = "";

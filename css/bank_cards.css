@@ -1,0 +1,273 @@
+body {
+    background-color: #d0cece;
+  }
+  
+  .bodyContainer {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 1/4 a la izquierda, 3/4 a la derecha */
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 20px;
+}
+
+  /* izquierda */
+  .barraLeft {
+    background-color: #1e3263a8;
+    text-align: center;
+    color: white;
+  }
+
+  #tarjetaImg {
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    height: 200px; /* Mantiene la proporción de la imagen */
+ 
+    border-radius: 10px; /* Mantiene el borde redondeado */
+  }
+
+  .error-input {
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+
+  h5 {
+    text-align: start;
+  }
+  
+  .barraLeft h2 {
+    font-size: 16px;
+    margin: 0px auto;
+    font-family: "Montserrat";
+    cursor: pointer;
+  }
+  
+  #close {
+    margin-top: 20px;
+    display: inline;
+  }
+  
+  .opcionesPerfil {
+    margin: auto 0px;
+  }
+  
+  .opcionesPerfil img {
+    width: 20px;
+    margin-bottom: 5px;
+  }
+  
+  /* centro */
+  .cajaCuentaDeposito {
+    grid-column: 2 / 2; /* Coloca la tarjeta de entrada en la primera columna */
+    max-width: max-content;
+    text-align: center;
+    background-color: #002b5b;
+    border-radius: 20px;
+    padding: 20px 30px 20px 30px;
+    color: #ffffff;
+    font-family: "Monserrat";
+    font-size: 20px;
+    margin: 55px auto 20px auto;
+  }
+  .cajaCuentaDeposito h1 {
+    color: #ffcc00;
+    text-align: center;
+    font-family: "Poppins";
+    font-weight: bold !important;
+    font-size: 28px;
+  }
+  
+  .cajaCuentaDeposito img {
+    margin-bottom: 40px;
+  }
+  
+  .cajaCuentaDepositoForm {
+    background-color: #627997;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .infoCenter img {
+    width: 250px;
+    margin-top: 20px;
+  }
+  
+  .cajaCuentaDeposito input {
+    flex-grow: 1;
+    border-radius: 20px;
+    background: rgb(0, 32, 68);
+    border-style: solid;
+    border-width: 3px;
+    height: 30px;
+  }
+  .cajaCuentaDeposito input,
+  textarea {
+    color: white;
+  }
+  
+  .itemForm {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
+  
+  .itemForm label {
+    margin-right: 15px;
+    text-align: left;
+    flex-shrink: 0; /* Asegura que el label mantenga su tamaño en relación con el contenido */
+  }
+
+  /* Hacer que los inputs ocupen el espacio restante */
+.itemForm input, 
+.itemForm textarea {
+  flex-grow: 1;
+  max-width: 90%; /* Asegura que no se desborde en pantallas pequeñas */
+  padding: 7px;
+  border-radius: 20px;
+}
+  
+  /* derecha */
+  
+  .btn.btn-primary {
+    background-color: #e08f0c;
+    border-radius: 20px;
+    border-color: #002b5b;
+    color: black;
+    font-family: "Montserrat";
+    font-weight: bold;
+    margin: 10px;
+    
+  }
+  #titleDepositAccount, #titleReport {
+    margin-top: 58px;
+    margin-bottom: 25px;
+    margin-left: 62px;
+    color: #08315f;
+    font-family: "Poppins";
+    font-weight: bold !important;
+    font-size: 40px;
+  }
+  #infoCliente {
+    padding: 0px;
+  }
+  #name-ipt,
+  #bank-ipt,
+  #account-ipt,
+  #fecha-ipt,
+  #cvv-ipt,
+  #banco-ipt {
+    display: flexbox;
+    max-width: 565px;
+    width: 100%;
+  }
+  .nav-link.active {
+    background-color: white;
+    color: #002b5b !important;
+    border-radius: 20px;
+    padding: 4px 16px
+  }
+  .modal-title {
+    color: black;
+  }
+
+  #fecha-ipt {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: rgb(0, 32, 68);
+    background-image: url('https://res.cloudinary.com/darjvaffy/image/upload/v1729039781/calendario-removebg-preview_wndt7n.png'); /* Ícono de calendario blanco */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+    padding-right: 30px;
+    border-radius: 20px;
+    height: 30px;
+    font-size: 14px;
+  }
+  #fecha-ipt:focus {
+    border-color: red; /* Cuando hay un error */
+  }
+  #banco-ipt,
+  #bank-ipt {
+    background-color: rgb(0, 32, 68);
+    border-radius: 20px;
+    color: #ffffff;
+  }
+
+  #banco-ipt:focus {
+    border-color: red; /* Cuando hay un error */
+  }
+  #bank-ipt:focus {
+    border-color: red; /* Cuando hay un error */
+  }
+  
+  .infoAdmin {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;  /* Alinear a la derecha */
+    padding: 20px; /* Añadir padding opcional */
+}
+
+#tarjetaImg {
+  width: 300px; /* Tamaño inicial para pantallas grandes */
+  height: auto;
+  border-radius: 10px;
+}
+
+  @media (width<= 1315px) {
+    .itemForm label {
+      text-align: right;
+   
+    }
+  }
+  
+  @media (width<= 575px) {
+    .opcionesPerfil {
+      margin: 20px;
+    }}
+  
+  @media (width<= 428px) {
+    .cajaCuentaDeposito {
+      margin: 28px;
+    }
+  }
+  
+  @media (max-width: 1315px) {
+    #tarjetaImg {
+      width: 250px; /* Cambiar el tamaño para pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 575px) {
+    #tarjetaImg {
+      width: 200px; /* Cambiar el tamaño para pantallas pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #tarjetaImg {
+      width: 150px; /* Cambiar el tamaño para pantallas muy pequeñas */
+    }
+  }
+  @media (max-width: 575px) {
+    .itemForm {
+      flex-direction: column; /* Apilar label y input verticalmente */
+      align-items: flex-start; /* Alinear elementos a la izquierda */
+    }
+  
+    .itemForm label {
+      margin-bottom: 5px;
+      text-align: left; /* Alineación a la izquierda en pantallas pequeñas */
+    }
+  
+    .itemForm input, 
+    .itemForm textarea {
+      width: 100%; /* Asegura que ocupen el 100% del ancho disponible */
+    }
+  }

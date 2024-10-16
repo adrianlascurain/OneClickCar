@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../fonts/LogoBlackOCK.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cuenta de depósito</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style -->
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/bank_cards.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script src="../assets/sweetAlert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../assets/emailJS/dist/email.min.js"></script>
+  </head>
+
+  <body>
+    <header id="nav_bar"></header>
+    <main>
+      <div class="container-fluid">
+        <div class="row" id="infoRow">
+          <div class="col-sm-2 barraLeft">
+            <div class="opcionesPerfil">
+              <br />
+              <h2 id="linkProfile">CONFIGURACIÓN</h2>
+              <br />
+              <h2 id="linkPurchase">HISTORIAL DE COMPRAS</h2>
+              <br />
+              <h2 id="linkPayment">FORMAS DE PAGO</h2>
+              <br />
+              <h2 class="nav-link active" id="linkDeposit">CUENTA DE DEPÓSITO</h2>
+              <br />
+              <h2 id="linkLogOut">
+                CERRAR SESIÓN
+                <img
+                  src="https://res.cloudinary.com/duxbrimwv/image/upload/v1726284778/exitIcon_dg9gyx.svg"
+                  alt="exitIcon"
+                />
+              </h2>
+            </div>
+            <!-- div opcionesPerfil-->
+          </div>
+          <div class="col-sm-10 infoCenter" id="infoCliente">
+              <h1 id="titleDepositAccount">Cuentas bancarias</h1>
+              <div class="text-center">
+              </div>
+              <div class="cajaCuentaDeposito">
+                <h5>Ingreso de datos de tarjeta</h5>
+                <div class="cajaCuentaDepositoForm">
+                  <img id="tarjetaImg" src="https://res.cloudinary.com/darjvaffy/image/upload/v1729046581/banco_neutro-removebg-preview_dicuhu.png" class="card-img-top" alt="BBVA" style="border-radius: 10px;">
+                  
+                  <form id="InfoProfile">
+                    <div class="itemForm">
+                      <label for="name-ipt">Titular de la tarjeta:</label>
+                      <input type="text" id="name-ipt" minlength="3" required />
+                    </div>
+                    
+                    <div class="itemForm">
+                      <label for="bank-ipt">Tipo de tarjeta:</label>
+                      <select id="bank-ipt">
+                        <option value="empty">--</option>
+                        <option value="visa">VISA</option>
+                        <option value="mastercard">MASTERCARD</option>
+                      </select>
+                    </div>
+                    
+                    <div class="itemForm">
+                      <label for="banco-ipt">Entidad bancaria:</label>
+                      <select id="banco-ipt" onchange="cambiarImagen()">
+                        <option value="vacio">--</option>
+                        <option value="azteca">Azteca</option>
+                        <option value="banamex">Banamex</option>
+                        <option value="banorte">Banorte</option>
+                        <option value="bbva">BBVA</option>
+                        <option value="hsbc">HSBC</option>
+                        <option value="santander">Santander</option>
+                        <option value="otro">Otro</option>
+                      </select>
+                    </div>
+                    
+                    <div class="itemForm">
+                      <label for="account-ipt">N.° de tarjeta:</label>
+                      <input type="text" id="account-ipt" pattern="\d{13,16}" title="El número de tarjeta debe tener entre 13 y 16 dígitos" required />
+                    </div>
+                    
+                    <div class="itemForm">
+                      <label for="fecha-ipt">Fecha de caducidad:</label>
+                      <input type="month" id="fecha-ipt" required />
+                    </div>
+                    
+                    <div class="itemForm">
+                      <label for="cvv-ipt">CVV:</label>
+                      <input type="text" id="cvv-ipt" pattern="\d{3}" title="Debe tener 3 dígitos" required />
+                    </div>
+                  </form>
+                </div>
+              </div>
+                 <!-- Botones -->
+              <div class="col-sm-12 text-center">
+              <button type="button" class="btn btn-primary btn-information" id="btnAgregar">Agregar</button>
+              <button type="button" class="btn btn-primary btn-information" id="btnModificar" disabled>Modificar</button>
+              <button type="button" class="btn btn-primary btn-information" id="btnEliminar" disabled>Eliminar</button>
+              </div>
+              
+
+              
+              <!-- Mostrar información en esta sección -->
+              <div class="col-sm-10 infoCenter" id="infoAdmin">
+              </div><!-- infoClienteRow-->
+          <!-- <div class="col-sm-12 text-center" id="modalArea">
+
+          </div> -->
+
+
+
+
+
+      </div><!-- container-fluid -->
+    </main>
+    <footer id="footer_back"></footer>
+
+    <!-- Scripts -->
+    <!-- navbar y footer -->
+    <script src="../js/navigation.js" defer></script>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- funcionalidad página -->
+    <script defer src="../js/subscribe.js"></script>
+    <!-- cambio de imagen -->
+    <script defer src="../js/bank_card.js"></script>
+
+
+  </body>
+</html>

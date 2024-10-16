@@ -1,5 +1,3 @@
-
-
 // navbar active
 let navLogIn = document
 .getElementById("navLogIn")
@@ -16,6 +14,84 @@ const alertValidacionesTexto = document.getElementById("alertValidacionesTexto")
 //bandera
 let isValid = true;
 
+function validatePassword(emailInserted, passwordInserted) {
+
+
+
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const raw = JSON.stringify({
+  "email": emailInserted,
+  "password": passwordInserted
+});
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("http://localhost:8080/api/login/", requestOptions)
+  .then((response) => response.json())
+  .then((result) => {
+    if(result.accessToken!=null){
+    console.log(result);
+    sessionStorage.setItem("token", result.accessToken);
+      sessionStorage.setItem("user", emailInserted);
+      txtEmail.value = "";
+    txtPassword.value = "";
+      recoverNameId(emailInserted);
+    }
+    else {
+          
+                Swal.fire({
+                    title: "Credenciales inválidas",
+                    text: "Por favor, ingrese un correo y contraseña válidos",
+                    icon: "error",
+                }); //cierre msj error
+                
+                txtEmail.style.border = "solid red medium";
+                txtPassword.style.border = "solid red medium";
+                alertValidacionesTexto.innerHTML += "Las <strong>CREDENCIALES</strong> son incorrectas";
+                alertValidaciones.style.display = "block";
+    }
+   })
+  .catch((error) => {
+    console.error(error); 
+
+  });
+
+}
+
+function recoverNameId(emailUser){
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+
+    const requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow"
+    };
+
+fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
+  .then((response) => response.json())
+  .then((userData) => {
+    // if (userData != null) {
+      console.log(userData);
+    sessionStorage.setItem("fullName", JSON.stringify(userData.fullName));
+    sessionStorage.setItem("idUser", JSON.stringify(userData.idUser));
+     window.location.href = "../index.html";
+    // } else { console.error("No fue posible leer las credenciales del usuario" + error) }
+
+  }).catch((error) => console.error(error));
+
+
+  }
+
+    
+   
 
 //Validaciones al dar click en botón "Iniciar sesión"
 btnLogin.addEventListener("click", function (event) {
@@ -48,33 +124,11 @@ btnLogin.addEventListener("click", function (event) {
         const email = txtEmail.value.trim();
         const password = txtPassword.value.trim();
 
+      // Aquí llamar a validatePassword(email, password)
+      validatePassword(email, password);
+
         //Validación de usuario en localStorage
         const usuario = localStorage.getItem("userCredentials");
-
-        if (usuario) {
-            //pasar a objeto
-            const usuarioObj = JSON.parse(usuario);
-
-            //verificar contraseña
-            if (usuarioObj.password === password) {
-                txtEmail.value = "";
-                txtPassword.value = "";
-                // Identificador usuario loggeado-actual
-                sessionStorage.setItem("id_user_logged", "2");
-                window.location.href = "../index.html";
-            } else {
-                Swal.fire({
-                    title: "Credenciales inválidas",
-                    text: "Por favor, ingrese un correo y contraseña válidos",
-                    icon: "error",
-                }); //cierre msj error
-                
-                txtEmail.style.border = "solid red medium";
-                txtPassword.style.border = "solid red medium";
-                alertValidacionesTexto.innerHTML += "Las <strong>CREDENCIALES</strong> son incorrectas";
-                alertValidaciones.style.display = "block";
-            }//else password !===
-
 
         } else {
             Swal.fire({
@@ -89,7 +143,7 @@ btnLogin.addEventListener("click", function (event) {
             alertValidaciones.style.display = "block";
         }//else usuario existente
 
-    }//if isValid
+    
 
 
 }); //cierre btnLogin

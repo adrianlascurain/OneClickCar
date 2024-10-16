@@ -1,0 +1,315 @@
+body {
+  background-color: #d0cece;
+}
+
+/* izquierda */
+.barraLeft {
+  background-color: #1e3263a8;
+  text-align: center;
+  color: white;
+  
+}
+
+.barraLeft h2 {
+  font-size: 16px;
+  margin: 0px auto;
+  font-family: "Montserrat";
+  cursor: pointer;
+}
+
+#close {
+  margin-top: 20px;
+  display: inline;
+}
+
+.opcionesPerfil {
+  margin: auto 0px;
+}
+
+.opcionesPerfil img {
+  width: 20px;
+  margin-bottom: 5px;
+}
+
+/* centro */
+.cajaCuentaDeposito {
+  max-width: 900px;
+  text-align: center;
+  background-color: #002b5b;
+  border-radius: 20px;
+  padding: 20px 30px 20px 30px;
+  color: #ffffff;
+  font-family: "Monserrat";
+  font-size: 20px;
+  margin: 55px auto 20px auto;
+}
+.cajaCuentaDeposito h1 {
+  color: #ffcc00;
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: bold !important;
+  font-size: 28px;
+}
+
+.cajaCuentaDeposito img {
+  margin-bottom: 40px;
+}
+
+.cajaCuentaDepositoForm {
+  background-color: #627997;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.infoCenter img {
+  width: 250px;
+  margin-top: 20px;
+}
+
+.cajaCuentaDeposito input {
+  flex-grow: 1;
+  border-radius: 20px;
+  background: rgb(0, 32, 68);
+  border-style: solid;
+  border-width: 3px;
+  height: 30px;
+}
+.cajaCuentaDeposito input,
+textarea {
+  color: white;
+}
+
+.itemForm {
+  padding: 10px;
+}
+
+.itemForm label {
+  width: 30px;
+  margin-right: 100px;
+  text-align: center;
+}
+
+td{
+  word-break: break-all;
+}
+button{
+  word-break:normal;
+}
+/* derecha */
+
+.card {
+  max-width: 262px;
+  border: 0px;
+  border-radius: 20px;
+  background-color: #002b5b;
+}
+.card-body {
+  padding: 0px;
+}
+
+.card-img-top {
+  width: 262px;
+  height: 167px;
+  border-radius: 20px;
+}
+
+.card-text {
+  font-family: "Montserrat";
+  font-weight: bold;
+  color: white;
+}
+.card-text-title {
+  font-size: 19px;
+}
+.card-text-kilometer {
+  font-size: 18px;
+}
+.card-text-price {
+  font-size: 22px;
+}
+
+.span_user {
+  word-break: break-all;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.btn.btn-primary {
+  background-color: #e08f0c;
+  border-radius: 20px;
+  border-color: #002b5b;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: bold;
+  margin: 10px;
+  
+}
+
+
+
+
+#titleDepositAccount, #titleReport {
+  margin-top: 58px;
+  margin-bottom: 25px;
+  margin-left: 62px;
+  color: #08315f;
+  font-family: "Poppins";
+  font-weight: bold !important;
+  font-size: 40px;
+}
+#infoCliente {
+  padding: 0px;
+}
+#name-ipt,
+#bank-ipt,
+#account-ipt {
+  display: inline-block;
+  max-width: 565px;
+  width: 100%;
+}
+.nav-link.active {
+  background-color: white;
+  color: #002b5b !important;
+  border-radius: 20px;
+  padding: 4px 16px
+}
+.modal-title {
+  color: black;
+}
+
+.btnsFilter>.btn{
+background-color: #002b5b;
+color: white;
+  font-family: "Poppins";
+  font-weight: bold !important;
+  font-size: 20px;
+}
+hr {
+  height: 0px;
+  border: none;
+  border-top: 1px solid #e08f0c;
+  opacity: 1;
+  margin: 0px;
+}
+
+.carTitle {
+  font-size: 28px;
+  color: #ffcc00;
+  font-family: "Poppins";
+  font-weight: bold;
+  margin: 0px;
+}
+
+.carousel.slide {
+  padding-left: 11px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+}
+
+
+.card {
+    max-width: 262px;
+    border: 0px;
+    margin-left: 57px;
+    margin-right: 57px;
+    border-radius: 20px;
+    background-color: #002b5b;
+  }
+
+
+.card-img-top {
+  width: 262px;
+  height: 167px;
+  border-radius: 20px;
+}
+
+.card-text {
+  font-family: "Montserrat";
+  font-weight: bold;
+  color: white;
+}
+.card-text-title {
+  font-size: 19px;
+}
+.card-text-kilometer {
+  font-size: 18px;
+}
+.card-text-price {
+  font-size: 22px;
+}
+
+.span_user {
+  word-break: break-all;
+}
+  .containerCarousel {
+    max-width: 376px;
+    margin-left: 26px;
+    margin-right: 26px;
+    padding: 0px;
+    background-color: #002b5b;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  /* .carousel-control-prev,
+  .carousel-control-next {
+    width: 45px;
+    height: 45px;
+  } */
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+@media (width<= 1315px) {
+  .itemForm label {
+    text-align: right;
+ 
+  }
+}
+
+@media (width<= 575px) {
+  .opcionesPerfil {
+    margin: 20px;
+  }}
+
+@media (width<= 428px) {
+  .cajaCuentaDeposito {
+    margin: 28px;
+  }
+}

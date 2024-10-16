@@ -3,7 +3,6 @@
     --navfoo-bg-color: #002B5B;
     background-color: var(--bg-color);
     opacity: 0.96;
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -27,19 +26,19 @@
 body {
     font-family: 'Tw-Cen-MT', sans-serif;
     background-color:#D0CECE;
-    color: #333;
+    /* color: #333; */
 }
 
 
 /* Sección del formulario */
 main {
     display: flex;
-    justify-content: space-between;  
+    justify-content: center;  
     align-items: flex-start; 
     padding: 20px;
-    gap: 20px;
+    gap: 40px;
+    height: max-content;
 }
-
 
 .form-section {
 /*   
@@ -84,13 +83,14 @@ select {
     align-items: end;
     width: 100%; 
     font-size: 0.7em; 
-    margin-bottom: 1em; 
+    margin-bottom: 10px; 
     padding: 0.5em; 
-    border: 1px solid #ccc;
+    border: 3px solid #7b7b7b;
     border-radius: 4px; 
-    margin-bottom: 1em;
+    margin-bottom: 10px;
     float: left;
 }
+
 .pares{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -107,9 +107,9 @@ select {
     flex-direction: column;
     width: 100%; 
     box-sizing: border-box;
-  margin-bottom: 20px;
-  text-align: left;
-  margin-right: 100px;
+    margin-bottom: 20px;
+    text-align: left;
+    margin: auto;
 }
 
 
@@ -128,9 +128,7 @@ select {
     margin: 0; */
     color: #FFFFFF; 
     font-size: 17px;
-    margin-bottom: 5px;
     display: block;
-    text-align: left;
 }
 
 .labelContainer {
@@ -148,11 +146,9 @@ select {
  #image{
     color: #FFFFFF; 
     font-size: 17px;
-     /* margin-right: 100px;
-    margin-bottom: 5px;  */
     margin: 20px 0;
+    padding: 0px;
     display: block;
-    padding-left: 200px;
     text-align: center;
     width: 100%;
 } 
@@ -160,9 +156,8 @@ input[type="text"],  input[type="number"],input[type="tel"],textarea {
     border-radius: 5px;
     color: #FFFFFF;
     font-size: medium;
-    background: rgb(0, 32, 68);
-    border-style: solid;
-    border-width: 3px;
+    background: #002044;
+    border: 3px solid #7b7b7b;
     width: 100%;
     margin-bottom: 10px;
     /* height: 30px;
@@ -170,6 +165,21 @@ input[type="text"],  input[type="number"],input[type="tel"],textarea {
     padding: 10px;
     text-align: left;
 }
+
+#tipo{
+    height: 48.8px;
+    color: white;
+    background: rgb(0, 32, 68);
+}
+
+/* #prop-label{
+    text-wrap: nowrap;
+} */
+
+#upload-widget{
+    width: 70%;
+}
+
 .drescripcion {
     display: flex; 
     flex-direction: column; 
@@ -202,26 +212,43 @@ input[type="file"] {
     
 }
 
+#upload-container-cd{
+    margin-bottom: 0px;
+}
+
 .custom-file-upload {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-     padding: 20px; 
     background-color: #002B5B; 
     color: white; 
     border-radius: 25px; 
     cursor: pointer; 
-    width: 300px; 
-    max-width: 300px;
-    
-    margin-left: 100px;
+    width: 100%; 
 }
 
-.upload-icon {
-    width: 200px; 
-    height: 80px; 
-    margin-right: 80px; 
-    padding-left: 100px;
+.custom-file-upload img{
+    padding: 0;
+    margin: auto;
+}
+
+#img-placeholder{
+    max-width: 400px;
+    max-height: 400px;
+    margin-top: 10px;
+    
+}
+
+#uploadedimage{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+#image{
+    text-align: center;
+    margin: auto;
 }
 
 #carouselExample {
@@ -255,9 +282,7 @@ input[type="file"] {
 
 .upload-icon {
     width: 100%; 
-    height: 40px;
-   max-height: 50px;
-   object-fit: contain;
+    object-fit: contain;
 }
 
 .custom-file-upload:hover {
@@ -267,6 +292,8 @@ input[type="file"] {
 /* Ocupa todo el ancho del grid para textarea */
 textarea {
     width: 100%;
+    height: 100px;
+    resize: none;
 }
 
 .terms-container {
@@ -283,22 +310,49 @@ textarea {
     display: flex;
     /* flex-direction: column;
     align-items: center; */
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   /* margin-top: 15px; */
-   margin-bottom: 10px;
-    
-  }
-  
-  .terms input[type="checkbox"] {
-    margin-right: 5px;
-  }
-  
-  .terms label {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 15px; */
+    margin-bottom: 10px;
+
+}
+
+.term-condi-cb{
+    justify-content: start;
+    margin-bottom: 10px;
+}
+
+.term-condi-cb label{
+    justify-content: start;
+    text-align: start !important;
+}
+
+.terms ul{
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.terms label {
     margin-right: 15px;
     font-size: 12px;
-  }
+}
+
+#terms-label, #privacy-label{
+    font-size: 15px !important;
+}  
+
+#terms-label span, #privacy-label span{
+    font-weight: bold;
+}   
+
 
 #public {
     /* background-color: #FFB82B; 
@@ -314,30 +368,42 @@ textarea {
    margin: 20px auto;
     width: 30%; 
     display: block; */
-    background-color: #FFB82B; 
+    width: 240px;
+    height: 45px;
+    background-color: #E08F0C; 
     color: white;
-    padding: 8px 16px;
     text-align: center;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-family: 'Tw-Cen-MT', sans-serif;
-    font-size: 14px;
+    font-family: 'Montserrat';
+    font-size: 24px;
     margin-top: 20px; 
-    width: 30%; 
     margin: 10px auto 0;
     display: block; 
+    box-shadow: 0px 2px 3px black;
+    font-weight: bold;
+}
+
+#public:hover:not([disabled]){
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+#public:disabled{
+    cursor: auto;
 }
 
 /* Sección de vista previa */
 .preview-section {
+    width: 40%;
     gap: 20px;
     padding: 20px;
     background-color:  #002B5B; 
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    width: 40%;
+    height: max-content; 
     color:#ffffff;
     align-self: flex-start;
 }
@@ -363,11 +429,35 @@ textarea {
 width: 67px ;
 }
 
-@media (max-width: 1070px) {
+#list-preview li{
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: start;
+}
+
+#description-pv{
+    overflow-wrap: break-word;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{ 
+    -webkit-box-shadow: 0 0 0 30px #002044 inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+/* .war-tooltip{
+    font-size: 10px;
+} */
+
+@media (max-width: 1310px) {
     main {
-        flex-direction: column;
-        padding: 10px;
-        align-items: center; /*cambio*/
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        /* padding: 10px; */
+        align-items: start; /*cambio*/
         justify-content: center;/*cambio*/
     }
 
@@ -378,13 +468,15 @@ width: 67px ;
         /* margin-bottom: 20px; */
         max-width: 500px; 
         margin: 0 auto; 
+        margin-right: 0px;
         align-items: center;/*cambio*/
     }
 
- .preview-section {
-        width: 100%;
+    .preview-section {
+        width: 40%;
         max-width: 500px; 
         margin: 0 auto;/*cambio*/
+        margin-left: 0px;
         margin-bottom: 20px;
         align-items: center;/*cambio*/
     }
@@ -404,12 +496,16 @@ width: 67px ;
     }
 
     #formulario label {
-        margin-bottom: 10px;
         /* align-items: center; 
         padding: 10px 0;*/
         width: 100%; 
         text-align: center;
     }
+
+    .drescripcion label{
+        margin-bottom: 5px;
+    }
+
     #image{
         padding-left: 0px;
     }
@@ -418,7 +514,7 @@ width: 67px ;
         margin-bottom: 10px;
         width: 100%; 
         padding: 10px;
-        
+        border-color: #7b7b7b;
     }
 
     .custom-file-upload {
@@ -427,9 +523,9 @@ width: 67px ;
         margin-bottom: 20px;
     }
 
-    #public {
+    /* #public {
         width: 100%; 
-    }
+    } */
 
     .icon {
         width: auto; 
@@ -453,5 +549,17 @@ width: 67px ;
         width: 100%;
         padding: 0;
         overflow: hidden; /* Evita que el contenido se salga */
+    }
+}
+
+@media(max-width:1100px){
+    .form-section{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .preview-section {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

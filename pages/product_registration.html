@@ -56,15 +56,16 @@
     <main>
       
       <section class="form-section">
-                <form id="formulario">
+      <form id="formulario">
                   
-                  <div class="pares">
+      <div class="pares">
         <div class="form-group">
           <div class="labelContainer">
             <img src="https://cdn-icons-png.flaticon.com/512/2555/2555021.png" alt="tipoLogo" class="icon">
            <label for="tipo">Tipo</label>
           </div>
-            <select id="tipo" name="tipo" style="margin-bottom: 1em;">
+            <select id="tipo" name="tipo">
+              <option value="nonSelected" selected>Selecciona una opción</option>
               <option value="Sedán">Sedán</option>
               <option value="Coupé">Coupé</option>
               <option value="SUV">SUV</option>
@@ -80,7 +81,7 @@
             <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" alt="marcaLogo" class="icon">
             <label for="marca">Marca</label>
           </div>
-              <input type="text" id="marca" name="marca" />
+              <input type="text" id="marca" name="marca"/>
           </div>
 
         
@@ -105,7 +106,7 @@
               <img src="https://cdn-icons-png.flaticon.com/512/4539/4539773.png" alt="kmLogo" class="icon">
               <label for="kilometraje">Kilometraje</label>
             </div>
-            <input type="text" id="kilometraje" name="kilometraje" />
+            <input type="number" id="kilometraje" name="kilometraje" />
           </div>
           <div class="form-group">
             <div class="labelContainer">
@@ -126,9 +127,9 @@
           <div class="form-group">
             <div class="labelContainer">
               <img src="https://cdn-icons-png.flaticon.com/512/2621/2621783.png" alt="nPropLogo" class="icon">
-              <label for="propietario">Número total de Propietarios</label>
+              <label for="num_prop" id="prop-label">Número total de Propietarios</label>
             </div>
-            <input type="number" id="num_prop" name="num_prop" min="1"/>
+            <input type="number" id="num_prop" name="num_prop" min="1" step="1"/>
           </div>
 
           <!-- <div class="form-group">
@@ -144,9 +145,21 @@
               <img src="https://cdn-icons-png.flaticon.com/512/1787/1787203.png" alt="precioLogo" class="icon">
               <label for="precio">Precio del Vehiculo</label>
             </div>
-            <input type="text" id="precio" name="precio" />
+            <input type="number" id="precio" name="precio" />
           </div>
          </div>
+
+         <div class="form-group mt-3">
+          <div class="labelContainer mx-auto align-items-center">
+            <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1728875875/barcode-svgrepo-com_sqk9xr.svg" alt="precioLogo" class="icon">
+            <label for="serial">Número de serie</label>
+          </div>
+          <input type="text" id="serial" name="serial" />
+        </div>
+
+        
+       
+
           <div class="drescripcion">
             <label for="descripcion">Descripción del vehículo</label>
             <textarea id="descripcion" name="descripcion"></textarea>
@@ -159,19 +172,22 @@
               name="imagenes"
               style="display: none"
             /> -->
-            <label for="imagenes" class="custom-file-upload">
+            <div for="imagenes" class="custom-file-upload p-0" id="upload-container-cd">
               <img
-                id="upload_widget"
+                id="upload-widget"
                 src="https://res.cloudinary.com/duqki6x6t/image/upload/v1728448319/fg7pko4clm8u05waeznc.png"
                 alt="Icono de subida"
                 class="upload-icon"
               />
-            </label>
+            </div>
                 <!-- placeholder for uploaded image -->
-     <img  
-      id="uploadedimage" 
-      src="" class="d-none">
-    </img>  
+            <figure class="mx-auto" id="img-placeholder">
+              <img  
+                id="uploadedimage" 
+                src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1726810826/occ-mascota_fddolf.png">
+              </img>  
+            </figure>
+             
           </div>
           <div id="carouselContainer" style="display: none;">
             <div id="imageContainer"></div>
@@ -199,52 +215,68 @@
           </div> -->
 
           <div class="terms-container">
-            <div class="terms"> 
-                <input type="checkbox" id="terms" name="terms" />
-                <label for="terms">
-                 <a href="Terminos.html"> Términos y condiciones</a>
-                </label>
-    
-                <input type="checkbox" id="privacy" name="privacy" />
-                <label for="privacy">
-                  <a href="Terminos.html">Política de privacidad</a>
-                </label>
+            <div class="terms d-flex flex-wrap mt-3 gap-2"> 
+
+              <ul>
+                <li>
+                  <div class="term-condi-cb d-flex">
+                    <input type="checkbox" id="terms" name="terms" />
+                    <label for="terms" id="terms-label">
+                     <a href="Terminos.html" target="_blank">Acepto los <span class="text-warning">Términos y Condiciones</span></a>
+                    </label>
+                  </div>
+                </li>
+                <li>
+                  <div class="term-condi-cb d-flex justify-content-start">
+                    <input type="checkbox" id="privacy" name="privacy" />
+                    <label for="privacy" id="privacy-label">
+                      <a href="Terminos.html" target="_blank"> Acepto la <span class="text-warning">Política de Privacidad</span></a>
+                    </label>
+                </div>
+                </li>
+              </ul>
+                
             </div>
             <div id="alertaVehiculos"></div>
             <button id="public" type="submit">Publicar</button>
         </div>
+      </form>
     </section>
-        </form>
-      </section>
+ 
      
       <section class="preview-section">
         <img src="https://res.cloudinary.com/duqki6x6t/image/upload/v1728448318/tmvctcqqiy878gn5itx0.png" alt="Imagen representativa" />
         <h3>*Imagen representativa</h3>
-        <ul>
-          <li>DESCRIPCIÓN</li>
-          <li>AÑO</li>
-          <li>VENDEDOR</li>
-          <li>KILOMETRAJE</li>
-          <li>TRANSMISIÓN</li>
-          <li>DUEÑOS</li>
-          <li>PRECIO</li>
+        <ul class="mx-3" id="list-preview">
+          <li id="type-pv"><span class="field-pv">TIPO</span></li>
+          <li id="brand-pv">MARCA</li>
+          <li id="model-pv">MODELO</li>
+          <li id="year-pv">AÑO</li>
+          <li id="km-pv">KILOMETRAJE</li>
+          <li id="transsmision-pv">TRANSMISIÓN</li>
+          <li id="owners-pv">DUEÑOS</li>
+          <li id="price-pv">PRECIO</li>
+          <li id="serial-pv">NÚMERO DE SERIE</li>
+          <li id="description-pv">DESCRIPCIÓN</li>
         </ul>
         <p>*Vista previa y estructura básica</p>
       </section>
     </main>
     <footer id="footer_back"></footer>
-    <script src="../js/navigation.js"></script>
+    <script defer src="../js/navigation.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/registro.js"></script>
+    <script src="../js/product_registration.js"></script>
         <!-- cloudinary upload widget -->
-    <script 
+    <!-- <script 
      src="https://widget.cloudinary.com/v2.0/global/all.js" 
      type="text/javascript">
+    </script> -->
+    <script src="https://upload-widget.cloudinary.com/latest/global/all.js" type="text/javascript">
     </script>
 
     <!-- local upload instantiation -->

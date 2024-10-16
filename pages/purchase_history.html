@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../fonts/LogoBlackOCK.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Historial de compras</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style -->
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/purchase_history.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script src="../assets/sweetAlert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../assets/emailJS/dist/email.min.js"></script>
+  </head>
+
+  <body>
+    <header id="nav_bar"></header>
+    <main>
+      <div class="container-fluid">
+        <div class="row" id="infoRow">
+          <div class="col-sm-2 barraLeft">
+            <div class="opcionesPerfil">
+              <br />
+              <h2 id="linkProfile" >INFORMACIÓN USUARIO</h2>
+              <br />
+              <h2 id="linkPurchase" class="nav-link active">HISTORIAL DE TRANSACCIONES</h2>
+              <br />
+              <h2 id="linkPayment">FORMAS DE PAGO</h2>
+              <br />
+              <h2  id="linkDeposit">CUENTA DE DEPÓSITO</h2>
+              <br />
+              <h2 id="linkLogOut">
+                CERRAR SESIÓN
+                <img
+                  src="https://res.cloudinary.com/duxbrimwv/image/upload/v1726284778/exitIcon_dg9gyx.svg"
+                  alt="exitIcon"
+                />
+              </h2>
+            </div><!-- div opcionesPerfil-->
+          </div>
+          <div class="col-sm-10 infoCenter" id="infoCliente">
+              <h1 id="titleDepositAccount">Historial de compras</h1>
+              <div class="container containerCarousel">
+            <div id="carouselSold" class="carousel slide col-sm-4"></div>
+            <div id="carouselBought" class="carousel slide col-sm-4"></div>
+      </div>
+          </div>
+          <div class="col-sm-10 infoCenter" id="headerAdmin">
+            <h1 class="text-center" >Historial de transacciones, vehículos y comentarios</h1><br>
+            <div class="btnsFilter text-center">
+              <a class="btn btn-primary" id="btnChangeTrans">Mostrar transacciones</a>
+              <a class="btn btn-primary" id="btnChangeCars">Mostrar vehículos</a>
+              <a class="btn btn-primary" id="btnChangeComm">Mostrar comentarios</a>
+              </div>
+            <div id="infoAdmin"></div>
+          
+              
+          </div>
+        </div><!-- infoClienteRow-->
+              <div class="modal fade" id="modalModificar" tabindex="-1" aria-labelledby="modalModificar" aria-hidden="inert">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalModificar">Modifica vehículo</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="noSerie-ipt-new" class="col-form-label">Número de serie:</label>
+                          <input type="text" class="form-control" id="noSerie-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="tipo-ipt-new" class="col-form-label">Tipo:</label>
+                          <input type="text" class="form-control" id="tipo-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="marca-ipt-new" class="col-form-label">Marca:</label>
+                          <input type="text" class="form-control" id="marca-ipt-new">
+                        </div>
+                          <div class="mb-3">
+                          <label for="nombre-ipt-new" class="col-form-label">Nombre:</label>
+                          <input type="text" class="form-control" id="nombre-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="anio-ipt-new" class="col-form-label">Año:</label>
+                          <input type="text" class="form-control" id="anio-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="kil-ipt-new" class="col-form-label">Kilometraje:</label>
+                          <input type="text" class="form-control" id="kil-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="trans-ipt-new" class="col-form-label">Transmisión:</label>
+                          <input type="text" class="form-control" id="trans-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="precio-ipt-new" class="col-form-label">Precio:</label>
+                          <input type="text" class="form-control" id="precio-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="img-ipt-new" class="col-form-label">Enlace imagen:</label>
+                          <input type="text" class="form-control" id="img-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="duenos-ipt-new" class="col-form-label">Dueños anteriores:</label>
+                          <input type="text" class="form-control" id="duenos-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="descrip-ipt-new" class="col-form-label">Descripcion:</label>
+                          <input type="text" class="form-control" id="descrip-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="verif-ipt-new" class="col-form-label">Verificado:</label>
+                          <input type="text" class="form-control" id="verif-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="vend-ipt-new" class="col-form-label">Vendido:</label>
+                          <input type="text" class="form-control" id="vend-ipt-new">
+                        </div>                        
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="btn-modificar-adm">Enviar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalAgregar" aria-hidden="inert">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalAgregar">Agrega vehículo</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="noSerie-ipt-add" class="col-form-label">Número de serie:</label>
+                          <input type="text" class="form-control" id="noSerie-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="tipo-ipt-add" class="col-form-label">Tipo:</label>
+                          <input type="text" class="form-control" id="tipo-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="marca-ipt-add" class="col-form-label">Marca:</label>
+                          <input type="text" class="form-control" id="marca-ipt-add">
+                        </div>
+                          <div class="mb-3">
+                          <label for="nombre-ipt-add" class="col-form-label">Nombre:</label>
+                          <input type="text" class="form-control" id="nombre-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="anio-ipt-add" class="col-form-label">Año:</label>
+                          <input type="text" class="form-control" id="anio-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="kil-ipt-add" class="col-form-label">Kilometraje:</label>
+                          <input type="text" class="form-control" id="kil-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="trans-ipt-add" class="col-form-label">Transmisión:</label>
+                          <input type="text" class="form-control" id="trans-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="precio-ipt-add" class="col-form-label">Precio:</label>
+                          <input type="text" class="form-control" id="precio-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="img-ipt-add" class="col-form-label">Enlace imagen:</label>
+                          <input type="text" class="form-control" id="img-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="duenos-ipt-add" class="col-form-label">Dueños anteriores:</label>
+                          <input type="text" class="form-control" id="duenos-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="descrip-ipt-add" class="col-form-label">Descripcion:</label>
+                          <input type="text" class="form-control" id="descrip-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="verif-ipt-add" class="col-form-label">Verificado:</label>
+                          <input type="text" class="form-control" id="verif-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="vend-ipt-add" class="col-form-label">Vendido:</label>
+                          <input type="text" class="form-control" id="vend-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="idVendedor-ipt-add" class="col-form-label">Id usuario:</label>
+                          <input type="text" class="form-control" id="idVendedor-ipt-add">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="btn-agregar-adm">Enviar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+      </div><!-- container-fluid -->
+    </main>
+    <footer id="footer_back"></footer>
+
+    <!-- Scripts -->
+    <!-- navbar y footer -->
+    <script src="../js/navigation.js" defer></script>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- funcionalidad página -->
+    <script defer src="../js/purchase_history.js"></script>
+    <script defer src="../js/subscribe.js"></script>
+  </body>
+</html>

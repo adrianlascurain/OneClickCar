@@ -12,48 +12,37 @@ const ipRegEx = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[
 // Check if local host its an ip direction
 let localDeployed = ipRegEx.test(location.hostname);
 
-if(localDeployed){
+// if(localDeployed){
     if(page == "index.html"){
-        relativePathOrigin = ".";
+        relativePathOrigin = "";
     }else{
-        relativePathOrigin = "..";
+        relativePathOrigin = "";
     }  
-}else{ // This case is used to deploy at GitHub Pages and must be reviewed if another hosting service will be used
-    relativePathOrigin =  "/OneClickCar"
-}
+// }else{ // This case is used to deploy at GitHub Pages and must be reviewed if another hosting service will be used
+//     relativePathOrigin =  "/OneClickCar"
+// }
 
 // Check if session storage is empty to change navbar options
 // User not logged anchors display 
-let displayAnchors = ["d-none","d-block","d-block","d-block","d-block","d-block","d-none","d-block","d-none","d-none"];
-let userName = "";
+    let displayAnchors = ["d-none","d-block","d-block","d-block","d-block","d-block","d-none","d-none","d-block","d-none"];
+    let userName = "";
+if (sessionStorage.length > 0) {
 
-if(sessionStorage.length != 0){
-    let idUser = sessionStorage.getItem("id_user_logged");
-    if(idUser > 0){
-        // Get JavaScript Object
-        let userCredentials = localStorage.getItem("userCredentials");
-        if(userCredentials != null){
-            // Try to read user credentials
-            try{
-                let userInfo = JSON.parse(userCredentials);
-                // Obtain user full name and bring only name
-                userName = userInfo.name;
-                userName = userName.split(" ");
-                userName = userName[0];
-        
-                // User logged anchors display 
-                displayAnchors = ["d-flex","d-block","d-block","d-block","d-none","d-none","d-block","d-block","d-block","d-block"];
-            }catch(error){
-                console.error("No fue posible leer las credenciales del usuario" + error)
-            }// catch
-            
-        }// if
-        
-    }// if
-}// if
+  let emailUser = sessionStorage.getItem("user");
+  if (emailUser != null) {
+  
+    
+    userName = JSON.parse(sessionStorage.getItem("fullName"));
+  userName = userName.split(" ");
+  userName = userName[0];
+    displayAnchors = ["d-flex justify-content-center align-items-center", "d-block", "d-block", "d-block", "d-none", "d-none", "d-block", "d-block", "d-block", "d-block"];
+// }
+  }// if
+  
+} 
 
 function createNavFoot(relativePathOrigin,displayAnchors,userName) {
-  let htmlContenidoNav = `<nav class="navbar navbar-expand-lg ">
+  let htmlContenidoNav = `<nav class="navbar navbar-expand-xl">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img class="logo" src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1725394895/OneClickCar/logoOneClickCar.png" alt="logo" id="logoOneClickCar">
@@ -63,21 +52,21 @@ function createNavFoot(relativePathOrigin,displayAnchors,userName) {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="${displayAnchors[0]}">
+                    <div class="${displayAnchors[0]}" id="welcome-container">
                         <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1728545465/user-person-profile-check-svgrepo-com_jhfdfe.svg" alt="logged" id="user-logged">
-                        <p class="my-auto" id="welcome-message">Bienvenido ${userName}</p>
+                        <p class="my-auto" id="welcome-message">Hola ${userName}</p>
                     </div>
                     <div class="navbar-nav ms-auto options">
                         <a class="nav-link ${displayAnchors[1]}" id="navIndex" aria-current="page" href="${relativePathOrigin}/index.html">INICIO</a>
-                        <a class="nav-link ${displayAnchors[2]}" id="navContact" href="${relativePathOrigin}/pages/contact.html">CONTACTO</a>
-                        <a class="nav-link ${displayAnchors[3]}" id="navAbout" href="${relativePathOrigin}/pages/about.html">NOSOTROS</a>
-                        <a class="nav-link ${displayAnchors[4]}" id="navLogIn" href="${relativePathOrigin}/pages/log_in.html">INICIAR SESIÓN</a>
-                        <a class="nav-link ${displayAnchors[5]}" id="navSignIn" href="${relativePathOrigin}/pages/sign_in.html">REGISTRARSE</a>
+                        <a class="nav-link ${displayAnchors[2]}" id="navAbout" href="${relativePathOrigin}/pages/about.html">NOSOTROS</a>
+                        <a class="nav-link ${displayAnchors[3]}" id="navContact" href="${relativePathOrigin}/pages/contact.html">CONTACTO</a>
+                        <a class="nav-link ${displayAnchors[4]}" id="navSignIn" href="${relativePathOrigin}/pages/sign_in.html">REGISTRARSE</a>
+                        <a class="nav-link ${displayAnchors[5]}" id="navLogIn" href="${relativePathOrigin}/pages/log_in.html">INICIAR SESIÓN</a>
                         <a class="nav-link ${displayAnchors[6]}" id="navUserProfile" href="${relativePathOrigin}/pages/user_profile.html">PERFIL</a>
-                        <a class="nav-link ${displayAnchors[7]}" id="navProductList" href="${relativePathOrigin}/pages/product_list.html">PRODUCTOS</a>
-                        <a class="nav-link ${displayAnchors[8]}" id="navProductList" href="${relativePathOrigin}/pages/product_registration.html">VENDER</a>
+                        <a class="nav-link ${displayAnchors[7]}" id="navProductRegist" href="${relativePathOrigin}/pages/product_registration.html">VENDER</a>
+                        <a class="nav-link ${displayAnchors[8]}" id="navProductList" href="${relativePathOrigin}/pages/product_list.html">PRODUCTOS</a>
                     </div>
-                    <div class="${displayAnchors[9]}">
+                    <div class="${displayAnchors[9]} text-center">
                         <button class="ms-3" title="Cerrar sesión" id="log-out-btn">
                             <img src="https://res.cloudinary.com/dz6zf3yio/image/upload/v1728548961/logout-svgrepo-com_2_xrxkpq.svg" alt="logout" id="user-logout">
                         </button>
@@ -158,7 +147,10 @@ function createNavFoot(relativePathOrigin,displayAnchors,userName) {
   footer_back.insertAdjacentHTML("beforeend", htmlContenidoFooter);
 }//createNavFoot
 
-createNavFoot(relativePathOrigin,displayAnchors,userName);
+
+
+createNavFoot(relativePathOrigin, displayAnchors, userName);
+
 
 const logOutBtn = document.getElementById("log-out-btn");
 

@@ -13,6 +13,59 @@ const nameRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,}$/;
 // Expresión regular para validar el correo electrónico
 const emailRegex = /^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$/;
 
+// Función para mostrar sweet alert de éxito
+function alertSuccess(titleShow, textShow) {
+  Swal.fire({
+    title: titleShow,
+    text: textShow,
+    imageUrl:
+      "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+    imageWidth: 350,
+    imageHeight: 200,
+    imageAlt: "Custom image",
+    icon: "success",
+  }); //function alertSuccess()
+}
+
+// Función para mostrar sweet alert de error
+function alertFailure(titleShow, textShow) {
+  Swal.fire({
+    title: titleShow,
+    text: textShow,
+    imageAlt: "Custom image",
+    icon: "error",
+  });
+} //function alertFailure()
+
+function addNewUser(raw){
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("http://localhost:8080/api/users/", requestOptions)
+  .then((response) => response.text())
+  .then((result) => {
+    console.log(result);
+    if (result.length > 0) {
+      // Mostrar mensaje de éxito
+      alertSuccess('Datos guardados', 'Los datos han sido guardados correctamente en local storage.').then(() => {
+        // Reiniciar el formulario una vez que el usuario cierra la alerta de éxito
+        document.getElementById('userForm').reset();
+      });
+      //guardar en LocalStorage
+      localStorage.setItem("userCredentials", result);  //usando  email como 'clave'
+    }
+   })
+  .catch((error) => console.error(error));
+
+}
+
 document.getElementById('btnSignIn').addEventListener('click', function (e) {
     e.preventDefault();  // Evita que el formulario se envíe automáticamente
 
@@ -21,78 +74,43 @@ document.getElementById('btnSignIn').addEventListener('click', function (e) {
     const email = document.getElementById('email').value.toLowerCase();
     const password = document.getElementById('inputPassword2').value;
     const confirmPassword = document.getElementById('inputPassword6').value;
-  const userType = "cliente";
-  const birthdate = document.getElementById('birthdate');
+  const userType = "client";
+  const birthdate = document.getElementById('birthdate').value;
 
     // Validar nombre
-    if (!nameRegex.test(name)) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Nombre inválido',
-            text: 'El nombre debe contener al menos 2 letras y solo puede incluir letras.',
-        });
-        return;
-    }
+  if (!nameRegex.test(name)) {
+    alertFailure('Nombre inválido','El nombre debe contener al menos 2 letras y solo puede incluir letras.');
+        return;}
 
     // Validar teléfono
-    if (!phoneRegex.test(phone)) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Teléfono inválido',
-            text: 'El teléfono debe contener solo dígitos y tener 10 caracteres.',
-        });
-        return;
-    }
+  if (!phoneRegex.test(phone)) {
+    alertFailure('Teléfono inválido','El teléfono debe contener solo dígitos y tener 10 caracteres.');
+        return;}
 
     // Validar correo electrónico
-    if (!emailRegex.test(email)) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Correo Electrónico inválido',
-            text: 'Por favor, ingresa un correo electrónico válido.',
-        });
-        return;
-    }
+  if (!emailRegex.test(email)) {
+    alertFailure('Correo Electrónico inválido','Por favor, ingresa un correo electrónico válido.');
+        return;}
 
     // Verificar si las contraseñas coinciden
-    if (password !== confirmPassword) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Error de contraseña',
-            text: 'Las contraseñas no coinciden.',
-        });
-        return;
-    }
+  if (password !== confirmPassword) {
+    alertFailure('Error de contraseña','Las contraseñas no coinciden.');
+        return;}
 
     // Validar contraseña con regex
-    if (!passwordRegex.test(password)) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Contraseña inválida',
-            text: 'La contraseña debe tener al menos 8 caracteres, incluir letras, número y un caracter especial.',
-        });
-        return;
-    }
+  if (!passwordRegex.test(password)) {
+    alertFailure('Contraseña inválida','La contraseña debe tener al menos 8 caracteres, incluir letras, número y un caracter especial.');
+        return;}
 
     // Crear objetoJSON
-    const usuarioObj = {
-        name: name, 
-        phone: phone, 
+    let usuarioObj = JSON.stringify({
+        fullName: name, 
+        phoneNumber: phone, 
         email: email, 
-        birthdate: birthdate, 
+        birthDate: birthdate, 
         password: password,
-        userType: userType 
-    };//usuarioObj
-    //guardar en LocalStorage
-    localStorage.setItem("userCredentials", JSON.stringify(usuarioObj));  //usando  email como 'clave'
-
-    // Mostrar mensaje de éxito
-    Swal.fire({
-        icon: 'success',
-        title: 'Datos guardados',
-        text: 'Los datos han sido guardados correctamente en local storage.',
-    }).then(() => {
-        // Reiniciar el formulario una vez que el usuario cierra la alerta de éxito
-        document.getElementById('userForm').reset();
-    });
+        typeUser: userType 
+    });//usuarioObj
+  
+  addNewUser(usuarioObj);
 });

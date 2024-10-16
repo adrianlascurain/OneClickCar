@@ -64,22 +64,21 @@ main p{
     color: #FFCC00;
     font-size: 28px;
 }
+
 .cajaForm{
     background-color: #002B5B;
     color: #ffffff;
     font-weight: 500;
     border-radius: 20px;
     padding: 40px 60px 40px 60px;
-    margin-right: 60px;
+    min-width: 500px;
     width: 100%;
-    margin-bottom: 30px;
-    
 }
 
 .columForm {
-    margin-right: 100px;  
+    margin-right: auto;  
     margin-left: auto;
-    
+ 
 }
 
 .columForm input, textarea {
@@ -114,7 +113,41 @@ main p{
     font-weight: bold;
 }
 
+@media (max-width: 800px){
+    main{
+        background-color: var(--bg-color);
+        padding: 40px 5px;
+    }
 
+    .cajaForm{
+        min-width: 550px;
+        padding: 40px 10px 40px 10px;
+    }
+
+    .columForm{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .col-map{
+        min-width: 450px;
+    }
+}
+
+@media (max-width: 600px){
+    .cajaForm{
+        min-width: auto;
+    }
+
+    .columForm{
+        width: 100%;
+    }
+
+    .col-map{
+        min-width: auto;
+    }
+}
 
 
 

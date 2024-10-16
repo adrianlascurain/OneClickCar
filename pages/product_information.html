@@ -93,6 +93,93 @@
           >Volver para ver más modelos</a
         >
       </div>
+      <div id="containerModal">
+        <div
+          class="modal fade"
+          id="modalComprar"
+          tabindex="-1"
+          aria-labelledby="modalComprar"
+          aria-hidden="inert"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalComprar">Datos de compra</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="inert"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="name-ipt-show" class="col-form-label"
+                      >Nombre:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name-ipt-show"
+                      disabled
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="type-ipt-show" class="col-form-label"
+                      >Tarjeta:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="type-ipt-show"
+                      disabled
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="number-ipt-show" class="col-form-label"
+                      >Número tarjeta:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="number-ipt-show"
+                      disabled
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="price-ipt-show" class="col-form-label"
+                      >Costo total:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="price-ipt-show"
+                      disabled
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="btnConfirmBuy"
+                >
+                  Confirmar compra
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer id="footer_back"></footer>
     <script
@@ -104,18 +191,17 @@
 
     <script defer src="../js/product_information.js"></script>
     <script src="../js/subscribe.js"></script>
+    <script>
+      function redireccion() {
+        if ((window.location.pathname = "/pages/product_information.html")) {
+          // local
+          window.location.href = "../pages/product_list.html";
+        } else {
+          // github
+          window.location.href =
+            "https://adrianlascurain.github.io/OneClickCar/pages/product_list.html";
+        }
+      }
+    </script>
   </body>
 </html>
-
-<script>
-  function redireccion() {
-    if ((window.location.pathname = "/pages/product_information.html")) {
-      // local
-      window.location.href = "../pages/product_list.html";
-    } else {
-      // github
-      window.location.href =
-        "https://adrianlascurain.github.io/OneClickCar/pages/product_list.html";
-    }
-  }
-</script>

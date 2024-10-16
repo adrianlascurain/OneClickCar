@@ -304,6 +304,51 @@ description.addEventListener("change", event => {
     }
 });
 
+// RegisterCar
+function registerCar(raw) {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+    myHeaders.append("Content-Type", "application/json");
+    
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    fetch("http://localhost:8080/api/cars/", requestOptions)
+    .then((response) => response.json())
+    .then((dataCar) => {
+        console.log(dataCar);
+        if (dataCar.length > 0) {
+        // Mensaje de éxito
+        Swal.fire({
+            title: "Vehículo registrado con éxito.",
+            text: "Se iniciará con el proceso de verificación conforme a las políticas de OneClickCar, pronto te contactaremos para más indicaciones.",
+            imageUrl:
+            "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+            imageWidth: 350,
+            imageHeight: 200,
+            imageAlt: "Custom image",
+            icon: "success",
+        });
+        }
+        else {
+        // Mostrar mensaje error
+            Swal.fire({
+        title: "Registro fallido",
+        text: `El número de serie ${serialNumber} ya se encuentra registrado`,
+        imageAlt: "Custom image",
+        icon: "error",
+    });
+            
+        }
+    })
+    .catch((error) => 
+        console.error(error) )
+}
+
 // Form actions
 let registerForm = document.getElementById("formulario");
 
@@ -334,13 +379,12 @@ registerForm.addEventListener("submit", function (event) {
     return;
     }
 
-
-    let contadorCarsOnSale=parseInt(localStorage.getItem("contadorCarsOnSale"))+1;
-    localStorage.setItem("contadorCarsOnSale", JSON.stringify(contadorCarsOnSale));
+    // let contadorCarsOnSale=parseInt(localStorage.getItem("contadorCarsOnSale"))+1;
+    // localStorage.setItem("contadorCarsOnSale", JSON.stringify(contadorCarsOnSale));
 
     // Create object with vehicle data
-    let vehicle = {
-    id_car: contadorCarsOnSale,
+    let vehicle = JSON.stringify( {
+    idCar: contadorCarsOnSale,
     type: typeValue,
     brand: brandValue,
     name: modelValue,
@@ -350,22 +394,25 @@ registerForm.addEventListener("submit", function (event) {
     price: priceValue,
     img: localStorage.getItem("image_url"), 
     owners: ownersValue,
-    serialNumber: serialNumberValue,
+    nuSerial: serialNumberValue,
     description: descriptionValue,
     verified: 0,
     sold: 0,
-    seller_id_user: parseInt(sessionStorage.getItem("id_user_logged")),
-    };
-    console.log(parseInt(sessionStorage.getItem("id_user_logged")))
+    usersIdSeller: parseInt(sessionStorage.getItem("idUser")),
+    });
 
+    registerCar(vehicle);
+    localStorage.removeItem("img_url")
     // Get data from local storage
-    let dataCarsOnSale = getVehicles();
+    // let dataCarsOnSale = getVehicles();
 
     // Add new vehicle to list
-    dataCarsOnSale.push(vehicle);
+    // dataCarsOnSale.push(vehicle);
 
     // store data in local sotrage
-    localStorage.setItem("dataCarsOnSale", JSON.stringify(dataCarsOnSale));
+    // localStorage.setItem("dataCarsOnSale", JSON.stringify(dataCarsOnSale));
+
+
 
     // Success message
             Swal.fire({
@@ -390,12 +437,12 @@ registerForm.addEventListener("submit", function (event) {
 })
 
 // Function to get stored vehicles
-function getVehicles() {
-    if (localStorage.getItem("dataCarsOnSale") != null) {
-      let dataCars = localStorage.getItem("dataCarsOnSale");
-      return dataCars ? JSON.parse(dataCars) : [];
-    }
-  }
+// function getVehicles() {
+//     if (localStorage.getItem("dataCarsOnSale") != null) {
+//       let dataCars = localStorage.getItem("dataCarsOnSale");
+//       return dataCars ? JSON.parse(dataCars) : [];
+//     }
+//   }
 
 
 // Display an alert containing all the invalid and empty fields

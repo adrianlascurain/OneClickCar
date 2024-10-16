@@ -322,6 +322,7 @@ function registerCar(raw) {
     .then((dataCar) => {
         console.log(dataCar);
         if (dataCar.idCar) {
+            
         // Mensaje de éxito
         Swal.fire({
             title: "Vehículo registrado con éxito.",
@@ -333,6 +334,9 @@ function registerCar(raw) {
             imageAlt: "Custom image",
             icon: "success",
         });
+        // Clean form
+        registerForm.reset();
+        resetForm()
         }
         else {
         // Mostrar mensaje error
@@ -425,14 +429,13 @@ registerForm.addEventListener("submit", function (event) {
     //     icon: "success",
     // });
 
-    // Clean form
-    registerForm.reset();
     
-    document
-    .getElementById("uploadedimage")
-    .setAttribute("src", "https://res.cloudinary.com/dz6zf3yio/image/upload/v1726810826/occ-mascota_fddolf.png");
+    
+    // document
+    // .getElementById("uploadedimage")
+    // .setAttribute("src", "https://res.cloudinary.com/dz6zf3yio/image/upload/v1726810826/occ-mascota_fddolf.png");
 
-    resetForm()
+    // resetForm()
 })
 
 // Function to get stored vehicles

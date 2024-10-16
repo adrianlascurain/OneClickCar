@@ -85,11 +85,12 @@ select {
     font-size: 0.7em; 
     margin-bottom: 10px; 
     padding: 0.5em; 
-    border: 1px solid #ccc;
+    border: 3px solid #7b7b7b;
     border-radius: 4px; 
     margin-bottom: 10px;
     float: left;
 }
+
 .pares{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -156,8 +157,7 @@ input[type="text"],  input[type="number"],input[type="tel"],textarea {
     color: #FFFFFF;
     font-size: medium;
     background: #002044;
-    border-style: solid;
-    border-width: 3px;
+    border: 3px solid #7b7b7b;
     width: 100%;
     margin-bottom: 10px;
     /* height: 30px;
@@ -510,7 +510,7 @@ input:-webkit-autofill:active{
         margin-bottom: 10px;
         width: 100%; 
         padding: 10px;
-        
+        border-color: #7b7b7b;
     }
 
     .custom-file-upload {

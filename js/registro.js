@@ -96,11 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const termsCheckbox = document.getElementById("terms");
       const privacyCheckbox = document.getElementById("privacy");
 
-      type.addEventListener("blur",event => {
-        
-      })
-
-      
 
     formRegistro.addEventListener("submit", function (event) {
       event.preventDefault();

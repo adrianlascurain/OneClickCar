@@ -305,86 +305,87 @@ description.addEventListener("change", event => {
 });
 
 // Form actions
-let registerForm = document.querySelector("form");
+let registerForm = document.getElementById("formulario");
 
 registerForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     let emptyFields = [];
 
-      // validate every single field of the form
-      if (!validTypeFlag) emptyFields.push("Tipo de vehículo");
-      if (!validBrandFlag) emptyFields.push("Marca");
-      if (!validModelFlag) emptyFields.push("Modelo");
-      if (!validYearFlag) emptyFields.push("Año");
-      if (!validKilometerFlag) emptyFields.push("Kilometraje");
-      if (!validTransmissionFlag) emptyFields.push("Transmisión");
-      if (!validOwnersFlag) emptyFields.push("Número de propietarios");
-      if (!validPriceFlag) emptyFields.push("Precio");
-      if (!validSerialNumberFlag) emptyFields.push("Número de serie");
-      if (!validDescriptionFlag) emptyFields.push("Descripción");
+    // validate every single field of the form
+    if (!validTypeFlag) emptyFields.push("Tipo de vehículo");
+    if (!validBrandFlag) emptyFields.push("Marca");
+    if (!validModelFlag) emptyFields.push("Modelo");
+    if (!validYearFlag) emptyFields.push("Año");
+    if (!validKilometerFlag) emptyFields.push("Kilometraje");
+    if (!validTransmissionFlag) emptyFields.push("Transmisión");
+    if (!validOwnersFlag) emptyFields.push("Número de propietarios");
+    if (!validPriceFlag) emptyFields.push("Precio");
+    if (!validSerialNumberFlag) emptyFields.push("Número de serie");
+    if (!validDescriptionFlag) emptyFields.push("Descripción");
 
-      // Check if any field is missing and if so then show an alert
-      if (emptyFields.length > 0) {
-        let errorMessage = "Los siguientes campos están vacíos o son inválidos:";
-        errorMessage += `<ul>${emptyFields
-          .map((field) => `<li><strong>${field}</strong></li>`)
-          .join("")}</ul>`;
-        showAlert(errorMessage);
-        return;
-      }
+    // Check if any field is missing and if so then show an alert
+    if (emptyFields.length > 0) {
+    let errorMessage = "Los siguientes campos están vacíos o son inválidos:";
+    errorMessage += `<ul>${emptyFields
+        .map((field) => `<li><strong>${field}</strong></li>`)
+        .join("")}</ul>`;
+    showAlert(errorMessage);
+    return;
+    }
 
 
-      let contadorCarsOnSale=parseInt(localStorage.getItem("contadorCarsOnSale"))+1;
-      localStorage.setItem("contadorCarsOnSale", JSON.stringify(contadorCarsOnSale));
+    let contadorCarsOnSale=parseInt(localStorage.getItem("contadorCarsOnSale"))+1;
+    localStorage.setItem("contadorCarsOnSale", JSON.stringify(contadorCarsOnSale));
 
-      // Create object with vehicle data
-      let vehicle = {
-        id_car: contadorCarsOnSale,
-        type: typeValue,
-        brand: brandValue,
-        name: modelValue,
-        year: yearValue,
-        kilometer: kilometerValue,
-        transmission: transmissionValue,
-        price: priceValue,
-        img: localStorage.getItem("image_url"), 
-        owners: ownersValue,
-        serialNumber: serialNumberValue,
-        description: descriptionValue,
-        verified: 0,
-        sold: 0,
-        seller_id_user: parseInt(sessionStorage.getItem("id_user_logged")),
-      };
-      console.log(parseInt(sessionStorage.getItem("id_user_logged")))
+    // Create object with vehicle data
+    let vehicle = {
+    id_car: contadorCarsOnSale,
+    type: typeValue,
+    brand: brandValue,
+    name: modelValue,
+    year: yearValue,
+    kilometer: kilometerValue,
+    transmission: transmissionValue,
+    price: priceValue,
+    img: localStorage.getItem("image_url"), 
+    owners: ownersValue,
+    serialNumber: serialNumberValue,
+    description: descriptionValue,
+    verified: 0,
+    sold: 0,
+    seller_id_user: parseInt(sessionStorage.getItem("id_user_logged")),
+    };
+    console.log(parseInt(sessionStorage.getItem("id_user_logged")))
 
-      // Get data from local storage
-      let dataCarsOnSale = getVehicles();
+    // Get data from local storage
+    let dataCarsOnSale = getVehicles();
 
-      // Add new vehicle to list
-      dataCarsOnSale.push(vehicle);
+    // Add new vehicle to list
+    dataCarsOnSale.push(vehicle);
 
-      // store data in local sotrage
-      localStorage.setItem("dataCarsOnSale", JSON.stringify(dataCarsOnSale));
+    // store data in local sotrage
+    localStorage.setItem("dataCarsOnSale", JSON.stringify(dataCarsOnSale));
 
-      // Success message
-             Swal.fire({
-          title: "Vehículo registrado con éxito.",
-          text: "Se iniciará con el proceso de verificación conforme a las políticas de OneClickCar, pronto te contactaremos para más indicaciones.",
-          imageUrl:
-            "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
-          imageWidth: 350,
-          imageHeight: 200,
-          imageAlt: "Custom image",
-          icon: "success",
-        });
+    // Success message
+            Swal.fire({
+        title: "Vehículo registrado con éxito.",
+        text: "Se iniciará con el proceso de verificación conforme a las políticas de OneClickCar, pronto te contactaremos para más indicaciones.",
+        imageUrl:
+        "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+        imageWidth: 350,
+        imageHeight: 200,
+        imageAlt: "Custom image",
+        icon: "success",
+    });
 
-      // Clean form
-      registerForm.reset();
-      
-      document
-        .getElementById("uploadedimage")
-        .setAttribute("src", "https://res.cloudinary.com/dz6zf3yio/image/upload/v1726810826/occ-mascota_fddolf.png");
+    // Clean form
+    registerForm.reset();
+    
+    document
+    .getElementById("uploadedimage")
+    .setAttribute("src", "https://res.cloudinary.com/dz6zf3yio/image/upload/v1726810826/occ-mascota_fddolf.png");
+
     resetForm()
 })
 
@@ -403,6 +404,7 @@ function showAlert(message) {
     alertDiv.innerHTML = `<div class="alert alert-danger" role="alert">
       ${message}
     </div>`;
+    alertDiv.style.display = "block";
     animeteElement("#alertaVehiculos","shakeX")
   }
 
@@ -414,6 +416,24 @@ div.insertAdjacentHTML(
         Vehículos en total registrados: <strong>${contadorCarsOnSaleCar}</strong>
         </div>`
 );
+}
+
+function hideAlert(div){
+    div.innerHTML = "";
+    div.style.display = "none";
+}
+
+function hidePreview(){
+    typePv.style.display = "none";
+    brandPv.style.display = "none";
+    modelPv.style.display = "none";
+    yearPv.style.display = "none";
+    kmPv.style.display = "none";
+    transmissionPv.style.display = "none";
+    ownersPv.style.display = "none";
+    pricePv.style.display = "none";
+    serialPv.style.display = "none";
+    descriptionPv.style.display = "none";
 }
 
 // Reset flags
@@ -446,14 +466,19 @@ function resetForm(){
     validDescriptionFlag = false;
 
     // Reset borders
-    type.style.border = "1px solid #ccc";
-    brand.style.border = "1px solid #ccc";
-    model.style.border = "1px solid #ccc";
-    year.style.border = "1px solid #ccc";
-    kilometer.style.border = "1px solid #ccc";
-    transmission.style.border = "1px solid #ccc";
-    owners.style.border = "1px solid #ccc";
-    price.style.border = "1px solid #ccc";
-    serialNumber.style.border = "1px solid #ccc";
-    description.style.border = "1px solid #ccc";
+    type.style.border = "3px solid #7b7b7b";
+    brand.style.border = "3px solid #7b7b7b";
+    model.style.border = "3px solid #7b7b7b";
+    year.style.border = "3px solid #7b7b7b";
+    kilometer.style.border = "3px solid #7b7b7b";
+    transmission.style.border = "3px solid #7b7b7b";
+    owners.style.border = "3px solid #7b7b7b";
+    price.style.border = "3px solid #7b7b7b";
+    serialNumber.style.border = "3px solid #7b7b7b";
+    description.style.border = "3px solid #7b7b7b";
+
+    let alertDiv = document.getElementById("alertaVehiculos");
+    hideAlert(alertDiv);
+    hidePreview();
+    disableBtn(publishBtn);
 }

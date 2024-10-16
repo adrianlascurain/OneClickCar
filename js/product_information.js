@@ -1,6 +1,4 @@
-let navProductList = document
-  .getElementById("navProductList")
-  .classList.add("active");
+let navProductList = document.getElementById("navProductList").classList.add("active");
 
 let htmlContent = "";
 let card_carro = document.getElementById("card_car");
@@ -54,11 +52,37 @@ function alertFailure(titleShow, textShow) {
   });
 } //function alertFailure()
 
-// function changeCarSold(carSelected) {}
+function changeCarSold(idCar) {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+  myHeaders.append("Content-Type", "application/json");
+
+const raw = JSON.stringify({
+  "sold": 1
+});
+
+const requestOptions = {
+  method: "PUT",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch(`http://localhost:8080/api/cars/${idCar}?sold=1`, requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+
+
+}
 
 function getDataDeposit(idCar, idUser, idPaymentSelected, idUserLogged) {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+  
   const requestOptions = {
     method: "GET",
+    headers: myHeaders,
     redirect: "follow",
   };
 
@@ -82,8 +106,12 @@ function getDataDeposit(idCar, idUser, idPaymentSelected, idUserLogged) {
     .catch((error) => console.error(error));
 }
 function getDataPayment(idCar, idUser, idUserLogged, price) {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+  
   const requestOptions = {
     method: "GET",
+    headers: myHeaders,
     redirect: "follow",
   };
 
@@ -126,7 +154,7 @@ function getDataPayment(idCar, idUser, idUserLogged, price) {
 }
 
 function showDataBuyOption(idCar, price, idUser) {
-  let idUserLogged = parseInt(sessionStorage.getItem("id_user_logged"));
+  let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
   getDataPayment(idCar, idUser, idUserLogged, price);
 }
 
@@ -138,6 +166,7 @@ function buyCarTransaction(
   idUserLogged
 ) {
   const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
   myHeaders.append("Content-Type", "application/json");
 
   const raw = JSON.stringify({
@@ -160,9 +189,12 @@ function buyCarTransaction(
     .then((response) => response.json())
     .then((result) => {
       if (result != null) {
+
+        changeCarSold(idCar);
+
         alertSuccess(
           "Compra exitosa",
-          "Felicidades has adquirido este vehículo, enseguida recibirás un correo con los siguientes trámites para recoger tu vehiculo"
+          "Felicidades has adquirido este vehículo, enseguida recibirás un correo con los siguientes trámites para recoger tu vehículo."
         );
         //Redirigir a transacciones
       }
@@ -257,8 +289,12 @@ function createCard(carSelected, sellerSelected) {
 } //createCard()
 
 function getDataUsersComments() {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+  
   const requestOptions = {
-  method: "GET",
+    method: "GET",
+    headers: myHeaders,
   redirect: "follow"
 };
 
@@ -270,9 +306,13 @@ fetch("http://localhost:8080/api/users/", requestOptions)
 };
 
 function createComments(dataUsers) {
-  let usersIdSeller=JSON.parse(localStorage.getItem("usersIdSeller"));
+  let usersIdSeller = JSON.parse(localStorage.getItem("usersIdSeller"));
+  const myHeaders = new Headers();
+myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+
   const requestOptions = {
-  method: "GET",
+    method: "GET",
+    headers: myHeaders,
   redirect: "follow"
 };
 
@@ -348,7 +388,8 @@ function showFormComment(userLogged) {
       if (content.toString().length != 0) {
         // Se incrementa en 1 por que se agrega otro comentario
         const myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+        myHeaders.append("Content-Type", "application/json");
 
       const raw = JSON.stringify({
         content: content,
@@ -407,9 +448,13 @@ function showFormComment(userLogged) {
 } //sendOpinion()
 
 function getDataUsersForm() {
-  let idUserLogged = parseInt(sessionStorage.getItem("id_user_logged"));
+  let idUserLogged = JSON.parse(sessionStorage.getItem("idUser"));
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+  
   const requestOptions = {
-  method: "GET",
+    method: "GET",
+    headers: myHeaders,
   redirect: "follow"
 };
 
@@ -424,10 +469,13 @@ fetch(`http://localhost:8080/api/users/${idUserLogged}`, requestOptions)
 };
 
 function getDataUsersCard(carSelected) {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
   
   const requestOptions = {
-  method: "GET",
-  redirect: "follow"
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow"
 };
 
 fetch(`http://localhost:8080/api/users/${carSelected.usersIdSeller}`, requestOptions)
@@ -441,6 +489,7 @@ fetch(`http://localhost:8080/api/users/${carSelected.usersIdSeller}`, requestOpt
 
 function getDataCars() {
   let idCar = JSON.parse(localStorage.getItem("idCar"));
+
  const requestOptions = {
   method: "GET",
   redirect: "follow"
@@ -454,21 +503,42 @@ fetch(`http://localhost:8080/api/cars/${idCar}`, requestOptions)
   .catch((error) => console.error(error));
 } //getDataCars()
 
-// ***********Ejecución
-if (sessionStorage.getItem("id_user_logged")!=null
-) {
+
+
+function validateUser() {
+	
+  let emailUser = sessionStorage.getItem("user");
+
+ const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+
+    const requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow"
+    };
+
+fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
+  .then((response) => response.json())
+  .then((userData) => {
+
+    if (userData.typeUser =="client" || userData.typeUser == "admin") {
   getDataCars();
   getDataUsersComments();
-  getDataUsersForm()
-
-  
-} else {
+  getDataUsersForm();
+    } else {
+   
   if ((window.location.pathname = "/pages/product_list.html")) {
     // local
-    window.location.href = "../pages/sign_in.html";
+    window.location.href = "../pages/log_in.html";
   } else {
     // github
     window.location.href =
       "https://adrianlascurain.github.io/OneClickCar/pages/sign_in.html";
   }
 }
+  }).catch((error) => console.error(error));
+}
+// ***********Ejecución
+validateUser();
+

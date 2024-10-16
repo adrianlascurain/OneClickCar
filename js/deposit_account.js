@@ -55,8 +55,11 @@ function alertFailure(titleShow, textShow) {
 // ------------------------Funciones fetch para el administrador
 // Actualiza la tabla cada vez que se le llama con un get a la DB
 function createTableAdmFetch() {
+    const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
   const requestOptions = {
     method: "GET",
+        headers: myHeaders,
     redirect: "follow",
   };
 
@@ -104,6 +107,7 @@ function createTableAdmFetch() {
 // Función que agrega un deposito con put a la DB
 function addDepositAdmFetch() {
   const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
   myHeaders.append("Content-Type", "application/json");
 
   const raw = JSON.stringify({
@@ -123,7 +127,7 @@ function addDepositAdmFetch() {
   fetch("http://localhost:8080/api/depositmethods/", requestOptions)
     .then((response) => response.text())
     .then((dataDepositMethod) => {
-      console.log(dataDepositMethod);
+      
       if (dataDepositMethod.length > 0) {
         (nameTextAdd.value = ""),
           (bankTextAdd.value = ""),
@@ -145,15 +149,19 @@ function addDepositAdmFetch() {
 
 // Función que recupera la información específica del usuario y la muestra en el modal
 function showInfoModAdmFetch(idAccount) {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+
   const requestOptions = {
     method: "GET",
+        headers: myHeaders,
     redirect: "follow",
   };
 
   fetch(`http://localhost:8080/api/depositmethods/${idAccount}`, requestOptions)
     .then((response) => response.json())
     .then((datumDepositMethod) => {
-      console.log(datumDepositMethod);
+      
       nameTextNew.value = datumDepositMethod.nameAccount;
       bankTextNew.value = datumDepositMethod.nameBank;
       accountTextNew.value = datumDepositMethod.accountBank;
@@ -163,8 +171,11 @@ function showInfoModAdmFetch(idAccount) {
 
 // Función que modifica la información insertada en el modal
 function modDepositAdmFetch(idAccount) {
+    const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
   const requestOptions = {
     method: "PUT",
+        headers: myHeaders,
     redirect: "follow",
   };
 
@@ -174,7 +185,7 @@ function modDepositAdmFetch(idAccount) {
   )
     .then((response) => response.text())
     .then((result) => {
-      console.log(result);
+      
       createTableAdmFetch();
     })
     .catch((error) => console.error(error));
@@ -182,15 +193,18 @@ function modDepositAdmFetch(idAccount) {
 
 // Función que elimina el registro al dar click en el botón
 function delDepositAdmFetch(idAccount) {
+    const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
   const requestOptions = {
     method: "DELETE",
+        headers: myHeaders,
     redirect: "follow",
   };
 
   fetch(`http://localhost:8080/api/depositmethods/${idAccount}`, requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      console.log(result);
+      
       createTableAdmFetch();
       alertSuccess(
         "Eliminación exitosa",
@@ -203,16 +217,19 @@ function delDepositAdmFetch(idAccount) {
 // ------------------------Funciones fetch para el cliente
 // Función para mostrar (si hay) información en el contenedor del cliente
 function showInfoModClientFetch() {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
   btnSubContainer.innerHTML = "";
   const requestOptions = {
     method: "GET",
+        headers: myHeaders,
     redirect: "follow",
   };
 
   fetch("http://localhost:8080/api/depositmethods/", requestOptions)
     .then((response) => response.json())
     .then((dataDepositMethod) => {
-      let idUserLogged = parseInt(sessionStorage.getItem("id_user_logged"));
+      let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
 
       //Buscamos el objeto dentro de todos los registros y con el índice y splice lo eliminamos
       for (i = 0; i < dataDepositMethod.length; i++) {
@@ -302,11 +319,12 @@ function addDepositClient() {
 }
 // Función para agregar registro en DB
 function addDepositClientFetch() {
-  let idUserLogged = parseInt(sessionStorage.getItem("id_user_logged"));
+  let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
 
   const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
 
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
   const raw = JSON.stringify({
     nameAccount: nameText.value,
     nameBank: bankText.value,
@@ -324,7 +342,7 @@ function addDepositClientFetch() {
   fetch("http://localhost:8080/api/depositmethods/", requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      console.log(result);
+      
       if (result.length > 0) {
         // Actualizamos referencias de las funciones de los botones
         showInfoModClientFetch();
@@ -350,8 +368,12 @@ function modDepositCliFetch(idAccount) {
     ) {
       alertFailure("Modificación fallida", "Ningún campo puede estar vacío.");
     } else {
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+
       const requestOptions = {
         method: "PUT",
+            headers: myHeaders,
         redirect: "follow",
       };
 
@@ -361,7 +383,7 @@ function modDepositCliFetch(idAccount) {
       )
         .then((response) => response.text())
         .then((result) => {
-          console.log(result);
+          
           if (result.length > 0) {
             alertSuccess(
               "Modificación exitosa",
@@ -388,8 +410,11 @@ function modDepositCliFetch(idAccount) {
 // Función para eliminar registro en DB
 function delDepositCliFetch(idAccount) {
   if (idAccount != null) {
+      const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
     const requestOptions = {
       method: "DELETE",
+          headers: myHeaders,
       redirect: "follow",
     };
 
@@ -399,7 +424,7 @@ function delDepositCliFetch(idAccount) {
     )
       .then((response) => response.text())
       .then((result) => {
-        console.log(result);
+        
         if (result.length > 0) {
           nameText.value = "";
           bankText.value = "";
@@ -423,69 +448,90 @@ function delDepositCliFetch(idAccount) {
     );
   }
 }
+function validateUser() {
+	
+  let emailUser = sessionStorage.getItem("user");
 
-// Validamos si el usuario es administrado (0), nulo (no ha iniciado sesión) o >1 es cliente
-if (sessionStorage.getItem("id_user_logged") == 0) {
-  infoCliente.classList.add("d-none");
-  infoCliente.innerHTML = "";
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+  
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow"
+  };
 
-  createTableAdmFetch();
+  fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
+    .then((response) => response.json())
+    .then((userData) => {
+      // Validamos si el usuario es administrado (0), nulo (no ha iniciado sesión) o >1 es cliente
+      if (userData.typeUser == "admin") {
+        infoCliente.classList.add("d-none");
+        infoCliente.innerHTML = "";
 
-  btnAgregarAdm.addEventListener("click", (event) => {
-    event.preventDefault();
-    // Validamos que no haya campos vacíos, si no lanzamos sweet alert
-    if (
-      nameTextAdd.value != "" &&
-      bankTextAdd.value != "" &&
-      accountTextAdd.value != "" &&
-      idUserTextAdd.value != ""
-    ) {
-      addDepositAdmFetch();
-    } else {
-      alertFailure("Registro fallido", "Ningún campo puede estar vacío");
-    } //else
-  }); //btnAgregar.addEventListener()
-  // Modificar información por administrador
-  function modInfoAdm(idAccount) {
-    showInfoModAdmFetch(idAccount);
+        createTableAdmFetch();
 
-    btnModificarAdm.addEventListener("click", (event) => {
-      event.preventDefault();
-      //Validación de campos vacíos
-      if (
-        nameTextNew.value != "" &&
-        bankTextNew.value != "" &&
-        accountTextNew.value != ""
-      ) {
-        modDepositAdmFetch(idAccount);
-        // Show sucess message
-        alertSuccess(
-          "Modificación exitosa",
-          "La cuenta de depósito fue modificada"
-        );
+        btnAgregarAdm.addEventListener("click", (event) => {
+          event.preventDefault();
+          // Validamos que no haya campos vacíos, si no lanzamos sweet alert
+          if (
+            nameTextAdd.value != "" &&
+            bankTextAdd.value != "" &&
+            accountTextAdd.value != "" &&
+            idUserTextAdd.value != ""
+          ) {
+            addDepositAdmFetch();
+          } else {
+            alertFailure("Registro fallido", "Ningún campo puede estar vacío");
+          } //else
+        }); //btnAgregar.addEventListener()
+        // Modificar información por administrador
+ 
+      } else if (userData.typeUser == "client") {
+                // Escondemos la vista de administrador
+        infoAdmin.innerHTML = "";
+        // Mostramos o no (si no tiene) datos de usuario
+        showInfoModClientFetch();
+
       } else {
-        // Show failure message
-        alertFailure("Modificación fallida", "Ningún campo puede estar vacío.");
+        infoCliente.classList.add("d-none");
+        infoAdmin.classList.add("d-none");
+        if ((window.location.pathname = "/pages/deposit_account.html")) {
+          // local
+          window.location.href = "../pages/log_in.html";
+        } else {
+          // github
+          window.location.href =
+            "https://adrianlascurain.github.io/OneClickCar/pages/log_in.html";
+        }
       }
-    }); //btnModificarAdm.addEventListener
-  }
-} else if (sessionStorage.getItem("id_user_logged") == null) {
-  infoCliente.classList.add("d-none");
-  infoAdmin.classList.add("d-none");
-  if ((window.location.pathname = "/pages/product_list.html")) {
-    // local
-    window.location.href = "../pages/sign_in.html";
-  } else {
-    // github
-    window.location.href =
-      "https://adrianlascurain.github.io/OneClickCar/pages/sign_in.html";
-  }
-} else {
-  // Escondemos la vista de administrador
-  infoAdmin.innerHTML = "";
-  // Mostramos o no (si no tiene) datos de usuario
-  showInfoModClientFetch();
+    }).catch((error) => console.error(error));
 }
+
+
+       function modInfoAdm(idAccount) {
+          showInfoModAdmFetch(idAccount);
+
+          btnModificarAdm.addEventListener("click", (event) => {
+            event.preventDefault();
+            //Validación de campos vacíos
+            if (
+              nameTextNew.value != "" &&
+              bankTextNew.value != "" &&
+              accountTextNew.value != ""
+            ) {
+              modDepositAdmFetch(idAccount);
+              // Show sucess message
+              alertSuccess(
+                "Modificación exitosa",
+                "La cuenta de depósito fue modificada"
+              );
+            } else {
+              // Show failure message
+              alertFailure("Modificación fallida", "Ningún campo puede estar vacío.");
+            }
+          }); //btnModificarAdm.addEventListener
+        }
 
 // ------------------------ Elementos y eventos de la barra izquierda
 linkProfile.addEventListener("click", (event) => {
@@ -549,3 +595,5 @@ linkLogOut.addEventListener("click", (event) => {
       "https://adrianlascurain.github.io/OneClickCar/pages/log_in.html";
   }
 }); //logOutBtn click
+
+validateUser();

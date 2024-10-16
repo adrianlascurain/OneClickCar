@@ -83,8 +83,8 @@ fetch("http://localhost:8080/api/cars/", requestOptions)
 // *************Métodos*************
 // Función para filtrar por tipo de carros
 function filterDataCars(dataCarsGeneral) {
-  sedanCars = dataCarsGeneral.filter((car) => car.type == "Sedan" && car.sold == 0);
-  coupeCars = dataCarsGeneral.filter((car) => car.type == "Coupe" && car.sold == 0);
+  sedanCars = dataCarsGeneral.filter((car) => car.type == "Sedán" && car.sold == 0);
+  coupeCars = dataCarsGeneral.filter((car) => car.type == "Coupé" && car.sold == 0);
   suvCars = dataCarsGeneral.filter((car) => car.type == "SUV" && car.sold == 0);
   hatchBackCars = dataCarsGeneral.filter((car) => car.type == "Hatchback" && car.sold == 0);
   pickUpCars = dataCarsGeneral.filter((car) => car.type == "Pick Up" && car.sold == 0);
@@ -561,7 +561,7 @@ inputSearch.addEventListener("keypress", function (event) {
 
 // Función para generar índice y presentar información en página product_information
 function productInformation(idCar, usersIdSeller) {
-  if (sessionStorage.getItem("id_user_logged") != null) {
+  if (sessionStorage.getItem("user") != null) {
     localStorage.setItem("idCar", idCar);
     localStorage.setItem("usersIdSeller", usersIdSeller);
     if ((window.location.pathname = "/pages/product_list.html")) {
@@ -575,11 +575,11 @@ function productInformation(idCar, usersIdSeller) {
   } else {
     if ((window.location.pathname = "/pages/product_list.html")) {
       // local
-      window.location.href = "../pages/sign_in.html";
+      window.location.href = "../pages/log_in.html";
     } else {
       // github
       window.location.href =
-        "https://adrianlascurain.github.io/OneClickCar/pages/sign_in.html";
+        "https://adrianlascurain.github.io/OneClickCar/pages/log_in.html";
     }
   }
 } // productInformation()

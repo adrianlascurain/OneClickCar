@@ -2,7 +2,9 @@
 const publishBtn = document.getElementById("public");
 const termsCheckboxBtn = document.getElementById("terms");
 const privacyCheckboxBtn = document.getElementById("privacy");
-
+let navProductList = document
+  .getElementById("navProductRegi")
+  .classList.add("active");
 // Regex for vehicle identification number (serial number)
 
 const disableBtn = (btn) => {
@@ -56,6 +58,50 @@ function animeteElement(selector,animation){
       element.addEventListener("animationend",handleAnimationEnd,{once : true})
   })
 } // animeteElement
+
+function registerCar(raw) {
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("http://localhost:8080/api/cars/", requestOptions)
+  .then((response) => response.json())
+  .then((dataCar) => {
+    console.log(dataCar);
+    if (dataCar.length > 0) {
+      // Mensaje de éxito
+      Swal.fire({
+        title: "Vehículo registrado con éxito.",
+        text: "Se iniciará con el proceso de verificación conforme a las políticas de OneClickCar, pronto te contactaremos para más indicaciones.",
+        imageUrl:
+          "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+        imageWidth: 350,
+        imageHeight: 200,
+        imageAlt: "Custom image",
+        icon: "success",
+      });
+    }
+    else {
+      // Mostrar mensaje error
+        Swal.fire({
+    title: "Registro fallido",
+    text: `El número de serie ${serialNumber} ya se encuentra registrado`,
+    imageAlt: "Custom image",
+    icon: "error",
+  });
+        
+    }
+   })
+  .catch((error) => 
+    console.error(error) )
+}
+
 
 // Regex set
 const brandRegEx = /a/;
@@ -152,95 +198,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return;
       }
-      // if (img.files.length > 0) {
-      // let reader = new FileReader();
 
-      // reader.onload = function(event) {
-      // Convertir la imagen a base64
-      // let imgBase64 = event.target.result;
-      
-      let contadorCarsOnSale=parseInt(localStorage.getItem("contadorCarsOnSale"))+1;
-      localStorage.setItem("contadorCarsOnSale", JSON.stringify(contadorCarsOnSale));
       // Objeto con los datos del vehículo
-      let vehiculo = {
-        id_car: contadorCarsOnSale,
+      let vehiculo = JSON.stringify({
         type: type,
         brand: brand,
         name: name,
         year: parseInt(year),
-        // seller: seller,
         kilometer: parseInt(kilometer),
         transmission: transmission,
         price: parseInt(price),
         img: localStorage.getItem("image_url"), 
         owners: parseInt(owners),
-        serialNumber: serialNumber,
         description: description,
         verified: 0,
         sold: 0,
-        seller_id_user: parseInt(sessionStorage.getItem("id_user_logged")),
-      };
-      console.log(parseInt(sessionStorage.getItem("id_user_logged")))
-      // // fetch pendiente modificar
-      // const promesa = fetch("http://localhost:8080/api/productos/addProduct", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(vehiculo),
-      // });
-      // promesa
-      //   .then((response) => {
-      //     response
-      //       .json()
-      //       .then((dataCarsFetch) => {
-      //         if (localStorage.getItem("dataCarsOnSale") != null) {
-      //           filterDataCars(
-      //             JSON.parse(localStorage.getItem("dataCarsOnSale"))
-      //           );
-      //           createGroupCarousels();
-      //         } else {
-      //           console.log(dataCarsFetch);
-      //           localStorage.setItem(
-      //             "dataCarsOnSale",
-      //             JSON.stringify(dataCarsFetch)
-      //           );
-      //           filterDataCars(
-      //             JSON.parse(localStorage.getItem("dataCarsOnSale"))
-      //           );
-      //           createGroupCarousels();
-      //         }
-      //       })
-      //       .catch((error) => console.log("Problema con el json", error));
-      //   })
-      //   .catch((err) =>
-      //     console.log("Existió un problema con la solicitud", err)
-      //   );
-      // //modificar pendiente
+        nuSerial: serialNumber,
+        usersIdSeller: parseInt(sessionStorage.getItem("id_user_logged")),
+      });
+      registerCar(vehiculo);
 
-      // Obtención de los datos en el localStorage
-      let dataCarsOnSale = obtenerVehiculos();
-
-      // Se agrega el nuevo vehículo al arreglo
-      dataCarsOnSale.push(vehiculo);
-
-      // Almacenar en localStorage
-      localStorage.setItem("dataCarsOnSale", JSON.stringify(dataCarsOnSale));
-
-      // Mensaje de éxito
-             Swal.fire({
-          title: "Vehículo registrado con éxito.",
-          text: "Se iniciará con el proceso de verificación conforme a las políticas de OneClickCar, pronto te contactaremos para más indicaciones.",
-          imageUrl:
-            "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
-          imageWidth: 350,
-          imageHeight: 200,
-          imageAlt: "Custom image",
-          icon: "success",
-        });
-
+      localStorage.removeItem();
       // Limpiar los campos del formulario
-      formRegistro.reset();
+      formRegistro.reset("image_url");
       document
         .getElementById("uploadedimage")
         .setAttribute("src", "https://res.cloudinary.com/dz6zf3yio/image/upload/v1726810826/occ-mascota_fddolf.png");

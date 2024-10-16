@@ -43,13 +43,15 @@
           <div class="col-sm-2 barraLeft">
             <div class="opcionesPerfil">
               <br />
-              <h2 id="linkProfile">CONFIGURACIÓN</h2>
+              <h2 id="linkProfile">INFORMACIÓN USUARIO</h2>
               <br />
-              <h2 id="linkPurchase">HISTORIAL DE VEHÍCULOS</h2>
+              <h2 id="linkPurchase">HISTORIAL DE TRANSACCIONES</h2>
               <br />
               <h2 id="linkPayment">FORMAS DE PAGO</h2>
               <br />
-              <h2 class="nav-link active" id="linkDeposit">CUENTA DE DEPÓSITO</h2>
+              <h2 class="nav-link active" id="linkDeposit">
+                CUENTA DE DEPÓSITO
+              </h2>
               <br />
               <h2 id="linkLogOut">
                 CERRAR SESIÓN
@@ -58,123 +60,186 @@
                   alt="exitIcon"
                 />
               </h2>
-            </div><!-- div opcionesPerfil-->
+            </div>
+            <!-- div opcionesPerfil-->
           </div>
           <div class="col-sm-10 infoCenter" id="infoCliente">
-              <h1 id="titleDepositAccount">Cuenta de depósito</h1>
-              <div class="text-center">
-              <img class="img-fluid" id="imgDepositAccount"
+            <h1 id="titleDepositAccount">Cuenta de depósito</h1>
+            <div class="text-center">
+              <img
+                class="img-fluid"
+                id="imgDepositAccount"
                 src="https://res.cloudinary.com/duqki6x6t/image/upload/v1728326342/kkvfvwaurbi02utohsfs.png"
                 alt="Icono cuenta de depósito"
               />
-              </div>
-              <div class="cajaCuentaDeposito">
-                <div class="cajaCuentaDepositoForm">
-                  <form action="" id="InfoProfile">
-                    <div class="itemForm">
-                      <label for="name-ipt">NOMBRE:</label>
-                      <input type="text" id="name-ipt" />
-                    </div>
-                    <div class="itemForm">
-                      <label for="bank-ipt">BANCO:</label>
-                      <input type="text" id="bank-ipt" />
-                    </div>
-                    <div class="itemForm">
-                      <label for="account-ipt">CUENTA:</label>
-                      <input type="text" id="account-ipt" />
-                    </div>
-                  </form>
-                </div>
-                              <div class="col-sm-12 text-center">
-                <button type="button" class="btn btn-primary btn-information" id="btnAgregar" >Agregar</button>
-                <button type="button" class="btn btn-primary  btn-information" id="btnModificar" >Modificar</button>
-                <button type="button" class="btn btn-primary  btn-information" id="btnEliminar" >Eliminar</button>
-              </div>
-                </div>
-
-          </div>
-          <div class="col-sm-10 infoCenter " id="infoAdmin">
-          </div>
-        </div><!-- infoClienteRow-->
-          <!-- <div class="col-sm-12 text-center" id="modalArea">
-
-          </div> -->
-
-
-
-              <!-- PARA ADMINISTRADOR -->
-                <!-- 
-                <button type="button" class="btn btn-primary btn-information" data-bs-toggle="modal" data-bs-target="#modalAgregar" >Agregar</button>
-                <button type="button" class="btn btn-primary  btn-information" data-bs-toggle="modal" data-bs-target="#modalModificar" >Modificar</button>
-                <button type="button" class="btn btn-primary  btn-information" data-bs-toggle="modal" data-bs-target="#modalEliminar" >Eliminar</button>
-              </div> -->
-              <div class="modal fade" id="modalModificar" tabindex="-1" aria-labelledby="modalModificar" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="modalModificar">Modifica cuenta de depósito</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="mb-3">
-                          <label for="name-ipt-new" class="col-form-label">Nombre:</label>
-                          <input type="text" class="form-control" id="name-ipt-new">
-                        </div>
-                        <div class="mb-3">
-                          <label for="bank-ipt-new" class="col-form-label">Banco:</label>
-                          <input type="text" class="form-control" id="bank-ipt-new">
-                        </div>
-                        <div class="mb-3">
-                          <label for="account-ipt-new" class="col-form-label">Cuenta:</label>
-                          <input type="text" class="form-control" id="account-ipt-new">
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary" id="btn-modificar-adm">Enviar</button>
-                    </div>
+            </div>
+            <div class="cajaCuentaDeposito" id="btnsInfoCliente">
+              <div class="cajaCuentaDepositoForm">
+                <form action="" id="InfoProfile">
+                  <div class="itemForm">
+                    <label for="name-ipt">NOMBRE:</label>
+                    <input type="text" id="name-ipt" />
                   </div>
-                </div>
-              </div>
-
-              <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalAgregar" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="modalAgregar">Agrega cuenta de depósito</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <form>
-                        <div class="mb-3">
-                          <label for="name-ipt-new" class="col-form-label">Nombre:</label>
-                          <input type="text" class="form-control" id="name-ipt-add">
-                        </div>
-                        <div class="mb-3">
-                          <label for="bank-ipt-new" class="col-form-label">Banco:</label>
-                          <input type="text" class="form-control" id="bank-ipt-add">
-                        </div>
-                        <div class="mb-3">
-                          <label for="account-ipt-new" class="col-form-label">Cuenta:</label>
-                          <input type="text" class="form-control" id="account-ipt-add">
-                        </div>
-                          <div class="mb-3">
-                          <label for="name-ipt-new" class="col-form-label">Id user:</label>
-                          <input type="text" class="form-control" id="iduser-ipt-add">
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary" id="btn-agregar-adm">Enviar</button>
-                    </div>
+                  <div class="itemForm">
+                    <label for="bank-ipt">BANCO:</label>
+                    <input type="text" id="bank-ipt" />
                   </div>
-                </div>
+                  <div class="itemForm">
+                    <label for="account-ipt">CUENTA:</label>
+                    <input type="text" id="account-ipt" />
+                  </div>
+                </form>
               </div>
+              <div class="col-sm-12 text-center" id="btnSubContainer"></div>
+            </div>
+          </div>
+          <div class="col-sm-10 infoCenter" id="infoAdmin"></div>
+        </div>
+        <!-- infoClienteRow-->
 
-      </div><!-- container-fluid -->
+        <div
+          class="modal fade"
+          id="modalModificar"
+          tabindex="-1"
+          aria-labelledby="modalModificar"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalModificar">
+                  Modifica cuenta de depósito
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="inert"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="name-ipt-new" class="col-form-label"
+                      >Nombre:</label
+                    >
+                    <input type="text" class="form-control" id="name-ipt-new" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="bank-ipt-new" class="col-form-label"
+                      >Banco:</label
+                    >
+                    <input type="text" class="form-control" id="bank-ipt-new" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="account-ipt-new" class="col-form-label"
+                      >Cuenta:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="account-ipt-new"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Salir
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="btn-modificar-adm"
+                >
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="modalAgregar"
+          tabindex="-1"
+          aria-labelledby="modalAgregar"
+          aria-hidden="intert"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalAgregar">
+                  Agrega cuenta de depósito
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="name-ipt-new" class="col-form-label"
+                      >Nombre:</label
+                    >
+                    <input type="text" class="form-control" id="name-ipt-add" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="bank-ipt-new" class="col-form-label"
+                      >Banco:</label
+                    >
+                    <input type="text" class="form-control" id="bank-ipt-add" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="account-ipt-new" class="col-form-label"
+                      >Cuenta:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="account-ipt-add"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="name-ipt-new" class="col-form-label"
+                      >Id user:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="iduser-ipt-add"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="btn-agregar-adm"
+                >
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- container-fluid -->
     </main>
     <footer id="footer_back"></footer>
 

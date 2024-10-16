@@ -45,7 +45,7 @@
               <br />
               <h2 id="linkProfile" >INFORMACIÓN USUARIO</h2>
               <br />
-              <h2 id="linkPurchase" class="nav-link active">HISTORIAL DE COMPRAS</h2>
+              <h2 id="linkPurchase" class="nav-link active">HISTORIAL DE TRANSACCIONES</h2>
               <br />
               <h2 id="linkPayment">FORMAS DE PAGO</h2>
               <br />
@@ -62,25 +62,24 @@
           </div>
           <div class="col-sm-10 infoCenter" id="infoCliente">
               <h1 id="titleDepositAccount">Historial de compras</h1>
-
-
+              <div class="container containerCarousel">
+            <div id="carouselSold" class="carousel slide col-sm-4"></div>
+            <div id="carouselBought" class="carousel slide col-sm-4"></div>
+      </div>
           </div>
-          <div class="col-sm-10 infoCenter " id="infoAdmin">
+          <div class="col-sm-10 infoCenter" id="headerAdmin">
+            <h1 class="text-center" >Historial de transacciones, vehículos y comentarios</h1><br>
+            <div class="btnsFilter text-center">
+              <a class="btn btn-primary" id="btnChangeTrans">Mostrar transacciones</a>
+              <a class="btn btn-primary" id="btnChangeCars">Mostrar vehículos</a>
+              <a class="btn btn-primary" id="btnChangeComm">Mostrar comentarios</a>
+              </div>
+            <div id="infoAdmin"></div>
+          
+              
           </div>
         </div><!-- infoClienteRow-->
-          <!-- <div class="col-sm-12 text-center" id="modalArea">
-
-          </div> -->
-
-
-
-              <!-- PARA ADMINISTRADOR -->
-                <!-- 
-                <button type="button" class="btn btn-primary btn-information" data-bs-toggle="modal" data-bs-target="#modalAgregar" >Agregar</button>
-                <button type="button" class="btn btn-primary  btn-information" data-bs-toggle="modal" data-bs-target="#modalModificar" >Modificar</button>
-                <button type="button" class="btn btn-primary  btn-information" data-bs-toggle="modal" data-bs-target="#modalEliminar" >Eliminar</button>
-              </div> -->
-              <div class="modal fade" id="modalModificar" tabindex="-1" aria-labelledby="modalModificar" aria-hidden="true">
+              <div class="modal fade" id="modalModificar" tabindex="-1" aria-labelledby="modalModificar" aria-hidden="inert">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -151,7 +150,7 @@
                 </div>
               </div>
 
-              <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalAgregar" aria-hidden="true">
+              <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalAgregar" aria-hidden="inert">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">

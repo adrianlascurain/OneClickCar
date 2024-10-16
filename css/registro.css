@@ -436,6 +436,10 @@ width: 67px ;
     text-align: start;
 }
 
+#description-pv{
+    overflow-wrap: break-word;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 

@@ -74,7 +74,7 @@ function createNavFoot(relativePathOrigin,displayAnchors,userName) {
                         <a class="nav-link ${displayAnchors[4]}" id="navSignIn" href="${relativePathOrigin}/pages/sign_in.html">REGISTRARSE</a>
                         <a class="nav-link ${displayAnchors[5]}" id="navLogIn" href="${relativePathOrigin}/pages/log_in.html">INICIAR SESIÓN</a>
                         <a class="nav-link ${displayAnchors[6]}" id="navUserProfile" href="${relativePathOrigin}/pages/user_profile.html">PERFIL</a>
-                        <a class="nav-link ${displayAnchors[7]}" id="navProductList" href="${relativePathOrigin}/pages/product_registration.html">VENDER</a>
+                        <a class="nav-link ${displayAnchors[7]}" id="navProductRegist" href="${relativePathOrigin}/pages/product_registration.html">VENDER</a>
                         <a class="nav-link ${displayAnchors[8]}" id="navProductList" href="${relativePathOrigin}/pages/product_list.html">PRODUCTOS</a>
                     </div>
                     <div class="${displayAnchors[9]} text-center">

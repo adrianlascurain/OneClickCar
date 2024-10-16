@@ -384,7 +384,6 @@ registerForm.addEventListener("submit", function (event) {
 
     // Create object with vehicle data
     let vehicle = JSON.stringify( {
-    idCar: contadorCarsOnSale,
     type: typeValue,
     brand: brandValue,
     name: modelValue,

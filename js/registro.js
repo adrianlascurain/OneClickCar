@@ -82,6 +82,26 @@ document.addEventListener("DOMContentLoaded", function () {
   let formRegistro = document.querySelector("form");
 
   if (formRegistro) {
+      const type = document.getElementById("tipo")
+      const brand = document.getElementById("marca")
+      const name = document.getElementById("modelo")
+      const year = document.getElementById("anio")
+      const kilometer = document.getElementById("kilometraje")
+      const transmission = document.getElementById("transmision")
+      const owners = document.getElementById("num_prop")
+      const price = document.getElementById("precio")
+      const serialNumber = document.getElementById("serial")  
+      const description = document.getElementById("descripcion")
+      const img = document.getElementById("imagenes");
+      const termsCheckbox = document.getElementById("terms");
+      const privacyCheckbox = document.getElementById("privacy");
+
+      type.addEventListener("blur",event => {
+        
+      })
+
+      
+
     formRegistro.addEventListener("submit", function (event) {
       event.preventDefault();
 

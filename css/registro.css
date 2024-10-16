@@ -429,6 +429,25 @@ textarea {
 width: 67px ;
 }
 
+#list-preview li{
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: start;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{ 
+    -webkit-box-shadow: 0 0 0 30px #002044 inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+/* .war-tooltip{
+    font-size: 10px;
+} */
+
 @media (max-width: 1310px) {
     main {
         /* flex-direction: column; */

@@ -65,6 +65,7 @@
            <label for="tipo">Tipo</label>
           </div>
             <select id="tipo" name="tipo">
+              <option value="nonSelected" selected>Selecciona una opción</option>
               <option value="Sedán">Sedán</option>
               <option value="Coupé">Coupé</option>
               <option value="SUV">SUV</option>
@@ -80,7 +81,7 @@
             <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" alt="marcaLogo" class="icon">
             <label for="marca">Marca</label>
           </div>
-              <input type="text" id="marca" name="marca" />
+              <input type="text" id="marca" name="marca"/>
           </div>
 
         
@@ -105,7 +106,7 @@
               <img src="https://cdn-icons-png.flaticon.com/512/4539/4539773.png" alt="kmLogo" class="icon">
               <label for="kilometraje">Kilometraje</label>
             </div>
-            <input type="text" id="kilometraje" name="kilometraje" />
+            <input type="number" id="kilometraje" name="kilometraje" />
           </div>
           <div class="form-group">
             <div class="labelContainer">
@@ -128,7 +129,7 @@
               <img src="https://cdn-icons-png.flaticon.com/512/2621/2621783.png" alt="nPropLogo" class="icon">
               <label for="num_prop" id="prop-label">Número total de Propietarios</label>
             </div>
-            <input type="number" id="num_prop" name="num_prop" min="1"/>
+            <input type="number" id="num_prop" name="num_prop" min="1" step="1"/>
           </div>
 
           <!-- <div class="form-group">
@@ -144,7 +145,7 @@
               <img src="https://cdn-icons-png.flaticon.com/512/1787/1787203.png" alt="precioLogo" class="icon">
               <label for="precio">Precio del Vehiculo</label>
             </div>
-            <input type="text" id="precio" name="precio" />
+            <input type="number" id="precio" name="precio" />
           </div>
          </div>
 
@@ -246,14 +247,17 @@
       <section class="preview-section">
         <img src="https://res.cloudinary.com/duqki6x6t/image/upload/v1728448318/tmvctcqqiy878gn5itx0.png" alt="Imagen representativa" />
         <h3>*Imagen representativa</h3>
-        <ul>
-          <li>DESCRIPCIÓN</li>
-          <li>AÑO</li>
-          <li>VENDEDOR</li>
-          <li>KILOMETRAJE</li>
-          <li>TRANSMISIÓN</li>
-          <li>DUEÑOS</li>
-          <li>PRECIO</li>
+        <ul class="mx-3" id="list-preview">
+          <li id="type-pv"><span class="field-pv">TIPO</span></li>
+          <li id="brand-pv">MARCA</li>
+          <li id="model-pv">MODELO</li>
+          <li id="year-pv">AÑO</li>
+          <li id="km-pv">KILOMETRAJE</li>
+          <li id="transsmision-pv">TRANSMISIÓN</li>
+          <li id="owners-pv">DUEÑOS</li>
+          <li id="price-pv">PRECIO</li>
+          <li id="serial-pv">NÚMERO DE SERIE</li>
+          <li id="description-pv">DESCRIPCIÓN</li>
         </ul>
         <p>*Vista previa y estructura básica</p>
       </section>
@@ -266,7 +270,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/registro.js"></script>
+    <script src="../js/product_registration.js"></script>
         <!-- cloudinary upload widget -->
     <!-- <script 
      src="https://widget.cloudinary.com/v2.0/global/all.js" 
@@ -281,5 +285,6 @@
      type="text/javascript">
     </script>
   <script defer src="../js/subscribe.js"></script>
+
   </body>
 </html>

@@ -321,7 +321,7 @@ function registerCar(raw) {
     .then((response) => response.json())
     .then((dataCar) => {
         console.log(dataCar);
-        if (dataCar.length > 0) {
+        if (dataCar) {
         // Mensaje de éxito
         Swal.fire({
             title: "Vehículo registrado con éxito.",
@@ -414,16 +414,16 @@ registerForm.addEventListener("submit", function (event) {
 
 
     // Success message
-            Swal.fire({
-        title: "Vehículo registrado con éxito.",
-        text: "Se iniciará con el proceso de verificación conforme a las políticas de OneClickCar, pronto te contactaremos para más indicaciones.",
-        imageUrl:
-        "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
-        imageWidth: 350,
-        imageHeight: 200,
-        imageAlt: "Custom image",
-        icon: "success",
-    });
+    //         Swal.fire({
+    //     title: "Vehículo registrado con éxito.",
+    //     text: "Se iniciará con el proceso de verificación conforme a las políticas de OneClickCar, pronto te contactaremos para más indicaciones.",
+    //     imageUrl:
+    //     "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+    //     imageWidth: 350,
+    //     imageHeight: 200,
+    //     imageAlt: "Custom image",
+    //     icon: "success",
+    // });
 
     // Clean form
     registerForm.reset();

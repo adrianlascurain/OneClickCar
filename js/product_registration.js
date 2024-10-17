@@ -1,4 +1,3 @@
-let navProductList = document.getElementById("navProductRegist").classList.add("active");
 // Get elements to control publish button
 const publishBtn = document.getElementById("public");
 const termsCheckboxBtn = document.getElementById("terms");

@@ -32,25 +32,25 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-2 barraLeft">
-            <div class="opcionesPerfil">
-              <br />
-              <h2 id="linkProfile" class="nav-link active" >INFORMACIÓN USUARIO</h2>
-              <br />
-              <h2 id="linkPurchase">HISTORIAL DE COMPRAS</h2>
-              <br />
-              <h2 id="linkPayment">FORMAS DE PAGO</h2>
-              <br />
-              <h2 id="linkDeposit">CUENTA DE DEPÓSITO</h2>
-              <br />
-              <h2 id="linkLogOut">
-                CERRAR SESIÓN
-                <img
-                  src="https://res.cloudinary.com/duxbrimwv/image/upload/v1726284778/exitIcon_dg9gyx.svg"
-                  alt="exitIcon"
-                />
-              </h2>
-            </div><!-- div opcionesPerfil-->
-                </div>
+                  <div class="opcionesPerfil">
+                    <br />
+                    <h2 id="linkProfile" class="nav-link active" >INFORMACIÓN USUARIO</h2>
+                    <br />
+                    <h2 id="linkPurchase">HISTORIAL DE COMPRAS</h2>
+                    <br />
+                    <h2 id="linkPayment">FORMAS DE PAGO</h2>
+                    <br />
+                    <h2 id="linkDeposit">CUENTA DE DEPÓSITO</h2>
+                    <br />
+                    <h2 id="linkLogOut">
+                      CERRAR SESIÓN
+                      <img
+                        src="https://res.cloudinary.com/duxbrimwv/image/upload/v1726284778/exitIcon_dg9gyx.svg"
+                        alt="exitIcon"
+                      />
+                    </h2>
+                  </div><!-- div opcionesPerfil-->
+                </div><!--col-sm-2 barraLeft-->
                 <div class="col-sm-8 infoCenter"  id="infoCliente">
                     <div class="cajaProfile">
                         <h1 id="titleDepositAccount">Mi Perfil</h1>
@@ -76,13 +76,94 @@
                                 </form>
                         </div>
                     </div>
-                </div>
-                <div id="infoAdmin"></div> 
+                </div><!--ccol-sm-8 infoCenter-->
+              <div class="col-sm-8 infoCenter" id="headerAdmin">
+              <h1 class="text-center" >Historial de transacciones, vehículos y comentarios</h1><br>
+              </div><!-- col-sm-8 infoCenter-->
                 <div class="col-sm-2 cochesRight">
                 </div>
-            </div>
+            </div><!-- row -->
 
-        </div>
+                      <div class="modal fade" id="modalModificar" tabindex="-1" aria-labelledby="modalModificar" aria-hidden="inert">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalModificar">Modifica usuario</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="fullName-ipt-new" class="col-form-label">Nombre completo:</label>
+                          <input type="text" class="form-control" id="fullName-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="phoneNumber-ipt-new" class="col-form-label">Teléfono:</label>
+                          <input type="text" class="form-control" id="phoneNumber-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="email-ipt-new" class="col-form-label">Email:</label>
+                          <input type="text" class="form-control" id="email-ipt-new">
+                        </div>
+                          <div class="mb-3">
+                          <label for="birthDate-ipt-new" class="col-form-label">Fecha de nacimiento:</label>
+                          <input type="text" class="form-control" id="birthDate-ipt-new">
+                        </div>
+                        <div class="mb-3">
+                          <label for="typeUser-ipt-new" class="col-form-label">Tipo de usuario:</label>
+                          <input type="text" class="form-control" id="typeUser-ipt-new">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="btn-modificar-adm">Enviar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalAgregar" aria-hidden="inert">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalAgregar">Agrega usuario</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="fullName-ipt-add" class="col-form-label">Nombre completo:</label>
+                          <input type="text" class="form-control" id="fullName-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="phoneNumber-ipt-add" class="col-form-label">Teléfono:</label>
+                          <input type="text" class="form-control" id="phoneNumber-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="email-ipt-add" class="col-form-label">Email:</label>
+                          <input type="text" class="form-control" id="email-ipt-add">
+                        </div>
+                          <div class="mb-3">
+                          <label for="birthDate-ipt-add" class="col-form-label">Fecha de nacimiento:</label>
+                          <input type="text" class="form-control" id="birthDate-ipt-add">
+                        </div>
+                        <div class="mb-3">
+                          <label for="typeUser-ipt-add" class="col-form-label">Tipo de usuario:</label>
+                          <input type="text" class="form-control" id="typeUser-ipt-add">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="btn-agregar-adm">Enviar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+        </div><!-- container-fluid -->
     </main>
     <footer id="footer_back"></footer>
 

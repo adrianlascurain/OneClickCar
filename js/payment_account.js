@@ -22,7 +22,7 @@ let typeCardTextAdd = document.getElementById("typeCard-ipt-add");
 let numberCardTextAdd = document.getElementById("numberCard-ipt-add");
 let dateCardTextAdd = document.getElementById("dateCard-ipt-add");
 let cvvCardTextAdd = document.getElementById("cvvCard-ipt-add");
-let idUserTextAdd = document.getElementById("iduser-ipt-add");
+let idUserTextAdd = document.getElementById("idUser-ipt-add");
 // Botones para modificar y agregar info en tabla administrador
 let btnModificarAdm = document.getElementById("btn-modificar-adm");
 let btnAgregarAdm = document.getElementById("btn-agregar-adm");
@@ -73,7 +73,7 @@ function createTableAdmFetch() {
       infoAdmin.innerHTML = "";
       let htmlContent = "";
       htmlContent += ` 
-        <h1 id="titleReport">Reporte de métodos de depósito</h1><br>
+        <h1 id="titleReport">Reporte de métodos de pago</h1><br>
         <div class="text-left">
         <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAgregar">Agregar</a></div>
         <div class="table-responsive">
@@ -533,8 +533,10 @@ function validateUser() {
             //Validación de campos vacíos
             if (
               nameCardTextNew.value != "" &&
-              bankTextNew.value != "" &&
-              accountTextNew.value != ""
+              typeCardTextNew.value != "" &&
+              numberCardTextNew.value != "" &&
+              dateCardTextNew.value != "" &&
+              cvvCardTextNew.value != ""
             ) {
               modPaymentAdmFetch(idCard);
               // Show sucess message

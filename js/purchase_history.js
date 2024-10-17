@@ -346,7 +346,7 @@ function addCarAdmFetch() {
   fetch("http://localhost:8080/api/cars/", requestOptions)
     .then((response) => response.text())
     .then((dataCar) => {
-      console.log(dataCar);
+     
       if (dataCar.length > 0) {
           noSerieTextAdd.value="";
           tipoTextAdd.value="";
@@ -386,7 +386,7 @@ function showInfoModAdmFetch(idCar) {
   fetch(`http://localhost:8080/api/cars/${idCar}`, requestOptions)
     .then((response) => response.json())
     .then((dataCar) => {
-      console.log(dataCar);
+     
       noSerieTextNew.setAttribute("disabled","true");
     noSerieTextNew.value = dataCar.nuSerial;
     tipoTextNew.value = dataCar.type;
@@ -422,7 +422,7 @@ function modCarAdmFetch(idCar) {
   )
     .then((response) => response.text())
     .then((dataCar) => {
-      console.log(dataCar);
+      
       if (dataCar.length > 0) {
           noSerieTextAdd.value="";
           tipoTextAdd.value="";
@@ -462,7 +462,7 @@ const requestOptions = {
 fetch(`http://localhost:8080/api/comments/${idComment}?approved=1`, requestOptions)
   .then((response) => response.text())
   .then((result) => {
-    console.log(result);
+    
     createTableAdmFetchComm();
     alertSuccess("Aprobación exitosa","El comentario fue aprobado.");
    })
@@ -481,7 +481,7 @@ const requestOptions = {
   fetch(`http://localhost:8080/api/comments/${idComment}`, requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      console.log(result);
+    
       createTableAdmFetchComm();
       alertSuccess("Eliminación exitosa","El comentario fue eliminado");
     })
@@ -511,7 +511,7 @@ const requestOptions = {
   fetch(`http://localhost:8080/api/cars/${idCar}`, requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      console.log(result);
+    
       createTableAdmFetch();
       alertSuccess(
         "Eliminación exitosa",
@@ -626,7 +626,7 @@ function recoverBoughts() {
   fetch("http://localhost:8080/api/transactions/", requestOptions)
     .then((response) => response.json())
     .then((dataTransactions) => {
-      console.log(dataTransactions);
+    
       let carsBought=[];
       if (dataTransactions[0] != null) {
         for (i = 0; i < dataTransactions.length; i++){
@@ -634,7 +634,7 @@ function recoverBoughts() {
             carsBought.push(dataTransactions[i].carsIdCars);
           }
         }
-        console.log(carsBought);
+     
         createCarouselBought(carsBought);
       } else {
         let htmlContMobile="";

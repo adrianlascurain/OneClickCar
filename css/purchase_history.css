@@ -273,7 +273,9 @@ hr {
     display: inline-block;
     
   }
-
+.containerCarousels{
+   display: flex; justify-content: center; align-items: center;
+}
   /* .carousel-control-prev,
   .carousel-control-next {
     width: 45px;

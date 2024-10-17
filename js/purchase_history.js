@@ -1,6 +1,6 @@
 let navUserProfile = document.getElementById("navUserProfile").classList.add("active");
 let infoCliente = document.getElementById("infoCliente");
-let infoAdmin = document.getElementById("infoAdmin");
+
 let headerAdmin = document.getElementById("headerAdmin");
 let nameTextNew = document.getElementById("name-ipt-new");
 let bankTextNew = document.getElementById("bank-ipt-new");
@@ -149,7 +149,7 @@ function createTableAdmFetch() {
   fetch("http://localhost:8080/api/cars/", requestOptions)
     .then((response) => response.json())
     .then((dataCarsGeneral) => {
-  infoAdmin.innerHTML = "";
+  headerAdmin.innerHTML = "";
   let htmlContent = "";
   htmlContent += ` 
 
@@ -202,7 +202,7 @@ function createTableAdmFetch() {
     `;
   }
   htmlContent += `</tbody></table></div>`;
-      infoAdmin.insertAdjacentHTML("beforeend", htmlContent);
+      headerAdmin.insertAdjacentHTML("beforeend", htmlContent);
       })
     .catch((error) => console.error(error));
 }//function createTableAdmFetch()
@@ -219,7 +219,7 @@ function createTableAdmFetchComm() {
   fetch("http://localhost:8080/api/comments/", requestOptions)
     .then((response) => response.json())
     .then((dataComments) => {
-      infoAdmin.innerHTML = "";
+      headerAdmin.innerHTML = "";
       let htmlContent = "";
       htmlContent += ` 
   <div class="table-responsive">
@@ -258,7 +258,7 @@ function createTableAdmFetchComm() {
     `;
   }
   htmlContent += `</tbody></table></div>`;
-      infoAdmin.insertAdjacentHTML("beforeend", htmlContent);
+      headerAdmin.insertAdjacentHTML("beforeend", htmlContent);
       })
     .catch((error) => console.error(error));
 }//function createTableAdmFetch()
@@ -276,7 +276,7 @@ function createTableAdmFetchTrans() {
   fetch("http://localhost:8080/api/transactions/", requestOptions)
     .then((response) => response.json())
     .then((dataTransactions) => {
-  infoAdmin.innerHTML = "";
+  headerAdmin.innerHTML = "";
   let htmlContent = "";
   htmlContent += ` 
   <div class="table-responsive">
@@ -308,7 +308,7 @@ function createTableAdmFetchTrans() {
     `;
   }
   htmlContent += `</tbody></table></div>`;
-      infoAdmin.insertAdjacentHTML("beforeend", htmlContent);
+      headerAdmin.insertAdjacentHTML("beforeend", htmlContent);
       })
     .catch((error) => console.error(error));
 }//function createTableAdmFetch()
@@ -570,21 +570,21 @@ fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
 
 
       btnChangeCars.addEventListener("click", event => {
-        infoAdmin.innerHTML = "";
+        headerAdmin.innerHTML = "";
         createTableAdmFetch();
       });
       btnChangeTrans.addEventListener("click", event => {
-        infoAdmin.innerHTML = "";
+        headerAdmin.innerHTML = "";
         createTableAdmFetchTrans();
       });
       btnChangeComm.addEventListener("click", event => {
-        infoAdmin.innerHTML = "";
+        headerAdmin.innerHTML = "";
         createTableAdmFetchComm();
       });
       
     } else if (userData.typeUser =="client") {
       // Escondemos la vista de administrador
-      infoAdmin.innerHTML = "";
+      headerAdmin.innerHTML = "";
       headerAdmin.innerHTML = "";
       
       createCarouselSold();
@@ -592,7 +592,7 @@ fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
       //------------------------------------------------PENDIENTE
     } else {
         infoCliente.classList.add("d-none");
-      infoAdmin.classList.add("d-none");
+      headerAdmin.classList.add("d-none");
       if ((window.location.pathname = "/pages/purchase_history.html")) {
         // local
         window.location.href = "../pages/sign_in.html";

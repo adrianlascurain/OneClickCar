@@ -176,7 +176,7 @@ function modUserAdmFetch(idUser) {
   };
 
   fetch(
-        `http://localhost:8080/api/users/${idUser}?fullName=${fullNameTextNew.value}&phoneNumber=${phoneNumberTextNew.value}&email=${emailTextNew.value}&birthDate=${birthDateTextNew.value}&typeUser=${typeUserTextNew.value}`,
+        `http://localhost:8080/api/users/${idUser}?fullName=${fullNameTextNew.value}&phoneNumber=${phoneNumberTextNew.value}&birthDate=${birthDateTextNew.value}&typeUser=${typeUserTextNew.value}`,
     requestOptions
   )
     .then((response) => response.text())
@@ -249,7 +249,8 @@ function showInfoModAdmFetch(idUser) {
       idUserTextNew.value = dataUsers.idUser;
     fullNameTextNew.value = dataUsers.fullName;
     phoneNumberTextNew.value = dataUsers.phoneNumber;
-    emailTextNew.value = dataUsers.email;
+      emailTextNew.value = dataUsers.email;
+      emailTextNew.setAttribute("disabled", "true");
     birthDateTextNew.value = dataUsers.birthDate;
     typeUserTextNew.value = dataUsers.typeUser;
     })

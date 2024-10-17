@@ -1,8 +1,8 @@
 let navUserProfile = document.getElementById("navUserProfile").classList.add("active");
 
 let infoCliente = document.getElementById("infoCliente");
-// let infoAdmin = document.getElementById("infoAdmin");
-let infoAdmi = document.getElementById("infoAdmi");
+let infoAdmin = document.getElementById("infoAdmin");
+
 let linkProfile = document.getElementById("linkProfile");
 let linkPayment = document.getElementById("linkPayment");
 let linkPurchase = document.getElementById("linkPurchase");

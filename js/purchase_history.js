@@ -342,10 +342,10 @@ function addCarAdmFetch() {
   };
 
   fetch("http://localhost:8080/api/cars/", requestOptions)
-    .then((response) => response.json())
+    .then((response) => response.text())
     .then((dataCar) => {
-     
-      if (dataCar.idCar!=null) {
+      console.log(dataCar);
+      if (dataCar.length > 0) {
           noSerieTextAdd.value="";
           tipoTextAdd.value="";
           marcaTextAdd.value="";
@@ -365,7 +365,7 @@ function addCarAdmFetch() {
         alertSuccess("Registro exitoso", "El vehículo fue agregado.");
       } else {
         // Mostrar mensaje error
-        alertFailure("Registro fallido",`El número de serie ${dataCar.nuSerial} ya se encuentra registrado`);
+        alertFailure("Registro fallido",`El número de serie ${noSerieTextAdd.value} ya se encuentra registrado`);
       }
     })
     .catch((error) => console.error(error));

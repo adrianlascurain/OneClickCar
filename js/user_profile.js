@@ -13,7 +13,8 @@ let fullNameTextNew= document.getElementById("fullName-ipt-new");
 let phoneNumberTextNew = document.getElementById("phoneNumber-ipt-new");
 let emailTextNew = document.getElementById("email-ipt-new");
 let birthDateTextNew = document.getElementById("birthDate-ipt-new");
-let typeUserTextNew= document.getElementById("typeUser-ipt-new");
+let typeUserTextNew = document.getElementById("typeUser-ipt-new");
+let idUserTextNew= document.getElementById("idUser-ipt-new");
 
 let fullNameTextAdd= document.getElementById("fullName-ipt-add");
 let phoneNumberTextAdd = document.getElementById("phoneNumber-ipt-add");
@@ -174,7 +175,27 @@ function modUserAdmFetch(idUser) {
     .catch((error) => console.error(error));
 }
 
+  function eliminarInfo(idUser) {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+ const requestOptions = {
+   method: "DELETE",
+   headers: myHeaders,
+    redirect: "follow",
+  };
 
+  fetch(`http://localhost:8080/api/cars/${idUser}`, requestOptions)
+    .then((response) => response.text())
+    .then((result) => {
+    
+      createTableAdmFetch();
+      alertSuccess(
+        "Eliminación exitosa",
+        "El usuario fue eliminado"
+      );
+    })
+    .catch((error) => console.error(error));
+  }
 
 
   function modificarInfo(idUser) {

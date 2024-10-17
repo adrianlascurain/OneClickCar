@@ -706,10 +706,11 @@ function createCarouselBought(carsBought) {
                   <img src="${dataCarsGeneral[i].img
             }" class="card-img-top img-fluid" alt="${dataCarsGeneral[i].name}" />
                   <div class="card-body text-center"><!-- Card body -->
+                  <hr>
                     <h5 class="text-center card-text">${dataCarsGeneral[i].brand} ${dataCarsGeneral[i].name
             } ${dataCarsGeneral[i].year}</h5><hr>
-                    <span class="card-text">| ${dataCarsGeneral[i].kilometer.toLocaleString("es-MX")} KM |</span><hr>
-                    <span class="card-text">${dataCarsGeneral[i].price.toLocaleString("es-MX")}</span>
+                    <span class="card-text">| ${dataCarsGeneral[i].kilometer.toLocaleString("es-MX")} KM |</span><hr><hr>
+                    <span class="card-text">$${dataCarsGeneral[i].price.toLocaleString("es-MX")}</span><hr>
               </div><!-- ****************************FIN card-body -->
             
                 </div><!-- ****************************FIN Card -->
@@ -786,10 +787,11 @@ function createCarouselSold() {
                   <img src="${dataCarsGeneral[i].img
             }" class="card-img-top img-fluid" alt="${dataCarsGeneral[i].name}" />
                   <div class="card-body text-center"><!-- Card body -->
+                  <hr>
                     <h5 class="text-center card-text">${dataCarsGeneral[i].brand} ${dataCarsGeneral[i].name
             } ${dataCarsGeneral[i].year}</h5><hr>
-                    <span class="card-text">| ${dataCarsGeneral[i].kilometer.toLocaleString("es-MX")} KM |</span><hr>
-                    <span class="card-text">${dataCarsGeneral[i].price.toLocaleString("es-MX")}</span>
+                    <span class="card-text">| ${dataCarsGeneral[i].kilometer.toLocaleString("es-MX")} KM |</span><hr><hr>
+                    <span class="card-text">${dataCarsGeneral[i].price.toLocaleString("es-MX")}</span><hr>
               </div><!-- ****************************FIN card-body -->
             
                 </div><!-- ****************************FIN Card -->

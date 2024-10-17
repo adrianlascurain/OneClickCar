@@ -91,10 +91,7 @@ if (userData.typeUser == "admin") {
   infoCliente.classList.add("d-none");
   infoCliente.innerHTML = "";
   
-  createTableAdmFetch();
-
-  
-
+  //  createTableAdmFetch();
 
   btnAgregarAdm.addEventListener("click", (event) => {
     event.preventDefault();
@@ -138,8 +135,16 @@ if (userData.typeUser == "admin") {
   // Escondemos la vista de administrador
   infoAdmin.innerHTML = "";
   headerAdmin.innerHTML = "";
-  
-  createCarouselSold();
+  console.log(userData);
+  let nameUserTxt = document.getElementById("name-ipt");
+  let emailUserTxt = document.getElementById("correo-ipt");
+  let birthdayUsertxt = document.getElementById("birtday-ipt");
+  let phoneUsertxt = document.getElementById("telefono-ipt");
+  nameUserTxt.value = userData.fullName;
+  emailUserTxt = emailUser;
+  birthdayUsertxt = userData.birthDate;
+  phoneUsertxt = userData.phoneNumber;
+
   //createCarouselBuyed();
   //------------------------------------------------PENDIENTE
 } else {

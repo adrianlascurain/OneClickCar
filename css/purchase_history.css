@@ -10,11 +10,22 @@ body {
   
 }
 
+#titleDepositAccount, #titleReport {
+  margin-top: 58px;
+  margin-bottom: 25px;
+  margin-left: 62px;
+  color: #08315f;
+  font-family: "Poppins";
+  font-weight: bold !important;
+  font-size: 40px;
+}
+
 .barraLeft h2 {
   font-size: 16px;
   margin: 0px auto;
   font-family: "Montserrat";
   cursor: pointer;
+  word-break: break-all;
 }
 
 #close {

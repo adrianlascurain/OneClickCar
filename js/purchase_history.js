@@ -684,6 +684,8 @@ function createCarouselBought(carsBought) {
     .then((response) => response.json())
     .then((dataCarsGeneral) => {
       console.log(dataCarsGeneral);
+      let htmlContMobile;
+      let isActive = false;
       htmlContMobile += `
       <div class="carousel-inner">
   `; // Inserción hasta inner

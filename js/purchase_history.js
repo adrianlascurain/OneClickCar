@@ -716,7 +716,7 @@ function createCarouselSold() {
           }
           isActive = true;
           htmlContMobile += `
-              <div class="col-6">
+              <div class="">
                 <div class="card" >
                   <!-- Card -->
                   <img src="${dataCarsGeneral[i].img

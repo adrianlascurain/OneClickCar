@@ -628,7 +628,7 @@ function recoverBoughts() {
     .then((dataTransactions) => {
       console.log(dataTransactions);
       let carsBought=[];
-      if (dataTransactions.idTransaction != null) {
+      if (dataTransactions[0] != null) {
         for (i = 0; i < dataTransactions.length; i++){
           if (dataTransactions[i].usersIdBuyer == idUserLogged) {
             carsBought.push(dataTransactions[i].carsIdCars);
@@ -637,6 +637,7 @@ function recoverBoughts() {
         console.log(carsBought);
         createCarouselBought(carsBought);
       } else {
+        let htmlContMobile = "";
         htmlContMobile += `<div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="">

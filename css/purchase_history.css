@@ -30,7 +30,12 @@ body {
   width: 20px;
   margin-bottom: 5px;
 }
+h4{
 
+    font-family: "Monserrat";
+    font-weight: bolder;
+    font-size: 30px;
+}
 /* centro */
 .cajaCuentaDeposito {
   max-width: 900px;
@@ -224,6 +229,7 @@ hr {
   padding-left: 11px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
+  max-width: 370;
 }
 
 
@@ -269,8 +275,12 @@ hr {
     background-color: #002b5b;
     border-radius: 20px;
     margin-bottom: 16px;
+    display: inline-block;
+    
   }
-
+.containerCarousels{
+   display: flex; justify-content: center; align-items: center;
+}
   /* .carousel-control-prev,
   .carousel-control-next {
     width: 45px;

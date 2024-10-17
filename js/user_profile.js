@@ -209,7 +209,7 @@ function modUserAdmFetch(idUser) {
     redirect: "follow",
   };
 
-  fetch(`http://localhost:8080/api/cars/${idUser}`, requestOptions)
+  fetch(`http://localhost:8080/api/users/${idUser}`, requestOptions)
     .then((response) => response.text())
     .then((result) => {
     
@@ -241,11 +241,12 @@ function showInfoModAdmFetch(idUser) {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/users/", requestOptions)
+  fetch(`http://localhost:8080/api/users/${idUser}`, requestOptions)
     .then((response) => response.json())
     .then((dataUsers) => {
      
-    idUserTextNew.setAttribute("disabled","true");
+      idUserTextNew.setAttribute("disabled", "true");
+      idUserTextNew.value = dataUsers.idUser;
     fullNameTextNew.value = dataUsers.fullName;
     phoneNumberTextNew.value = dataUsers.phoneNumber;
     emailTextNew.value = dataUsers.email;

@@ -26,6 +26,31 @@ let passwordTextAdd = document.getElementById("password-ipt-add");
 let btnModificarAdm = document.getElementById("btn-modificar-adm");
 let btnAgregarAdm = document.getElementById("btn-agregar-adm");
 
+// Función para mostrar sweet alert de éxito
+function alertSuccess(titleShow, textShow) {
+  Swal.fire({
+    title: titleShow,
+    text: textShow,
+    imageUrl:
+      "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+    imageWidth: 350,
+    imageHeight: 200,
+    imageAlt: "Custom image",
+    icon: "success",
+  }); //function alertSuccess()
+}
+
+// Función para mostrar sweet alert de error
+function alertFailure(titleShow, textShow) {
+  Swal.fire({
+    title: titleShow,
+    text: textShow,
+    imageAlt: "Custom image",
+    icon: "error",
+  });
+} //function alertFailure()
+
+
   linkProfile.addEventListener("click", (event) => {
     event.preventDefault();
     if ((window.location.pathname = "/pages/user_profile.html")) {

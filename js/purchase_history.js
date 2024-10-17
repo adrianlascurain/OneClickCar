@@ -683,11 +683,9 @@ function createCarouselBought(carsBought) {
   fetch(`http://localhost:8080/api/cars/`, requestOptions)
     .then((response) => response.json())
     .then((dataCarsGeneral) => {
-      console.log(dataCarsGeneral);
       let htmlContMobile;
       let isActive = false;
-      htmlContMobile += `
-      <div class="carousel-inner">
+      htmlContMobile += `<div class="carousel-inner">
   `; // Inserción hasta inner
       for (i = 0; i < dataCarsGeneral.length; i++) {
        

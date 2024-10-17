@@ -690,12 +690,14 @@ function createCarouselBought(carsBought) {
       <div class="carousel-inner">
   `; // Inserción hasta inner
       for (i = 0; i < dataCarsGeneral.length; i++) {
-        console.log("Entro a for de datacarsGeneral");
-        for (j = 0; j < carsBought.length; j++)
-           console.log("Entro a for de carsBought");
+       
+        for (j = 0; j < carsBought.length; j++){
+           
         if (dataCarsGeneral[i].idCar == carsBought[j] &&
           dataCarsGeneral[i].sold == 1
         ) {
+          console.log(dataCarsGeneral[i]);
+          console.log("Entro a for=true de carsBought");
           if (isActive) {
             htmlContMobile += `
           <div class="carousel-item">`;
@@ -722,7 +724,8 @@ function createCarouselBought(carsBought) {
           </div> <!-- ****************************FIN carousel-item -->
           </div><!-- ****************************FIN carousel-inner -->`;
         }//if
-      }//for
+        }//for
+        }
       htmlContMobile += `
       
         <button

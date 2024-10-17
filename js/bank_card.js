@@ -51,7 +51,10 @@ function createCardFetch(raw){
   fetch("http://localhost:8080/api/paymentmethods/", requestOptions)
     .then((response) => response.text())
     .then((result) => {
-if (result.length > 0) {
+      if (result.length > 0) {
+    // Crear un nuevo div que será la tarjeta solo si todas las validaciones se cumplen
+  const nuevaTarjeta = document.createElement('div');
+  nuevaTarjeta.classList.add('cajaCuentaDeposito');
         // Actualizamos referencias de las funciones de los botones
   // Añadir el contenido de la tarjeta
   nuevaTarjeta.innerHTML = `

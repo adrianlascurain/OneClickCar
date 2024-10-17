@@ -123,7 +123,7 @@ function addPaymentAdmFetch() {
     typeCard: typeCardTextAdd.value,
     numberCard: numberCardTextAdd.value,
     dateCard: typeCardTextAdd.value,
-    cvvCard: numberCardTextAdd.value,
+    cvvCard: cvvCardTextAdd.value,
     usersIdUser: idUserTextAdd.value,
   });
 

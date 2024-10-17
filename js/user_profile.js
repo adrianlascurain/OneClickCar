@@ -19,7 +19,11 @@ let fullNameTextAdd= document.getElementById("fullName-ipt-add");
 let phoneNumberTextAdd = document.getElementById("phoneNumber-ipt-add");
 let emailTextAdd = document.getElementById("email-ipt-add");
 let birthDateTextAdd = document.getElementById("birthDate-ipt-add");
-let typeUserTextAdd= document.getElementById("typeUser-ipt-add");
+let typeUserTextAdd = document.getElementById("typeUser-ipt-add");
+let passwordTextAdd = document.getElementById("password-ipt-add");
+
+let btnModificarAdm = document.getElementById("btn-modificar-adm");
+let btnAgregarAdm = document.getElementById("btn-agregar-adm");
 
   linkProfile.addEventListener("click", (event) => {
     event.preventDefault();
@@ -116,11 +120,10 @@ function createTableAdmFetch() {
   </thead>
   <tbody class="table-group-divider">
 `;
-  for (i = 0; i < dataCarsGeneral.length; i++) {
+  for (i = 0; i < dataUsers.length; i++) {
     htmlContent += `
       <tr>
-      <th scope="row">${dataCarsGeneral[i].idCar}</th>
-      <td>${dataUsers[i].idUser}</td> 
+      <th scope="row">${dataUsers[i].idUser}</th>
       <td>${dataUsers[i].fullName}</td>
       <td>${dataUsers[i].phoneNumber}</td>
       <td>${dataUsers[i].email}</td>
@@ -206,6 +209,51 @@ function showInfoModAdmFetch(idUser) {
     .catch((error) => console.error(error));
 } //showInfoModAdmFetch
 
+function addUserAdmFetch() {
+  const myHeaders = new Headers();
+    myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+  myHeaders.append("Content-Type", "application/json");
+
+  const raw = JSON.stringify({
+          fullName: fullNameTextAdd.value,
+          phoneNumber: phoneTextAdd.value,
+          email: emailTextAdd.value,
+          birthDate: birthDateTextAdd.value,
+          password: passwordTextAdd.value,
+          typeUser: typeUserTextAdd.value,
+   
+  });
+
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
+  fetch("http://localhost:8080/api/users/", requestOptions)
+    .then((response) => response.text())
+    .then((dataUser) => {
+     
+      if (dataUser.length > 0) {
+          fullNameTextAdd.value="";
+          phoneNumberTextAdd.value="";
+          emailTextAdd.value="";
+          birthDateTextAdd.value="";
+          passwordTextAdd.value="";
+          typeUserTextAdd.value="";
+   
+          createTableAdmFetch();
+        // Mostramos mensaje de éxito
+        alertSuccess("Registro exitoso", "El usuario fue agregado.");
+      } else {
+        // Mostrar mensaje error
+        alertFailure("Registro fallido",`El correo ${emailTextAdd.value} ya se encuentra registrado`);
+      }
+    })
+    .catch((error) => console.error(error));
+} //function addDepositAdmFetch()
+
 //function validateUser
 function validateUser() {
 	
@@ -232,21 +280,12 @@ if (userData.typeUser == "admin") {
   btnAgregarAdm.addEventListener("click", (event) => {
     event.preventDefault();
       // Validamos que no haya campos vacíos, si no lanzamos sweet alert
-      if (noSerieTextAdd.value != "" &&
-          tipoTextAdd.value != "" &&
-          marcaTextAdd.value != "" &&
-          nombreTextAdd.value != "" &&
-          anioTextAdd.value != "" &&
-          kilTextAdd.value != "" &&
-          transTextAdd.value != "" &&
-          precioTextAdd.value != "" &&
-          imgTextAdd.value != "" &&
-          duenosTextAdd.value != "" &&
-          descripTextAdd.value != "" &&
-          verifTextAdd.value != "" &&
-          vendTextAdd.value != "" &&
-          idVendedorTextAdd.value != "") {
-        addCarAdmFetch()
+      if (fullNameTextAdd.value != "" &&
+          phoneNumberTextAdd.value != "" &&
+          emailTextAdd.value != "" &&
+          birthDateTextAdd.value != "" &&
+          typeUserTextAdd.value != "") {
+        addUserAdmFetch()
         
       } else {
         alertFailure("Registro fallido","Ningún campo puede estar vacío" );

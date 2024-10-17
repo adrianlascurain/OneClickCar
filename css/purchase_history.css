@@ -224,6 +224,7 @@ hr {
   padding-left: 11px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
+  max-width: 370;
 }
 
 
@@ -262,7 +263,7 @@ hr {
   word-break: break-all;
 }
   .containerCarousel {
-    max-width: 744px;
+    max-width: 376px;
     margin-left: 26px;
     margin-right: 26px;
     padding: 0px;

@@ -606,12 +606,6 @@ if (userData.typeUser == "admin") {
 }
   }).catch((error) => console.error(error));
 }
-// ***********Ejecución
-validateUser();
-
-
-
-
 function recoverBoughts() {
   let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
    const myHeaders = new Headers();
@@ -708,7 +702,7 @@ function createCarouselBought(carsBought) {
                   <div class="card-body text-center"><!-- Card body -->
                   <br>
                     <h5 class="text-center card-text">${dataCarsGeneral[i].brand} ${dataCarsGeneral[i].name
-            } ${dataCarsGeneral[i].year}</h5><br>
+            } ${dataCarsGeneral[i].year}</h5><hr><br>
                     <span class="card-text">| ${dataCarsGeneral[i].kilometer.toLocaleString("es-MX")} KM |</span><hr><br>
                     <span class="card-text">$${dataCarsGeneral[i].price.toLocaleString("es-MX")}</span><br>
               </div><!-- ****************************FIN card-body -->
@@ -789,7 +783,7 @@ function createCarouselSold() {
                   <div class="card-body text-center"><!-- Card body -->
                   <br>
                     <h5 class="text-center card-text">${dataCarsGeneral[i].brand} ${dataCarsGeneral[i].name
-            } ${dataCarsGeneral[i].year}</h5><br>
+            } ${dataCarsGeneral[i].year}</h5><hr><br>
                     <span class="card-text">| ${dataCarsGeneral[i].kilometer.toLocaleString("es-MX")} KM |</span><hr><br>
                     <span class="card-text">$${dataCarsGeneral[i].price.toLocaleString("es-MX")}</span><br>
               </div><!-- ****************************FIN card-body -->
@@ -828,6 +822,13 @@ function createCarouselSold() {
     })//then
     .catch((error) => console.error(error));
 }
+// ***********Ejecución
+validateUser();
+
+
+
+
+
   
 
       

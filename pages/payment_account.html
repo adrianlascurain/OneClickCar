@@ -64,13 +64,13 @@
             <!-- div opcionesPerfil-->
           </div>
           <div class="col-sm-10 infoCenter" id="infoCliente">
-            <h1 id="titleDepositAccount">Cuenta de depósito</h1>
+            <h1 id="titleDepositAccount">Cuenta de pago</h1>
             <div class="text-center">
               <img
                 class="img-fluid"
                 id="imgDepositAccount"
                 src="https://res.cloudinary.com/duqki6x6t/image/upload/v1728326342/kkvfvwaurbi02utohsfs.png"
-                alt="Icono cuenta de depósito"
+                alt="Icono cuenta de pago"
               />
             </div>
             <div class="cajaCuentaDeposito" id="btnsInfoCliente">
@@ -108,7 +108,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="modalModificar">
-                  Modifica cuenta de depósito
+                  Modifica cuenta de pago
                 </h5>
                 <button
                   type="button"
@@ -120,26 +120,38 @@
               <div class="modal-body">
                 <form>
                   <div class="mb-3">
-                    <label for="name-ipt-new" class="col-form-label"
+                    <label for="nameCard-ipt-new" class="col-form-label"
                       >Nombre:</label
                     >
-                    <input type="text" class="form-control" id="name-ipt-new" />
+                    <input type="text" class="form-control" id="nameCard-ipt-new" />
                   </div>
                   <div class="mb-3">
-                    <label for="bank-ipt-new" class="col-form-label"
-                      >Banco:</label
+                    <label for="typeCard-ipt-new" class="col-form-label"
+                      >Tipo de tarjeta:</label
                     >
-                    <input type="text" class="form-control" id="bank-ipt-new" />
+                    <input type="text" class="form-control" id="typeCard-ipt-new" />
                   </div>
                   <div class="mb-3">
-                    <label for="account-ipt-new" class="col-form-label"
-                      >Cuenta:</label
+                    <label for="numberCard-ipt-new" class="col-form-label"
+                      >Número de tarjeta:</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="account-ipt-new"
+                      id="numberCard-ipt-new"
                     />
+                  </div>
+                  <div class="mb-3">
+                    <label for="dateCard-ipt-new" class="col-form-label"
+                      >Fecha de vencimiento:</label
+                    >
+                    <input type="text" class="form-control" id="dateCard-ipt-new" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="cvvCard-ipt-new" class="col-form-label"
+                      >CVV:</label
+                    >
+                    <input type="text" class="form-control" id="cvvCard-ipt-new" />
                   </div>
                 </form>
               </div>
@@ -186,36 +198,44 @@
               <div class="modal-body">
                 <form>
                   <div class="mb-3">
-                    <label for="name-ipt-new" class="col-form-label"
+                    <label for="nameCard-ipt-add" class="col-form-label"
                       >Nombre:</label
                     >
-                    <input type="text" class="form-control" id="name-ipt-add" />
+                    <input type="text" class="form-control" id="nameCard-ipt-add" />
                   </div>
                   <div class="mb-3">
-                    <label for="bank-ipt-new" class="col-form-label"
-                      >Banco:</label
+                    <label for="typeCard-ipt-add" class="col-form-label"
+                      >Tipo de tarjeta:</label
                     >
-                    <input type="text" class="form-control" id="bank-ipt-add" />
+                    <input type="text" class="form-control" id="typeCard-ipt-add" />
                   </div>
                   <div class="mb-3">
-                    <label for="account-ipt-new" class="col-form-label"
-                      >Cuenta:</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="account-ipt-add"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="name-ipt-new" class="col-form-label"
-                      >Id user:</label
+                    <label for="numberCard-ipt-add" class="col-form-label"
+                      >Número de tarjeta:</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="iduser-ipt-add"
+                      id="numberCard-ipt-add"
                     />
+                  </div>
+                  <div class="mb-3">
+                    <label for="dateCard-ipt-add" class="col-form-label"
+                      >Fecha de vencimiento:</label
+                    >
+                    <input type="text" class="form-control" id="dateCard-ipt-add" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="cvvCard-ipt-add" class="col-form-label"
+                      >CVV:</label
+                    >
+                    <input type="text" class="form-control" id="cvvCard-ipt-add" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="idUser-ipt-add" class="col-form-label"
+                      >Id usuario:</label
+                    >
+                    <input type="text" class="form-control" id="dUser-ipt-add" />
                   </div>
                 </form>
               </div>

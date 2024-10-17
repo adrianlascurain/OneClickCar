@@ -626,13 +626,15 @@ function recoverBoughts() {
   fetch("http://localhost:8080/api/transactions/", requestOptions)
     .then((response) => response.json())
     .then((dataTransactions) => {
-      let carsBought;
+      console.log(dataTransactions);
+      let carsBought=[];
       if (dataTransactions.idTransaction != null) {
         for (i = 0; i < dataTransactions.length; i++){
           if (dataTransactions[i].usersIdBuyer == idUserLogged) {
             carsBought.push(dataTransactions[i].carsIdCars);
           }
         }
+        console.log(carsBought);
         createCarouselBought(carsBought);
       } else {
         htmlContMobile += `<div class="carousel-inner">
@@ -680,11 +682,14 @@ function createCarouselBought(carsBought) {
   fetch(`http://localhost:8080/api/cars/`, requestOptions)
     .then((response) => response.json())
     .then((dataCarsGeneral) => {
+      console.log(dataCarsGeneral);
       htmlContMobile += `
       <div class="carousel-inner">
   `; // Inserción hasta inner
       for (i = 0; i < dataCarsGeneral.length; i++) {
-        for (j = 0; j < carsBought.length;j++)
+        console.log("Entro a for de datacarsGeneral");
+        for (j = 0; j < carsBought.length; j++)
+           console.log("Entro a for de carsBought");
         if (dataCarsGeneral[i].idCar == carsBought[j] &&
           dataCarsGeneral[i].sold == 1
         ) {

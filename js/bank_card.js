@@ -33,7 +33,71 @@ function cambiarImagen() {
       // Imagen predeterminada si no coincide el número de cuenta
       tarjetaImg.src = 'https://res.cloudinary.com/darjvaffy/image/upload/v1729046581/banco_neutro-removebg-preview_dicuhu.png';
     }
-  }
+}
+// funciona
+function createCardFetch(raw){
+  const myHeaders = new Headers();
+
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+
+   const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
+  fetch("http://localhost:8080/api/paymentmethods/", requestOptions)
+    .then((response) => response.text())
+    .then((result) => {
+if (result.length > 0) {
+        // Actualizamos referencias de las funciones de los botones
+  // Añadir el contenido de la tarjeta
+  nuevaTarjeta.innerHTML = `
+    <h5>${entidadBancaria.value} - ${tipoTarjeta.value}</h5>
+    <div class="cajaCuentaDepositoForm">
+      <img src="${document.getElementById('tarjetaImg').src}" class="card-img-top" alt="${entidadBancaria.value}" style="border-radius: 10px; width: 100px;">
+      <div>
+        <p><strong>Titular de la tarjeta:</strong> ${titular.value}</p>
+        <p><strong>Entidad bancaria:</strong> ${entidadBancaria.value}</p>
+        <p><strong>Tipo de tarjeta:</strong> ${tipoTarjeta.value}</p>
+        <p><strong>Número de tarjeta:</strong> ${numeroTarjeta.value}</p>
+        <p><strong>Fecha de caducidad:</strong> ${fechaCaducidad.value}</p>
+        <p><strong>CVV:</strong> ${cvv.value}</p>
+      </div>
+    </div>
+  `;
+
+  // Añadir la nueva tarjeta al contenedor 'infoAdmin'
+  document.getElementById('infoAdmin').appendChild(nuevaTarjeta);
+
+  // Limpiar los campos de entrada
+  document.getElementById('InfoProfile').reset();
+
+  // Mostrar el mensaje de éxito de SweetAlert
+  Swal.fire({
+    title: "Registro exitoso",
+    text: "Tu tarjeta fue agregada",
+    imageUrl: "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+    imageWidth: 350,
+    imageHeight: 200,
+    imageAlt: "Custom image",
+    icon: "success",
+  });
+      } else {
+        // Mostramos mensaje de error
+        alertFailure(
+          "Registro fallido",
+          `La cuenta de depósito ya se encuentra registrada`
+        );
+      }
+    })
+    .catch((error) => console.error(error));
+
+}
+
+
 // Función para guardar y agregar la tarjeta solo si todas las validaciones se cumplen
 document.getElementById('btnAgregar').addEventListener('click', function () {
   // Capturar los valores de los inputs
@@ -139,39 +203,24 @@ document.getElementById('btnAgregar').addEventListener('click', function () {
     // Crear un ID único para la tarjeta
     const tarjetaId = `tarjeta-${Date.now()}`;
     nuevaTarjeta.id = tarjetaId;
+  // objeto
+  let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
 
-  // Añadir el contenido de la tarjeta
-  nuevaTarjeta.innerHTML = `
-    <h5>${entidadBancaria.value} - ${tipoTarjeta.value}</h5>
-    <div class="cajaCuentaDepositoForm">
-      <img src="${document.getElementById('tarjetaImg').src}" class="card-img-top" alt="${entidadBancaria.value}" style="border-radius: 10px; width: 100px;">
-      <div>
-        <p><strong>Titular de la tarjeta:</strong> ${titular.value}</p>
-        <p><strong>Entidad bancaria:</strong> ${entidadBancaria.value}</p>
-        <p><strong>Tipo de tarjeta:</strong> ${tipoTarjeta.value}</p>
-        <p><strong>Número de tarjeta:</strong> ${numeroTarjeta.value}</p>
-        <p><strong>Fecha de caducidad:</strong> ${fechaCaducidad.value}</p>
-        <p><strong>CVV:</strong> ${cvv.value}</p>
-      </div>
-    </div>
-  `;
+    const raw = JSON.stringify({
+    nameCard: titular.value,
+    typeCard: tipoTarjeta.value,
+    numberCard: numeroTarjeta.value,
+    dateCard: fechaCaducidad.value,
+    cvvCard: cvv.value,
+    usersIdUser: idUserLogged,
+    });
+  
+  createCardFetch(raw);
 
-  // Añadir la nueva tarjeta al contenedor 'infoAdmin'
-  document.getElementById('infoAdmin').appendChild(nuevaTarjeta);
 
-  // Limpiar los campos de entrada
-  document.getElementById('InfoProfile').reset();
 
-  // Mostrar el mensaje de éxito de SweetAlert
-  Swal.fire({
-    title: "Registro exitoso",
-    text: "Tu tarjeta fue agregada",
-    imageUrl: "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
-    imageWidth: 350,
-    imageHeight: 200,
-    imageAlt: "Custom image",
-    icon: "success",
-  });
+
+
 });
 
 // Asignar la fecha actual como el mínimo para el campo de fecha de caducidad

@@ -344,7 +344,7 @@ function addCarAdmFetch() {
   };
 
   fetch("http://localhost:8080/api/cars/", requestOptions)
-    .then((response) => response.text())
+    .then((response) => response.json())
     .then((dataCar) => {
      
       if (dataCar.idCar!=null) {

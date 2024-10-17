@@ -270,6 +270,8 @@ hr {
     background-color: #002b5b;
     border-radius: 20px;
     margin-bottom: 16px;
+    display: inline-block;
+    text-align: center;
   }
 
   /* .carousel-control-prev,

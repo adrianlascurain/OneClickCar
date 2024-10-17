@@ -637,7 +637,7 @@ function recoverBoughts() {
         console.log(carsBought);
         createCarouselBought(carsBought);
       } else {
-        let htmlContMobile = "";
+        let htmlContMobile="";
         htmlContMobile += `<div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="">
@@ -669,9 +669,7 @@ function recoverBoughts() {
 
 // Función para crear carousels en versión Mobile
 function createCarouselBought(carsBought) {
-  let htmlContMobile="";
-  let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
-  let isActive = false;
+
   const myHeaders = new Headers();
   myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
   const requestOptions = {
@@ -694,18 +692,15 @@ function createCarouselBought(carsBought) {
         if (dataCarsGeneral[i].idCar == carsBought[j] &&
           dataCarsGeneral[i].sold == 1
         ) {
-          console.log(dataCarsGeneral[i]);
-          console.log("Entro a for=true de carsBought");
+
           if (isActive) {
-            htmlContMobile += `
-          <div class="carousel-item">`;
+            htmlContMobile += `<div class="carousel-item">`;
           } else {
-            htmlContMobile += `
-          <div class="carousel-item active">`;
+            htmlContMobile += `<div class="carousel-item active">`;
           }
           isActive = true;
           htmlContMobile += `
-              <div class="">
+              
                 <div class="card" >
                   <!-- Card -->
                   <img src="${dataCarsGeneral[i].img
@@ -718,7 +713,7 @@ function createCarouselBought(carsBought) {
               </div><!-- ****************************FIN card-body -->
             
                 </div><!-- ****************************FIN Card -->
-              </div><!-- ****************************FIN col-12 -->
+              
           </div> <!-- ****************************FIN carousel-item -->
           </div><!-- ****************************FIN carousel-inner -->`;
         }//if

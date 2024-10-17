@@ -50,7 +50,7 @@ function createCardFetch(raw){
 
   fetch("http://localhost:8080/api/paymentmethods/", requestOptions)
     .then((response) => response.text())
-    .then((result) => {
+    .then((dataCard) => {
       if (result.length > 0) {
     // Crear un nuevo div que será la tarjeta solo si todas las validaciones se cumplen
   const nuevaTarjeta = document.createElement('div');

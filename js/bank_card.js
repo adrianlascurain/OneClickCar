@@ -51,7 +51,7 @@ function createCardFetch(raw){
   fetch("http://localhost:8080/api/paymentmethods/", requestOptions)
     .then((response) => response.text())
     .then((dataCard) => {
-      if (result.length > 0) {
+      if (dataCard.length > 0) {
     // Crear un nuevo div que será la tarjeta solo si todas las validaciones se cumplen
   const nuevaTarjeta = document.createElement('div');
   nuevaTarjeta.classList.add('cajaCuentaDeposito');
@@ -60,7 +60,7 @@ function createCardFetch(raw){
   nuevaTarjeta.innerHTML = `
     <h5>${entidadBancaria.value} - ${tipoTarjeta.value}</h5>
     <div class="cajaCuentaDepositoForm">
-      <img src="${document.getElementById('tarjetaImg').src}" class="card-img-top" alt="${entidadBancaria.value}" style="border-radius: 10px; width: 100px;">
+      <img src="${document.getElementById('tarjetaImg').src}" class="card-img-top" alt="${dataCard}" style="border-radius: 10px; width: 100px;">
       <div>
         <p><strong>Titular de la tarjeta:</strong> ${titular.value}</p>
         <p><strong>Entidad bancaria:</strong> ${entidadBancaria.value}</p>

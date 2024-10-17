@@ -538,8 +538,8 @@ fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
   .then((response) => response.json())
   .then((userData) => {
 if (userData.typeUser == "admin") {
-  infoCliente.classList.add("d-none");
-  infoCliente.innerHTML = "";
+  // infoCliente.classList.add("d-none");
+  // infoCliente.innerHTML = "";
   
   createTableAdmFetch();
 

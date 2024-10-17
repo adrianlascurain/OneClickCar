@@ -1,7 +1,7 @@
 let navUserProfile = document.getElementById("navUserProfile").classList.add("active");
 
 let infoCliente = document.getElementById("infoCliente");
-let infoAdmin = document.getElementById("infoAdmin");
+let infoAdminn = document.getElementById("infoAdminn");
 
 let linkProfile = document.getElementById("linkProfile");
 let linkPayment = document.getElementById("linkPayment");
@@ -126,7 +126,7 @@ function createTableAdmFetch() {
   fetch("http://localhost:8080/api/users/", requestOptions)
     .then((response) => response.json())
     .then((dataUsers) => {
-  infoAdmi.innerHTML = "";
+  infoAdmin.innerHTML = "";
   let htmlContent = "";
   htmlContent += ` 
   <h1 id="titleReport">Reporte de usuarios</h1><br>
@@ -161,7 +161,7 @@ function createTableAdmFetch() {
     `;
   }
   htmlContent += `</tbody></table></div>`;
-      infoAdmi.insertAdjacentHTML("beforeend", htmlContent);
+      infoAdmin.insertAdjacentHTML("beforeend", htmlContent);
       })
     .catch((error) => console.error(error));
 }//function createTableAdmFetch()
@@ -343,8 +343,8 @@ if (userData.typeUser == "admin") {
 
 } else if (userData.typeUser =="client") {
   // Escondemos la vista de administrador
-  // infoAdmin.innerHTML = "";
-  infoAdmi.innerHTML = "";
+  // infoAdminn.innerHTML = "";
+  infoAdmin.innerHTML = "";
   headerAdmin.innerHTML = "";
   console.log(userData);
   let nameUserTxt = document.getElementById("name-ipt");
@@ -360,7 +360,7 @@ if (userData.typeUser == "admin") {
   //------------------------------------------------PENDIENTE
 } else {
     infoCliente.classList.add("d-none");
-  infoAdmi.classList.add("d-none");
+  infoAdmin.classList.add("d-none");
   if ((window.location.pathname = "/pages/purchase_history.html")) {
     // local
     window.location.href = "../pages/sign_in.html";

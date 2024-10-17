@@ -63,7 +63,7 @@ body{
 .cajaProfileForm{
     background-color: #627997;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px auto;
     text-align: center;
     color: black;
     font-family: 'Montserrat';
@@ -106,8 +106,30 @@ body{
     height: 100vh;
 
 }
+.btn.btn-primary {
+  background-color: #e08f0c;
+  border-radius: 20px;
+  border-color: #002b5b;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: bold;
+  margin: 10px;
+  
+}
+ #titleReport {
+  margin-top: 58px;
+  margin-bottom: 25px;
+  margin-left: 62px;
+  color: #08315f;
+  font-family: "Poppins";
+  font-weight: bold !important;
+  font-size: 40px;
+}
 
 @media (width<= 575px) {
   .opcionesPerfil {
     margin: 20px;
-  }}
+  }
+.itemForm{
+text-align:center;
+}}

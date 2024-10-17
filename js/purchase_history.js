@@ -590,7 +590,7 @@ if (userData.typeUser == "admin") {
   headerAdmin.innerHTML = "";
   
   createCarouselSold();
-  createCarouselBought();
+  recoverBoughts();
   //------------------------------------------------PENDIENTE
 } else {
     infoCliente.classList.add("d-none");

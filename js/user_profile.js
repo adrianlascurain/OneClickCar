@@ -100,7 +100,7 @@ function createTableAdmFetch() {
   fetch("http://localhost:8080/api/users/", requestOptions)
     .then((response) => response.json())
     .then((dataUsers) => {
-  infoAdmin.innerHTML = "";
+  headerAdmin.innerHTML = "";
   let htmlContent = "";
   htmlContent += ` 
 
@@ -135,7 +135,7 @@ function createTableAdmFetch() {
     `;
   }
   htmlContent += `</tbody></table></div>`;
-      infoAdmin.insertAdjacentHTML("beforeend", htmlContent);
+      headerAdmin.insertAdjacentHTML("beforeend", htmlContent);
       })
     .catch((error) => console.error(error));
 }//function createTableAdmFetch()

@@ -49,6 +49,8 @@ let linkLogOut = document.getElementById("linkLogOut");
 let linkDeposit = document.getElementById("linkDeposit");
 
 let carouselSold = document.getElementById("carouselSold");
+let carouselBought = document.getElementById("carouselBought");
+
 // Función para mostrar sweet alert de éxito
 function alertSuccess(titleShow, textShow) {
   Swal.fire({
@@ -588,7 +590,7 @@ if (userData.typeUser == "admin") {
   headerAdmin.innerHTML = "";
   
   createCarouselSold();
-  //createCarouselBuyed();
+  createCarouselBought();
   //------------------------------------------------PENDIENTE
 } else {
     infoCliente.classList.add("d-none");
@@ -610,58 +612,115 @@ validateUser();
 
 
 
+function recoverBoughts() {
+  let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
+   const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+
+   const requestOptions = {
+     method: "GET",
+     headers: myHeaders,
+    redirect: "follow",
+  };
+
+  fetch("http://localhost:8080/api/transactions/", requestOptions)
+    .then((response) => response.json())
+    .then((dataTransactions) => {
+      let carsBought;
+      if (dataTransactions.idTransaction != null) {
+        for (i = 0; i < dataTransactions.length; i++){
+          if (dataTransactions[i].usersIdBuyer == idUserLogged) {
+            carsBought.push(dataTransactions[i].carsIdCars);
+          }
+        }
+        createCarouselBought(carsBought);
+      } else {
+        htmlContMobile += `<div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="">
+                <div class="card" >
+              <img src="" alt="Aún no has comprado vehículos"
+              >
+              <div class="card-body>
+              <h5></>
+              <span></span><hr>
+              <span></span>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>`;
+        carouselBought.insertAdjacentHTML("beforeend", htmlContMobile);
+        htmlContMobile = "";
+    }
+
+    })
+
+
+
+
+}
 
 
 
 // Función para crear carousels en versión Mobile
-function createCarouselBuyed() {
-  htmlContMobile += `
+function createCarouselBought(carsBought) {
+  let htmlContMobile="";
+  let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
+  let isActive = false;
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow"
+  };
+
+  fetch(`http://localhost:8080/api/cars/`, requestOptions)
+    .then((response) => response.json())
+    .then((dataCarsGeneral) => {
+      htmlContMobile += `
       <div class="carousel-inner">
   `; // Inserción hasta inner
-  for (let i = 0; i < listCars.length; i++) {
-    if (isActive) {
-      htmlContMobile += `
+      for (i = 0; i < dataCarsGeneral.length; i++) {
+        for (j = 0; j < carsBought.length;j++)
+        if (dataCarsGeneral[i].idCar == carsBought[j] &&
+          dataCarsGeneral[i].sold == 1
+        ) {
+          if (isActive) {
+            htmlContMobile += `
           <div class="carousel-item">`;
-    } else {
-      htmlContMobile += `
+          } else {
+            htmlContMobile += `
           <div class="carousel-item active">`;
-    }
-    isActive = true;
-    htmlContMobile += `
-              <div class="col-12">
+          }
+          isActive = true;
+          htmlContMobile += `
+              <div class="">
                 <div class="card" >
                   <!-- Card -->
-                  <img src="${
-                    listCars[i].img
-                  }" class="card-img-top img-fluid" alt="${listCars[i].name}" />
+                  <img src="${dataCarsGeneral[i].img
+            }" class="card-img-top img-fluid" alt="${dataCarsGeneral[i].name}" />
                   <div class="card-body text-center"><!-- Card body -->
-                    <h5 class="text-center card-text">${listCars[i].brand} ${
-      listCars[i].name
-    } ${listCars[i].year}</h5><hr>
-                    <span class="card-text">| ${listCars[
-                      i
-                    ].kilometer.toLocaleString("es-MX")} KM |</span><hr>
-                    <span class="card-text">$ ${listCars[
-                      i
-                    ].price.toLocaleString("es-MX")}</span>
-                    <div class="text-center"><a id="btnInfoMob${
-                      listCars[i].idCar
-                    }"  onclick="productInformation(${listCars[i].idCar},${
-      listCars[i].usersIdSeller
-    })" oncontextmenu="productInformation(${listCars[i].idCar},${
-      listCars[i].usersIdSeller
-    })" class="btn btn-primary btn-informacion" ">Más información</a></div><!-- fin div boton-->
-                  </div><!-- ****************************FIN Card body -->
+                    <h5 class="text-center card-text">${dataCarsGeneral[i].brand} ${dataCarsGeneral[i].name
+            } ${dataCarsGeneral[i].year}</h5><hr>
+                    <span class="card-text">| ${dataCarsGeneral[i].kilometer.toLocaleString("es-MX")} KM |</span><hr>
+                    <span class="card-text">${dataCarsGeneral[i].price.toLocaleString("es-MX")}</span>
+              </div><!-- ****************************FIN card-body -->
+            
                 </div><!-- ****************************FIN Card -->
               </div><!-- ****************************FIN col-12 -->
-          </div> <!-- ****************************FIN carousel-item -->`;
-  } // for hasta final tarjetas
-  htmlContMobile += `
-      </div><!-- ****************************FIN carousel-inner -->
+          </div> <!-- ****************************FIN carousel-item -->
+          </div><!-- ****************************FIN carousel-inner -->`;
+        }//if
+      }//for
+      htmlContMobile += `
+      
         <button
           class="carousel-control-prev"
           type="button"
-          data-bs-target="#carousel${tipoCarro}Mobile"
+          data-bs-target="#carouselSold"
           data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -670,21 +729,22 @@ function createCarouselBuyed() {
         <button
           class="carousel-control-next"
           type="button"
-          data-bs-target="#carousel${tipoCarro}Mobile"
+          data-bs-target="#carouselSold"
           data-bs-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
   `;
+      // Inserción final al documento
+      carouselBought.insertAdjacentHTML("beforeend", htmlContMobile);
+      htmlContMobile = "";
+      isActive = false;
+    })//then
+    .catch((error) => console.error(error));
+}
 
-  // Inserción final al documento
-  carouselSold.insertAdjacentHTML("beforeend", htmlContMobile);
-  htmlContMobile = "";
-  isActive = false;
-} // createCarouselMobile()
 
-// Función para crear carousels en versión Mobile
 function createCarouselSold() {
   let htmlContMobile="";
   let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
@@ -762,7 +822,6 @@ function createCarouselSold() {
     })//then
     .catch((error) => console.error(error));
 }
-
   
 
       

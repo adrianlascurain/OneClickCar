@@ -134,7 +134,7 @@ function createTableAdmFetch() {
   <div class="text-left">
   <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAgregar">Agregar</a></div>
   <div class="table-responsive">
-  <table class="table table-bordered  border-secondary align-middle"> 
+  <table class="table table-striped table-bordered  border-secondary align-middle"> 
       <thead>
         <tr>
       <th scope="col">Id user</th>

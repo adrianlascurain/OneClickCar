@@ -537,73 +537,71 @@ function validateUser() {
 fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
   .then((response) => response.json())
   .then((userData) => {
-if (userData.typeUser == "admin") {
-  // infoCliente.classList.add("d-none");
-  // infoCliente.innerHTML = "";
-  
-  createTableAdmFetch();
-
-  
+    if (userData.typeUser == "admin") {
+      infoCliente.classList.add("d-none");
+      infoCliente.innerHTML = "";
+      
+      createTableAdmFetch();
 
 
-  btnAgregarAdm.addEventListener("click", (event) => {
-    event.preventDefault();
-      // Validamos que no haya campos vacíos, si no lanzamos sweet alert
-      if (noSerieTextAdd.value != "" &&
-          tipoTextAdd.value != "" &&
-          marcaTextAdd.value != "" &&
-          nombreTextAdd.value != "" &&
-          anioTextAdd.value != "" &&
-          kilTextAdd.value != "" &&
-          transTextAdd.value != "" &&
-          precioTextAdd.value != "" &&
-          imgTextAdd.value != "" &&
-          duenosTextAdd.value != "" &&
-          descripTextAdd.value != "" &&
-          verifTextAdd.value != "" &&
-          vendTextAdd.value != "" &&
-          idVendedorTextAdd.value != "") {
-        addCarAdmFetch()
-        
+      btnAgregarAdm.addEventListener("click", (event) => {
+        event.preventDefault();
+          // Validamos que no haya campos vacíos, si no lanzamos sweet alert
+          if (noSerieTextAdd.value != "" &&
+              tipoTextAdd.value != "" &&
+              marcaTextAdd.value != "" &&
+              nombreTextAdd.value != "" &&
+              anioTextAdd.value != "" &&
+              kilTextAdd.value != "" &&
+              transTextAdd.value != "" &&
+              precioTextAdd.value != "" &&
+              imgTextAdd.value != "" &&
+              duenosTextAdd.value != "" &&
+              descripTextAdd.value != "" &&
+              verifTextAdd.value != "" &&
+              vendTextAdd.value != "" &&
+              idVendedorTextAdd.value != "") {
+            addCarAdmFetch()
+            
+          } else {
+            alertFailure("Registro fallido","Ningún campo puede estar vacío" );
+          }//else
+      });//btnAgregar.addEventListener()
+
+
+      btnChangeCars.addEventListener("click", event => {
+        infoAdmin.innerHTML = "";
+        createTableAdmFetch();
+      });
+      btnChangeTrans.addEventListener("click", event => {
+        infoAdmin.innerHTML = "";
+        createTableAdmFetchTrans();
+      });
+      btnChangeComm.addEventListener("click", event => {
+        infoAdmin.innerHTML = "";
+        createTableAdmFetchComm();
+      });
+      
+    } else if (userData.typeUser =="client") {
+      // Escondemos la vista de administrador
+      infoAdmin.innerHTML = "";
+      headerAdmin.innerHTML = "";
+      
+      createCarouselSold();
+      recoverBoughts();
+      //------------------------------------------------PENDIENTE
+    } else {
+        infoCliente.classList.add("d-none");
+      infoAdmin.classList.add("d-none");
+      if ((window.location.pathname = "/pages/purchase_history.html")) {
+        // local
+        window.location.href = "../pages/sign_in.html";
       } else {
-        alertFailure("Registro fallido","Ningún campo puede estar vacío" );
-      }//else
-  });//btnAgregar.addEventListener()
-
-
-  btnChangeCars.addEventListener("click", event => {
-    infoAdmin.innerHTML = "";
-    createTableAdmFetch();
-  });
-  btnChangeTrans.addEventListener("click", event => {
-    infoAdmin.innerHTML = "";
-    createTableAdmFetchTrans();
-  });
-  btnChangeComm.addEventListener("click", event => {
-    infoAdmin.innerHTML = "";
-    createTableAdmFetchComm();
-  });
-
-} else if (userData.typeUser =="client") {
-  // Escondemos la vista de administrador
-  infoAdmin.innerHTML = "";
-  headerAdmin.innerHTML = "";
-  
-  createCarouselSold();
-  recoverBoughts();
-  //------------------------------------------------PENDIENTE
-} else {
-    infoCliente.classList.add("d-none");
-  infoAdmin.classList.add("d-none");
-  if ((window.location.pathname = "/pages/purchase_history.html")) {
-    // local
-    window.location.href = "../pages/sign_in.html";
-  } else {
-    // github
-    window.location.href =
-      "https://adrianlascurain.github.io/OneClickCar/pages/sign_in.html";
-  }
-}
+        // github
+        window.location.href =
+          "https://adrianlascurain.github.io/OneClickCar/pages/sign_in.html";
+      }
+    }
   }).catch((error) => console.error(error));
 }
 function recoverBoughts() {

@@ -2,7 +2,7 @@ let navUserProfile = document.getElementById("navUserProfile").classList.add("ac
 
 let infoCliente = document.getElementById("infoCliente");
 // let infoAdmin = document.getElementById("infoAdmin");
-let headerAdmin = document.getElementById("headerAdmin");
+let infoAdmi = document.getElementById("infoAdmi");
 let linkProfile = document.getElementById("linkProfile");
 let linkPayment = document.getElementById("linkPayment");
 let linkPurchase = document.getElementById("linkPurchase");
@@ -126,10 +126,10 @@ function createTableAdmFetch() {
   fetch("http://localhost:8080/api/users/", requestOptions)
     .then((response) => response.json())
     .then((dataUsers) => {
-  headerAdmin.innerHTML = "";
+  infoAdmi.innerHTML = "";
   let htmlContent = "";
   htmlContent += ` 
-
+  <h1 id="titleReport">Reporte de usuarios</h1><br>
   <div class="text-left">
   <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAgregar">Agregar</a></div>
   <div class="table-responsive">
@@ -161,7 +161,7 @@ function createTableAdmFetch() {
     `;
   }
   htmlContent += `</tbody></table></div>`;
-      headerAdmin.insertAdjacentHTML("beforeend", htmlContent);
+      infoAdmi.insertAdjacentHTML("beforeend", htmlContent);
       })
     .catch((error) => console.error(error));
 }//function createTableAdmFetch()
@@ -176,7 +176,7 @@ function modUserAdmFetch(idUser) {
   };
 
   fetch(
-        `http://localhost:8080/api/users/${idUser}?fullName=${fullNameTextNew.value}&phoneNumber=${phoneNumberTextNew.value}&email=${emailTextNew.value}&birthDate=${birthDateNew.value}&=typeUser${typeUserTextNew.value}`,
+        `http://localhost:8080/api/users/${idUser}?fullName=${fullNameTextNew.value}&phoneNumber=${phoneNumberTextNew.value}&email=${emailTextNew.value}&birthDate=${birthDateTextNew.value}&typeUser=${typeUserTextNew.value}`,
     requestOptions
   )
     .then((response) => response.text())
@@ -344,6 +344,7 @@ if (userData.typeUser == "admin") {
 } else if (userData.typeUser =="client") {
   // Escondemos la vista de administrador
   // infoAdmin.innerHTML = "";
+  infoAdmi.innerHTML = "";
   headerAdmin.innerHTML = "";
   console.log(userData);
   let nameUserTxt = document.getElementById("name-ipt");
@@ -359,7 +360,7 @@ if (userData.typeUser == "admin") {
   //------------------------------------------------PENDIENTE
 } else {
     infoCliente.classList.add("d-none");
-  headerAdmin.classList.add("d-none");
+  infoAdmi.classList.add("d-none");
   if ((window.location.pathname = "/pages/purchase_history.html")) {
     // local
     window.location.href = "../pages/sign_in.html";

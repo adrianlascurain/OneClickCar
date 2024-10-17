@@ -30,7 +30,12 @@ body {
   width: 20px;
   margin-bottom: 5px;
 }
+h4{
 
+    font-family: "Monserrat";
+    font-weight: bolder;
+    font-size: 30px;
+}
 /* centro */
 .cajaCuentaDeposito {
   max-width: 900px;

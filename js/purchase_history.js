@@ -706,11 +706,11 @@ function createCarouselBought(carsBought) {
                   <img src="${dataCarsGeneral[i].img
             }" class="card-img-top img-fluid" alt="${dataCarsGeneral[i].name}" />
                   <div class="card-body text-center"><!-- Card body -->
-                  <hr>
+                  <br>
                     <h5 class="text-center card-text">${dataCarsGeneral[i].brand} ${dataCarsGeneral[i].name
-            } ${dataCarsGeneral[i].year}</h5><hr>
-                    <span class="card-text">| ${dataCarsGeneral[i].kilometer.toLocaleString("es-MX")} KM |</span><hr><hr>
-                    <span class="card-text">$${dataCarsGeneral[i].price.toLocaleString("es-MX")}</span><hr>
+            } ${dataCarsGeneral[i].year}</h5><br>
+                    <span class="card-text">| ${dataCarsGeneral[i].kilometer.toLocaleString("es-MX")} KM |</span><hr><br>
+                    <span class="card-text">$${dataCarsGeneral[i].price.toLocaleString("es-MX")}</span><br>
               </div><!-- ****************************FIN card-body -->
             
                 </div><!-- ****************************FIN Card -->
@@ -725,7 +725,7 @@ function createCarouselBought(carsBought) {
         <button
           class="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselSold"
+          data-bs-target="#carouselBought"
           data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -734,7 +734,7 @@ function createCarouselBought(carsBought) {
         <button
           class="carousel-control-next"
           type="button"
-          data-bs-target="#carouselSold"
+          data-bs-target="#carouselBought"
           data-bs-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -787,11 +787,11 @@ function createCarouselSold() {
                   <img src="${dataCarsGeneral[i].img
             }" class="card-img-top img-fluid" alt="${dataCarsGeneral[i].name}" />
                   <div class="card-body text-center"><!-- Card body -->
-                  <hr>
+                  <br>
                     <h5 class="text-center card-text">${dataCarsGeneral[i].brand} ${dataCarsGeneral[i].name
-            } ${dataCarsGeneral[i].year}</h5><hr>
-                    <span class="card-text">| ${dataCarsGeneral[i].kilometer.toLocaleString("es-MX")} KM |</span><hr><hr>
-                    <span class="card-text">${dataCarsGeneral[i].price.toLocaleString("es-MX")}</span><hr>
+            } ${dataCarsGeneral[i].year}</h5><br>
+                    <span class="card-text">| ${dataCarsGeneral[i].kilometer.toLocaleString("es-MX")} KM |</span><hr><br>
+                    <span class="card-text">$${dataCarsGeneral[i].price.toLocaleString("es-MX")}</span><br>
               </div><!-- ****************************FIN card-body -->
             
                 </div><!-- ****************************FIN Card -->

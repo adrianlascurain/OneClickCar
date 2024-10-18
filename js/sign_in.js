@@ -52,7 +52,7 @@ fetch("http://localhost:8080/api/users/", requestOptions)
   .then((response) => response.json())
   .then((user) => {
     
-    if (user.userId != null) {
+    if (user.idUser != null) {
       document.getElementById('userForm').reset();
       // Mostrar mensaje de éxito
       alertSuccess('Registro exitoso', 'Felicidades has creado una nueva cuenta, ahora puedes dirigirte a iniciar sesión.');

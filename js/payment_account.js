@@ -378,13 +378,13 @@ linkPayment.addEventListener("click", (event) => {
 
 linkDeposit.addEventListener("click", (event) => {
   event.preventDefault();
-  if ((window.location.pathname = "/pages/payment_account.html")) {
+  if ((window.location.pathname = "/pages/deposit_account.html")) {
     // local
-    window.location.href = "../pages/payment_account.html";
+    window.location.href = "../pages/deposit_account.html";
   } else {
     // github
     window.location.href =
-      "https://adrianlascurain.github.io/OneClickCar/pages/payment_account.html";
+      "https://adrianlascurain.github.io/OneClickCar/pages/deposit_account.html";
   }
 });
 

@@ -312,15 +312,7 @@ function validateUser() {
         infoAdmin.innerHTML = "";
         // Mostramos o no (si no tiene) datos de usuario
         //Aquí agregar código Luis José
-        
-
-
-
-
-
-
-
-
+        window.location.href = "../pages/bank_cards.html";
       } else {
         infoCliente.classList.add("d-none");
         infoAdmin.classList.add("d-none");

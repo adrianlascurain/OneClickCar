@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../fonts/LogoBlackOCK.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cuenta de depósito</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style -->
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/deposit_account.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script src="../assets/sweetAlert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../assets/emailJS/dist/email.min.js"></script>
+  </head>
+
+  <body>
+    <header id="nav_bar"></header>
+    <main>
+      <div class="container-fluid">
+        <div class="row" id="infoRow">
+          <div class="col-sm-2 barraLeft">
+            <div class="opcionesPerfil">
+              <br />
+              <h2 id="linkProfile">INFORMACIÓN USUARIO</h2>
+              <br />
+              <h2 id="linkPurchase">HISTORIAL DE TRANSACCIONES</h2>
+              <br />
+              <h2 class="nav-link active" id="linkPayment">FORMAS DE PAGO</h2>
+              <br />
+              <h2  id="linkDeposit">
+                CUENTA DE DEPÓSITO
+              </h2>
+              <br />
+              <h2 id="linkLogOut">
+                CERRAR SESIÓN
+                <img
+                  src="https://res.cloudinary.com/duxbrimwv/image/upload/v1726284778/exitIcon_dg9gyx.svg"
+                  alt="exitIcon"
+                />
+              </h2>
+            </div>
+            <!-- div opcionesPerfil-->
+          </div>
+          <div class="col-sm-10 infoCenter" id="infoCliente">
+            <h1 id="titleDepositAccount">Cuenta de pago</h1>
+            <div class="text-center">
+              <img
+                class="img-fluid"
+                id="imgDepositAccount"
+                src="https://res.cloudinary.com/duqki6x6t/image/upload/v1728326342/kkvfvwaurbi02utohsfs.png"
+                alt="Icono cuenta de pago"
+              />
+            </div>
+            <div class="cajaCuentaDeposito" id="btnsInfoCliente">
+              <div class="cajaCuentaDepositoForm">
+                <form action="" id="InfoProfile">
+                  <div class="itemForm">
+                    <label for="name-ipt">NOMBRE:</label>
+                    <input type="text" id="name-ipt" />
+                  </div>
+                  <div class="itemForm">
+                    <label for="bank-ipt">BANCO:</label>
+                    <input type="text" id="bank-ipt" />
+                  </div>
+                  <div class="itemForm">
+                    <label for="account-ipt">CUENTA:</label>
+                    <input type="text" id="account-ipt" />
+                  </div>
+                </form>
+              </div>
+              <div class="col-sm-12 text-center" id="btnSubContainer"></div>
+            </div>
+          </div>
+          <div class="col-sm-10 infoCenter" id="infoAdmin"></div>
+        </div>
+        <!-- infoClienteRow-->
+
+        <div
+          class="modal fade"
+          id="modalModificar"
+          tabindex="-1"
+          aria-labelledby="modalModificar"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalModificar">
+                  Modifica cuenta de pago
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="inert"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="nameCard-ipt-new" class="col-form-label"
+                      >Nombre:</label
+                    >
+                    <input type="text" class="form-control" id="nameCard-ipt-new" />
+                  </div>
+                    <label for="nameBank-ipt-new" class="col-form-label"
+                      >Banco:</label
+                    >
+                    <input type="text" class="form-control" id="nameBank-ipt-new" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="typeCard-ipt-new" class="col-form-label"
+                      >Tipo de tarjeta:</label
+                    >
+                    <input type="text" class="form-control" id="typeCard-ipt-new" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="numberCard-ipt-new" class="col-form-label"
+                      >Número de tarjeta:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="numberCard-ipt-new"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="dateCard-ipt-new" class="col-form-label"
+                      >Fecha de vencimiento:</label
+                    >
+                    <input type="text" class="form-control" id="dateCard-ipt-new" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="cvvCard-ipt-new" class="col-form-label"
+                      >CVV:</label
+                    >
+                    <input type="text" class="form-control" id="cvvCard-ipt-new" />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Salir
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="btn-modificar-adm"
+                >
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="modalAgregar"
+          tabindex="-1"
+          aria-labelledby="modalAgregar"
+          aria-hidden="intert"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalAgregar">
+                  Agrega cuenta de depósito
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="nameCard-ipt-add" class="col-form-label"
+                      >Nombre:</label
+                    >
+                    <input type="text" class="form-control" id="nameCard-ipt-add" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="nameBank-ipt-add" class="col-form-label"
+                      >Banco:</label
+                    >
+                    <input type="text" class="form-control" id="nameBank-ipt-add" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="typeCard-ipt-add" class="col-form-label"
+                      >Tipo de tarjeta:</label
+                    >
+                    <input type="text" class="form-control" id="typeCard-ipt-add" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="numberCard-ipt-add" class="col-form-label"
+                      >Número de tarjeta:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="numberCard-ipt-add"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="dateCard-ipt-add" class="col-form-label"
+                      >Fecha de vencimiento:</label
+                    >
+                    <input type="text" class="form-control" id="dateCard-ipt-add" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="cvvCard-ipt-add" class="col-form-label"
+                      >CVV:</label
+                    >
+                    <input type="text" class="form-control" id="cvvCard-ipt-add" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="idUser-ipt-add" class="col-form-label"
+                      >Id usuario:</label
+                    >
+                    <input type="text" class="form-control" id="idUser-ipt-add" />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="btn-agregar-adm"
+                >
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- container-fluid -->
+    </main>
+    <footer id="footer_back"></footer>
+
+    <!-- Scripts -->
+    <!-- navbar y footer -->
+    <script src="../js/navigation.js" defer></script>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- funcionalidad página -->
+    <script defer src="../js/payment_account.js"></script>
+    <script defer src="../js/subscribe.js"></script>
+  </body>
+</html>

@@ -321,7 +321,7 @@ function registerCar(raw) {
     .then((response) => response.json())
     .then((dataCar) => {
         
-        if (dataCar.idCar) {
+        if (dataCar.idCar != null) {
             
         // Mensaje de éxito
         Swal.fire({
@@ -342,7 +342,7 @@ function registerCar(raw) {
         // Mostrar mensaje error
         Swal.fire({
             title: "Registro fallido",
-            text: `El número de serie ${dataCar.nuSerial} ya se encuentra registrado`,
+            text: `El número de serie ${serialNumberValue} ya se encuentra registrado`,
             imageAlt: "Custom image",
             icon: "error",
     });

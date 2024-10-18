@@ -31,13 +31,15 @@ body {
   h5 {
     text-align: start;
   }
-  
+
   .barraLeft h2 {
     font-size: 16px;
     margin: 0px auto;
     font-family: "Montserrat";
     cursor: pointer;
+    word-break: break-all;
   }
+
   
   #close {
     margin-top: 20px;
@@ -185,7 +187,7 @@ body {
     background-color: white;
     color: #002b5b !important;
     border-radius: 20px;
-    padding: 4px 16px
+    /* padding: 4px 16px */
   }
   .modal-title {
     color: black;

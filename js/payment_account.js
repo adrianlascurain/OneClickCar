@@ -201,11 +201,12 @@ function modPaymentAdmFetch(idCard) {
   };
 
   fetch(
-    `http://localhost:8080/api/paymentmethods/${idCard}?nameCard=${nameCardTextNew.value}&typeCard=${typeCardTextNew.value}&numberCard=${numberCardTextNew.value}&dateCard=${dateCardTextNew.value}&cvvCard=${cvvCardTextNew.value}`,
+    `http://localhost:8080/api/paymentmethods/${idCard}?nameCard=${nameCardTextNew.value}&typeCard=${typeCardTextNew.value}&numberCard=${numberCardTextNew.value}&dateCard=${dateCardTextNew.value}&cvvCard=${cvvCardTextNew.value}&nameBank=${nameBankTextNew.value}`,
     requestOptions
   )
     .then((response) => response.text())
-    .then((result) => {
+    .then((dataCard) => {
+      
       
       createTableAdmFetch();
     })

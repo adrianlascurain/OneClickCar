@@ -63,7 +63,7 @@ function createTableAdmFetch() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/depositmethods/", requestOptions)
+  fetch("http://3.16.180.62/api/depositmethods/", requestOptions)
     .then((response) => response.json())
     .then((dataDepositMethod) => {
       infoAdmin.innerHTML = "";
@@ -124,7 +124,7 @@ function addDepositAdmFetch() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/depositmethods/", requestOptions)
+  fetch("http://3.16.180.62/api/depositmethods/", requestOptions)
     .then((response) => response.text())
     .then((dataDepositMethod) => {
       
@@ -158,7 +158,7 @@ function showInfoModAdmFetch(idAccount) {
     redirect: "follow",
   };
 
-  fetch(`http://localhost:8080/api/depositmethods/${idAccount}`, requestOptions)
+  fetch(`http://3.16.180.62/api/depositmethods/${idAccount}`, requestOptions)
     .then((response) => response.json())
     .then((datumDepositMethod) => {
       
@@ -180,7 +180,7 @@ function modDepositAdmFetch(idAccount) {
   };
 
   fetch(
-    `http://localhost:8080/api/depositmethods/${idAccount}?nameAccount=${nameTextNew.value}&nameBank=${bankTextNew.value}&accountBank=${accountTextNew.value}`,
+    `http://3.16.180.62/api/depositmethods/${idAccount}?nameAccount=${nameTextNew.value}&nameBank=${bankTextNew.value}&accountBank=${accountTextNew.value}`,
     requestOptions
   )
     .then((response) => response.text())
@@ -201,7 +201,7 @@ function delDepositAdmFetch(idAccount) {
     redirect: "follow",
   };
 
-  fetch(`http://localhost:8080/api/depositmethods/${idAccount}`, requestOptions)
+  fetch(`http://3.16.180.62/api/depositmethods/${idAccount}`, requestOptions)
     .then((response) => response.text())
     .then((result) => {
       
@@ -226,7 +226,7 @@ function showInfoModClientFetch() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/depositmethods/", requestOptions)
+  fetch("http://3.16.180.62/api/depositmethods/", requestOptions)
     .then((response) => response.json())
     .then((dataDepositMethod) => {
       let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
@@ -339,7 +339,7 @@ function addDepositClientFetch() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/depositmethods/", requestOptions)
+  fetch("http://3.16.180.62/api/depositmethods/", requestOptions)
     .then((response) => response.text())
     .then((result) => {
       
@@ -378,7 +378,7 @@ function modDepositCliFetch(idAccount) {
       };
 
       fetch(
-        `http://localhost:8080/api/depositmethods/${idAccount}?nameAccount=${nameText.value}&nameBank=${bankText.value}&accountBank=${accountText.value}`,
+        `http://3.16.180.62/api/depositmethods/${idAccount}?nameAccount=${nameText.value}&nameBank=${bankText.value}&accountBank=${accountText.value}`,
         requestOptions
       )
         .then((response) => response.text())
@@ -419,7 +419,7 @@ function delDepositCliFetch(idAccount) {
     };
 
     fetch(
-      `http://localhost:8080/api/depositmethods/${idAccount}`,
+      `http://3.16.180.62/api/depositmethods/${idAccount}`,
       requestOptions
     )
       .then((response) => response.text())
@@ -461,7 +461,7 @@ function validateUser() {
     redirect: "follow"
   };
 
-  fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
+  fetch(`http://3.16.180.62/api/users/email/${emailUser}`, requestOptions)
     .then((response) => response.json())
     .then((userData) => {
       // Validamos si el usuario es administrado (0), nulo (no ha iniciado sesión) o >1 es cliente

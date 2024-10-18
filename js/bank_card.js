@@ -87,8 +87,8 @@ function createCardFetch(raw){
     body: raw,
     redirect: "follow",
   };
-console.log(raw);
-  fetch("http://localhost:8080/api/paymentmethods/", requestOptions)
+
+  fetch("http://3.16.180.62/api/paymentmethods/", requestOptions)
     .then((response) => response.json())
     .then((dataCard) => {
      if (dataCard.idCard != null) {
@@ -260,7 +260,6 @@ document.getElementById('btnAgregar').addEventListener('click', function () {
     cvvCard: cvv.value,
     usersIdUser: idUserLogged,
     });
-  console.log("estoy adentro del fetch");
   createCardFetch(raw);
 
 
@@ -411,12 +410,12 @@ document.getElementById('btnModificar').addEventListener('click', function () {
         redirect: "follow",
       };
     
-      fetch(`http://localhost:8080/api/paymentmethods/${sessionStorage.getItem("idCard")}?nameCard=${titular.value}&nameBank=${entidadBancaria.value}&typeCard=${tipoTarjeta.value}&numberCard=${numeroTarjeta.value}&dateCard=${fechaCaducidad.value}&cvvCard=${cvv.value}`,
+      fetch(`http://3.16.180.62/api/paymentmethods/${sessionStorage.getItem("idCard")}?nameCard=${titular.value}&nameBank=${entidadBancaria.value}&typeCard=${tipoTarjeta.value}&numberCard=${numeroTarjeta.value}&dateCard=${fechaCaducidad.value}&cvvCard=${cvv.value}`,
         requestOptions
       )
         .then((response) => response.json())
         .then((result) => {
-          console.log(result)
+          
           if (result.idCard != null) {
     
 
@@ -494,10 +493,10 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch(`http://localhost:8080/api/paymentmethods/${sessionStorage.getItem("idCard")}`, requestOptions)
+fetch(`http://3.16.180.62/api/paymentmethods/${sessionStorage.getItem("idCard")}`, requestOptions)
   .then((response) => response.text())
   .then((result) => 
-{console.log(result)
+{
 
       // Eliminar la tarjeta del DOM
       tarjetaSeleccionada.remove();
@@ -531,7 +530,7 @@ function getCards () {
     redirect: "follow"
   };
 
-  fetch (`http://localhost:8080/api/paymentmethods/`, requestOptions)
+  fetch (`http://3.16.180.62/api/paymentmethods/`, requestOptions)
   .then((response) => response.json())
     .then((paymentmethods) => {
       let idUserLogged = parseInt(sessionStorage.getItem("idUser"));

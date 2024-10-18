@@ -71,7 +71,7 @@ function getDataCars() {
   redirect: "follow"
 };
 
-fetch("http://localhost:8080/api/cars/", requestOptions)
+fetch("http://3.16.180.62/api/cars/", requestOptions)
   .then((response) => response.json())
   .then((dataCarsGeneral) => {
     filterDataCars(dataCarsGeneral);

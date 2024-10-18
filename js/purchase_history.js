@@ -146,7 +146,7 @@ function createTableAdmFetch() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/cars/", requestOptions)
+  fetch("http://3.16.180.62/api/cars/", requestOptions)
     .then((response) => response.json())
     .then((dataCarsGeneral) => {
   infoAdmin.innerHTML = "";
@@ -216,7 +216,7 @@ function createTableAdmFetchComm() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/comments/", requestOptions)
+  fetch("http://3.16.180.62/api/comments/", requestOptions)
     .then((response) => response.json())
     .then((dataComments) => {
       infoAdmin.innerHTML = "";
@@ -273,7 +273,7 @@ function createTableAdmFetchTrans() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/transactions/", requestOptions)
+  fetch("http://3.16.180.62/api/transactions/", requestOptions)
     .then((response) => response.json())
     .then((dataTransactions) => {
   infoAdmin.innerHTML = "";
@@ -343,7 +343,7 @@ function addCarAdmFetch() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/cars/", requestOptions)
+  fetch("http://3.16.180.62/api/cars/", requestOptions)
     .then((response) => response.json())
     .then((dataCar) => {
      
@@ -383,7 +383,7 @@ function showInfoModAdmFetch(idCar) {
     redirect: "follow",
   };
 
-  fetch(`http://localhost:8080/api/cars/${idCar}`, requestOptions)
+  fetch(`http://3.16.180.62/api/cars/${idCar}`, requestOptions)
     .then((response) => response.json())
     .then((dataCar) => {
      
@@ -417,7 +417,7 @@ function modCarAdmFetch(idCar) {
   };
 
   fetch(
-        `http://localhost:8080/api/cars/${idCar}?numSerial=${noSerieTextNew.value}&type=${tipoTextNew.value}&brand=${marcaTextNew.value}&name=${nombreTextNew.value}&=year${anioTextNew.value}&kilometer=${kilTextNew.value}&transmission=${transTextNew.value}&price=${precioTextNew.value}&img=${imgTextNew.value}&owners=${duenosTextNew.value}&description=${descripTextNew.value}&verified=${verifTextNew.value}&sold=${vendTextNew.value}&=usersIdSeller${idVendedorTextAdd.value}`,
+        `http://3.16.180.62/api/cars/${idCar}?numSerial=${noSerieTextNew.value}&type=${tipoTextNew.value}&brand=${marcaTextNew.value}&name=${nombreTextNew.value}&=year${anioTextNew.value}&kilometer=${kilTextNew.value}&transmission=${transTextNew.value}&price=${precioTextNew.value}&img=${imgTextNew.value}&owners=${duenosTextNew.value}&description=${descripTextNew.value}&verified=${verifTextNew.value}&sold=${vendTextNew.value}&=usersIdSeller${idVendedorTextAdd.value}`,
     requestOptions
   )
     .then((response) => response.text())
@@ -459,7 +459,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch(`http://localhost:8080/api/comments/${idComment}?approved=1`, requestOptions)
+fetch(`http://3.16.180.62/api/comments/${idComment}?approved=1`, requestOptions)
   .then((response) => response.text())
   .then((result) => {
     
@@ -478,7 +478,7 @@ const requestOptions = {
     redirect: "follow",
   };
 
-  fetch(`http://localhost:8080/api/comments/${idComment}`, requestOptions)
+  fetch(`http://3.16.180.62/api/comments/${idComment}`, requestOptions)
     .then((response) => response.text())
     .then((result) => {
     
@@ -508,7 +508,7 @@ const requestOptions = {
     redirect: "follow",
   };
 
-  fetch(`http://localhost:8080/api/cars/${idCar}`, requestOptions)
+  fetch(`http://3.16.180.62/api/cars/${idCar}`, requestOptions)
     .then((response) => response.text())
     .then((result) => {
     
@@ -534,7 +534,7 @@ function validateUser() {
       redirect: "follow"
     };
 
-fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
+fetch(`http://3.16.180.62/api/users/email/${emailUser}`, requestOptions)
   .then((response) => response.json())
   .then((userData) => {
     if (userData.typeUser == "admin") {
@@ -615,7 +615,7 @@ function recoverBoughts() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/transactions/", requestOptions)
+  fetch("http://3.16.180.62/api/transactions/", requestOptions)
     .then((response) => response.json())
     .then((dataTransactions) => {
     
@@ -670,7 +670,7 @@ function createCarouselBought(carsBought) {
     redirect: "follow"
   };
 
-  fetch(`http://localhost:8080/api/cars/`, requestOptions)
+  fetch(`http://3.16.180.62/api/cars/`, requestOptions)
     .then((response) => response.json())
     .then((dataCarsGeneral) => {
       let htmlContMobile="";
@@ -754,7 +754,7 @@ function createCarouselSold() {
     redirect: "follow"
   };
 
-  fetch(`http://localhost:8080/api/cars/`, requestOptions)
+  fetch(`http://3.16.180.62/api/cars/`, requestOptions)
     .then((response) => response.json())
     .then((dataCarsGeneral) => {
       htmlContMobile += `

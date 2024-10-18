@@ -68,9 +68,9 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch(`http://localhost:8080/api/cars/${idCar}?sold=1`, requestOptions)
+fetch(`http://3.16.180.62/api/cars/${idCar}?sold=1`, requestOptions)
   .then((response) => response.text())
-  .then((result) => console.log(result))
+  .then((result) => console.log(""))
   .catch((error) => console.error(error));
 
 
@@ -86,7 +86,7 @@ function getDataDeposit(idCar, idUser, idPaymentSelected, idUserLogged) {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/depositmethods/", requestOptions)
+  fetch("http://3.16.180.62/api/depositmethods/", requestOptions)
     .then((response) => response.json())
     .then((dataDepositMethod) => {
       let idDepositSelected;
@@ -115,7 +115,7 @@ function getDataPayment(idCar, idUser, idUserLogged, price) {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/paymentmethods/", requestOptions)
+  fetch("http://3.16.180.62/api/paymentmethods/", requestOptions)
     .then((response) => response.json())
     .then((dataPaymentMethod) => {
       let idPaymentSelected;
@@ -185,7 +185,7 @@ function buyCarTransaction(
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/transactions/", requestOptions)
+  fetch("http://3.16.180.62/api/transactions/", requestOptions)
     .then((response) => response.json())
     .then((result) => {
       if (result != null) {
@@ -298,7 +298,7 @@ function getDataUsersComments() {
   redirect: "follow"
 };
 
-fetch("http://localhost:8080/api/users/", requestOptions)
+fetch("http://3.16.180.62/api/users/", requestOptions)
   .then((response) => response.json())
   .then((dataUsers) => createComments(dataUsers))
   .catch((error) => console.error(error));
@@ -316,7 +316,7 @@ myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
   redirect: "follow"
 };
 
-fetch("http://localhost:8080/api/comments/", requestOptions)
+fetch("http://3.16.180.62/api/comments/", requestOptions)
   .then((response) => response.json())
   .then((dataComments) => {
     
@@ -407,7 +407,7 @@ function showFormComment(userLogged) {
         redirect: "follow"
       };
 
-      fetch("http://localhost:8080/api/comments/", requestOptions)
+      fetch("http://3.16.180.62/api/comments/", requestOptions)
         .then((response) => response.text())
         .then((result) => console.log(""))
         .catch((error) => console.error(error));
@@ -458,7 +458,7 @@ function getDataUsersForm() {
   redirect: "follow"
 };
 
-fetch(`http://localhost:8080/api/users/${idUserLogged}`, requestOptions)
+fetch(`http://3.16.180.62/api/users/${idUserLogged}`, requestOptions)
   .then((response) => response.json())
   .then((userLogged) => {
     
@@ -478,7 +478,7 @@ function getDataUsersCard(carSelected) {
     redirect: "follow"
 };
 
-fetch(`http://localhost:8080/api/users/${carSelected.usersIdSeller}`, requestOptions)
+fetch(`http://3.16.180.62/api/users/${carSelected.usersIdSeller}`, requestOptions)
   .then((response) => response.json())
   .then((sellerSelected) => {
     createCard(carSelected, sellerSelected);
@@ -495,7 +495,7 @@ function getDataCars() {
   redirect: "follow"
 };
 
-fetch(`http://localhost:8080/api/cars/${idCar}`, requestOptions)
+fetch(`http://3.16.180.62/api/cars/${idCar}`, requestOptions)
   .then((response) => response.json())
   .then((carSelected) => {
     getDataUsersCard(carSelected);
@@ -518,7 +518,7 @@ function validateUser() {
       redirect: "follow"
     };
 
-fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
+fetch(`http://3.16.180.62/api/users/email/${emailUser}`, requestOptions)
   .then((response) => response.json())
   .then((userData) => {
 

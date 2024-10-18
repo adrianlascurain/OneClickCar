@@ -33,11 +33,10 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:8080/api/login/", requestOptions)
+fetch("http://3.16.180.62/api/login/", requestOptions)
   .then((response) => response.json())
   .then((result) => {
     if(result.accessToken!=null){
-    console.log(result);
     sessionStorage.setItem("token", result.accessToken);
       sessionStorage.setItem("user", emailInserted);
       txtEmail.value = "";
@@ -75,11 +74,11 @@ function recoverNameId(emailUser){
       redirect: "follow"
     };
 
-fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
+fetch(`http://3.16.180.62/api/users/email/${emailUser}`, requestOptions)
   .then((response) => response.json())
   .then((userData) => {
     // if (userData != null) {
-      console.log(userData);
+  
     sessionStorage.setItem("fullName", JSON.stringify(userData.fullName));
     sessionStorage.setItem("idUser", JSON.stringify(userData.idUser));
      window.location.href = "../index.html";

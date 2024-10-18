@@ -124,7 +124,7 @@ function createTableAdmFetch() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/users/", requestOptions)
+  fetch("http://3.16.180.62/api/users/", requestOptions)
     .then((response) => response.json())
     .then((dataUsers) => {
   infoAdmin.innerHTML = "";
@@ -177,7 +177,7 @@ function modUserAdmFetch(idUser) {
   };
 
   fetch(
-        `http://localhost:8080/api/users/${idUser}?fullName=${fullNameTextNew.value}&phoneNumber=${phoneNumberTextNew.value}&birthDate=${birthDateTextNew.value}&typeUser=${typeUserTextNew.value}`,
+        `http://3.16.180.62/api/users/${idUser}?fullName=${fullNameTextNew.value}&phoneNumber=${phoneNumberTextNew.value}&birthDate=${birthDateTextNew.value}&typeUser=${typeUserTextNew.value}`,
     requestOptions
   )
     .then((response) => response.text())
@@ -211,7 +211,7 @@ function modUserAdmFetch(idUser) {
     redirect: "follow",
   };
 
-  fetch(`http://localhost:8080/api/users/${idUser}`, requestOptions)
+  fetch(`http://3.16.180.62/api/users/${idUser}`, requestOptions)
     .then((response) => response.text())
     .then((result) => {
     
@@ -243,7 +243,7 @@ function showInfoModAdmFetch(idUser) {
     redirect: "follow",
   };
 
-  fetch(`http://localhost:8080/api/users/${idUser}`, requestOptions)
+  fetch(`http://3.16.180.62/api/users/${idUser}`, requestOptions)
     .then((response) => response.json())
     .then((dataUsers) => {
      
@@ -280,7 +280,7 @@ function addUserAdmFetch() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/users/", requestOptions)
+  fetch("http://3.16.180.62/api/users/", requestOptions)
     .then((response) => response.json())
     .then((dataUser) => {
      
@@ -317,7 +317,7 @@ function validateUser() {
       redirect: "follow"
     };
 
-fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
+fetch(`http://3.16.180.62/api/users/email/${emailUser}`, requestOptions)
   .then((response) => response.json())
   .then((userData) => {
 if (userData.typeUser == "admin") {

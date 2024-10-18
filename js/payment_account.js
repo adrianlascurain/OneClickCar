@@ -69,7 +69,7 @@ function createTableAdmFetch() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/paymentmethods/", requestOptions)
+  fetch("http://3.16.180.62/api/paymentmethods/", requestOptions)
     .then((response) => response.json())
     .then((dataPaymentMethod) => {
       infoAdmin.innerHTML = "";
@@ -139,7 +139,7 @@ function addPaymentAdmFetch() {
     redirect: "follow",
   };
 
-  fetch("http://localhost:8080/api/paymentmethods/", requestOptions)
+  fetch("http://3.16.180.62/api/paymentmethods/", requestOptions)
     .then((response) => response.json())
     .then((dataPaymentMethod) => {
       
@@ -176,7 +176,7 @@ function showInfoModAdmFetch(idCard) {
     redirect: "follow",
   };
 
-  fetch(`http://localhost:8080/api/paymentmethods/${idCard}`, requestOptions)
+  fetch(`http://3.16.180.62/api/paymentmethods/${idCard}`, requestOptions)
     .then((response) => response.json())
     .then((datumPaymentMethod) => {
       
@@ -201,7 +201,7 @@ function modPaymentAdmFetch(idCard) {
   };
 
   fetch(
-    `http://localhost:8080/api/paymentmethods/${idCard}?nameCard=${nameCardTextNew.value}&typeCard=${typeCardTextNew.value}&numberCard=${numberCardTextNew.value}&dateCard=${dateCardTextNew.value}&cvvCard=${cvvCardTextNew.value}&nameBank=${nameBankTextNew.value}`,
+    `http://3.16.180.62/api/paymentmethods/${idCard}?nameCard=${nameCardTextNew.value}&typeCard=${typeCardTextNew.value}&numberCard=${numberCardTextNew.value}&dateCard=${dateCardTextNew.value}&cvvCard=${cvvCardTextNew.value}&nameBank=${nameBankTextNew.value}`,
     requestOptions
   )
     .then((response) => response.text())
@@ -223,7 +223,7 @@ function delPaymentAdmFetch(idCard) {
     redirect: "follow",
   };
 
-  fetch(`http://localhost:8080/api/paymentmethods/${idCard}`, requestOptions)
+  fetch(`http://3.16.180.62/api/paymentmethods/${idCard}`, requestOptions)
     .then((response) => response.text())
     .then((result) => {
       
@@ -278,7 +278,7 @@ function validateUser() {
     redirect: "follow"
   };
 
-  fetch(`http://localhost:8080/api/users/email/${emailUser}`, requestOptions)
+  fetch(`http://3.16.180.62/api/users/email/${emailUser}`, requestOptions)
     .then((response) => response.json())
     .then((userData) => {
       // Validamos si el usuario es administrado (0), nulo (no ha iniciado sesión) o >1 es cliente

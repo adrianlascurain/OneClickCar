@@ -317,10 +317,10 @@ function registerCar(raw) {
         redirect: "follow"
     };
 
-    fetch("http://localhost:8080/api/cars/", requestOptions)
+    fetch("http://3.16.180.62/api/cars/", requestOptions)
     .then((response) => response.json())
     .then((dataCar) => {
-        console.log(dataCar);
+        
         if (dataCar.idCar) {
             
         // Mensaje de éxito

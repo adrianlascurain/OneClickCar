@@ -48,7 +48,7 @@ const requestOptions = {
   redirect: "follow"
 };
 
-fetch("http://localhost:8080/api/users/", requestOptions)
+fetch("http://3.16.180.62/api/users/", requestOptions)
   .then((response) => response.json())
   .then((user) => {
     

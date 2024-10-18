@@ -4,9 +4,9 @@ const sellBtn = document.getElementById("sell-btn-btn");
 // Check if sesssion storage has information
 let sellBtnRef = "./pages/log_in.html";
 if(sessionStorage.length != 0){
-    let idUser = sessionStorage.getItem("id_user_logged");
+    let idUser = sessionStorage.getItem("idUser");
     // Set path to react to sell btn 
-    if(idUser > 0){
+    if(idUser != null){
         // User is logged in so go to sell page
         sellBtnRef = "./pages/product_registration.html";
     }else{

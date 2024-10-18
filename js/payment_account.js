@@ -84,6 +84,7 @@ function createTableAdmFetch() {
               <tr>
             <th scope="col ">Id tarjeta</th>
             <th scope="col ">Nombre completo</th>
+            <th scope="col ">Banco</th>
             <th scope="col ">Tipo tarjeta</th>
             <th scope="col ">Número tarjeta</th>
             <th scope="col ">Fecha vencimiento</th>
@@ -98,6 +99,7 @@ function createTableAdmFetch() {
             <tr>
             <th scope="row ">${dataPaymentMethod[i].idCard}</th>
             <td>${dataPaymentMethod[i].nameCard}</td>
+            <td>${dataPaymentMethod[i].nameBank}</td>
             <td>${dataPaymentMethod[i].typeCard}</td>
             <td>${dataPaymentMethod[i].numberCard}</td>
             <td>${dataPaymentMethod[i].dateCard}</td>
@@ -138,7 +140,7 @@ function addPaymentAdmFetch() {
   };
 
   fetch("http://localhost:8080/api/paymentmethods/", requestOptions)
-    .then((response) => response.text())
+    .then((response) => response.json())
     .then((dataPaymentMethod) => {
       
       if (dataPaymentMethod.idCard != null) {
@@ -179,6 +181,7 @@ function showInfoModAdmFetch(idCard) {
     .then((datumPaymentMethod) => {
       
       nameCardTextNew.value = datumPaymentMethod.nameCard;
+      nameBankTextNew.value = datumPaymentMethod.nameBank;
       typeCardTextNew.value = datumPaymentMethod.typeCard;
      numberCardTextNew.value = datumPaymentMethod.numberCard;
       dateCardTextNew.value = datumPaymentMethod.dateCard;

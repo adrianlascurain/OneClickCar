@@ -54,7 +54,8 @@ body {
   }
   
   /* centro */
-  .cajaCuentaDeposito {
+  .cajaCuentaDeposito
+   {
     grid-column: 2 / 2; /* Coloca la tarjeta de entrada en la primera columna */
     max-width: max-content;
     text-align: center;
@@ -66,6 +67,20 @@ body {
     font-size: 20px;
     margin: 55px auto 20px auto;
   }
+
+  #cardsContainer .cajaCuentaDepositoForm{
+    grid-column: 2 / 2; /* Coloca la tarjeta de entrada en la primera columna */
+    max-width: max-content;
+    text-align: center;
+    background-color: #002b5b;
+    border-radius: 20px;
+    padding: 20px 30px 20px 30px;
+    color: #ffffff;
+    font-family: "Monserrat";
+    font-size: 20px;
+    margin: 55px auto 20px auto;
+  }
+
   .cajaCuentaDeposito h1 {
     color: #ffcc00;
     text-align: center;
@@ -170,7 +185,7 @@ body {
     background-color: white;
     color: #002b5b !important;
     border-radius: 20px;
-    /* padding: 4px 16px */
+    padding: 4px 16px
   }
   .modal-title {
     color: black;

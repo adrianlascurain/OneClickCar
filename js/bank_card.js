@@ -1,3 +1,35 @@
+const cardsImages = {
+  bbva:"https://res.cloudinary.com/darjvaffy/image/upload/v1728622014/tarjeta_bbva_hrajq7.jpg",
+  banorte: "https://res.cloudinary.com/darjvaffy/image/upload/v1728626782/banorte_ty3rmr.jpg",
+  banamex: "https://res.cloudinary.com/darjvaffy/image/upload/v1728626838/banamex_l2ictv.jpg",
+  santander: "https://res.cloudinary.com/darjvaffy/image/upload/v1728626929/santander_kszsgg.jpg",
+  hsbc: "https://res.cloudinary.com/darjvaffy/image/upload/v1728626957/hsbc_cnfarn.jpg",
+  azteca: "https://res.cloudinary.com/darjvaffy/image/upload/v1729046673/banco_azteca-removebg-preview_uq4i45.png",
+  otro: "https://res.cloudinary.com/darjvaffy/image/upload/v1729046581/banco_neutro-removebg-preview_dicuhu.png"
+}
+
+// Función para mostrar sweet alert de éxito
+function alertSuccess(titleShow, textShow) {
+  Swal.fire({
+    title: titleShow,
+    text: textShow,
+    imageUrl:
+      "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+    imageWidth: 350,
+    imageHeight: 200,
+    imageAlt: "Custom image",
+    icon: "success",
+  }); //function alertSuccess()
+}
+// Función para mostrar sweet alert de error
+function alertFailure(titleShow, textShow) {
+  Swal.fire({
+    title: titleShow,
+    text: textShow,
+    imageAlt: "Custom image",
+    icon: "error",
+  });
+} //function alertFailure()
 // Función para verificar si el número de tarjeta ya está registrado
 function esNumeroTarjetaDuplicado(numeroTarjeta) {
   const tarjetasExistentes = document.querySelectorAll('.cajaCuentaDeposito p:nth-of-type(4)');
@@ -33,7 +65,76 @@ function cambiarImagen() {
       // Imagen predeterminada si no coincide el número de cuenta
       tarjetaImg.src = 'https://res.cloudinary.com/darjvaffy/image/upload/v1729046581/banco_neutro-removebg-preview_dicuhu.png';
     }
-  }
+}
+// funcion de insertar card
+function createCardFetch(raw){
+  const myHeaders = new Headers();
+
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+
+   const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+console.log(raw);
+  fetch("http://localhost:8080/api/paymentmethods/", requestOptions)
+    .then((response) => response.json())
+    .then((dataCard) => {
+     if (dataCard.idCard != null) {
+      sessionStorage.setItem("idCard", dataCard.idCard); 
+    // Crear un nuevo div que será la tarjeta solo si todas las validaciones se cumplen
+  const nuevaTarjeta = document.createElement('div');
+  nuevaTarjeta.classList.add('cajaCuentaDeposito');
+        // Actualizamos referencias de las funciones de los botones
+  // Añadir el contenido de la tarjeta
+  nuevaTarjeta.innerHTML = `
+    <h5>${dataCard.nameBank} - ${dataCard.typeCard}</h5>
+    <div class="cajaCuentaDepositoForm">
+      <img src="${document.getElementById('tarjetaImg').src}" class="card-img-top" alt="${dataCard.nameBank}" style="border-radius: 10px; width: 100px;">
+      <div>
+        <p><strong>Titular de la tarjeta:</strong> ${dataCard.nameCard}</p>
+        <p><strong>Entidad bancaria:</strong> ${dataCard.nameBank}</p>
+        <p><strong>Tipo de tarjeta:</strong> ${dataCard.typeCard}</p>
+        <p><strong>Número de tarjeta:</strong> ${dataCard.numberCard}</p>
+        <p><strong>Fecha de caducidad:</strong> ${dataCard.dateCard}</p>
+        <p><strong>CVV:</strong> ${dataCard.cvvCard}</p>
+      </div>
+    </div>
+  `;
+
+  // Añadir la nueva tarjeta al contenedor 'infoAdmin'
+  document.getElementById('infoAdmin').appendChild(nuevaTarjeta);
+
+  // Limpiar los campos de entrada
+  document.getElementById('InfoProfile').reset();
+
+  // Mostrar el mensaje de éxito de SweetAlert
+  Swal.fire({
+    title: "Registro exitoso",
+    text: "Tu tarjeta fue agregada",
+    imageUrl: "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
+    imageWidth: 350,
+    imageHeight: 200,
+    imageAlt: "Custom image",
+    icon: "success",
+  });
+      }
+       else {
+         //Mostramos mensaje de error
+        alertFailure(
+          "Registro fallido",
+          `La cuenta de depósito ya se encuentra registrada`
+        );
+      }
+    })
+    .catch((error) => console.error(error));
+
+}
+
+
 // Función para guardar y agregar la tarjeta solo si todas las validaciones se cumplen
 document.getElementById('btnAgregar').addEventListener('click', function () {
   // Capturar los valores de los inputs
@@ -139,39 +240,22 @@ document.getElementById('btnAgregar').addEventListener('click', function () {
     // Crear un ID único para la tarjeta
     const tarjetaId = `tarjeta-${Date.now()}`;
     nuevaTarjeta.id = tarjetaId;
+  // objeto
+  let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
 
-  // Añadir el contenido de la tarjeta
-  nuevaTarjeta.innerHTML = `
-    <h5>${entidadBancaria.value} - ${tipoTarjeta.value}</h5>
-    <div class="cajaCuentaDepositoForm">
-      <img src="${document.getElementById('tarjetaImg').src}" class="card-img-top" alt="${entidadBancaria.value}" style="border-radius: 10px; width: 100px;">
-      <div>
-        <p><strong>Titular de la tarjeta:</strong> ${titular.value}</p>
-        <p><strong>Entidad bancaria:</strong> ${entidadBancaria.value}</p>
-        <p><strong>Tipo de tarjeta:</strong> ${tipoTarjeta.value}</p>
-        <p><strong>Número de tarjeta:</strong> ${numeroTarjeta.value}</p>
-        <p><strong>Fecha de caducidad:</strong> ${fechaCaducidad.value}</p>
-        <p><strong>CVV:</strong> ${cvv.value}</p>
-      </div>
-    </div>
-  `;
+    const raw = JSON.stringify({
+    nameCard: titular.value,
+    typeCard: tipoTarjeta.value,
+    numberCard: numeroTarjeta.value,
+    nameBank: entidadBancaria.value,
+    dateCard: fechaCaducidad.value,
+    cvvCard: cvv.value,
+    usersIdUser: idUserLogged,
+    });
+  console.log("estoy adentro del fetch");
+  createCardFetch(raw);
 
-  // Añadir la nueva tarjeta al contenedor 'infoAdmin'
-  document.getElementById('infoAdmin').appendChild(nuevaTarjeta);
 
-  // Limpiar los campos de entrada
-  document.getElementById('InfoProfile').reset();
-
-  // Mostrar el mensaje de éxito de SweetAlert
-  Swal.fire({
-    title: "Registro exitoso",
-    text: "Tu tarjeta fue agregada",
-    imageUrl: "https://res.cloudinary.com/dz6zf3yio/image/upload/v1727650800/occmegaphonev2F_x1pwor.png",
-    imageWidth: 350,
-    imageHeight: 200,
-    imageAlt: "Custom image",
-    icon: "success",
-  });
 });
 
 // Asignar la fecha actual como el mínimo para el campo de fecha de caducidad
@@ -181,6 +265,10 @@ document.getElementById('fecha-ipt').addEventListener('focus', function () {
   const mes = (hoy.getMonth() + 1).toString().padStart(2, '0'); // Formatear el mes con dos dígitos
   this.min = `${anio}-${mes}`;
 });
+
+
+
+
 
 // funcion modificar
 
@@ -296,17 +384,45 @@ document.getElementById('btnModificar').addEventListener('click', function () {
     return;
   }
 
+    // Crear objeto con los datos de la tarjeta
+    const dataCard = {
+      nameCard: titular.value,
+      nameBank: entidadBancaria.value.toLowerCase(),
+      typeCard: tipoTarjeta.value.toLowerCase(),
+      numberCard: numeroTarjeta.value,
+      dateCard: fechaCaducidad.value,
+      cvvCard: cvv.value
+    };
+
+      // Hacer el fetch para enviar los datos a la base de datos
+      const myHeaders = new Headers();
+      myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+      const requestOptions = {
+        method: "PUT",
+            headers: myHeaders,
+        redirect: "follow",
+      };
+    
+      fetch(`http://localhost:8080/api/paymentmethods/${sessionStorage.getItem("idCard")}?nameCard=${titular.value}&nameBank=${entidadBancaria.value}&typeCard=${tipoTarjeta.value}&numberCard=${numeroTarjeta.value}&dateCard=${fechaCaducidad.value}&cvvCard=${cvv.value}`,
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          console.log(result)
+          if (result.idCard != null) {
+    
+
   // Actualizar la tarjeta seleccionada con los nuevos valores
-  tarjetaSeleccionada.querySelector('h5').textContent = `${entidadBancaria.value} - ${tipoTarjeta.value}`;
-  tarjetaSeleccionada.querySelector('p:nth-of-type(1)').textContent = `Titular de la tarjeta: ${titular.value}`;
-  tarjetaSeleccionada.querySelector('p:nth-of-type(2)').textContent = `Entidad bancaria: ${entidadBancaria.value}`;
-  tarjetaSeleccionada.querySelector('p:nth-of-type(3)').textContent = `Tipo de tarjeta: ${tipoTarjeta.value}`;
-  tarjetaSeleccionada.querySelector('p:nth-of-type(4)').textContent = `Número de tarjeta: ${numeroTarjeta.value}`;
-  tarjetaSeleccionada.querySelector('p:nth-of-type(5)').textContent = `Fecha de caducidad: ${fechaCaducidad.value}`;
-  tarjetaSeleccionada.querySelector('p:nth-of-type(6)').textContent = `CVV: ${cvv.value}`;
+  tarjetaSeleccionada.querySelector('h5').textContent = `${dataCard.nameBank} - ${dataCard.typeCard}`;
+  tarjetaSeleccionada.querySelector('p:nth-of-type(1)').textContent = `Titular de la tarjeta: ${dataCard.nameCard}`;
+  tarjetaSeleccionada.querySelector('p:nth-of-type(2)').textContent = `Entidad bancaria: ${dataCard.nameBank}`;
+  tarjetaSeleccionada.querySelector('p:nth-of-type(3)').textContent = `Tipo de tarjeta: ${dataCard.typeCard}`;
+  tarjetaSeleccionada.querySelector('p:nth-of-type(4)').textContent = `Número de tarjeta: ${dataCard.numberCard}`;
+  tarjetaSeleccionada.querySelector('p:nth-of-type(5)').textContent = `Fecha de caducidad: ${dataCard.dateCard}`;
+  tarjetaSeleccionada.querySelector('p:nth-of-type(6)').textContent = `CVV: ${dataCard.cvvCard}`;
 
   // Cambiar la imagen de la tarjeta según la entidad bancaria seleccionada
-  const nuevaImagen = obtenerImagenBanco(entidadBancaria.value.toLowerCase());
+  const nuevaImagen = obtenerImagenBanco(dataCard.nameBank.toLowerCase());
   tarjetaSeleccionada.querySelector('img').src = nuevaImagen;
 
   // Limpiar el formulario y deseleccionar la tarjeta
@@ -323,7 +439,21 @@ document.getElementById('btnModificar').addEventListener('click', function () {
     text: "La tarjeta ha sido actualizada.",
     icon: "success",
   });
+} else {
+  Swal.fire({
+    title: "Error",
+    text: "No se pudo actualizar la tarjeta en la base de datos.",
+    icon: "error",
+  });
+}
+})
+.catch(error => {
+  console.error('Error al actualizar la tarjeta:', error);
 });
+});
+
+
+
 
 // Evento para eliminar la tarjeta seleccionada
 document.getElementById('btnEliminar').addEventListener('click', function () {
@@ -341,6 +471,26 @@ document.getElementById('btnEliminar').addEventListener('click', function () {
     cancelButtonText: "Cancelar",
   }).then((result) => {
     if (result.isConfirmed) {
+
+      const dataCard = {
+        numberCard: tarjetaSeleccionada.querySelector('p:nth-of-type(4)').textContent.replace('Número de tarjeta: ', '')
+      };
+  
+      // Hacer el fetch para eliminar la tarjeta en la base de datos
+      const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+
+const requestOptions = {
+  method: "DELETE",
+  headers: myHeaders,
+  redirect: "follow"
+};
+
+fetch(`http://localhost:8080/api/paymentmethods/${sessionStorage.getItem("idCard")}`, requestOptions)
+  .then((response) => response.text())
+  .then((result) => 
+{console.log(result)
+
       // Eliminar la tarjeta del DOM
       tarjetaSeleccionada.remove();
 
@@ -355,6 +505,53 @@ document.getElementById('btnEliminar').addEventListener('click', function () {
         text: "La tarjeta ha sido eliminada correctamente.",
         icon: "success",
       });
+    })
+    .catch((error) => console.error(error));
+ } 
+    })
+  }
+);
+
+function getCards () {
+
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", `Bearer: ${sessionStorage.getItem("token")}`);
+
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow"
+  };
+
+  fetch (`http://localhost:8080/api/paymentmethods/`, requestOptions)
+  .then((response) => response.json())
+    .then((paymentmethods) => {
+      let idUserLogged = parseInt(sessionStorage.getItem("idUser"));
+      //Buscamos el objeto dentro de todos los registros y con el índice y splice lo eliminamos
+      const div = document.getElementById("cardsContainer")
+        div.innerHTML=""
+      for (i = 0; i < paymentmethods.length; i++) { 
+        if (paymentmethods[i].usersIdUser == idUserLogged) {
+
+                  nuevaTarjeta = `
+            <h5 class="mx-auto">${paymentmethods[i].nameBank} - ${paymentmethods[i].typeCard}</h5>
+            <div class="cajaCuentaDepositoForm">
+              <img src="${cardsImages[paymentmethods[i].nameBank]}" class="card-img-top" alt="${paymentmethods[i].nameBank}" style="border-radius: 10px; width: 100px;">
+              <div>
+                <p><strong>Titular de la tarjeta:</strong> ${paymentmethods[i].nameCard}</p>
+                <p><strong>Entidad bancaria:</strong> ${paymentmethods[i].nameBank}</p>
+                <p><strong>Tipo de tarjeta:</strong> ${paymentmethods[i].typeCard}</p>
+                <p><strong>Número de tarjeta:</strong> ${paymentmethods[i].numberCard}</p>
+                <p><strong>Fecha de caducidad:</strong> ${paymentmethods[i].dateCard}</p>
+                <p><strong>CVV:</strong> ${paymentmethods[i].cvvCard}</p>
+              </div>
+            </div>
+          `;
+        div.insertAdjacentHTML("beforeend", nuevaTarjeta);
+        }
+      } 
     }
-  });
-});
+  )
+.catch((error) => console.error(error));
+}
+getCards();

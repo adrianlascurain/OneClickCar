@@ -207,7 +207,7 @@ button{
   background-color: white;
   color: #002b5b !important;
   border-radius: 20px;
-  padding: 4px 16px
+  /* padding: 4px 16px */
 }
 .modal-title {
   color: black;
